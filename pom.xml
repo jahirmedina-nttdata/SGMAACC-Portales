@@ -16,36 +16,25 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>2.3.2</serenity.version>
-        <serenity.cucumber.version>2.3.2</serenity.cucumber.version>
+        <serenity.version>3.2.1</serenity.version>
+        <serenity.maven.version>3.2.1</serenity.maven.version>
+        <serenity.cucumber.version>3.2.1</serenity.cucumber.version>
+
+        <tags></tags>
+        <webdriver.base.url></webdriver.base.url>
         <webdriver.driver></webdriver.driver>
     </properties>
-
-    <repositories>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>central</id>
-            <name>bintray</name>
-            <url>https://jcenter.bintray.com</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>central</id>
-            <name>bintray-plugins</name>
-            <url>https://jcenter.bintray.com</url>
-        </pluginRepository>
-    </pluginRepositories>
 
     <dependencies>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
+            <version>${serenity.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-cucumber</artifactId>
             <version>${serenity.version}</version>
             <scope>test</scope>
         </dependency>
@@ -68,51 +57,33 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-assertions</artifactId>
-            <version>${serenity.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-screenplay-rest</artifactId>
-            <version>${serenity.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-cucumber6</artifactId>
-            <version>${serenity.cucumber.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.7</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-launcher</artifactId>
-            <version>1.5.2</version>
+            <version>1.8.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.5.2</version>
+            <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <version>5.5.2</version>
+            <version>5.8.2</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.10</version>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.13.2</version>
+            <version>3.6.2</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
@@ -122,16 +93,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <includes>
-                        <include>**/Test*.java</include>
-                        <include>**/*Test.java</include>
-                        <include>**/*Tests.java</include>
-                        <include>**/*TestCase.java</include>
-                        <include>**/When*.java</include>
-                    </includes>
-                    <excludes>
-                        <exclude>**/acceptancetests/*.java</exclude>
-                    </excludes>
+                    <skip>true</skip>
                 </configuration>
             </plugin>
             <plugin>
@@ -139,9 +101,17 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <includes>
-                        <include>**/acceptancetests/*.java</include>
+                        <include>**/*Test.java</include>
+                        <include>**/Test*.java</include>
+                        <include>**/*TestSuite.java</include>
+                        <include>**/When*.java</include>
                     </includes>
-                    <argLine>-Xmx512m</argLine>
+                    <systemPropertyVariables>
+                        <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
+                    </systemPropertyVariables>
+                    <parallel>classes</parallel>
+                    <parallel>methods</parallel>
+                    <useUnlimitedThreads>true</useUnlimitedThreads>
                 </configuration>
                 <executions>
                     <execution>
@@ -165,6 +135,9 @@
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
                 <artifactId>serenity-maven-plugin</artifactId>
                 <version>${serenity.version}</version>
+                <configuration>
+                    <tags>${tags}</tags>
+                </configuration>
                 <executions>
                     <execution>
                         <id>serenity-reports</id>
@@ -177,5 +150,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

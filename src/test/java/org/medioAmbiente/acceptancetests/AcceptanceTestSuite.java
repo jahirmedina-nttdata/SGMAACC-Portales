@@ -5,14 +5,16 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(plugin = {"html:target/build/cucumber-html-report", "pretty:target/build/cucumber-pretty.txt"
-        , "json:target/build/cucumber.json"},
+@CucumberOptions(
+        plugin = {"html:target/build/cucumber-html-report"
+                        , "pretty:target/build/cucumber-pretty.txt"
+                        , "json:target/build/cucumber.json"},
         stepNotifications=true,
-        features="src/test/resources/",
+        features="src/test/resources/features",
         glue="org.medioAmbiente"
 //        , tags = "(@CAP_F_056 or @CAP_F_057)"
 //                , tags = "(@CAP_F_005 or @CAP_F_013 or @CAP_F_026 or @CAP_F_084)"
-        , tags = "@PPB001_Family001"
+        , tags = ""
         )
 
 public class AcceptanceTestSuite {}
