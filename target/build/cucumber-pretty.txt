@@ -1,0 +1,140 @@
+
+@PPB001_Family001
+Scenario Outline: Cargando la web                                            [90m# src/test/resources/PPB001_Family001.feature:23[0m
+  [32mGiven [0m[32mPPB001_Family001 - Cargando el Navegador[0m                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()[0m
+  [32mWhen [0m[32mPPB001_Family001 - Se haya cargado la web[0m                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Aceptar las cookies[0m                                 [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Limpiar[0m                                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar por palabras "[0m[32m[1mnone[0m[32m"[0m                          [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Tipos de Espacios Naturales "[0m[32m[1mnone[0m[32m"[0m      [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Provincias "[0m[32m[1mnone[0m[32m"[0m                       [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Selecciona un tipo de Equipamento "[0m[32m[1mÁREA RECREATIVA[0m[32m"[0m [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Es Accesible "[0m[32m[1mno[0m[32m"[0m                                   [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Nombre de Espacio Natural "[0m[32m[1mnone[0m[32m"[0m                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar[0m                                              [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()[0m
+
+@PPB001_Family001
+Scenario Outline: Cargando la web                                            [90m# src/test/resources/PPB001_Family001.feature:24[0m
+  [32mGiven [0m[32mPPB001_Family001 - Cargando el Navegador[0m                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()[0m
+  [32mWhen [0m[32mPPB001_Family001 - Se haya cargado la web[0m                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Aceptar las cookies[0m                                 [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Limpiar[0m                                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar por palabras "[0m[32m[1mnone[0m[32m"[0m                          [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Tipos de Espacios Naturales "[0m[32m[1mnone[0m[32m"[0m      [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Provincias "[0m[32m[1mALMERÍA[0m[32m"[0m                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Selecciona un tipo de Equipamento "[0m[32m[1mÁREA RECREATIVA[0m[32m"[0m [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Es Accesible "[0m[32m[1mno[0m[32m"[0m                                   [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Nombre de Espacio Natural "[0m[32m[1mnone[0m[32m"[0m                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar[0m                                              [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()[0m
+
+@PPB001_Family001
+Scenario Outline: Cargando la web                                            [90m# src/test/resources/PPB001_Family001.feature:25[0m
+  [32mGiven [0m[32mPPB001_Family001 - Cargando el Navegador[0m                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()[0m
+  [32mWhen [0m[32mPPB001_Family001 - Se haya cargado la web[0m                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Aceptar las cookies[0m                                 [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Limpiar[0m                                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar por palabras "[0m[32m[1mnone[0m[32m"[0m                          [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Tipos de Espacios Naturales "[0m[32m[1mGEOPARQUE[0m[32m"[0m [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Provincias "[0m[32m[1mnone[0m[32m"[0m                       [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Selecciona un tipo de Equipamento "[0m[32m[1mÁREA RECREATIVA[0m[32m"[0m [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Es Accesible "[0m[32m[1mno[0m[32m"[0m                                   [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Nombre de Espacio Natural "[0m[32m[1mnone[0m[32m"[0m                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar[0m                                              [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()[0m
+
+@PPB001_Family001
+Scenario Outline: Cargando la web                                            [90m# src/test/resources/PPB001_Family001.feature:26[0m
+  [32mGiven [0m[32mPPB001_Family001 - Cargando el Navegador[0m                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()[0m
+  [32mWhen [0m[32mPPB001_Family001 - Se haya cargado la web[0m                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Aceptar las cookies[0m                                 [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Limpiar[0m                                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar por palabras "[0m[32m[1mnone[0m[32m"[0m                          [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Tipos de Espacios Naturales "[0m[32m[1mGEOPARQUE[0m[32m"[0m [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Provincias "[0m[32m[1mCÓRDOBA[0m[32m"[0m                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Selecciona un tipo de Equipamento "[0m[32m[1mÁREA RECREATIVA[0m[32m"[0m [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Es Accesible "[0m[32m[1mno[0m[32m"[0m                                   [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Nombre de Espacio Natural "[0m[32m[1mnone[0m[32m"[0m                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar[0m                                              [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()[0m
+
+@PPB001_Family001
+Scenario Outline: Cargando la web                                                                   [90m# src/test/resources/PPB001_Family001.feature:27[0m
+  [32mGiven [0m[32mPPB001_Family001 - Cargando el Navegador[0m                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()[0m
+  [32mWhen [0m[32mPPB001_Family001 - Se haya cargado la web[0m                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Aceptar las cookies[0m                                                        [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Limpiar[0m                                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar por palabras "[0m[32m[1mnone[0m[32m"[0m                                                 [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Tipos de Espacios Naturales "[0m[32m[1mLUGAR DE IMPORTANCIA COMUNITARIA[0m[32m"[0m [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Provincias "[0m[32m[1mCÁDIZ[0m[32m"[0m                                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Selecciona un tipo de Equipamento "[0m[32m[1mSENDERO SEÑALIZADO[0m[32m"[0m                     [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Es Accesible "[0m[32m[1mno[0m[32m"[0m                                                          [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Nombre de Espacio Natural "[0m[32m[1mBAHÍA DE CÁDIZ[0m[32m"[0m                                 [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar[0m                                                                     [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()[0m
+
+@PPB001_Family001
+Scenario Outline: Cargando la web                                                                   [90m# src/test/resources/PPB001_Family001.feature:28[0m
+  [32mGiven [0m[32mPPB001_Family001 - Cargando el Navegador[0m                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()[0m
+  [32mWhen [0m[32mPPB001_Family001 - Se haya cargado la web[0m                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Aceptar las cookies[0m                                                        [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Limpiar[0m                                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar por palabras "[0m[32m[1mnone[0m[32m"[0m                                                 [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Tipos de Espacios Naturales "[0m[32m[1mLUGAR DE IMPORTANCIA COMUNITARIA[0m[32m"[0m [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Provincias "[0m[32m[1mnone[0m[32m"[0m                                              [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Selecciona un tipo de Equipamento "[0m[32m[1mnone[0m[32m"[0m                                   [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Es Accesible "[0m[32m[1mno[0m[32m"[0m                                                          [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Nombre de Espacio Natural "[0m[32m[1mnone[0m[32m"[0m                                           [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar[0m                                                                     [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()[0m
+
+@PPB001_Family001
+Scenario Outline: Cargando la web                                                                   [90m# src/test/resources/PPB001_Family001.feature:29[0m
+  [32mGiven [0m[32mPPB001_Family001 - Cargando el Navegador[0m                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()[0m
+  [32mWhen [0m[32mPPB001_Family001 - Se haya cargado la web[0m                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Aceptar las cookies[0m                                                        [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Limpiar[0m                                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar por palabras "[0m[32m[1mnone[0m[32m"[0m                                                 [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Tipos de Espacios Naturales "[0m[32m[1mLUGAR DE IMPORTANCIA COMUNITARIA[0m[32m"[0m [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Provincias "[0m[32m[1mnone[0m[32m"[0m                                              [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Selecciona un tipo de Equipamento "[0m[32m[1mnone[0m[32m"[0m                                   [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Es Accesible "[0m[32m[1mno[0m[32m"[0m                                                          [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Nombre de Espacio Natural "[0m[32m[1mDUNAS DEL ODIEL[0m[32m"[0m                                [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar[0m                                                                     [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()[0m
+
+@PPB001_Family001
+Scenario Outline: Cargando la web                                                                   [90m# src/test/resources/PPB001_Family001.feature:30[0m
+  [32mGiven [0m[32mPPB001_Family001 - Cargando el Navegador[0m                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()[0m
+  [32mWhen [0m[32mPPB001_Family001 - Se haya cargado la web[0m                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Aceptar las cookies[0m                                                        [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Limpiar[0m                                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar por palabras "[0m[32m[1mnone[0m[32m"[0m                                                 [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Tipos de Espacios Naturales "[0m[32m[1mLUGAR DE IMPORTANCIA COMUNITARIA[0m[32m"[0m [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Provincias "[0m[32m[1mCÁDIZ[0m[32m"[0m                                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Selecciona un tipo de Equipamento "[0m[32m[1mnone[0m[32m"[0m                                   [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Es Accesible "[0m[32m[1mno[0m[32m"[0m                                                          [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Nombre de Espacio Natural "[0m[32m[1mnone[0m[32m"[0m                                           [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar[0m                                                                     [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()[0m
+
+@PPB001_Family001
+Scenario Outline: Cargando la web                                                                   [90m# src/test/resources/PPB001_Family001.feature:31[0m
+  [32mGiven [0m[32mPPB001_Family001 - Cargando el Navegador[0m                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()[0m
+  [32mWhen [0m[32mPPB001_Family001 - Se haya cargado la web[0m                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Aceptar las cookies[0m                                                        [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Limpiar[0m                                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar por palabras "[0m[32m[1mnone[0m[32m"[0m                                                 [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Tipos de Espacios Naturales "[0m[32m[1mLUGAR DE IMPORTANCIA COMUNITARIA[0m[32m"[0m [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Provincias "[0m[32m[1mnone[0m[32m"[0m                                              [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Selecciona un tipo de Equipamento "[0m[32m[1mTODO[0m[32m"[0m                                   [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Es Accesible "[0m[32m[1msi[0m[32m"[0m                                                          [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Nombre de Espacio Natural "[0m[32m[1mnone[0m[32m"[0m                                           [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar[0m                                                                     [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()[0m
+
+@PPB001_Family001
+Scenario Outline: Cargando la web                                                               [90m# src/test/resources/PPB001_Family001.feature:32[0m
+  [32mGiven [0m[32mPPB001_Family001 - Cargando el Navegador[0m                                                [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()[0m
+  [32mWhen [0m[32mPPB001_Family001 - Se haya cargado la web[0m                                                [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Aceptar las cookies[0m                                                    [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Limpiar[0m                                                                [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar por palabras "[0m[32m[1mnone[0m[32m"[0m                                             [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Tipos de Espacios Naturales "[0m[32m[1mSIN ESPACIO NATURAL ASOCIADO[0m[32m"[0m [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Seleccionar Provincias "[0m[32m[1mnone[0m[32m"[0m                                          [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Selecciona un tipo de Equipamento "[0m[32m[1mTODO[0m[32m"[0m                               [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Es Accesible "[0m[32m[1mno[0m[32m"[0m                                                      [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Nombre de Espacio Natural "[0m[32m[1mnone[0m[32m"[0m                                       [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)[0m
+  [32mAnd [0m[32mPPB001_Family001 - Buscar[0m                                                                 [90m# org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()[0m

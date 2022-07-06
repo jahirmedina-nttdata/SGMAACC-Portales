@@ -1,0 +1,1943 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 933000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "PPB001_Family001 - Cargando el Navegador",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-23T02:44:14.033Z",
+        "line": 23,
+        "name": "Cargando la web",
+        "description": "",
+        "id": "ppb001-family001---validar-estado-de-la-web;cargando-la-web;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 46977000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "PPB001_Family001 - Se haya cargado la web",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4112000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "PPB001_Family001 - Aceptar las cookies",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2514000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "PPB001_Family001 - Limpiar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "PPB001_Family001 - Buscar por palabras \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 40
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 832000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "PPB001_Family001 - Seleccionar Tipos de Espacios Naturales \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 60
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "PPB001_Family001 - Seleccionar Provincias \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 43
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6563000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "PPB001_Family001 - Selecciona un tipo de Equipamento \"ÁREA RECREATIVA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ÁREA RECREATIVA",
+                  "offset": 54
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "PPB001_Family001 - Es Accesible \"no\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "no",
+                  "offset": 33
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "PPB001_Family001 - Nombre de Espacio Natural \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 46
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8661000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "PPB001_Family001 - Buscar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PPB001_Family001"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 31000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "PPB001_Family001 - Cargando el Navegador",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-23T02:45:34.027Z",
+        "line": 24,
+        "name": "Cargando la web",
+        "description": "",
+        "id": "ppb001-family001---validar-estado-de-la-web;cargando-la-web;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 35138000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "PPB001_Family001 - Se haya cargado la web",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2568000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "PPB001_Family001 - Aceptar las cookies",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3911000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "PPB001_Family001 - Limpiar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "PPB001_Family001 - Buscar por palabras \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 40
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1299000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "PPB001_Family001 - Seleccionar Tipos de Espacios Naturales \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 60
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5046000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "PPB001_Family001 - Seleccionar Provincias \"ALMERÍA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ALMERÍA",
+                  "offset": 43
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6638000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "PPB001_Family001 - Selecciona un tipo de Equipamento \"ÁREA RECREATIVA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ÁREA RECREATIVA",
+                  "offset": 54
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "PPB001_Family001 - Es Accesible \"no\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "no",
+                  "offset": 33
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "PPB001_Family001 - Nombre de Espacio Natural \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 46
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8945000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "PPB001_Family001 - Buscar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PPB001_Family001"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 31000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "PPB001_Family001 - Cargando el Navegador",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-23T02:46:41.846Z",
+        "line": 25,
+        "name": "Cargando la web",
+        "description": "",
+        "id": "ppb001-family001---validar-estado-de-la-web;cargando-la-web;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 38203000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "PPB001_Family001 - Se haya cargado la web",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1015000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "PPB001_Family001 - Aceptar las cookies",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1792000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "PPB001_Family001 - Limpiar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "PPB001_Family001 - Buscar por palabras \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 40
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2831000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "PPB001_Family001 - Seleccionar Tipos de Espacios Naturales \"GEOPARQUE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GEOPARQUE",
+                  "offset": 60
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "PPB001_Family001 - Seleccionar Provincias \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 43
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10544000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "PPB001_Family001 - Selecciona un tipo de Equipamento \"ÁREA RECREATIVA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ÁREA RECREATIVA",
+                  "offset": 54
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "PPB001_Family001 - Es Accesible \"no\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "no",
+                  "offset": 33
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "PPB001_Family001 - Nombre de Espacio Natural \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 46
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8535000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "PPB001_Family001 - Buscar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PPB001_Family001"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 23000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "PPB001_Family001 - Cargando el Navegador",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-23T02:47:49.977Z",
+        "line": 26,
+        "name": "Cargando la web",
+        "description": "",
+        "id": "ppb001-family001---validar-estado-de-la-web;cargando-la-web;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 34178000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "PPB001_Family001 - Se haya cargado la web",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1109000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "PPB001_Family001 - Aceptar las cookies",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1962000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "PPB001_Family001 - Limpiar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "PPB001_Family001 - Buscar por palabras \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 40
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3630000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "PPB001_Family001 - Seleccionar Tipos de Espacios Naturales \"GEOPARQUE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GEOPARQUE",
+                  "offset": 60
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6132000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "PPB001_Family001 - Seleccionar Provincias \"CÓRDOBA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "CÓRDOBA",
+                  "offset": 43
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8961000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "PPB001_Family001 - Selecciona un tipo de Equipamento \"ÁREA RECREATIVA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ÁREA RECREATIVA",
+                  "offset": 54
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 29000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "PPB001_Family001 - Es Accesible \"no\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "no",
+                  "offset": 33
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "PPB001_Family001 - Nombre de Espacio Natural \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 46
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8634000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "PPB001_Family001 - Buscar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PPB001_Family001"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 15000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "PPB001_Family001 - Cargando el Navegador",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-23T02:49:00.712Z",
+        "line": 27,
+        "name": "Cargando la web",
+        "description": "",
+        "id": "ppb001-family001---validar-estado-de-la-web;cargando-la-web;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 41746000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "PPB001_Family001 - Se haya cargado la web",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2183000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "PPB001_Family001 - Aceptar las cookies",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2804000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "PPB001_Family001 - Limpiar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "PPB001_Family001 - Buscar por palabras \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 40
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2156000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "PPB001_Family001 - Seleccionar Tipos de Espacios Naturales \"LUGAR DE IMPORTANCIA COMUNITARIA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "LUGAR DE IMPORTANCIA COMUNITARIA",
+                  "offset": 60
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5525000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "PPB001_Family001 - Seleccionar Provincias \"CÁDIZ\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "CÁDIZ",
+                  "offset": 43
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7758000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "PPB001_Family001 - Selecciona un tipo de Equipamento \"SENDERO SEÑALIZADO\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SENDERO SEÑALIZADO",
+                  "offset": 54
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "PPB001_Family001 - Es Accesible \"no\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "no",
+                  "offset": 33
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11363000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "PPB001_Family001 - Nombre de Espacio Natural \"BAHÍA DE CÁDIZ\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BAHÍA DE CÁDIZ",
+                  "offset": 46
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7851000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "PPB001_Family001 - Buscar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PPB001_Family001"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 18000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "PPB001_Family001 - Cargando el Navegador",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-23T02:50:24.910Z",
+        "line": 28,
+        "name": "Cargando la web",
+        "description": "",
+        "id": "ppb001-family001---validar-estado-de-la-web;cargando-la-web;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 41706000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "PPB001_Family001 - Se haya cargado la web",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 946000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "PPB001_Family001 - Aceptar las cookies",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1967000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "PPB001_Family001 - Limpiar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "PPB001_Family001 - Buscar por palabras \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 40
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4213000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "PPB001_Family001 - Seleccionar Tipos de Espacios Naturales \"LUGAR DE IMPORTANCIA COMUNITARIA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "LUGAR DE IMPORTANCIA COMUNITARIA",
+                  "offset": 60
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "PPB001_Family001 - Seleccionar Provincias \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 43
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 36000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "PPB001_Family001 - Selecciona un tipo de Equipamento \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 54
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "PPB001_Family001 - Es Accesible \"no\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "no",
+                  "offset": 33
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1081000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "PPB001_Family001 - Nombre de Espacio Natural \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 46
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6834000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "PPB001_Family001 - Buscar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PPB001_Family001"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 12000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "PPB001_Family001 - Cargando el Navegador",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-23T02:51:29.590Z",
+        "line": 29,
+        "name": "Cargando la web",
+        "description": "",
+        "id": "ppb001-family001---validar-estado-de-la-web;cargando-la-web;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 36586000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "PPB001_Family001 - Se haya cargado la web",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 959000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "PPB001_Family001 - Aceptar las cookies",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2129000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "PPB001_Family001 - Limpiar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "PPB001_Family001 - Buscar por palabras \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 40
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2306000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "PPB001_Family001 - Seleccionar Tipos de Espacios Naturales \"LUGAR DE IMPORTANCIA COMUNITARIA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "LUGAR DE IMPORTANCIA COMUNITARIA",
+                  "offset": 60
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "PPB001_Family001 - Seleccionar Provincias \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 43
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1019000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "PPB001_Family001 - Selecciona un tipo de Equipamento \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 54
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "PPB001_Family001 - Es Accesible \"no\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "no",
+                  "offset": 33
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15577000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "PPB001_Family001 - Nombre de Espacio Natural \"DUNAS DEL ODIEL\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DUNAS DEL ODIEL",
+                  "offset": 46
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6883000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "PPB001_Family001 - Buscar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PPB001_Family001"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "PPB001_Family001 - Cargando el Navegador",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-23T02:52:38.044Z",
+        "line": 30,
+        "name": "Cargando la web",
+        "description": "",
+        "id": "ppb001-family001---validar-estado-de-la-web;cargando-la-web;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 40750000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "PPB001_Family001 - Se haya cargado la web",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 836000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "PPB001_Family001 - Aceptar las cookies",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1137000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "PPB001_Family001 - Limpiar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "PPB001_Family001 - Buscar por palabras \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 40
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1767000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "PPB001_Family001 - Seleccionar Tipos de Espacios Naturales \"LUGAR DE IMPORTANCIA COMUNITARIA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "LUGAR DE IMPORTANCIA COMUNITARIA",
+                  "offset": 60
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1638000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "PPB001_Family001 - Seleccionar Provincias \"CÁDIZ\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "CÁDIZ",
+                  "offset": 43
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "PPB001_Family001 - Selecciona un tipo de Equipamento \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 54
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "PPB001_Family001 - Es Accesible \"no\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "no",
+                  "offset": 33
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "PPB001_Family001 - Nombre de Espacio Natural \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 46
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7166000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "PPB001_Family001 - Buscar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PPB001_Family001"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 15000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "PPB001_Family001 - Cargando el Navegador",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-23T02:53:37.712Z",
+        "line": 31,
+        "name": "Cargando la web",
+        "description": "",
+        "id": "ppb001-family001---validar-estado-de-la-web;cargando-la-web;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 36972000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "PPB001_Family001 - Se haya cargado la web",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 972000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "PPB001_Family001 - Aceptar las cookies",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1679000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "PPB001_Family001 - Limpiar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "PPB001_Family001 - Buscar por palabras \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 40
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1795000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "PPB001_Family001 - Seleccionar Tipos de Espacios Naturales \"LUGAR DE IMPORTANCIA COMUNITARIA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "LUGAR DE IMPORTANCIA COMUNITARIA",
+                  "offset": 60
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "PPB001_Family001 - Seleccionar Provincias \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 43
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12941000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "PPB001_Family001 - Selecciona un tipo de Equipamento \"TODO\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TODO",
+                  "offset": 54
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1616000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "PPB001_Family001 - Es Accesible \"si\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "si",
+                  "offset": 33
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "PPB001_Family001 - Nombre de Espacio Natural \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 46
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7633000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "PPB001_Family001 - Buscar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PPB001_Family001"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 26000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "PPB001_Family001 - Cargando el Navegador",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Cargando_El_Post()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-23T02:54:46.038Z",
+        "line": 32,
+        "name": "Cargando la web",
+        "description": "",
+        "id": "ppb001-family001---validar-estado-de-la-web;cargando-la-web;;11",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 38719000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "PPB001_Family001 - Se haya cargado la web",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Se_Haya_Cargado_El_Blog()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1233000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "PPB001_Family001 - Aceptar las cookies",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Aceptar_Cookies()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1460000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "PPB001_Family001 - Limpiar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Limpiar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "PPB001_Family001 - Buscar por palabras \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 40
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar_por_palabras(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5689000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "PPB001_Family001 - Seleccionar Tipos de Espacios Naturales \"SIN ESPACIO NATURAL ASOCIADO\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SIN ESPACIO NATURAL ASOCIADO",
+                  "offset": 60
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Tipos_de_Espacios_Naturales(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4115000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "PPB001_Family001 - Seleccionar Provincias \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 43
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Seleccionar_Provincias(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5696000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "PPB001_Family001 - Selecciona un tipo de Equipamento \"TODO\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TODO",
+                  "offset": 54
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Selecciona_un_tipo_de_Equipamento(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "PPB001_Family001 - Es Accesible \"no\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "no",
+                  "offset": 33
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Es_Accesible(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1338000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "PPB001_Family001 - Nombre de Espacio Natural \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "none",
+                  "offset": 46
+                }
+              ],
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Nombre_de_Espacio_Natural(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6715000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "PPB001_Family001 - Buscar",
+            "match": {
+              "location": "org.medioAmbiente.ppb001.testCasesFamily001.stepdefinition.StepDefinition.Buscar()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PPB001_Family001"
+          }
+        ]
+      }
+    ],
+    "name": "PPB001_Family001 - Validar estado de la Web",
+    "description": "  As un usuario comun\n  I quiero visualizar la web\n  So cargar la web",
+    "id": "ppb001-family001---validar-estado-de-la-web",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/PPB001_Family001.feature",
+    "tags": []
+  }
+]
