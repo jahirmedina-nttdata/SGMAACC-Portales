@@ -12,30 +12,30 @@ public class MyStepDefinition {
     @Steps
     private MyStep myStep;
 
-    @Dado("^CAPF005 - Cargando el Navegador$")
+    @Dado("^PPB001-CAPF005 - Cargando el Navegador$")
     public void Cargando_El_Post() {
 
     }
 
-    @Cuando("^CAPF005 - Se haya cargado la pagina$")
+    @Cuando("^PPB001-CAPF005 - Se haya cargado la pagina$")
     public void Se_Haya_Cargado_El_Blog() throws InterruptedException {
         myStep.cargarPagina();
     }
 
-    @Y("^CAPF005 - Aceptar las cookies")
+    @Y("^PPB001-CAPF005 - Aceptar las cookies")
     public void Aceptar_Cookies() throws InterruptedException {
         myStep.aceptarCookies();
     }
 
-    @Y("^CAPF005 - Clickar en Twitter$")
+    @Y("^PPB001-CAPF005 - Clickar en Twitter$")
     public void Clickar_En_Twitter() throws InterruptedException {
         myStep.clickBtnTwitter();
     }
-    @Y("^CAPF005 - Clickar en Facebook$")
+    @Y("^PPB001-CAPF005 - Clickar en Facebook$")
     public void Clickar_En_Facebook() throws InterruptedException {
         myStep.clickBtnFacebook();
     }
-    @Y("^CAPF005 - Clickar en Instagram$")
+    @Y("^PPB001-CAPF005 - Clickar en Instagram$")
     public void Clickar_En_Instagram() throws InterruptedException {
         myStep.clickBtnInstagram();
     }
