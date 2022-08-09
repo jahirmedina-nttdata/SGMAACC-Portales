@@ -1,15 +1,16 @@
 #language: es
-@PPB002-CAP_F_005
+@PPB002-CAP_F_005 and @skip and @KO
 
-Característica: PPB002-CAP_F_005 - Funcionamiento del componente CLADT21-Listado Varios
+Característica: PPB002-CAP_F_005 - Listado Varios
   Como un usuario comun
-  Quiero acceder al listado varios
-  Para seleccionar un enlace
+  Quiero acceder al portal
+  Para seleccionar enlace
 
-  Escenario: Cargando el Listado Varios
+  Escenario: Cargando el Enlace
     Dado PPB002-CAPF005 - Cargando el Navegador
     Cuando PPB002-CAPF005 - Se haya cargado la web
     Y PPB002-CAPF005 - Aceptar las cookies
-
+    Y PPB002-CAPF005 - Acceder a informacion ambiental Andalucia
+    Y PPB002-CAPF005 - Clickar enlace
 
 
