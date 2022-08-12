@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_075 and @skip and @KO
+@PPB002-CAP_F_075 @skip @KO
 
 Característica: PPB002-CAP_F_075 - Visualizacion de Publicaciones
   Como un usuario comun

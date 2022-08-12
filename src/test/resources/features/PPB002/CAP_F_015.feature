@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_015 and @skip and @KO
+@PPB002-CAP_F_015  @skip @KO
 
 Característica: PPB002-CAP_F_015 - Tambien se puede interesar
   Como un usuario comun

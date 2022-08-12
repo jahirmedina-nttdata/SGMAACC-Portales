@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_095 and @skip and @KO
+@PPB002-CAP_F_095 @skip @KO
 
 Característica: PPB002-CAP_F_095 - Visualizacion detalle Mapa
   Como un usuario comun

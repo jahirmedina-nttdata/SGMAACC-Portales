@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_006 and @skip and @KO
+@PPB002-CAP_F_006 @skip @KO
 
 Característica: PPB002-CAP_F_006 - Contenidos Relacionados
   Como un usuario comun

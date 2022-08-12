@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_096 and @skip and @KO
+@PPB002-CAP_F_096 @skip @KO
 
 Característica: PPB002-CAP_F_096 - Visualizacion detalle indice
   Como un usuario comun

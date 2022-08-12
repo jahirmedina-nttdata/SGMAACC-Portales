@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_020 and @skip and @KO
+@PPB002-CAP_F_020 @skip @KO
 
 Característica: PPB002-CAP_F_020 - Destacado con Descripcion
   Como un usuario comun

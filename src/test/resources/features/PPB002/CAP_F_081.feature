@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_081 and @skip and @KO
+@PPB002-CAP_F_081 @skip @KO
 
 Característica: PPB002-CAP_F_081 - Detalle Normativa
   Como un usuario comun

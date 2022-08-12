@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_026 and @skip and @KO
+@PPB002-CAP_F_026 @skip @KO
 
 Característica: PPB002-CAP_F_026 - Distributiva - Temas
   Como un usuario comun

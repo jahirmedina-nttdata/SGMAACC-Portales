@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_010 and @skip and @KO
+@PPB002-CAP_F_010  @skip @KO
 
 Característica: PPB002-CAP_F_010 - Noticias Actualidad
   Como un usuario comun

@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_021 and @skip and @KO
+@PPB002-CAP_F_021 @skip @KO
 
 Característica: PPB002-CAP_F_021 - Campañas
   Como un usuario comun

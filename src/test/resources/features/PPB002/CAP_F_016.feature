@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_016 and @skip and @KO
+@PPB002-CAP_F_016  @skip @KO
 
 Característica: PPB002-CAP_F_016 - Tiempo Lista lateral
   Como un usuario comun

@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_013 and @skip and @KO
+@PPB002-CAP_F_013  @skip @KO
 
 Característica: PPB002-CAP_F_013 - Buscador Agenda
   Como un usuario comun

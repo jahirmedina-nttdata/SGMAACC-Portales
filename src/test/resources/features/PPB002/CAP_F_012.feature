@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_012 and @skip and @KO
+@PPB002-CAP_F_012  @skip @KO
 
 Característica: PPB002-CAP_F_012 - Destacados lateral portlets
   Como un usuario comun

@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_038 and @skip and @KO
+@PPB002-CAP_F_038 @skip @KO
 
 Característica: PPB002-CAP_F_038 - Buscador por pestaña
   Como un usuario comun

@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_084 and @skip and @KO
+@PPB002-CAP_F_084 @skip @KO
 
 Característica: PPB002-CAP_F_084 - Visualizacion detalle Audio
   Como un usuario comun

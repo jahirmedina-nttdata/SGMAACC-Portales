@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_094 and @skip and @KO
+@PPB002-CAP_F_094 @skip @KO
 
 Característica: PPB002-CAP_F_094 - Visualizacion detalle Entidad
   Como un usuario comun

@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_082 and @skip and @KO
+@PPB002-CAP_F_082 @skip @KO
 
 Característica: PPB002-CAP_F_082 - Visualizacion detalle Galeria
   Como un usuario comun

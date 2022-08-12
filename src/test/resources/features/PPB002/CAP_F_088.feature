@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_088 and @skip and @KO
+@PPB002-CAP_F_088 @skip @KO
 
 Característica: PPB002-CAP_F_088 - Visualizacion detalle Grafico Interactivo
   Como un usuario comun

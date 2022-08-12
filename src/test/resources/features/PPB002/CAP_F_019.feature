@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_019 and @skip and @KO
+@PPB002-CAP_F_019  @skip @KO
 
 Característica: PPB002-CAP_F_019 - Listado varios
   Como un usuario comun

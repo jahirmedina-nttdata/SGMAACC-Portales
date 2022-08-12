@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_087 and @skip and @KO
+@PPB002-CAP_F_087 @skip @KO
 
 Característica: PPB002-CAP_F_087 - Visualizacion detalle Indicador
   Como un usuario comun

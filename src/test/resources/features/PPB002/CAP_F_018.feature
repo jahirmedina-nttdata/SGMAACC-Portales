@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_018 and @skip and @KO
+@PPB002-CAP_F_018  @skip @KO
 
 Característica: PPB002-CAP_F_018 - Carrusel secundario
   Como un usuario comun

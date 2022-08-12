@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_076 and @skip and @KO
+@PPB002-CAP_F_076 @skip @KO
 
 Característica: PPB002-CAP_F_076 - Visualizacion de Galeria/Videos/Audios
   Como un usuario comun

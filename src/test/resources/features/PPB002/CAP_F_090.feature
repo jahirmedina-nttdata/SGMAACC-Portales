@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_090 and @skip and @KO
+@PPB002-CAP_F_090 @skip @KO
 
 Característica: PPB002-CAP_F_090 - Visualizacion detalle Servicio OGC
   Como un usuario comun

@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_043 and @skip and @KO
+@PPB002-CAP_F_043 @skip @KO
 
 Característica: PPB002-CAP_F_043 - Listado de enlaces lateral
   Como un usuario comun

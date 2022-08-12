@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_077 and @skip and @KO
+@PPB002-CAP_F_077 @skip @KO
 
 Característica: PPB002-CAP_F_077 - Visualizacion de Publicaciones Revistas
   Como un usuario comun

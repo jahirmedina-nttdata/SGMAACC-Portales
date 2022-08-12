@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_089 and @skip and @KO
+@PPB002-CAP_F_089 @skip @KO
 
 Característica: PPB002-CAP_F_089 - Visualizacion detalle Tramite
   Como un usuario comun

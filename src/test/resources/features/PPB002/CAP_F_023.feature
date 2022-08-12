@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_023 and @skip and @KO
+@PPB002-CAP_F_023 @skip @KO
 
 Característica: PPB002-CAP_F_023 - Componentes Basicos
   Como un usuario comun

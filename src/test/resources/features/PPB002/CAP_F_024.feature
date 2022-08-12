@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_024 and @skip and @KO
+@PPB002-CAP_F_024 @skip @KO
 
 Característica: PPB002-CAP_F_024 - Componentes Destacados
   Como un usuario comun

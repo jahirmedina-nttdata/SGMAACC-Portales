@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_091 and @skip and @KO
+@PPB002-CAP_F_091 @skip @KO
 
 Característica: PPB002-CAP_F_091 - Visualizacion detalle Estadistica
   Como un usuario comun
