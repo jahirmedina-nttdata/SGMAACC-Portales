@@ -159,27 +159,14 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void clickarGeodiversidad() throws InterruptedException {
-
         page.clickarGeodiversidad();
     }
 
     @net.thucydides.core.annotations.Step
     public void deslizarElemento() throws InterruptedException {
-        //Derecha
-        WebElement draggable = getDriver().findElement(By.xpath("//*[@id=\"slick-slide00\"]/a"));
-        WebElement droppable = getDriver().findElement(By.xpath("//*[@id=\"portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_JfWXEDxiD5s5\"]//div[2]/button[2]"));
-        new Actions(getDriver())
-                .dragAndDrop(draggable, droppable)
-                .perform();
+        getDriver().navigate().back();
         Thread.sleep(2000);
-        //Izquierda
-        WebElement draggable1 = getDriver().findElement(By.xpath("//*[@id=\"slick-slide01\"]/a"));
-        WebElement droppable1 = getDriver().findElement(By.xpath("//*[@id=\"portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_JfWXEDxiD5s5\"]//div[2]/button[1]"));
-
-        new Actions(getDriver())
-                .dragAndDrop(draggable1, droppable1)
-                .perform();
-        Thread.sleep(2000);
+        page.deslizarElemento();
     }
 
     @net.thucydides.core.annotations.Step
@@ -190,7 +177,7 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void ubicarNoticia() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 350)");
+        j.executeScript("window.scrollBy(0, 700)");
 
     }
 

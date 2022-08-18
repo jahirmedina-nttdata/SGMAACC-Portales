@@ -51,11 +51,14 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"card-cladt13-distributivaMasBuscado2\"]//p")
     private WebElementFacade btnservicio;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide08\"]/a/p")
+    @FindBy(xpath = "//*[contains(text(),'Espacios Protegidos')][1]")
     private WebElementFacade btnbiodiversidad;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide01\"]/a")
+    @FindBy(xpath = "//*[contains(text(),'Atmósfera')][1]")
     private WebElementFacade carrusel;
+
+    @FindBy(xpath = "//*[contains(text(),'Atmósfera')][1]")
+    private WebElementFacade carrusel_move;
 
     @FindBy(xpath = "//*[@id=\"slick-slide23\"]/div/a/h5")
     private WebElementFacade noticia;
@@ -118,8 +121,18 @@ public class MyPage extends PageObject {
     }
 
     public void clickarGeodiversidad() throws InterruptedException {
-        btnbiodiversidad.click();
 
+      btnbiodiversidad.click();
+
+    }
+
+    public void deslizarElemento() throws InterruptedException{
+        Actions actions = new Actions(getDriver());
+        actions.dragAndDropBy(carrusel_move,-400,0)
+                .perform();
+        Thread.sleep(1000);
+        actions.dragAndDropBy(carrusel_move,400,0)
+                .perform();
     }
 
     public void clickarElemento()throws InterruptedException {
@@ -139,4 +152,6 @@ public class MyPage extends PageObject {
     public void clickarTodos()throws InterruptedException {
         vertodo.click();
     }
+
+
 }
