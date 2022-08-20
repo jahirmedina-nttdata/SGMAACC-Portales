@@ -12,7 +12,7 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void cargarPagina() throws InterruptedException {
         page.open();
-//        getDriver().manage().window().maximize();
+        getDriver().manage().window().maximize();
     }
 
 

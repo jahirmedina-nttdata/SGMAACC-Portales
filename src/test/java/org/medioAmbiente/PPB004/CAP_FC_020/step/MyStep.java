@@ -23,41 +23,31 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void mostrarNumeracion() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 800)");
-       Thread.sleep(3000);
-
+        page.mostrarNumeracion();
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarPagina() throws InterruptedException{
         page.clickarPagina();
-        Thread.sleep(2000);
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarSiguiente() throws InterruptedException{
         page.clickarSiguiente();
-        Thread.sleep(2000);
-
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarUltimaPag() throws InterruptedException{
         page.clickarUltimaPag();
-        Thread.sleep(2000);
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarAtras() throws InterruptedException {
         page.clickarAtras();
-        Thread.sleep(2000);
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarPrimeraPg() throws InterruptedException{
         page.clickarPrimeraPg();
-        Thread.sleep(2000);
-
     }
 }

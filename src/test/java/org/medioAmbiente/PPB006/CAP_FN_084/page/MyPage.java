@@ -4,6 +4,7 @@ package org.medioAmbiente.PPB006.CAP_FN_084.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -18,7 +19,6 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"layout_93\"]")
     private WebElementFacade SubMenu;
 
-
     public void clickarLeyCambio()  throws InterruptedException{
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Menu)
@@ -26,7 +26,10 @@ public class MyPage extends PageObject {
         actions.moveToElement(SubMenu)
                 .perform();
         SubMenu.click();
-
     }
 
+    public void visualizarLeyCambio()throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 300)");
+    }
 }

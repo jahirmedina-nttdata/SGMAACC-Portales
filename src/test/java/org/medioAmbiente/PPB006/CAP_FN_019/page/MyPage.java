@@ -25,17 +25,11 @@ public class MyPage extends PageObject {
     private WebElementFacade Enlace;
 
 
-
-    public void visualizarCAPFN007()  throws InterruptedException{
-            Apartado.click();
-            Thread.sleep(2000);
-            Enlace.click();
-            getDriver().navigate().back();
-           Thread.sleep(3000);
-           Apartado.click();
-           Thread.sleep(2000);
-           Apartado.click();
-
+    public void visualizarCAPFN007() throws InterruptedException {
+        Apartado.click();
+        Enlace.click();
+        getDriver().navigate().back();
+        Apartado.click();
+        Apartado.click();
     }
-
 }

@@ -29,7 +29,6 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void escriboContraseña(String contraseña) throws InterruptedException {
         page.escriboContraseña(contraseña);
-        Thread.sleep(5000);
     }
 
 }

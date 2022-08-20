@@ -71,18 +71,6 @@ public class MyStep extends ScenarioSteps {
     public void clickarVentanaVisitante() throws InterruptedException {
         page.clickarVentanaVisitante();
 
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana " + getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
     }
 
     @net.thucydides.core.annotations.Step
@@ -146,16 +134,12 @@ public class MyStep extends ScenarioSteps {
     public void filtracionBusquedad() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 300)");
-        Thread.sleep(6000);
-
-    }
+     }
 
     @net.thucydides.core.annotations.Step
     public void ubicarCarrusel() throws InterruptedException {
-
-        Thread.sleep(5000);
-
-    }
+        page.ubicarCarrusel();
+       }
 
     @net.thucydides.core.annotations.Step
     public void clickarGeodiversidad() throws InterruptedException {
@@ -164,8 +148,6 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void deslizarElemento() throws InterruptedException {
-        getDriver().navigate().back();
-        Thread.sleep(2000);
         page.deslizarElemento();
     }
 
@@ -183,43 +165,23 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void deslizarnoticia() throws InterruptedException {
-
-        WebElement draggable = getDriver().findElement(By.xpath("//*[@id=\"slick-slide21\"]//div[2]"));
-        WebElement droppable = getDriver().findElement(By.xpath("//*[@id=\"slick-slide22\"]/figure/img"));
-
-
-        new Actions(getDriver())
-                .dragAndDrop(draggable, droppable)
-                .perform();
-        //Izquierda
-        WebElement draggable1 = getDriver().findElement(By.xpath("//*[@id=\"slick-slide24\"]//div[2]"));
-        WebElement droppable1 = getDriver().findElement(By.xpath("//*[@id=\"slick-slide23\"]/figure/img"));
-
-        new Actions(getDriver())
-                .dragAndDrop(draggable1, droppable1)
-                .perform();
-
+        page.deslizarnoticia();
 
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarNoticia() throws InterruptedException{
         page.clickarNoticia();
-        Thread.sleep(3000);
-
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarCategoriaNoti() throws InterruptedException{
         page.clickarcategoria();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarTodos() throws InterruptedException{
         page.clickarTodos();
-        Thread.sleep(2000);
 
     }
 }

@@ -23,7 +23,7 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void mostrarBuscador() throws InterruptedException {
-       Thread.sleep(5000);
+       page.mostrarBuscador();
     }
 
     @net.thucydides.core.annotations.Step
@@ -33,14 +33,11 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void clickarEnlace() throws InterruptedException{
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 200)");
         page.clickarEnlace();
     }
 
     @net.thucydides.core.annotations.Step
     public void visualizarCAPFN05()throws InterruptedException {
-        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/caza-y-pesca/buscador");
         page.visualizarCAPFN05();
     }
 

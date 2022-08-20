@@ -3,6 +3,7 @@ package org.medioAmbiente.PPB004.CAP_FN_006.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 
@@ -32,6 +33,8 @@ public class MyPage extends PageObject {
 
 
     public void clickarDia() throws InterruptedException{
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
         Dia_Caza.click();
     }
 
@@ -48,6 +51,7 @@ public class MyPage extends PageObject {
     }
 
     public void clickarPesca()throws InterruptedException {
+        getDriver().navigate().back();
         Tab_Pesca.click();
     }
 

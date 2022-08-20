@@ -23,7 +23,6 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void posicionarMenu() throws InterruptedException {
-
        page.posicionarMenu();
     }
 
@@ -31,10 +30,5 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void clickarSubmenu() throws InterruptedException {
         page.clickarSubmenu();
-
-
     }
-
-
-
 }

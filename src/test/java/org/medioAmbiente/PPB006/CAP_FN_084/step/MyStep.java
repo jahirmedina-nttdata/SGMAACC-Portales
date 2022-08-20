@@ -28,11 +28,6 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void visualizarLeyCambio() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 300)");
-        Thread.sleep(2000);
+        page.visualizarLeyCambio();
     }
-
-
-
 }

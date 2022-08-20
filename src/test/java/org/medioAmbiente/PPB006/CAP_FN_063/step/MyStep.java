@@ -25,7 +25,4 @@ public class MyStep extends ScenarioSteps {
     public void clickarJornadas() throws InterruptedException {
         page.clickarJornadas();
     }
-
-
-
 }

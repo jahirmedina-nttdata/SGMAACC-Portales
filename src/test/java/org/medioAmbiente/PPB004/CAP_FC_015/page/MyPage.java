@@ -21,6 +21,7 @@ public class MyPage extends PageObject {
 
     public void navegarContenido()throws InterruptedException  {
         Enlace.click();
+        getDriver().navigate().back();
     }
     public void validarTextFlotante() throws InterruptedException{
         Actions actions = new Actions(getDriver());

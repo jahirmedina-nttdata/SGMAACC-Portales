@@ -35,12 +35,10 @@ public class MyPage extends PageObject {
                 .perform();
         actions.moveToElement(Submenu)
                 .perform();
-
     }
 
     public void clickarSubmenu() throws InterruptedException{
         Submenu.click();
-
     }
 
 

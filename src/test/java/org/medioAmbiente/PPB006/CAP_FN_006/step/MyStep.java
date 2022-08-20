@@ -19,7 +19,6 @@ public class MyStep extends ScenarioSteps {
     public void aceptarCookies() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
-        Thread.sleep(3000);
     }
 
     @net.thucydides.core.annotations.Step
@@ -34,8 +33,6 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void visualizarCAPFC04() throws InterruptedException {
-        Thread.sleep(4000);
+        page.visualizarCAPFC04();
     }
-
-
 }

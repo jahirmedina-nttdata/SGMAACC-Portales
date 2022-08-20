@@ -25,19 +25,15 @@ public class MyStep extends ScenarioSteps {
     public void mostrarMenu() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 350)");
-       Thread.sleep(1000);
-
     }
 
     @net.thucydides.core.annotations.Step
     public void posicionarPuntero()throws InterruptedException {
         page.posicionarPuntero();
-        Thread.sleep(3000);
     }
 
     @net.thucydides.core.annotations.Step
     public void accederPag()throws InterruptedException {
         page.accederPag();
-        Thread.sleep(2000);
     }
 }

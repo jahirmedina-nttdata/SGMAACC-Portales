@@ -22,15 +22,13 @@ public class MyPage extends PageObject {
 
     public void clickarImageJunta() throws InterruptedException {
         Imagen_Junta.click();
-
     }
 
     public void validarJuntaFlotante() throws InterruptedException{
-
+        getDriver().navigate().back();
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Imagen_Junta)
                 .perform();
-
 
         String textflotante = Imagen_Junta.getAttribute("title");
 
@@ -43,15 +41,12 @@ public class MyPage extends PageObject {
 
     public void clickarTextoPortal() throws InterruptedException {
         Texto_Portal.click();
-
     }
 
     public void validarPortalFlotante() throws InterruptedException{
-
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Texto_Portal)
                 .perform();
-
 
         String textflotante = Texto_Portal.getAttribute("title");
 

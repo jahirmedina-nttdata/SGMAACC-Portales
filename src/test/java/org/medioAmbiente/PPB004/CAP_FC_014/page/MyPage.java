@@ -12,16 +12,12 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/caza-y-pesca/caza")
 
 
-
 public class MyPage extends PageObject {
-
 
     @FindBy(xpath = "//*[@id=\"card-cladt13-destacadosConDescripcionTresColumnas1\"]//h2/a")
     private WebElementFacade Enlace;
 
-    public void clickarEnlace()throws InterruptedException  {
-        Enlace.click();
-    }
+
     public void validarTextFlotante() throws InterruptedException{
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Enlace)
@@ -34,6 +30,10 @@ public class MyPage extends PageObject {
         }else{
             Assert.fail("No Coincide el Texto");
         }
+    }
+
+    public void clickarEnlace()throws InterruptedException  {
+        Enlace.click();
     }
 
 

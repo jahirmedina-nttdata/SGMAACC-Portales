@@ -23,12 +23,6 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void visualizarCAPFC010() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 500)");
         page.visualizarCAPFC010();
-        Thread.sleep(2000);
     }
-
-
-
 }

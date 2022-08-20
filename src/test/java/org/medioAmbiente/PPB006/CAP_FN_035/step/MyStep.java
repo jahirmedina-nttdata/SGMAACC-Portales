@@ -25,9 +25,5 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void visualizarCAPFC008() throws InterruptedException {
         page.visualizarCAPFC008();
-        Thread.sleep(2000);
     }
-
-
-
 }

@@ -26,6 +26,4 @@ public class MyStep extends ScenarioSteps {
     public void visualizarCAPFN007() throws InterruptedException {
         page.visualizarCAPFN007();
     }
-
-
 }

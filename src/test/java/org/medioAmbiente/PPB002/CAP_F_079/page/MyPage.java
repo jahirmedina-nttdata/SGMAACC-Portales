@@ -4,6 +4,7 @@ package org.medioAmbiente.PPB002.CAP_F_079.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 
@@ -63,6 +64,7 @@ public class MyPage extends PageObject {
     }
 
     public void visualizarSinSub() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
        txtbusquedad.sendKeys("Taller de astronomía");
         btnbuscar.click();
@@ -71,74 +73,103 @@ public class MyPage extends PageObject {
     }
 
     public void visualizarSinImagen() throws InterruptedException{
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Las flores del Jardín Botánico");
         btnbuscar.click();
         sinimage.click();
+        JavascriptExecutor j = (JavascriptExecutor)getDriver();
+        j.executeScript("window.scrollBy(0, 350)");
 
     }
 
     public void visualizarSinTexto()throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Marismas del Odiel");
         btnbuscar.click();
         sintxt.click();
+        JavascriptExecutor j = (JavascriptExecutor)getDriver();
+        j.executeScript("window.scrollBy(0, 100)");
     }
 
     public void visualizarSinFechaDesde()throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Aprovechamiento pesquero");
         btnbuscar.click();
         sinfechadesde.click();
+        JavascriptExecutor j = (JavascriptExecutor)getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
     }
 
     public void visualizarSinDireccion() throws InterruptedException{
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Día del medio ambiente");
         btnbuscar.click();
         sindirec.click();
+        JavascriptExecutor j = (JavascriptExecutor)getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
     }
 
     public void visualizarSinProvincia() throws InterruptedException{
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Munición ecoalternativa");
         btnbuscar.click();
         sinprovincia.click();
+        JavascriptExecutor j = (JavascriptExecutor)getDriver();
+        j.executeScript("window.scrollBy(0, 350)");
     }
 
     public void visualizarSinPrograma() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Jornada temática");
         btnbuscar.click();
         sinprograma.click();
+        JavascriptExecutor j = (JavascriptExecutor)getDriver();
+        j.executeScript("window.scrollBy(0, 350)");
     }
 
     public void visualizarSinDescarga() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("supervivencia en la naturaleza");
         btnbuscar.click();
         sindescarga.click();
+        JavascriptExecutor j = (JavascriptExecutor)getDriver();
+        j.executeScript("window.scrollBy(0, 600)");
     }
 
     public void vizualizaSinDestinatario()throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Feria de Muestras");
         btnbuscar.click();
         sindestino.click();
+        JavascriptExecutor j = (JavascriptExecutor)getDriver();
+        j.executeScript("window.scrollBy(0, 700)");
     }
 
     public void visualizarSinContacto() throws InterruptedException{
-
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Parque Natural Del Estrecho");
         btnbuscar.click();
         sincontacto.click();
+        JavascriptExecutor j = (JavascriptExecutor)getDriver();
+        j.executeScript("window.scrollBy(0, 700)");
     }
 
     public void visualizarSinEnlace() throws InterruptedException{
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("riqueza botánica");
         btnbuscar.click();
         sinenlace.click();
+        JavascriptExecutor j = (JavascriptExecutor)getDriver();
+        j.executeScript("window.scrollBy(0, 700)");
     }
 }

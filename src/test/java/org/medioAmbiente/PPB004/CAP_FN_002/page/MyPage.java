@@ -28,7 +28,6 @@ public class MyPage extends PageObject {
 
     public void escriboContraseña(String contraseña) throws InterruptedException {
         txtcontraseña.sendKeys(contraseña + "\n");
-
     }
 
 }

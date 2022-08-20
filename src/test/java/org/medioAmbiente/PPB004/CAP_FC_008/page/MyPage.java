@@ -11,4 +11,7 @@ import net.thucydides.core.pages.PageObject;
 
 public class MyPage extends PageObject {
 
+    public void mostrarTexto() throws InterruptedException{
+        waitFor(5).second();
+    }
 }

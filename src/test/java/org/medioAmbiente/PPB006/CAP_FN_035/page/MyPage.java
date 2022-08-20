@@ -23,22 +23,17 @@ public class MyPage extends PageObject {
 
     public void visualizarCAPFC008()  throws InterruptedException{
         Contenido.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
-        Thread.sleep(2000);
 
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Texto_Flotante)
                 .perform();
 
         String flotante = Texto_Flotante.getAttribute("title");
-
         if(flotante.equals("SERVICIO DE ATENCIÓN CIUDADANA")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide el Texto");
         }
-
     }
-
 }

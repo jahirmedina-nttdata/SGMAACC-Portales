@@ -23,13 +23,7 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void visualizarImagen() throws InterruptedException {
-
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 150)");
-        Thread.sleep(6000);
+        page.visualizarImagen();
     }
-
-
-
 
 }

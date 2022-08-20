@@ -4,6 +4,7 @@ package org.medioAmbiente.PPB002.CAP_F_093.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 
@@ -92,6 +93,7 @@ public class MyPage extends PageObject {
     }
 
     public void visualizarSinSub() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Lobezno" + "\n");
         sinSubtitulo.click();
@@ -100,14 +102,18 @@ public class MyPage extends PageObject {
 
 
     public void visualizarSinTexto() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Mediterranean Forests" + "\n");
         sinText.click();
     }
 
     public void visualizarSinTextominiatura() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Recetario de comida" + "\n");
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 250)");
     }
 
 
@@ -115,63 +121,83 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("SIOSE Andalucía" + "\n");
         sinCredito.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 250)");
     }
 
     public void visualizarSinFichero() throws InterruptedException{
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Growing" + "\n");
         sinFichero.click();
     }
 
     public void visualizarSinUrl() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("La Gobernanza" + "\n");
         sinUrl.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 250)");
     }
 
     public void visualizarSinImage() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("emisiones a la atmósfera" + "\n");
         sinImage.click();
     }
 
     public void visualizarSinBliblioteca() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Agenda 21" + "\n");
         sinBliblioteca.click();
     }
 
     public void visualizarSinSerie() throws InterruptedException{
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Aurora" + "\n");
         sinSerie.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 250)");
     }
 
     public void visualizarSinActor() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Jaén Renacentista" + "\n");
         sinautor.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 250)");
     }
 
     public void visualizarSinNotas() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Paisajes de Andalucía" + "\n");
         sinNotas.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 250)");
     }
 
     public void visualizarSinArchivos() throws InterruptedException{
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Geoparque" + "\n");
         sinArchivo.click();
     }
 
     public void visualizarSinDerechos() throws InterruptedException{
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Siente el Bosque" + "\n");
         sinDerecho.click();
     }
 
     public void clickarDercarga() throws InterruptedException{
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Entremijos" + "\n");
         descarga.click();
@@ -179,6 +205,7 @@ public class MyPage extends PageObject {
     }
 
     public void clickarDocument() throws InterruptedException{
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Cádiz y Málaga" + "\n");
         documento.click();
@@ -186,6 +213,9 @@ public class MyPage extends PageObject {
     }
 
     public void clickarUrl() throws InterruptedException{
+        getDriver().navigate().back();
+        Thread.sleep(1000);
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Cádiz y Málaga" + "\n");
         documento.click();
@@ -193,6 +223,7 @@ public class MyPage extends PageObject {
     }
 
     public void clickarInteractivo() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Málaga industrial" + "\n");
         interactivo.click();
@@ -200,6 +231,9 @@ public class MyPage extends PageObject {
     }
 
     public void clickarEnlaceBibli() throws InterruptedException {
+        getDriver().navigate().back();
+        Thread.sleep(1000);
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Nudibranquios" + "\n");
         biblioteca.click();

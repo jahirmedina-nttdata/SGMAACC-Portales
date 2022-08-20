@@ -23,17 +23,12 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void buscadorGeneral() throws InterruptedException {
-       Thread.sleep(8000);
-
+        page.buscadorGeneral();
     }
 
     @net.thucydides.core.annotations.Step
     public void buscadorAvanzado() throws InterruptedException {
         page.buscadorAvanzado();
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 200)");
-        Thread.sleep(3000);
-
     }
 
 

@@ -4,6 +4,7 @@ package org.medioAmbiente.PPB006.CAP_FC_013.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 
@@ -59,27 +60,35 @@ public class MyPage extends PageObject {
 
 
     public void clickarportalAmbiental() throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Portal_Ambiental.click();
+        getDriver().navigate().back();
     }
 
     public void clickarportalCaza() throws InterruptedException{
         Portal_Caza.click();
+        getDriver().navigate().back();
     }
 
     public void clickarVentanVisitante() throws InterruptedException{
         Ventana_Visitante.click();
+        getDriver().navigate().back();
     }
 
     public void clickarCanalAdministracion()throws InterruptedException {
         Canal_Admin.click();
+        getDriver().navigate().back();
     }
 
     public void planAndaluz() throws InterruptedException {
         Plan_Andaluz.click();
+        getDriver().navigate().back();
     }
 
     public void clickarPreguntasFrecuente() throws InterruptedException {
         Preguntas_Frecuentes.click();
+        getDriver().navigate().back();
     }
 
     public void clickarTwitter() throws InterruptedException{
@@ -103,12 +112,16 @@ public class MyPage extends PageObject {
     }
 
     public void clickarMapa() throws InterruptedException{
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Mapa_WEb.click();
+        getDriver().navigate().back();
     }
 
 
     public void clickarAccesibilidad()throws InterruptedException {
         Accesibilidad.click();
+        getDriver().navigate().back();
     }
 
     public void clickarCondicionesUso() throws InterruptedException {

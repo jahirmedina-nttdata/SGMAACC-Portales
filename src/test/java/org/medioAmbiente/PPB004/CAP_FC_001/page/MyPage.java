@@ -26,12 +26,11 @@ public class MyPage extends PageObject {
 
     public void clickarLogoJunta() throws InterruptedException {
         Logo_Junta.click();
-
     }
 
     public void clickarLogoCasaPesca() throws InterruptedException{
+        getDriver().navigate().back();
         Logo_Portal.click();
-
     }
 
     public void visualizarTextFlotante()throws InterruptedException {

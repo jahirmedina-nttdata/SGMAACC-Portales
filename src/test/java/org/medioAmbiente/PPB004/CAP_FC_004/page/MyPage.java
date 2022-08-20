@@ -4,6 +4,7 @@ package org.medioAmbiente.PPB004.CAP_FC_004.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -62,15 +63,22 @@ public class MyPage extends PageObject {
 
 
     public void clickarportalAmbiental() throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 850)");
         Portal_Ambiental.click();
     }
 
     public void clickarportalAndaluz() throws InterruptedException{
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 850)");
         Portal_Andaluz.click();
     }
 
     public void clickarVentanVisitante() throws InterruptedException{
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 850)");
         Ventana_Visitante.click();
+        getDriver().navigate().back();
     }
 
     public void clickarCanalAdministracion()throws InterruptedException {
@@ -78,7 +86,10 @@ public class MyPage extends PageObject {
     }
 
     public void clickarPeriodosHabiles() throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 850)");
         Periodos_Habiles.click();
+        getDriver().navigate().back();
     }
 
     public void clickarBuzon() throws InterruptedException {
@@ -98,6 +109,8 @@ public class MyPage extends PageObject {
     }
 
     public void clikarlogoJunta() throws InterruptedException{
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Logo_Junta.click();
     }
 
@@ -107,14 +120,17 @@ public class MyPage extends PageObject {
 
     public void clickarMapa() throws InterruptedException{
         Mapa_WEb.click();
+        getDriver().navigate().back();
     }
 
     public void clickarProteccionDatos() throws InterruptedException{
         Proteccion_Datos.click();
+        getDriver().navigate().back();
     }
 
     public void clickarAccesibilidad()throws InterruptedException {
         Accesibilidad.click();
+        getDriver().navigate().back();
     }
 
     public void clickarCondicionesUso() throws InterruptedException {

@@ -5,6 +5,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -20,7 +21,6 @@ public class MyPage extends PageObject {
     private WebElementFacade SubMenu;
 
 
-
     public void clickarEvidencias()  throws InterruptedException{
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Menu)
@@ -31,4 +31,8 @@ public class MyPage extends PageObject {
 
     }
 
+    public void visualizarEvidencias()throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
+    }
 }

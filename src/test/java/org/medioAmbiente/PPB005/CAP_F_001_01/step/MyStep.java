@@ -15,6 +15,10 @@ public class MyStep extends ScenarioSteps {
         getDriver().manage().window().maximize();
     }
 
+    public void aceptarCookies() throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("document.querySelector(\"#accept-cookies\").click();");
+    }
 
     public void escribimosUsuario(String usuario) throws InterruptedException {
         page.escribimosUsuario(usuario);
@@ -26,13 +30,6 @@ public class MyStep extends ScenarioSteps {
 
     public void clickAcceder() throws InterruptedException {
         page.clickAcceder();
-        Thread.sleep(3000);
     }
 
-
-    public void aceptarCookies() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("document.querySelector(\"#accept-cookies\").click();");
-        //  j.executeScript("window.scrollBy(0, 700)");
-    }
 }

@@ -5,6 +5,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -22,11 +23,17 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"slick-slide-control13\"]")
     private WebElementFacade Bullet;
 
+    public void visualizarCAPFC004() throws InterruptedException{
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 1000)");
+        waitFor(3).second();
+    }
+
     public void visualizarCAPFC009() throws InterruptedException{
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 300)");
         Contenido.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
-        Thread.sleep(2000);
 
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Contenido)
@@ -39,8 +46,6 @@ public class MyPage extends PageObject {
         }else{
             Assert.fail("No Coincide el Texto");
         }
-        Thread.sleep(2000);
-
         Bullet.click();
         Actions actions1 = new Actions(getDriver());
         actions1.dragAndDropBy(Deslizar,-300,0)

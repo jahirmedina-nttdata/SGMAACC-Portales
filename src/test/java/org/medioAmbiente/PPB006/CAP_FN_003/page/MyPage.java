@@ -5,6 +5,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -85,31 +86,22 @@ public class MyPage extends PageObject {
 
     public void visualizarCAPFC01() throws InterruptedException {
         Imagen_Junta.click();
-        Thread.sleep(3000);
-
         getDriver().navigate().back();
-        Thread.sleep(2000);
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Imagen_Junta)
                 .perform();
-
         String textflotante = Imagen_Junta.getAttribute("title");
-
         if(textflotante.equals("Consejería de Agricultura, Ganadería, Pesca y Desarrollo Sostenible")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide el Texto");
         }
 
-        Thread.sleep(2000);
         Texto_Portal.click();
-
-        Thread.sleep(2000);
 
         Actions actions1 = new Actions(getDriver());
         actions1.moveToElement(Texto_Portal)
                 .perform();
-
 
         String textflotante1 = Texto_Portal.getAttribute("title");
 
@@ -128,53 +120,38 @@ public class MyPage extends PageObject {
         Actions actions1 = new Actions(getDriver());
         actions1.moveToElement(SubMenu)
                 .perform();
-        Thread.sleep(1000);
         SubMenu.click();
-        Thread.sleep(2000);
     }
 
     public void visualizarCAPFC11() throws InterruptedException{
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Miga_Padre)
                 .perform();
-        Thread.sleep(2000);
         Miga_Padre.click();
-        Thread.sleep(2000);
         Miga_Actual.click();
-        Thread.sleep(2000);
         Home.click();
     }
 
     public void visualizarCAPFC13() throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Portal_Ambiental.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
-        Thread.sleep(1000);
 
         Portal_Caza.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
-        Thread.sleep(1000);
 
         Ventana_Visitante.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
-        Thread.sleep(1000);
 
         Canal_Admin.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
-        Thread.sleep(1000);
 
         Plan_Andaluz.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
-        Thread.sleep(1000);
 
         Preguntas_Frecuentes.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
-        Thread.sleep(1000);
 
         Twitter.click();
         Set<String> wnd = getDriver().getWindowHandles();
@@ -247,17 +224,11 @@ public class MyPage extends PageObject {
         getDriver().switchTo().window(prntw);
 
         Mapa_WEb.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
-        Thread.sleep(1000);
 
         Accesibilidad.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
-        Thread.sleep(1000);
 
         Condicion_Uso.click();
-        Thread.sleep(2000);
-
     }
 }

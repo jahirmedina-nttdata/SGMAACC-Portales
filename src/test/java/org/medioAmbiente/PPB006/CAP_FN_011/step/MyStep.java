@@ -24,24 +24,6 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void visualizarInformacion() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 100)");
-        Thread.sleep(2000);
-        j.executeScript("window.scrollBy(0, 200)");
-        Thread.sleep(1000);
-        j.executeScript("window.scrollBy(0, 200)");
-        Thread.sleep(1000);
-        j.executeScript("window.scrollBy(0, 200)");
-        Thread.sleep(1000);
-        j.executeScript("window.scrollBy(0, 200)");
-        Thread.sleep(1000);
-        j.executeScript("window.scrollBy(0, 200)");
-        Thread.sleep(1000);
-        j.executeScript("window.scrollBy(0, 200)");
-        Thread.sleep(1000);
-
-
+        page.visualizarInformacion();
     }
-
-
 }

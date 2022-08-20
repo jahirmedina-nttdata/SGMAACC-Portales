@@ -28,6 +28,5 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void validarUsuario() throws InterruptedException {
-        Thread.sleep(6000);
     }
 }

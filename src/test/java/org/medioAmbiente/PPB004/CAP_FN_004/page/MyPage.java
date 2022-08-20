@@ -3,6 +3,7 @@ package org.medioAmbiente.PPB004.CAP_FN_004.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 
@@ -54,45 +55,42 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_4kAjH4Yf0u8r_pagination\"]/li[1]/a")
     private WebElementFacade btnPrimerapg;
 
-
+    public void mostrarBuscador()throws InterruptedException {
+        waitFor(5).second();
+    }
     public void buscarPortexto()throws InterruptedException {
         txtbuscar.sendKeys("Cinegetico"+ "\n");
     }
 
     public void clickarEnlace() throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
         Enlace.click();
     }
 
     public void visualizarCAPFN05() throws InterruptedException{
+        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/caza-y-pesca/buscador");
         Limpiar.click();
-        Thread.sleep(2000);
         btnBuscar.click();
-        Thread.sleep(2000);
         txtavanzado.sendKeys("Plan"+ "\n");
-        Thread.sleep(2000);
         Limpiar.click();
         Lista_Tema.click();
         Tema_Caza.click();
         btnBuscar.click();
-        Thread.sleep(2000);
         Limpiar.click();
         btnBuscar.click();
         Pag.click();
         Sig.click();
-
     }
 
     public void visualizarCAPFC020() throws InterruptedException {
         Limpiar.click();
         btnBuscar.click();
         btnNro2.click();
-        Thread.sleep(2000);
         btnAdelante.click();
-        Thread.sleep(2000);
         btnUltimapg.click();
         btnAtras.click();
-        Thread.sleep(2000);
         btnPrimerapg.click();
-
     }
+
 }

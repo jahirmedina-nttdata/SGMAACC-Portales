@@ -6,6 +6,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.junit.experimental.theories.Theories;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -96,16 +97,12 @@ public class MyPage extends PageObject {
 
     public void ejecutarFC01() throws InterruptedException{
         Logo_Junta.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
         Logo_Portal.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
-        Thread.sleep(3000);
 
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Flotante).perform();
-
 
         String textflotante = Flotante.getAttribute("title");
 
@@ -126,24 +123,21 @@ public class MyPage extends PageObject {
                 .perform();
         actions.moveToElement(Submenu)
                 .perform();
-        Thread.sleep(1000);
         Submenu.click();
-        Thread.sleep(2000);
-
     }
 
     public void ejecutarFC03()throws InterruptedException {
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Miga_Padre)
                 .perform();
-        Thread.sleep(2000);
         Miga_Padre.click();
-        Thread.sleep(2000);
         Miga.click();
     }
 
     public void ejecutarFC04()throws InterruptedException {
-
+        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/caza-y-pesca/");
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Portal_Ambiental.click();
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
@@ -173,7 +167,6 @@ public class MyPage extends PageObject {
         getDriver().switchTo().window(prntw);
 
         Ventana_Visitante.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
 
         Canal_Admin.click();
@@ -191,7 +184,6 @@ public class MyPage extends PageObject {
         getDriver().switchTo().window(prntw);
 
         Periodos_Habiles.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
 
         Buzon.click();
@@ -279,19 +271,14 @@ public class MyPage extends PageObject {
         getDriver().switchTo().window(prntw);
 
         Mapa_WEb.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
 
         Proteccion_Datos.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
 
         Accesibilidad.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
 
         Condicion_Uso.click();
-        Thread.sleep(2000);
-
     }
 }

@@ -11,11 +11,16 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.WebDriver;
 
+import java.util.Iterator;
+import java.util.Set;
+
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/home")
 
 
 public class MyPage extends PageObject {
+    private String prntw;
+    private String popwnd;
 
     public static WebDriver driver;
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_UrW3Fsd7dldJ_searchTextInputMinimize\"]")
@@ -85,6 +90,18 @@ public class MyPage extends PageObject {
     public void clickarVentanaVisitante()throws InterruptedException {
 
         btnelement.click();
+        Set<String> wnd = getDriver().getWindowHandles();
+        // window handles iteration
+        Iterator<String> i = wnd.iterator();
+        prntw = i.next();
+        popwnd = i.next();
+        // switching pop up window handle id
+        getDriver().switchTo().window(popwnd);
+        System.out.println("Nombre de Pestana " + getDriver().getTitle());
+        // closes pop up window
+        getDriver().close();
+        // switching parent window handle id
+        getDriver().switchTo().window(prntw);
     }
 
     public void clickarMasBuscado() throws InterruptedException {
@@ -120,6 +137,10 @@ public class MyPage extends PageObject {
         btnservicio.click();
     }
 
+    public void ubicarCarrusel() throws InterruptedException {
+        Thread.sleep(3000);
+    }
+
     public void clickarGeodiversidad() throws InterruptedException {
 
       btnbiodiversidad.click();
@@ -127,6 +148,7 @@ public class MyPage extends PageObject {
     }
 
     public void deslizarElemento() throws InterruptedException{
+        getDriver().navigate().back();
         Actions actions = new Actions(getDriver());
         actions.dragAndDropBy(carrusel_move,-400,0)
                 .perform();
@@ -139,6 +161,24 @@ public class MyPage extends PageObject {
         carrusel.click();
     }
 
+
+    public void deslizarnoticia() throws InterruptedException{
+        WebElement draggable = getDriver().findElement(By.xpath("//*[@id=\"slick-slide21\"]//div[2]"));
+        WebElement droppable = getDriver().findElement(By.xpath("//*[@id=\"slick-slide22\"]/figure/img"));
+
+
+        new Actions(getDriver())
+                .dragAndDrop(draggable, droppable)
+                .perform();
+        //Izquierda
+        WebElement draggable1 = getDriver().findElement(By.xpath("//*[@id=\"slick-slide24\"]//div[2]"));
+        WebElement droppable1 = getDriver().findElement(By.xpath("//*[@id=\"slick-slide23\"]/figure/img"));
+
+        new Actions(getDriver())
+                .dragAndDrop(draggable1, droppable1)
+                .perform();
+    }
+
     public void clickarNoticia()throws InterruptedException {
         noticia.click();
     }
@@ -146,7 +186,7 @@ public class MyPage extends PageObject {
     public void clickarcategoria()throws InterruptedException {
         categorianoticia.click();
         textnoticia.sendKeys("El Consejo de Gobierno" + "\n");
-
+        getDriver().navigate().back();
     }
 
     public void clickarTodos()throws InterruptedException {

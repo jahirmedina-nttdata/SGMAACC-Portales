@@ -48,46 +48,38 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_j9REwhPrNDhF_pagination\"]/li[1]/a")
     private WebElementFacade Primera;
 
-
+    public void visualizarBuscador() throws InterruptedException{
+        waitFor(3).second();
+    }
 
     public void accederBuscador() throws InterruptedException{
         getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/buscador");
         Busqueda_Avan.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 100)");
     }
 
     public void visualizarCAPFC0201() throws InterruptedException{
         Texto_Buscar.sendKeys("Huella"+ "\n");
-        Thread.sleep(2000);
         btnLimpiar.click();
         Lista.click();
         Categoria.click();
         btnBuscar.click();
-        Thread.sleep(2000);
         btnLimpiar.click();
-
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Enlace)
                 .perform();
-
         String textflotante = Enlace.getAttribute("title");
-
         if(textflotante.equals("Nuevos visores de adaptación de las costas al cambio climático")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide el Texto");
         }
-
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
-
         Sig.click();
-        Thread.sleep(1000);
         Ultimo.click();
-        Thread.sleep(1000);
         Atras.click();
-        Thread.sleep(1000);
         Primera.click();
-
-
     }
 }

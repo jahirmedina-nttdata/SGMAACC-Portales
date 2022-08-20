@@ -24,15 +24,11 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void seleccionarEnlace() throws InterruptedException {
         page.seleccionarEnlace();
-
-
-
     }
 
     @net.thucydides.core.annotations.Step
     public void posicionarPuntero() throws InterruptedException{
         page.posicionarPuntero();
-        Thread.sleep(5000);
     }
 
     @net.thucydides.core.annotations.Step

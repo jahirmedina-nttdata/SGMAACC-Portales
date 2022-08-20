@@ -9,10 +9,10 @@ Característica: PPB002-CAP_F_017 - Visualizar tiempo en tema
   Escenario: Cargando el Portal Web
     Dado PPB002-CAPF017 - Cargando el Navegador
     Cuando PPB002-CAPF017 - Se haya cargado la web
+    Y PPB002-CAPF017 - Click permitir geolocalizar
     Y PPB002-CAPF017 - Aceptar las cookies
-    Y PPB002-CAPF017 - Click permitir geolocalizacion
     Y PPB002-CAPF017 - Click no permitir geolocalizar
-    Entonces PPB002-CAPF017 - Seleccionar provincia Granada
+    Y PPB002-CAPF017 - Seleccionar provincia
 
 
 

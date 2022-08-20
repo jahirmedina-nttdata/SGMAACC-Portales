@@ -18,7 +18,6 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"layout_126\"]")
     private WebElementFacade SubMenu;
 
-
     public void clickarParticipacion()  throws InterruptedException{
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Menu)
@@ -26,8 +25,5 @@ public class MyPage extends PageObject {
         actions.moveToElement(SubMenu)
                 .perform();
         SubMenu.click();
-
-
     }
-
 }

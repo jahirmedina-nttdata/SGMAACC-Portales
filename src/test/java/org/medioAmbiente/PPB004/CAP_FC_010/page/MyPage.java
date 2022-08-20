@@ -54,6 +54,7 @@ public class MyPage extends PageObject {
     }
     public void clickarAnuncio() throws InterruptedException{
         Detalle_Anuncio.click();
+        getDriver().navigate().back();
     }
 
     public void puntearVertodo() throws InterruptedException{

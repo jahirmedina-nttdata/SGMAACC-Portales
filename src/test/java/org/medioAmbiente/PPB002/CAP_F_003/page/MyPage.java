@@ -6,6 +6,9 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.Iterator;
+import java.util.Set;
+
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/home")
 
@@ -17,7 +20,6 @@ public class MyPage extends PageObject {
 
 
     public void clickarCAGPDS() {
-
         btnconsejeria.click();
     }
 }

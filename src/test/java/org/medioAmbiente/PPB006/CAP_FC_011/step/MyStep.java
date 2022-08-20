@@ -23,29 +23,20 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void visualizarCaminoMiga() throws InterruptedException {
-
-        Thread.sleep(5000);
+        page.visualizarCaminoMiga();
     }
 
 
     @net.thucydides.core.annotations.Step
     public void posicionarPuntero() throws InterruptedException {
         page.posicionarPuntero();
-        Thread.sleep(3000);
-
     }
 
     public void clickarPadre() throws InterruptedException {
         page.clickarPadre();
-        Thread.sleep(2000);
-
     }
 
     public void clickarActual() throws InterruptedException {
         page.clickarActual();
-        Thread.sleep(2000);
-
     }
-
-
 }

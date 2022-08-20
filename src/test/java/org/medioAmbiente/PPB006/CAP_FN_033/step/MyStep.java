@@ -24,11 +24,5 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void clickarMitigacion() throws InterruptedException {
         page.clickarMitigacion();
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 300)");
-        Thread.sleep(4000);
     }
-
-
-
 }

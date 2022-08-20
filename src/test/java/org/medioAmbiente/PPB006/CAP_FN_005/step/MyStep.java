@@ -25,6 +25,4 @@ public class MyStep extends ScenarioSteps {
     public void visualizarMenu() throws InterruptedException {
         page.visualizarMenu();
     }
-
-
 }

@@ -14,7 +14,6 @@ public class MyStep extends ScenarioSteps {
         page.open();
         getDriver().manage().window().maximize();
     }
-
     @net.thucydides.core.annotations.Step
     public void aceptarCookies() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
@@ -23,10 +22,7 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void visualizarDiseño() throws InterruptedException {
-
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 980)");
-        Thread.sleep(6000);
+        page.visualizarDiseño();
     }
 
     @net.thucydides.core.annotations.Step
@@ -36,9 +32,5 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void accederContenido() throws InterruptedException {
         page.accederContenido();
-        Thread.sleep(3000);
-
     }
-
-
 }

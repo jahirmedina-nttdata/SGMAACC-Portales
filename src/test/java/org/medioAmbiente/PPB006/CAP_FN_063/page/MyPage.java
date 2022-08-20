@@ -26,8 +26,5 @@ public class MyPage extends PageObject {
         actions.moveToElement(SubMenu)
                 .perform();
         SubMenu.click();
-
-
     }
-
 }

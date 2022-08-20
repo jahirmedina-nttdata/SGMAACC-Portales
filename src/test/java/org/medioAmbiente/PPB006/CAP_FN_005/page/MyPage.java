@@ -28,9 +28,6 @@ public class MyPage extends PageObject {
         Actions actions1 = new Actions(getDriver());
         actions1.moveToElement(SubMenu)
                 .perform();
-        Thread.sleep(1000);
         SubMenu.click();
-        Thread.sleep(2000);
-
     }
 }

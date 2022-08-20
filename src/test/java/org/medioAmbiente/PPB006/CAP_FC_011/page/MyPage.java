@@ -20,6 +20,9 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"_com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet_breadcrumbs-defaultScreen\"]//ul/li[3]")
     private WebElementFacade Miga_Actual;
 
+    public void visualizarCaminoMiga() throws InterruptedException{
+        waitFor(1).second();
+    }
 
     public void posicionarPuntero() throws InterruptedException {
         Actions actions = new Actions(getDriver());
@@ -34,4 +37,6 @@ public class MyPage extends PageObject {
     public void clickarActual() throws InterruptedException{
         Miga_Actual.click();
     }
+
+
 }

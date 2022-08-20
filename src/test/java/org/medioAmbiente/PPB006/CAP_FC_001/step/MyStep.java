@@ -24,20 +24,16 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void clickarImageJunta() throws InterruptedException {
         page.clickarImageJunta();
-        Thread.sleep(3000);
     }
 
     @net.thucydides.core.annotations.Step
     public void validarJuntaFlotante() throws InterruptedException {
-        getDriver().navigate().back();
-        Thread.sleep(2000);
         page.validarJuntaFlotante();
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarTextoPortal() throws InterruptedException {
         page.clickarTextoPortal();
-        Thread.sleep(3000);
     }
 
     @net.thucydides.core.annotations.Step

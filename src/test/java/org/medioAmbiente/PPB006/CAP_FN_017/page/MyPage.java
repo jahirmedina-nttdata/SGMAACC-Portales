@@ -21,14 +21,8 @@ public class MyPage extends PageObject {
     private WebElementFacade Apartado;
 
 
-
     public void visualizarCAPFN007()  throws InterruptedException{
             Apartado.click();
-            Thread.sleep(2000);
-
             Apartado.click();
-            Thread.sleep(2000);
-
     }
-
 }

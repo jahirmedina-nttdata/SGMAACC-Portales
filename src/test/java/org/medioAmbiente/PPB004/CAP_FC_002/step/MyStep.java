@@ -24,15 +24,11 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void situarCursor() throws InterruptedException {
         page.situarCursor();
-        Thread.sleep(3000);
-
-
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarSubmenu() throws InterruptedException {
         page.clickarSubmenu();
-        Thread.sleep(3000);
     }
 
 

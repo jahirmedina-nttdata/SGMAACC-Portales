@@ -33,12 +33,10 @@ public class MyPage extends PageObject {
         txtusuario.sendKeys(usuario);
     }
 
-
     public void escribimosContraseña(String contraseña) throws InterruptedException {
         txtcontraseña.sendKeys(contraseña);
 
     }
-
 
     public void clickAcceder() throws InterruptedException {
         btnAcceder.click();

@@ -5,6 +5,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -61,6 +62,10 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_Fptb3mEIwaEh_pagination\"]/li[1]/a")
     private WebElementFacade btnPrimerapg;
 
+    public void mostrarBuscador()throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
+    }
 
     public void clickarBuscar() throws InterruptedException {
         btnBuscar.click();
@@ -68,52 +73,40 @@ public class MyPage extends PageObject {
 
     public void buscarPortexto() throws InterruptedException {
         text_Buscar.sendKeys("Solicitud");
-        Thread.sleep(1000);
         btnBuscar.click();
     }
 
     public void buscarPorCateg() throws InterruptedException {
         Limpiar.click();
-        Thread.sleep(1000);
         Lista_Categ.click();
         Colectivo.click();
-        Thread.sleep(1000);
         btnBuscar.click();
 
     }
 
     public void buscarPorPlazo() throws InterruptedException {
         Limpiar.click();
-        Thread.sleep(1000);
         Plazo_Abierto.click();
-        Thread.sleep(1000);
         btnBuscar.click();
     }
 
     public void buscarPorTramitacion() throws InterruptedException {
         Limpiar.click();
-        Thread.sleep(1000);
         Tramitacion.click();
-        Thread.sleep(1000);
         btnBuscar.click();
     }
 
     public void buscarPorTextoPlazo() throws InterruptedException {
         Limpiar.click();
-        Thread.sleep(1000);
         text_Buscar.sendKeys("PLanes");
-        Thread.sleep(1000);
         Plazo_Abierto.click();
-        Thread.sleep(1000);
         btnBuscar.click();
-
     }
 
     public void accederContenido() throws InterruptedException {
         Enlace.click();
-
+        getDriver().navigate().back();
     }
-
 
     public void validarTextFlotante() throws InterruptedException{
         Actions actions = new Actions(getDriver());
@@ -129,24 +122,18 @@ public class MyPage extends PageObject {
         }
     }
 
-
     public void ejecutarcaso() throws InterruptedException {
         Limpiar.click();
-        Thread.sleep(2000);
         btnBuscar.click();
         btnNro2.click();
-        Thread.sleep(2000);
         btnNro1.click();
-        Thread.sleep(1000);
         btnAdelante.click();
-        Thread.sleep(2000);
         btnNro1.click();
         btnUltimapg.click();
-        Thread.sleep(1000);
         btnAtras.click();
-        Thread.sleep(2000);
         btnNro2.click();
-        Thread.sleep(1000);
         btnPrimerapg.click();
     }
+
+
 }

@@ -27,55 +27,37 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void clickarportalAmbiental() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         page.clickarportalAmbiental();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
-
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarportalCaza() throws InterruptedException{
         page.clickarportalCaza();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
-
-
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarVentanVisitante() throws InterruptedException {
         page.clickarVentanVisitante();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarCanalAdministracion() throws InterruptedException {
         page.clickarCanalAdministracion();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
     }
 
     @net.thucydides.core.annotations.Step
     public void planAndaluz() throws InterruptedException {
         page.planAndaluz();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarPreguntasFrecuente() throws InterruptedException{
         page.clickarPreguntasFrecuente();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarTwitter() throws InterruptedException{
         page.clickarTwitter();
-
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
         Iterator<String> i = wnd.iterator();
@@ -93,7 +75,6 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void clickarFacebook() throws InterruptedException{
         page.clickarFacebook();
-
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
         Iterator<String> i = wnd.iterator();
@@ -111,7 +92,6 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void clickarInstagram() throws InterruptedException{
         page.clickarInstagram();
-
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
         Iterator<String> i = wnd.iterator();
@@ -128,9 +108,7 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void clikarlogoJunta() throws InterruptedException{
-
         page.clikarlogoJunta();
-
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
         Iterator<String> i = wnd.iterator();
@@ -148,7 +126,6 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void clickarlogoUnion() throws InterruptedException {
         page.clickarlogoUnion();
-
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
         Iterator<String> i = wnd.iterator();
@@ -165,27 +142,18 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void clickarMapa() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         page.clickarMapa();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarAccesibilidad() throws InterruptedException {
         page.clickarAccesibilidad();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarCondicionesUso() throws InterruptedException {
         page.clickarCondicionesUso();
-        Thread.sleep(2000);
-
     }
-
 }
 
 

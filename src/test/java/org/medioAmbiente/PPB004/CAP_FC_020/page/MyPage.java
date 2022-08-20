@@ -4,6 +4,7 @@ package org.medioAmbiente.PPB004.CAP_FC_020.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -33,16 +34,18 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_Fptb3mEIwaEh_pagination\"]/li[1]/a")
     private WebElementFacade btnPrimerapg;
 
+    public void mostrarNumeracion()throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 800)");
+    }
 
     public void clickarPagina() throws InterruptedException {
         btnNro2.click();
-        Thread.sleep(2000);
         btnNro1.click();
     }
 
     public void clickarSiguiente() throws InterruptedException{
         btnAdelante.click();
-        Thread.sleep(2000);
         btnNro1.click();
     }
 
@@ -52,7 +55,6 @@ public class MyPage extends PageObject {
 
     public void clickarAtras()throws InterruptedException  {
         btnAtras.click();
-        Thread.sleep(2000);
         btnNro2.click();
     }
 

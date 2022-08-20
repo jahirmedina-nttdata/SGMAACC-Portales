@@ -25,9 +25,7 @@ public class MyPage extends PageObject {
     private String popwnd;
 
 
-
-
-    public void clickarEscenariosClimaticos()  throws InterruptedException{
+    public void clickarEscenariosClimaticos() throws InterruptedException {
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Menu)
                 .perform();
@@ -42,12 +40,10 @@ public class MyPage extends PageObject {
         popwnd = i.next();
         // switching pop up window handle id
         getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
+        System.out.println("Nombre de Pestana " + getDriver().getTitle());
         // closes pop up window
         getDriver().close();
         // switching parent window handle id
         getDriver().switchTo().window(prntw);
-
     }
-
 }

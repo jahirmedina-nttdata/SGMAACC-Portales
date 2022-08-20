@@ -5,6 +5,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -22,8 +23,13 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_VTr3UpWfPhP8\"]//div[2]//div[1]/div/h2/a")
     private WebElementFacade Texto_Flotante;
 
+    public void mostrarContenido()throws InterruptedException  {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 500)");
+    }
     public void navegarContenido()throws InterruptedException  {
         Enlace.click();
+        getDriver().navigate().back();
     }
     public void validarTextFlotante() throws InterruptedException{
         Actions actions = new Actions(getDriver());
@@ -38,6 +44,7 @@ public class MyPage extends PageObject {
             Assert.fail("No Coincide el Texto");
         }
     }
+
 
 
 }

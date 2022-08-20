@@ -4,6 +4,7 @@ package org.medioAmbiente.PPB002.CAP_F_080.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 
@@ -48,46 +49,65 @@ public class MyPage extends PageObject {
     }
 
     public void visualizarSinSub() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Realidad esquematizada" + "\n");
         sinSub.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 700)");
 
     }
 
     public void visualizarSinImagen() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Lola Quintana" + "\n");
         sinimage.click();
     }
 
     public void visualizarSinPie() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Emasagra" + "\n");
         sinpieImagen.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 700)");
     }
 
     public void visualizarSinTexto() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Proyección visual" + "\n");
         sintxt.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 700)");
     }
 
 
     public void visualizarSinAutor() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Modelo Digital" + "\n");
         sinautor.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 700)");
     }
 
     public void visualizarSinlocalizacion() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Arrozales Doñana" + "\n");
         sinlocalizacion.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 700)");
     }
 
     public void visualizarSinderecho() throws InterruptedException {
+        getDriver().navigate().back();
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Pinsapar" + "\n");
         sinderechos.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 700)");
     }
 }

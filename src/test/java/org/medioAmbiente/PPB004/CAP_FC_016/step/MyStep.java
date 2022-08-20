@@ -25,24 +25,16 @@ public class MyStep extends ScenarioSteps {
     public void visualizarCarrusel() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 1000)");
-       Thread.sleep(4000);
-
     }
 
     @net.thucydides.core.annotations.Step
     public void navegarContenido()throws InterruptedException {
         page.navegarContenido();
-        Thread.sleep(3000);
-        getDriver().navigate().back();
-        Thread.sleep(2000);
     }
 
     @net.thucydides.core.annotations.Step
     public void validarTextFlotante()throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 100)");
         page.validarTextFlotante();
-        Thread.sleep(4000);
     }
 
     @net.thucydides.core.annotations.Step
@@ -53,13 +45,11 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void deslizarIzquierda() throws InterruptedException {
         page.deslizarIzquierda();
-        Thread.sleep(2000);
     }
 
     @net.thucydides.core.annotations.Step
     public void deslizarDerecha() throws InterruptedException {
         page.deslizarDerecha();
-        Thread.sleep(2000);
     }
 
     @net.thucydides.core.annotations.Step
@@ -70,6 +60,5 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void clickarFIzquierda() throws InterruptedException{
         page.clickarFIzquierda();
-        Thread.sleep(3000);
     }
 }

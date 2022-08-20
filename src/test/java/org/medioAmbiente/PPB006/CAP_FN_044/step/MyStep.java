@@ -28,12 +28,6 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void visualizarSumideros() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 200)");
-        Thread.sleep(4000);
+        page.visualizarSumideros();
     }
-
-
-
-
 }

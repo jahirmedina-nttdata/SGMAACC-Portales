@@ -24,11 +24,5 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void clickarOficinaAndaluza() throws InterruptedException {
         page.clickarOficinaAndaluza();
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 200)");
-        Thread.sleep(4000);
     }
-
-
-
 }

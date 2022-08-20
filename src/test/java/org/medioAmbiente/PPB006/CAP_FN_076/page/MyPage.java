@@ -5,6 +5,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -22,23 +23,20 @@ public class MyPage extends PageObject {
 
 
     public void visualizarCAPFC008()  throws InterruptedException{
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 700)");
         Contenido.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
-        Thread.sleep(2000);
 
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Texto_Flotante)
                 .perform();
 
         String flotante = Texto_Flotante.getAttribute("title");
-
         if(flotante.equals("SERVICIO DE ATENCIÓN CIUDADANA")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide el Texto");
         }
-
     }
-
 }

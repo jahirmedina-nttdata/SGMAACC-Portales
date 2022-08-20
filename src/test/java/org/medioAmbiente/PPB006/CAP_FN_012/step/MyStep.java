@@ -21,16 +21,8 @@ public class MyStep extends ScenarioSteps {
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
     }
 
-
     @net.thucydides.core.annotations.Step
     public void visualizarCAPFC008() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 900)");
-        Thread.sleep(2000);
         page.visualizarCAPFC008();
-
-        Thread.sleep(2000);
     }
-
-
 }

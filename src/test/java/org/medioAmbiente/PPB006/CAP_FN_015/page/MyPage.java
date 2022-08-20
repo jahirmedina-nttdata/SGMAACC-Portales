@@ -21,16 +21,12 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_d5P0Nwe4AkL0\"]//div[2]//div/div[3]/div[1]/a")
     private WebElementFacade Apartado;
 
-
     @FindBy(xpath = "//*[@id=\"collapseService1\"]//div/a")
     private WebElementFacade Enlace;
 
-
-
     public void visualizarCAPFN007()  throws InterruptedException{
-            Apartado.click();
-            Thread.sleep(2000);
-            Enlace.click();
+        Apartado.click();
+        Enlace.click();
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
         Iterator<String> i = wnd.iterator();
@@ -43,11 +39,6 @@ public class MyPage extends PageObject {
         getDriver().close();
         // switching parent window handle id
         getDriver().switchTo().window(prntw);
-
-        Thread.sleep(3000);
         Apartado.click();
-        Thread.sleep(2000);
-
     }
-
 }

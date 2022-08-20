@@ -26,8 +26,6 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void clickarportalAmbiental() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 850)");
         page.clickarportalAmbiental();
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
@@ -41,13 +39,10 @@ public class MyStep extends ScenarioSteps {
         getDriver().close();
         // switching parent window handle id
         getDriver().switchTo().window(prntw);
-
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarportalAndaluz() throws InterruptedException{
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 850)");
         page.clickarportalAndaluz();
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
@@ -61,16 +56,11 @@ public class MyStep extends ScenarioSteps {
         getDriver().close();
         // switching parent window handle id
         getDriver().switchTo().window(prntw);
-
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarVentanVisitante() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 850)");
         page.clickarVentanVisitante();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
     }
 
     @net.thucydides.core.annotations.Step
@@ -92,11 +82,7 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void clickarPeriodosHabiles() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 850)");
         page.clickarPeriodosHabiles();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
     }
 
     @net.thucydides.core.annotations.Step
@@ -119,7 +105,6 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void clickarTwitter() throws InterruptedException{
         page.clickarTwitter();
-
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
         Iterator<String> i = wnd.iterator();
@@ -137,7 +122,6 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void clickarFacebook() throws InterruptedException{
         page.clickarFacebook();
-
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
         Iterator<String> i = wnd.iterator();
@@ -155,7 +139,6 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void clickarInstagram() throws InterruptedException{
         page.clickarInstagram();
-
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
         Iterator<String> i = wnd.iterator();
@@ -172,11 +155,7 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void clikarlogoJunta() throws InterruptedException{
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
-
         page.clikarlogoJunta();
-
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
         Iterator<String> i = wnd.iterator();
@@ -194,7 +173,6 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void clickarlogoUnion() throws InterruptedException {
         page.clickarlogoUnion();
-
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
         Iterator<String> i = wnd.iterator();
@@ -211,32 +189,22 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void clickarMapa() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         page.clickarMapa();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarProteccionDatos() throws InterruptedException {
         page.clickarProteccionDatos();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarAccesibilidad() throws InterruptedException {
         page.clickarAccesibilidad();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarCondicionesUso() throws InterruptedException {
         page.clickarCondicionesUso();
-        Thread.sleep(2000);
-
     }
 
 }

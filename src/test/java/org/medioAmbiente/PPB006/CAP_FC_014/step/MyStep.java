@@ -23,35 +23,21 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void visualizarContenido() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 850)");
-        Thread.sleep(5000);
+        page.visualizarContenido();
     }
 
     @net.thucydides.core.annotations.Step
     public void mostrarAnimacion() throws InterruptedException {
-
        page.mostrarAnimacion();
-       Thread.sleep(2000);
     }
-
 
     @net.thucydides.core.annotations.Step
     public void accederContenido() throws InterruptedException {
         page.accederContenido();
-        Thread.sleep(2000);
-        getDriver().navigate().back();
     }
 
     @net.thucydides.core.annotations.Step
     public void validarFlotante() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 100)");
         page.validarFlotante();
-        Thread.sleep(3000);
-
     }
-
-
-
 }

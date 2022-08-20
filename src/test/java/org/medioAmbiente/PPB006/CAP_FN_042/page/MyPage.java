@@ -5,6 +5,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -18,22 +19,22 @@ public class MyPage extends PageObject {
 
     @FindBy(xpath = "//*[@id=\"card-cladt07-destacados3\"]/div/h2/a")
     private WebElementFacade Flotante;
-    public void visualizarCAPFC010() throws InterruptedException{
+
+    public void visualizarCAPFC010() throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 500)");
         Contenido.click();
-        Thread.sleep(2000);
         getDriver().navigate().back();
+
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Flotante)
                 .perform();
 
-
         String textflotante = Flotante.getAttribute("title");
-
-        if(textflotante.equals("Pacto de los Gobiernos Locales ante el Cambio Climático")) {
+        if (textflotante.equals("Pacto de los Gobiernos Locales ante el Cambio Climático")) {
             Assert.assertTrue(true);
-        }else{
+        } else {
             Assert.fail("No Coincide el Texto");
         }
-
     }
 }

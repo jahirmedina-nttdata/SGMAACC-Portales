@@ -32,7 +32,6 @@ public class MyPage extends PageObject {
         actions.moveToElement(Menu3)
                 .perform();
         Submenu.click();
-
     }
 
 

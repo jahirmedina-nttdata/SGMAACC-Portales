@@ -23,8 +23,7 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void mostrarCarrusel() throws InterruptedException {
-       Thread.sleep(10000);
-
+        page.mostrarCarrusel();
     }
 
 
