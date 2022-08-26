@@ -4,10 +4,13 @@ package org.medioAmbiente.PPB003.CAP_F_045.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import java.awt.*;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -19,13 +22,13 @@ public class MyPage extends PageObject {
     private String prntw;
     private String popwnd;
 
-    @FindBy(xpath = "//a[1][@href='https://www.facebook.com/209785922463897']")
+    @FindBy(xpath = "//a[@href=\"https://www.facebook.com/209785922463897\"][@title=\"Centro de Visitantes Parque Natural Bahía de Cádiz\"]")
     private WebElementFacade Pagina_Facebook;
 
-    @FindBy(xpath = "//*[@class=\"_10b4\"]")
+    @FindBy(xpath = "//div[@class=\"_5pcr userContentWrapper\"][1]")
     private WebElementFacade Scroll;
 
-    @FindBy(xpath = "//*[contains(text(),'Seguir página')]")
+    @FindBy(xpath = "//div[@class=\"pluginConnectButton\"]/a[1]")
     private WebElementFacade Me_Gusta;
 
 
@@ -33,11 +36,8 @@ public class MyPage extends PageObject {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 1000)");
         waitFor(3).second();
-
-        Actions actions = new Actions(getDriver());
-        actions.click(Pagina_Facebook)
-                .perform();
-
+        WebElement iframe = getDriver().findElement(By.xpath( "//iframe[@title=\"fb:page Facebook Social Plugin\"]"));
+        getDriver().switchTo().frame(iframe);
         Pagina_Facebook.click();
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
@@ -54,6 +54,8 @@ public class MyPage extends PageObject {
     }
 
     public void clickarMeGusta() throws InterruptedException {
+        WebElement iframe = getDriver().findElement(By.xpath( "//iframe[@title=\"fb:page Facebook Social Plugin\"]"));
+        getDriver().switchTo().frame(iframe);
         Me_Gusta.click();
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
@@ -69,9 +71,13 @@ public class MyPage extends PageObject {
         getDriver().switchTo().window(prntw);
     }
 
-    public void moverScroll() throws InterruptedException {
+    public void moverScroll() throws InterruptedException{
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
+        WebElement iframe = getDriver().findElement(By.xpath( "//iframe[@title=\"fb:page Facebook Social Plugin\"]"));
+        getDriver().switchTo().frame(iframe);
         Actions actions = new Actions(getDriver());
-        actions.dragAndDropBy(Scroll,0,300)
-                .perform();
+        actions.dragAndDropBy(Scroll,0,-300)
+            .perform();
     }
 }

@@ -5,6 +5,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_045.step.MyStep;
 
+import java.awt.*;
+
 public class MyStepDefinition {
 
     @Steps
@@ -22,7 +24,7 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB003-CAPF045 - Acceder Facebook Centro de Visitantes$")
-    public void Acceder_Facebook_Centro_De_Visitantes()throws InterruptedException {
+    public void Acceder_Facebook_Centro_De_Visitantes() throws InterruptedException{
         myStep.accederPagina();
     }
 
@@ -32,7 +34,7 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB003-CAPF045 - Mover scroll$")
-    public void Mover_Scroll()throws InterruptedException {
+    public void Mover_Scroll() throws InterruptedException {
         myStep.moverScroll();
     }
 }
