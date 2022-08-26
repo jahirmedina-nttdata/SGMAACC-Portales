@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_092 @skip @KO
+@PPB003-CAP_F_092 @bloqued
 
 Característica: PPB003-CAP_F_092 - Incrementar numeros de resultados
   Como un usuario autenticado
@@ -9,6 +9,7 @@ Característica: PPB003-CAP_F_092 - Incrementar numeros de resultados
   Escenario: Cargando Portal de referencia
     Dado PPB003-CAPF092 - Accedo al Navegador
     Y PPB003-CAPF092 - Aceptar Cookies
+    Y PPB003-CAPF092 - Autentico usuario
     Y PPB003-CAPF092 - Acceder al menu vertical Contenido Web
 
 

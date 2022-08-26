@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_071
+@PPB003-CAP_F_071 @bloqued
 
 Característica: PPB003-CAP_F_071 - Autenticacion de usuario
   Como un usuario

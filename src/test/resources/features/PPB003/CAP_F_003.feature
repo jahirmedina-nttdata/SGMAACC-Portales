@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_003 @skip @KO
+@PPB003-CAP_F_003  @bloqued
 
 Característica: PPB003-CAP_F_003 - Codigo RENPA
   Como un usuario
@@ -9,8 +9,8 @@ Característica: PPB003-CAP_F_003 - Codigo RENPA
   Escenario: Cargando portal Ventana Visitante
     Dado PPB003-CAPF003 - Accedo al Navegador
     Y PPB003-CAPF003 - Aceptar Cookies
-    Y PPB003-CAPF003 - Clickar icono
-    Y PPB003-CAPF003 - Clickar editar
+    Y PPB003-CAPF003 - Autentico usuario
+    Y PPB003-CAPF003 - Clickar icono editar
     Entonces PPB003-CAPF003 - Visualiza codigo RENPA
 
 

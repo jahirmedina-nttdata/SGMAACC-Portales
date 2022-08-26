@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_095 @skip @KO
+@PPB003-CAP_F_095 @bloqued
 
 Característica: PPB003-CAP_F_095 - Aumentar numero de resultados
   Como un usuario autenticado
@@ -9,6 +9,7 @@ Característica: PPB003-CAP_F_095 - Aumentar numero de resultados
   Escenario: Cargando Portal de referencia
     Dado PPB003-CAPF095 - Accedo al Navegador
     Y PPB003-CAPF095 - Aceptar Cookies
+    Y PPB003-CAPF095 - Autentico usuario
     Y PPB003-CAPF095 - Acceder al menu Publicaciones
     Y PPB003-CAPF095 - Configurar paginador
     Y PPB003-CAPF095 - Recargar pagina

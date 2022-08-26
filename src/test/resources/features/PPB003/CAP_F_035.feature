@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_035 @skip @KO
+@PPB003-CAP_F_035 @bloqued
 
 Característica: PPB003-CAP_F_035 - Validacion Espacios Naturales
   Como un usuario

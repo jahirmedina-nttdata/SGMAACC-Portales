@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_069
+@PPB003-CAP_F_069 @bloqued
 
 Característica: PPB003-CAP_F_069 - Alta nuevo usuario
   Como un usuario

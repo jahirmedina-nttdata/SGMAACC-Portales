@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_108 @skip @KO
+@PPB003-CAP_F_108 @bloqued
 
 Característica: PPB003-CAP_F_108 - Visualizacion check ocultar actividades especificas
   Como un usuario
