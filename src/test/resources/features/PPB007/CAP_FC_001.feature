@@ -6,11 +6,10 @@ Característica: PPB007-CAP_FC_001 - Visualizacion de Cabecera
   Quiero acceder al portal
   Para visualizar cabecera
 
-  Escenario: Cargando la Web de Referencia
+  Escenario: Cargando cabecera del Portal
     Dado PPB007-CAPFC001 - Accedo al Navegador
-    Y PPB007-CAPFC001 - Aceptar Cookies
-    Y PPB007-CAPFC001 - Clickar imagen Junta Andalucia
-    Y PPB007-CAPFC001 - Clickar texto Portal de Caza
-    Y PPB007-CAPFC001 - Validar texto flotante imagen Junta Andalucia
-
+    Y PPB007-CAPFC001 - Acepto Cookies
+    Y PPB007-CAPFC001 - Clickar en Junta de Andalucia
+    Y PPB007-CAPFC001 - Clickar en Portal de la Caza y Pesca
+    Y PPB007-CAPFC001 - Validar texto flotante de Junta de Andalucia
 
