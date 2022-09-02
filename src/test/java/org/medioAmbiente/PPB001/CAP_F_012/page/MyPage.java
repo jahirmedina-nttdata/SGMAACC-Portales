@@ -7,29 +7,62 @@ import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/actualidad")
+@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/home")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_PubL15h3Rd3R\"]/div/div/div/ul/li[1]/a")
-    private WebElementFacade btnTwitter;
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_UrW3Fsd7dldJ_searchTextInputMinimize\"]")
+    private WebElementFacade Buscador_General;
 
-    @FindBy(xpath = "//*[@id=\"portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_PubL15h3Rd3R\"]/div/div/div/ul/li[2]/a")
-    private WebElementFacade btnFacebook;
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_k4AFpXuQNU0N_searchTextInput\"]")
+    private WebElementFacade Buscador_Especifico;
 
-    @FindBy(xpath = "//*[@id=\"portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_PubL15h3Rd3R\"]/div/div/div/ul/li[3]/a")
-    private WebElementFacade btnInstagram;
+    @FindBy(xpath = "//*[@id=\"evr-formFilters\"]/div[2]/div[2]/label")
+    private WebElementFacade Busqueda_Avanzada;
 
-    public void clickBtnTwitter() throws InterruptedException {
-        btnTwitter.click();
+    @FindBy(xpath = "//*[@id=\"52815710\"]")
+    private WebElementFacade Contenido;
+
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_k4AFpXuQNU0N_startDate\"]")
+    private WebElementFacade Fecha_Incio;
+
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_k4AFpXuQNU0N_endDate\"]")
+    private WebElementFacade Fecha_Fin;
+
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_k4AFpXuQNU0N_searchButton\"]")
+    private WebElementFacade btnBuscar;
+
+    @FindBy(xpath = "//*[@id=\"evr-formFilters\"]/div[2]/button[2]/span")
+    private WebElementFacade btnLimpiar;
+
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_k4AFpXuQNU0N_category0-button\"]")
+    private WebElementFacade Lista_Tema;
+
+    @FindBy(xpath = "//div[contains(text(),'Agua')]")
+    private WebElementFacade Tema;
+
+    public void buscarPorTexto() throws InterruptedException {
+        Buscador_General.sendKeys("Producción Ecológica"+ "\n");
     }
 
-    public void clickBtnFacebook() throws InterruptedException {
-        btnFacebook.click();
+    public void accederContenido() throws InterruptedException {
+        Contenido.click();
     }
-    public void clickBtnInstagram() throws InterruptedException {
-        btnInstagram.click();
+    public void buscarPorFecha() throws InterruptedException {
+        getDriver().navigate().back();
+        Buscador_Especifico.clear();
+        Busqueda_Avanzada.click();
+        Fecha_Incio.sendKeys("01/06/2022");
+        Fecha_Fin.sendKeys("30/06/2022");
+        btnBuscar.click();
+    }
+
+    public void buscarPorTema() throws InterruptedException {
+        btnLimpiar.click();
+        Lista_Tema.click();
+        Tema.click();
+        btnBuscar.click();
     }
 
 }

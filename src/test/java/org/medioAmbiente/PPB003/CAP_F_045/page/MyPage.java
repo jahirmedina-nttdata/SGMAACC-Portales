@@ -35,6 +35,7 @@ public class MyPage extends PageObject {
     public void accederPagina() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 1000)");
+        j.executeScript("window.scrollBy(0, 300)");
         waitFor(3).second();
         WebElement iframe = getDriver().findElement(By.xpath( "//iframe[@title=\"fb:page Facebook Social Plugin\"]"));
         getDriver().switchTo().frame(iframe);
@@ -72,12 +73,9 @@ public class MyPage extends PageObject {
     }
 
     public void moverScroll() throws InterruptedException{
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 200)");
         WebElement iframe = getDriver().findElement(By.xpath( "//iframe[@title=\"fb:page Facebook Social Plugin\"]"));
         getDriver().switchTo().frame(iframe);
-        Actions actions = new Actions(getDriver());
-        actions.dragAndDropBy(Scroll,0,-300)
-            .perform();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
     }
 }

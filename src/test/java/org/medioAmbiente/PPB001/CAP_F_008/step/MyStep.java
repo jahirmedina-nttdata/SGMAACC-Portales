@@ -25,62 +25,16 @@ public class MyStep extends ScenarioSteps {
     public void aceptarCookies() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
-        j.executeScript("window.scrollBy(0, 700)");
+      //  j.executeScript("window.scrollBy(0, 700)");
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickBtnTwitter() throws InterruptedException {
-        myPage.clickBtnTwitter();
-
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
-
+    public void cambiarIdioma() throws InterruptedException {
+        myPage.cambiarIdioma();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickBtnFacebook() throws InterruptedException {
-        myPage.clickBtnFacebook();
-
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
-
-    }
-    @net.thucydides.core.annotations.Step
-    public void clickBtnInstagram() throws InterruptedException {
-        myPage.clickBtnInstagram();
-
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
-
+    public void validarTraduccion() throws InterruptedException {
+        myPage.validarTraduccion();
     }
 }

@@ -1,7 +1,7 @@
 package org.medioAmbiente.PPB001.CAP_F_012.step;
 
 import net.thucydides.core.steps.ScenarioSteps;
-import org.medioAmbiente.PPB001.CAP_F_008.page.MyPage;
+import org.medioAmbiente.PPB001.CAP_F_012.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
 import java.util.Iterator;
@@ -25,62 +25,25 @@ public class MyStep extends ScenarioSteps {
     public void aceptarCookies() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
-        j.executeScript("window.scrollBy(0, 700)");
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickBtnTwitter() throws InterruptedException {
-        myPage.clickBtnTwitter();
-
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
-
+    public void buscarPorTexto() throws InterruptedException {
+        myPage.buscarPorTexto();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickBtnFacebook() throws InterruptedException {
-        myPage.clickBtnFacebook();
-
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
-
+    public void accederContenido() throws InterruptedException {
+        myPage.accederContenido();
     }
+
     @net.thucydides.core.annotations.Step
-    public void clickBtnInstagram() throws InterruptedException {
-        myPage.clickBtnInstagram();
+    public void buscarPorFecha() throws InterruptedException {
+        myPage.buscarPorFecha();
+    }
 
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
-
+    @net.thucydides.core.annotations.Step
+    public void buscarPorTema() throws InterruptedException {
+        myPage.buscarPorTema();
     }
 }
