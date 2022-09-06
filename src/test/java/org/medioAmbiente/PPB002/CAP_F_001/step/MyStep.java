@@ -1,7 +1,7 @@
 package org.medioAmbiente.PPB002.CAP_F_001.step;
 
 import net.thucydides.core.steps.ScenarioSteps;
-import org.medioAmbiente.PPB001.CAP_F_003.page.MyPage;
+import org.medioAmbiente.PPB002.CAP_F_001.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
 
@@ -12,17 +12,26 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void cargarPagina() throws InterruptedException {
         page.open();
-//        getDriver().manage().window().maximize();
+        getDriver().manage().window().maximize();
     }
 
-    @net.thucydides.core.annotations.Step
+
+    public void escribimosUsuario(String usuario) throws InterruptedException {
+        page.escribimosUsuario(usuario);
+    }
+
+    public void escribimosContraseña(String contraseña) throws InterruptedException {
+        page.escribimosContraseña(contraseña);
+    }
+
+    public void clickAcceder() throws InterruptedException {
+        page.clickAcceder();
+    }
+
+
     public void aceptarCookies() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor)getDriver();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void valorarContenido(String xValoracion) throws InterruptedException {
-        page.valorarContenido(xValoracion);
+        //  j.executeScript("window.scrollBy(0, 700)");
     }
 }

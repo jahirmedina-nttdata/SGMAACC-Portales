@@ -4,61 +4,42 @@ package org.medioAmbiente.PPB002.CAP_F_001.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.junit.Assert;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es//medioambiente/portal/web/guest/landing-page-noticia/-/asset_publisher/XYiggbz580YL/content/la-poblacion-del-lince-en-andalucia-crece-un-10-7-y-alcanza-el-record-de-506-ejemplares/20151?categoryVal=")
+@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/c/portal/login")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id='mCSB_1_dragger_vertical']")
-    private WebElementFacade scrollAceptarCookies;
-
     @FindBy(xpath = "//*[@id='accept-cookies']")
     private WebElementFacade btnAceptarCookies;
 
-    @FindBy(xpath = "//*[@id='ahyk_column1_0_averageRatingContent']/a[1]")
-    private WebElementFacade btnValorarContenido1;
+    @FindBy(xpath = "//*[@id='_com_liferay_login_web_portlet_LoginPortlet_login']")
+    private WebElementFacade txtusuario;
 
-    @FindBy(xpath = "//*[@id='ahyk_column1_0_averageRatingContent']/a[2]")
-    private WebElementFacade btnValorarContenido2;
+    @FindBy(xpath = "//*[@id='_com_liferay_login_web_portlet_LoginPortlet_password']")
+    private WebElementFacade txtcontraseña;
 
-    @FindBy(xpath = "//*[@id='ahyk_column1_0_averageRatingContent']/a[3]")
-    private WebElementFacade btnValorarContenido3;
+    @FindBy(xpath = "//*[contains(text(),'Acceder')]")
+    private WebElementFacade btnAcceder;
 
-    @FindBy(xpath = "//*[@id='ahyk_column1_0_averageRatingContent']/a[4]")
-    private WebElementFacade btnValorarContenido4;
+    @FindBy(xpath = "//*[@id=\"slick-slide03\"]/a/p")
+    private WebElementFacade lbl_Portal;
 
-    @FindBy(xpath = "//*[@id='ahyk_column1_0_averageRatingContent']/a[5]")
-    private WebElementFacade btnValorarContenido5;
 
-    public void interacturaScrollAceptarCookies() throws InterruptedException {
-        scrollAceptarCookies.click();
+    public void escribimosUsuario(String usuario) throws InterruptedException {
+        txtusuario.sendKeys(usuario);
     }
 
-    public void aceptarCookies() throws InterruptedException {
-        btnAceptarCookies.click();
+    public void escribimosContraseña(String contraseña) throws InterruptedException {
+        txtcontraseña.sendKeys(contraseña);
+
     }
 
-    public void valorarContenido(String xValoracion) throws InterruptedException {
-        switch (xValoracion) {
-            case "1":
-                btnValorarContenido1.click();
-                break;
-            case "2":
-                btnValorarContenido2.click();
-                break;
-            case "3":
-                btnValorarContenido3.click();
-                break;
-            case "4":
-                btnValorarContenido4.click();
-                break;
-            case "5":
-                btnValorarContenido5.click();
-                break;
-        }
+    public void clickAcceder() throws InterruptedException {
+        btnAcceder.click();
     }
 
 }

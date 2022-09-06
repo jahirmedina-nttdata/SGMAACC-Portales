@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         glue="org.medioAmbiente"
 //        , tags = "(@CAP_F_056 or @CAP_F_057)"
 //                , tags = "(@CAP_F_005 or @CAP_F_013 or @CAP_F_026 or @CAP_F_084)"
-        , tags = "@PPB002-CAP_F_001"
+        , tags = "@PPB003-CAP_F_028"
         )
 
 public class AcceptanceTestSuite {}
