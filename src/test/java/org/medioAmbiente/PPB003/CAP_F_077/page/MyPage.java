@@ -1,6 +1,7 @@
 package org.medioAmbiente.PPB003.CAP_F_077.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
@@ -63,10 +64,11 @@ public class MyPage extends PageObject {
     }
 
     public void clickarCancelar() throws InterruptedException{
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Edita tu visita')]")));
         btnEliminar.click();
         Alert alert = getDriver().switchTo().alert();
         alert.dismiss();
-
     }
 
     public void clickarAceptar() throws InterruptedException {

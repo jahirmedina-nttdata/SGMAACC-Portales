@@ -13,7 +13,7 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void cargarPagina() throws AWTException{
-        page.cargarPagina();
+        page.cargarpagina();
     }
 
 

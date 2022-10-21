@@ -29,4 +29,8 @@ public class MyStep extends ScenarioSteps {
     public void Visualizar_Paginador() throws InterruptedException {
         page.Visualizar_Paginador();
     }
+    @net.thucydides.core.annotations.Step
+    public void seleccionarPaginador() throws InterruptedException {
+        page.seleccionarPaginador();
+    }
 }

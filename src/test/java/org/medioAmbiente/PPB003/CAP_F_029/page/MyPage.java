@@ -4,7 +4,9 @@ package org.medioAmbiente.PPB003.CAP_F_029.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
@@ -18,8 +20,9 @@ public class MyPage extends PageObject {
 
 
     public void visualizarDescargas() throws InterruptedException {
+        WebElement Element = getDriver().findElement(By.xpath("//span[contains(text(),'DESCARGAS')]"));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 1000)");
+        j.executeScript("arguments[0].scrollIntoView();", Element);
     }
 
     public void clickarDescarga() throws InterruptedException {

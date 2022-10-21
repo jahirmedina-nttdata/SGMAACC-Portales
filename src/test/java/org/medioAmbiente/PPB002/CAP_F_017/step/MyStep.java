@@ -18,13 +18,8 @@ public class MyStep extends ScenarioSteps {
 
 
     @net.thucydides.core.annotations.Step
-    public void cargarPagina() throws InterruptedException{
+    public void cargarPagina() throws AWTException{
         page.cargarPagina();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickpermitir() throws AWTException {
-        page.clickpermitir();
     }
 
     @net.thucydides.core.annotations.Step

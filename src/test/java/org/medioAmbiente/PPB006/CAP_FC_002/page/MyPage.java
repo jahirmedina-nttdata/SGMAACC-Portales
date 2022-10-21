@@ -1,13 +1,17 @@
 package org.medioAmbiente.PPB006.CAP_FC_002.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/home")
@@ -49,7 +53,12 @@ public class MyPage extends PageObject {
     private WebElementFacade Primera;
 
     public void visualizarBuscador() throws InterruptedException{
-        waitFor(3).second();
+        List<WebElement> lista = getDriver().findElements(By.xpath("//div[@id=\"searchDiv\"]"));
+        if (lista.size() != 0) {
+            Assert.assertTrue(true);
+        } else {
+            Assert.fail("No existe Busqueda");
+        }
     }
 
     public void accederBuscador() throws InterruptedException{

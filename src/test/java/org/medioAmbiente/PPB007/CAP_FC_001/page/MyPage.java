@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.junit.Assert;
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cae/")
+@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/caza-y-pesca")
 
 
 public class MyPage extends PageObject {
@@ -16,13 +16,20 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_PubL1et3R1zQ\"]//ul/a")
     private WebElementFacade Logo_Junta;
 
+    @FindBy(xpath = "//a[@title=\"PORTAL DE LA CAZA Y PESCA CONTINENTAL EN ANDALUCIA\"]")
+    private WebElementFacade Logo_CazaPesca;
+
 
     public void clickarLogoJunta() throws InterruptedException {
         Logo_Junta.click();
     }
 
-    public void validarTextFlotante() throws InterruptedException {
+    public void clickarLogoPortalCazaPesca() throws InterruptedException {
         getDriver().navigate().back();
+        Logo_CazaPesca.click();
+    }
+
+    public void validarTextFlotante() throws InterruptedException {
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Logo_Junta).perform();
 

@@ -1,12 +1,15 @@
 package org.medioAmbiente.PPB003.CAP_F_073.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
@@ -40,8 +43,10 @@ public class MyPage extends PageObject {
     }
 
     public void validarPermiso() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"evr-photographytitle__title\"]")));
         String validar = Validar_Permiso.getText();
-        if(validar.equals("Visitas")) {
+        if(validar.contains("Visitas")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No se encuentra autenticado");

@@ -7,6 +7,8 @@ import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -25,12 +27,9 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"_cmaotAemetModule_INSTANCE_A3m3T_provincia-button\"]/span[2]")
     private WebElementFacade Listprovincia;
 
-    public void cargarPagina()throws InterruptedException {
+    public void cargarPagina()throws AWTException {
         open();
-        waitFor(5).second();
-    }
-
-    public void clickpermitir() throws AWTException {
+        waitFor(7).second();
         Robot robot = new  Robot();
         try {
             robot.keyPress(KeyEvent.VK_TAB);
@@ -45,21 +44,19 @@ public class MyPage extends PageObject {
         }
     }
 
-    public void aceptarCookies() throws InterruptedException {
 
+    public void aceptarCookies() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
+        waitFor(5).second();
     }
 
     public void clickNopermitir() throws AWTException {
-        getDriver().navigate().refresh();
-        waitFor(6).second();
+        getDriver().close();
+        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/home");
+        waitFor(7).second();
         Robot robot = new  Robot();
         try {
-            robot.keyPress(KeyEvent.VK_TAB);
-            robot.keyRelease(KeyEvent.VK_TAB);
-            robot.keyPress(KeyEvent.VK_TAB);
-            robot.keyRelease(KeyEvent.VK_TAB);
             robot.keyPress(KeyEvent.VK_TAB);
             robot.keyRelease(KeyEvent.VK_TAB);
             robot.keyPress(KeyEvent.VK_ENTER);
@@ -71,8 +68,13 @@ public class MyPage extends PageObject {
     }
 
     public void seleccionarProvin()throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("document.querySelector(\"#accept-cookies\").click();");
         Listprovincia.click();
         provincia.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'°C')]")));
+
     }
 
 

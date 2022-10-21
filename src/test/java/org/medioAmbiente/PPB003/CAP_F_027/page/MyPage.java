@@ -8,6 +8,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.awt.*;
 import java.util.Iterator;
@@ -21,20 +23,24 @@ public class MyPage extends PageObject {
     private String prntw;
     private String popwnd;
 
-    @FindBy(xpath = "//a[@href=\"https://www.facebook.com/EspNaturalDonana/\"][@title=\"Espacio Natural de Doñana\"]")
+    @FindBy(xpath = "//div[@class=\"lfloat\"]//a[contains(text(),'Espacio Natural de Doñana')]")
     private WebElementFacade Pagina_Facebook;
 
     @FindBy(xpath = "//div[@class=\"pluginConnectButton\"]/a[1]")
     private WebElementFacade Me_Gusta;
 
+    @FindBy(xpath = "(//div[contains(text(),'Espacio Natural de Doñana')])[2]")
+    private WebElementFacade Comentar;
+
 
     public void accederPagina() throws InterruptedException {
+        WebElement Element = getDriver().findElement(By.xpath("//span[contains(text(),'Fecha Declaración')]"));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 1000)");
-        j.executeScript("window.scrollBy(0, 700)");
-        waitFor(3).second();
+        j.executeScript("arguments[0].scrollIntoView();", Element);
         WebElement iframe = getDriver().findElement(By.xpath( "//iframe[@title=\"fb:page Facebook Social Plugin\"]"));
         getDriver().switchTo().frame(iframe);
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Seguir página')]")));
         Pagina_Facebook.click();
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
@@ -71,7 +77,6 @@ public class MyPage extends PageObject {
     public void moverScroll() throws InterruptedException  {
         WebElement iframe = getDriver().findElement(By.xpath( "//iframe[@title=\"fb:page Facebook Social Plugin\"]"));
         getDriver().switchTo().frame(iframe);
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 200)");
+        Comentar.click();
     }
 }

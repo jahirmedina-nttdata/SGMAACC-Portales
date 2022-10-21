@@ -1,13 +1,19 @@
 package org.medioAmbiente.PPB003.CAP_F_089.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
@@ -24,7 +30,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_ReTFpDg2eNvQ\"]//section/div//div[3]//figure/a/img")
     private WebElementFacade Pasaporte_Ecoturista;
 
-    @FindBy(xpath = "//*[@id=\"portlet_Pasaportemodule_INSTANCE_PasaporteModule\"]/div/div/div/div/button[1]/a/figure/img")
+    @FindBy(xpath = "//button[@class=\"evr-btn--add-pas\"]")
     private WebElementFacade Añadir_Pasaporte;
 
     @FindBy(xpath = "//button[@id=\"_Pasaportemodule_INSTANCE_vXEUJGmerZqu_delete-5186748\"]")
@@ -44,6 +50,8 @@ public class MyPage extends PageObject {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
         Añadir_Pasaporte.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class=\"evr-btn--delete-pas\"]")));
         Usuario_Contenido.click();
         Pasaporte_Ecoturista.click();
     }
@@ -65,9 +73,9 @@ public class MyPage extends PageObject {
     public void validarPasaporteEliminado() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 50)");
-        String validar = Validar_Eliminado.getText();
-        if (validar.contains("PARQUE NATURAL BAHÍA DE CÁDIZ")) {
-            Assert.fail("No se Añadio");
+        List<WebElement> lista = getDriver().findElements(By.xpath("//span[contains(text(),'PARQUE NATURAL BAHÍA DE CÁDIZ')]"));
+        if (lista.size() != 0) {
+            Assert.fail("No se Eliminó");
         } else {
             Assert.assertTrue(true);
         }

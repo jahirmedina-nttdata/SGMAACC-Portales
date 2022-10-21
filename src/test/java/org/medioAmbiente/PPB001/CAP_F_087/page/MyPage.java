@@ -4,9 +4,12 @@ package org.medioAmbiente.PPB001.CAP_F_087.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/noticias?categoryVal=")
 
@@ -23,17 +26,20 @@ public class MyPage extends PageObject {
     private WebElementFacade Validar_Noticia;
 
     public void seleccionarFicha() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor)getDriver();
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"reflex-grid resultados\"]")));
         Siguiente.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"reflex-grid resultados\"]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, -document.body.scrollHeight)");
-        waitFor(2).second();
         Noticia_Andalucia.click();
     }
 
     public void validarNoticia() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Andalucía, tierra de acogida de quebrantahuesos')]")));
         String validar = Validar_Noticia.getText();
-        if(validar.equals("Andalucía, tierra de acogida de quebrantahuesos")) {
+        if(validar.contains("Andalucía, tierra de acogida de quebrantahuesos")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide la Noticia");

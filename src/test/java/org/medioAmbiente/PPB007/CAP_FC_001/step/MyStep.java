@@ -26,6 +26,11 @@ public class MyStep extends ScenarioSteps {
         page.clickarLogoJunta();
     }
 
+    @net.thucydides.core.annotations.Step
+    public void clickarLogoPortalCazaPesca() throws InterruptedException {
+        page.clickarLogoPortalCazaPesca();
+    }
+
 
     @net.thucydides.core.annotations.Step
     public void validarTextFlotante() throws InterruptedException{

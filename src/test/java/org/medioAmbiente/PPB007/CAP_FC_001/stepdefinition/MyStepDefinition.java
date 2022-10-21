@@ -29,7 +29,7 @@ public class MyStepDefinition {
 
     @Y("^PPB007-CAPFC001 - Clickar en Portal de la Caza y Pesca$")
     public void Clickar_En_Portal_De_La_Caza_Y_Pesca()throws InterruptedException {
-
+        myStep.clickarLogoPortalCazaPesca();
     }
 
     @Y("^PPB007-CAPFC001 - Validar texto flotante de Junta de Andalucia$")

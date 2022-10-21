@@ -4,8 +4,11 @@ package org.medioAmbiente.PPB001.CAP_F_107.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/publicaciones?categoryVal=")
 
@@ -29,104 +32,103 @@ public class MyPage extends PageObject {
     private WebElementFacade Primera_Pagina;
 
     public void seleccionarPaginador() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Paginador.click();
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
     }
 
     public void clickarSiguientePag() throws InterruptedException {
-        waitFor(2).second();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Siguiente.click();
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
     }
 
     public void clickarSiguienteUltimaPag() throws InterruptedException {
-        waitFor(2).second();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Ultima_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Siguiente.click();
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
     }
 
     public void clickarAnterior() throws InterruptedException {
-        waitFor(2).second();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Anterior.click();
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
+
     }
 
     public void clickarAnteriorPrimeraPag() throws InterruptedException {
-        waitFor(2).second();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Primera_Pagina.click();
-        waitFor(2).second();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_vmsqjALduDnx_resultsDiv\"]//table/tbody/tr[1]")));
         Anterior.click();
     }
 

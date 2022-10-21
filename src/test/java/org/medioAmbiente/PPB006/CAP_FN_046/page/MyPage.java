@@ -1,11 +1,13 @@
 package org.medioAmbiente.PPB006.CAP_FN_046.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -14,12 +16,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"slick-slide00\"]/a")
+    @FindBy(xpath = "//a[@title=\"Inventario Andaluz de sumideros de dióxido de carbono\"]")
     private WebElementFacade Contenido;
 
     public void visualizarCAPFC010() throws InterruptedException {
+        WebElement Element = getDriver().findElement(By.xpath("//h1[@id=\"evr-menu-block__title-principal\"]"));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 500)");
+        j.executeScript("arguments[0].scrollIntoView();", Element);
         Contenido.click();
         getDriver().navigate().back();
 

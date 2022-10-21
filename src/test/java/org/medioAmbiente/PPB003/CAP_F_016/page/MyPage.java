@@ -20,7 +20,7 @@ import java.util.Set;
 public class MyPage extends PageObject {
     private String prntw;
     private String popwnd;
-    @FindBy(xpath = "//*[@id=\"_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_Jlbxh2qB3NwR_tabs177658065TabsId\"]")
+    @FindBy(xpath = "//li[@id=\"_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_Jlbxh2qB3NwR_tabs177658065TabsId\"]")
     private WebElementFacade Pestaña_Mapa;
 
     @FindBy(xpath = "//*[@id=\"mapjs\"]/div/canvas")
@@ -38,7 +38,7 @@ public class MyPage extends PageObject {
     public void clickarIconoObservatorio() throws InterruptedException {
         WebElement iframe = getDriver().findElement(By.xpath("//*[@id=\"ifr\"]"));
         getDriver().switchTo().frame(iframe);
-        waitFor(15).second();
+        waitFor(20).second();
         Actions actions = new Actions(getDriver());
         actions.click(Observatorio)
                 .perform();

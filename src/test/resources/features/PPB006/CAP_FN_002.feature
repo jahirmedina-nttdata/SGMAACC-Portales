@@ -1,5 +1,5 @@
 #language: es
-@PPB006-CAP_FN_002
+@PPB006-CAP_FN_002 @bloqued
 
 Característica: PPB006-CAP_FN_002 - Acceso al Portal de Referencia
   Como un usuario comun

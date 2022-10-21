@@ -25,14 +25,12 @@ public class MyPage extends PageObject {
 
 
     public void desplazarAlApartado() throws InterruptedException {
+        WebElement Element = getDriver().findElement(By.xpath("//span[contains(text(),'Ampliar información meteorológica')]"));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 1000)");
-        j.executeScript("window.scrollBy(0, 1000)");
+        j.executeScript("arguments[0].scrollIntoView();", Element);
     }
 
     public void clickarFicha() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 200)");
         Disfruta_Playas.click();
     }
 

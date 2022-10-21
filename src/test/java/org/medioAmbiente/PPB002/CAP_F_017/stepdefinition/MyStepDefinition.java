@@ -21,13 +21,12 @@ public class MyStepDefinition {
     }
 
     @Cuando("^PPB002-CAPF017 - Se haya cargado la web$")
-    public void Se_Haya_Cargado_LaWeb() throws InterruptedException {
+    public void Se_Haya_Cargado_LaWeb() throws AWTException {
         myStep.cargarPagina();
     }
 
     @Y("^PPB002-CAPF017 - Click permitir geolocalizar$")
     public void Click_Permitir_Geolocalizar() throws AWTException{
-        myStep.clickpermitir();
     }
 
     @Y("^PPB002-CAPF017 - Aceptar las cookies$")

@@ -5,8 +5,11 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/buscador-de-espacios-naturales-y-equipamientos?categoryVal=")
 
@@ -41,39 +44,40 @@ public class MyPage extends PageObject {
         Tipo_Equipamiento.click();
         Area_Recreativa.click();
         btnBuscar.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
         Pagina_5.click();
     }
 
     public void clickarSiguientePag() throws InterruptedException {
-        waitFor(2).second();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
         Siguiente.click();
     }
 
     public void clickarSiguienteUltimaPag() throws InterruptedException {
-        waitFor(2).second();
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
         Pagina_19.click();
-        Pagina_19.click();
-        Pagina_19.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
         Siguiente.click();
     }
 
     public void clickarAnterior() throws InterruptedException {
-        waitFor(2).second();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Anterior.click();
     }
 
     public void clickarAnteriorPrimeraPag() throws InterruptedException {
-        waitFor(2).second();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Pagina_1.click();
-        Pagina_1.click();
-        Pagina_1.click();
-        Pagina_1.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
         Anterior.click();
     }
 

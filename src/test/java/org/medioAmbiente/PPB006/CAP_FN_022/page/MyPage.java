@@ -1,10 +1,12 @@
 package org.medioAmbiente.PPB006.CAP_FN_022.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.junit.Assert;
@@ -14,15 +16,16 @@ import org.junit.Assert;
 
 
 public class MyPage extends PageObject {
-    @FindBy(xpath = "//*[@id=\"slick-slide00\"]/a/div/div")
+    @FindBy(xpath = "//a[@title=\"Buenas prácticas en casa, en la comunidad de vecinos y el barrio\"]")
     private WebElementFacade Enlace;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide01\"]/a")
+    @FindBy(xpath = "//a[@title=\"Buenas prácticas en el puesto de trabajo y en el aula\"]")
     private WebElementFacade Flotante;
 
     public void visualizarCAPFC004() throws InterruptedException{
+        WebElement Element = getDriver().findElement(By.xpath("//h2[contains(text(),'¿Qué puedes hacer tú?')]"));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 700)");
+        j.executeScript("arguments[0].scrollIntoView();", Element);
     }
 
     public void visualizarCAPFC009()  throws InterruptedException{

@@ -5,8 +5,14 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/avisos?categoryVal=")
 
@@ -35,10 +41,13 @@ public class MyPage extends PageObject {
     }
 
     public void validarFicha() throws InterruptedException {
-         String ficha = Validar_Ficha.getText();
-        String cantidad = Resultado_Cantidad.getText();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"reflex-grid resultados\"]")));
+        List<WebElement> lista = getDriver().findElements(By.xpath("//div[@class=\"reflex-grid resultados\"]"));
+        String ficha = Validar_Ficha.getText();
+        //String cantidad = Resultado_Cantidad.getText();
 
-        if(ficha.contains("ZONA") && cantidad.contains("4")) {
+        if(ficha.contains("Zona") && lista.size() != 0) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No realiza busqueda");

@@ -1,6 +1,7 @@
 package org.medioAmbiente.PPB006.CAP_FN_006.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
@@ -8,6 +9,8 @@ import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/home")
@@ -57,12 +60,15 @@ public class MyPage extends PageObject {
         j.executeScript("window.scrollBy(0, 100)");
 
         Texto_Buscar.sendKeys("Huella"+ "\n");
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class=\"evr-form-results__item-title\"])[1]")));
         btnLimpiar.click();
         Lista.click();
         Categoria.click();
         btnBuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class=\"evr-form-results__item-title\"])[1]")));
         btnLimpiar.click();
-
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class=\"evr-form-results__item-title\"])[1]")));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Enlace)
                 .perform();
@@ -73,12 +79,13 @@ public class MyPage extends PageObject {
         }else{
             Assert.fail("No Coincide el Texto");
         }
-
-        JavascriptExecutor j1 = (JavascriptExecutor) getDriver();
-        j1.executeScript("window.scrollBy(0, document.body.scrollHeight)");
+        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Sig.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class=\"evr-form-results__item-title\"])[1]")));
         Ultimo.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class=\"evr-form-results__item-title\"])[1]")));
         Atras.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class=\"evr-form-results__item-title\"])[1]")));
         Primera.click();
     }
 

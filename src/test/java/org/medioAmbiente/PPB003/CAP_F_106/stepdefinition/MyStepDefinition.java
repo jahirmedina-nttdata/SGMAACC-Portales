@@ -32,6 +32,7 @@ public class MyStepDefinition {
 
     @Y("^PPB003-CAPF106 - Seleccionar paginador$")
     public void Seleccionar_Paginador()throws InterruptedException {
+        myStep.seleccionarPaginador();
     }
 }
 
