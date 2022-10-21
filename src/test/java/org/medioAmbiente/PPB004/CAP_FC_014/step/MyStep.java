@@ -23,8 +23,7 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void mostrarDestacamos() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 700)");
+        page.mostrarDestacamos();
     }
 
     @net.thucydides.core.annotations.Step

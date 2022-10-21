@@ -6,6 +6,8 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/guest/buscador-imagenes?categoryVal=")
@@ -50,8 +52,11 @@ public class MyPage extends PageObject {
 
     public void visualizarSinSub() throws InterruptedException {
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Realidad esquematizada" + "\n");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinSub.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 700)");
@@ -60,15 +65,21 @@ public class MyPage extends PageObject {
 
     public void visualizarSinImagen() throws InterruptedException {
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Lola Quintana" + "\n");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinimage.click();
     }
 
     public void visualizarSinPie() throws InterruptedException {
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Emasagra" + "\n");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinpieImagen.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 700)");
@@ -76,8 +87,11 @@ public class MyPage extends PageObject {
 
     public void visualizarSinTexto() throws InterruptedException {
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Proyección visual" + "\n");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sintxt.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 700)");
@@ -86,8 +100,11 @@ public class MyPage extends PageObject {
 
     public void visualizarSinAutor() throws InterruptedException {
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Modelo Digital" + "\n");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinautor.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 700)");
@@ -95,8 +112,11 @@ public class MyPage extends PageObject {
 
     public void visualizarSinlocalizacion() throws InterruptedException {
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Arrozales Doñana" + "\n");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinlocalizacion.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 700)");
@@ -104,8 +124,11 @@ public class MyPage extends PageObject {
 
     public void visualizarSinderecho() throws InterruptedException {
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Pinsapar" + "\n");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinderechos.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 700)");

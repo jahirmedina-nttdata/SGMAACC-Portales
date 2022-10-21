@@ -1,11 +1,14 @@
 package org.medioAmbiente.PPB004.CAP_FC_010.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/caza-y-pesca/")
@@ -14,19 +17,19 @@ import org.openqa.selenium.support.FindBy;
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"slick-slide01\"]")
+    @FindBy(xpath = "(//div[@class=\"slick-list draggable\"])[2]")
     private WebElementFacade anuncio;
 
     @FindBy(xpath = "//*[@id=\"slick-slide03\"]")
     private WebElementFacade anuncio2;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide00\"]")
+    @FindBy(xpath = "(//a[contains(text(),'Publicada en BOJA la resolución')])[3]")
     private WebElementFacade Puntero;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide-control00\"]")
+    @FindBy(xpath = "//button[contains(text(),'4')]")
     private WebElementFacade Bullets;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide02\"]/div[1]/a")
+    @FindBy(xpath = "(//a[contains(text(),'Publicada en BOJA la resolución')])[3]")
     private WebElementFacade Detalle_Anuncio;
 
     @FindBy(xpath = "//*[@id=\"portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_WhzMUAwWgzEi\"]//div[2]//a")
@@ -53,6 +56,8 @@ public class MyPage extends PageObject {
                 .perform();
     }
     public void clickarAnuncio() throws InterruptedException{
+        WebDriverWait wait = new WebDriverWait(getDriver(), 60);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[contains(text(),'Publicada en BOJA la resolución')])[3]")));
         Detalle_Anuncio.click();
         getDriver().navigate().back();
     }

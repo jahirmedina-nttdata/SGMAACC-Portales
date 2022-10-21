@@ -68,9 +68,12 @@ public class MyPage extends PageObject {
 
     public void visualizarSinSub() throws InterruptedException {
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
        txtbusquedad.sendKeys("Taller de astronomía");
         btnbuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinSub.click();
 
     }
@@ -82,6 +85,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Las flores del Jardín Botánico");
         btnbuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinimage.click();
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("window.scrollBy(0, 350)");
@@ -90,9 +94,12 @@ public class MyPage extends PageObject {
 
     public void visualizarSinTexto()throws InterruptedException {
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Marismas del Odiel");
         btnbuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sintxt.click();
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("window.scrollBy(0, 100)");
@@ -100,9 +107,12 @@ public class MyPage extends PageObject {
 
     public void visualizarSinFechaDesde()throws InterruptedException {
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Aprovechamiento pesquero");
         btnbuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinfechadesde.click();
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("window.scrollBy(0, 200)");
@@ -110,9 +120,12 @@ public class MyPage extends PageObject {
 
     public void visualizarSinDireccion() throws InterruptedException{
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Día del medio ambiente");
         btnbuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sindirec.click();
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("window.scrollBy(0, 200)");
@@ -120,9 +133,12 @@ public class MyPage extends PageObject {
 
     public void visualizarSinProvincia() throws InterruptedException{
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Munición ecoalternativa");
         btnbuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinprovincia.click();
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("window.scrollBy(0, 350)");
@@ -130,9 +146,12 @@ public class MyPage extends PageObject {
 
     public void visualizarSinPrograma() throws InterruptedException {
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Jornada temática");
         btnbuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinprograma.click();
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("window.scrollBy(0, 350)");
@@ -140,9 +159,12 @@ public class MyPage extends PageObject {
 
     public void visualizarSinDescarga() throws InterruptedException {
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("supervivencia en la naturaleza");
         btnbuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sindescarga.click();
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("window.scrollBy(0, 600)");
@@ -150,9 +172,12 @@ public class MyPage extends PageObject {
 
     public void vizualizaSinDestinatario()throws InterruptedException {
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Feria de Muestras");
         btnbuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sindestino.click();
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("window.scrollBy(0, 700)");
@@ -160,9 +185,12 @@ public class MyPage extends PageObject {
 
     public void visualizarSinContacto() throws InterruptedException{
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Parque Natural Del Estrecho");
         btnbuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sincontacto.click();
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("window.scrollBy(0, 700)");
@@ -170,9 +198,12 @@ public class MyPage extends PageObject {
 
     public void visualizarSinEnlace() throws InterruptedException{
         getDriver().navigate().back();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
         txtbusquedad.sendKeys("riqueza botánica");
         btnbuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinenlace.click();
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("window.scrollBy(0, 700)");

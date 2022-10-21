@@ -1,6 +1,7 @@
 package org.medioAmbiente.PPB004.CAP_FC_016.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
@@ -8,6 +9,8 @@ import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/caza-y-pesca/especies-cinegéticas")
@@ -17,13 +20,13 @@ import org.openqa.selenium.support.FindBy;
 public class MyPage extends PageObject {
 
 
-    @FindBy(xpath = "//*[@id=\"slick-slide01\"]/a")
+    @FindBy(xpath = "//a[@title=\"Delimitación cartográfica del Arruí\"]")
     private WebElementFacade Contenido;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide-control00\"]")
+    @FindBy(xpath = "//button[contains(text(),'2')]")
     private WebElementFacade Bullet;
 
-    @FindBy(xpath = "//*[@id=\"slick-slide02\"]")
+    @FindBy(xpath = "//div[@class=\"slick-list draggable\"]")
     private WebElementFacade Card;
 
     @FindBy(xpath = "//*[@id=\"portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_SDFlr2QMFIzO\"]//div[2]/button[2]")
@@ -38,13 +41,14 @@ public class MyPage extends PageObject {
     public void validarTextFlotante() throws InterruptedException{
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 100)");
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title=\"Delimitación cartográfica del Arruí\"]")));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Contenido)
                 .perform();
-        Thread.sleep(2000);
         String textflotante = Contenido.getAttribute("title");
 
-        if(textflotante.equals("Emergencia cinegética")) {
+        if(textflotante.equals("Delimitación cartográfica del Arruí")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide el Texto");

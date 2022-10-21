@@ -1,6 +1,7 @@
 package org.medioAmbiente.PPB004.CAP_FC_018.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
@@ -8,6 +9,8 @@ import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 @DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/caza-y-pesca/trámites")
@@ -41,7 +44,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"14625020\"]")
     private WebElementFacade Enlace;
 
-    @FindBy(xpath = "//*[@id=\"18820764\"]")
+    @FindBy(xpath = "//a[@title=\"Comunicación de cesión temporal o definitiva del ave de cetrería\"]")
     private WebElementFacade Flotante;
 
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_Fptb3mEIwaEh_pagination\"]/li[4]/a")
@@ -72,11 +75,15 @@ public class MyPage extends PageObject {
     }
 
     public void buscarPortexto() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         text_Buscar.sendKeys("Solicitud");
         btnBuscar.click();
     }
 
     public void buscarPorCateg() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Limpiar.click();
         Lista_Categ.click();
         Colectivo.click();
@@ -85,18 +92,24 @@ public class MyPage extends PageObject {
     }
 
     public void buscarPorPlazo() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Limpiar.click();
         Plazo_Abierto.click();
         btnBuscar.click();
     }
 
     public void buscarPorTramitacion() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Limpiar.click();
         Tramitacion.click();
         btnBuscar.click();
     }
 
     public void buscarPorTextoPlazo() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Limpiar.click();
         text_Buscar.sendKeys("PLanes");
         Plazo_Abierto.click();
@@ -104,18 +117,26 @@ public class MyPage extends PageObject {
     }
 
     public void accederContenido() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Enlace.click();
         getDriver().navigate().back();
     }
 
     public void validarTextFlotante() throws InterruptedException{
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        Limpiar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        btnBuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Flotante)
                 .perform();
 
         String textflotante = Flotante.getAttribute("title");
 
-        if(textflotante.equals("Comunicación de alteración, extravío o pérdida del sistema de marcaje del ave de cetrería")) {
+        if(textflotante.contains("Comunicación de cesión temporal o definitiva del ave de cetrería")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide el Texto");
@@ -125,13 +146,22 @@ public class MyPage extends PageObject {
     public void ejecutarcaso() throws InterruptedException {
         Limpiar.click();
         btnBuscar.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         btnNro2.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         btnNro1.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         btnAdelante.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         btnNro1.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         btnUltimapg.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         btnAtras.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         btnNro2.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         btnPrimerapg.click();
     }
 

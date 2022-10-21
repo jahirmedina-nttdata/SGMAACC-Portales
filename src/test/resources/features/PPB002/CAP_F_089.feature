@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_089 @skip @KO
+@PPB002-CAP_F_089
 
 Característica: PPB002-CAP_F_089 - Visualizacion detalle Tramite
   Como un usuario comun
@@ -15,7 +15,7 @@ Característica: PPB002-CAP_F_089 - Visualizacion detalle Tramite
     Y PPB002-CAPF089 - Mostrar sin texto
     Y PPB002-CAPF089 - Mostrar sin texto miniatura
     Y PPB002-CAPF089 - Mostrar sin requisitos
-    Y PPB002-CAPF089 - Mostrar sin afectador
+    Y PPB002-CAPF089 - Mostrar sin afectados
     Y PPB002-CAPF089 - Mostrar sin organos
     Y PPB002-CAPF089 - Mostrar sin lugar
     Y PPB002-CAPF089 - Mostrar sin observaciones
