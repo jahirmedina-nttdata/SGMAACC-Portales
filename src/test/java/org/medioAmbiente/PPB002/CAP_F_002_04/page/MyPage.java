@@ -5,6 +5,7 @@ import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -32,10 +33,10 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//button[@class=\"evr-btn evr-btn__secondary\"][1]")
     private WebElementFacade categorianoticia;
 
-    @FindBy(xpath = "//button[@class=\"evr-btn evr-btn__secondary\"]")
+    @FindBy(xpath = "//a[@title=\"VER TODAS LAS NOVEDADES\"]")
     private WebElementFacade vertodo;
 
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_eKAK0hUFAay8_searchTextInputMinimize\"]")
+    @FindBy(xpath = "(//h1)[6]")
     private WebElementFacade textnoticia;
 
 
@@ -45,26 +46,28 @@ public class MyPage extends PageObject {
         Actions actions = new Actions(getDriver());
         actions.dragAndDropBy(carrusel_move,-400,0)
                 .perform();
-        Thread.sleep(1000);
+        waitFor(2).second();
         actions.dragAndDropBy(carrusel_move,400,0)
                 .perform();
     }
 
     public void clickarNoticia()throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(getDriver(), 60);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\\\"card-cladt05-destacadosActualidad3\\\"]/div/a/h5\"")));
+        WebDriverWait wait = new WebDriverWait(getDriver(), 90);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"card-cladt05-destacadosActualidad3\"]/div/a/h5")));
         noticia.click();
+        String validacion = textnoticia.getText();
+        if(validacion.contains("Sierra Mágina, el parque natural de los castillos medievales")) {
+            Assert.assertTrue(true);
+        }else{
+            Assert.fail("Informacion no valida");
+        }
+        getDriver().navigate().back();
     }
 
-    public void clickarcategoria()throws InterruptedException {
-       //categorianoticia.click();
-      // textnoticia.sendKeys("El Consejo de Gobierno" + "\n");
-       // getDriver().navigate().back();
-    }
 
     public void clickarTodos()throws InterruptedException {
         vertodo.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Noticias y destacados')])[2]")));
     }
-
-
 }

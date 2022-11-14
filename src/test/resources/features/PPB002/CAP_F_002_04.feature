@@ -1,6 +1,6 @@
 #language: es
 
-@PPB002-CAP_F_002_04 @bloqued
+@PPB002-CAP_F_002_04
 Característica: PPB002-CAP_F_002_04 - Visualizar carrusel noticia
   Como un usuario comun
   Quiero acceder a la pagina principal
@@ -12,7 +12,6 @@ Característica: PPB002-CAP_F_002_04 - Visualizar carrusel noticia
     Y PPB002-CAPF00204 - Ubicarnos seccion noticia
     Y PPB002-CAPF00204 - Deslizar de izquierda a derecha noticia
     Y PPB002-CAPF00204 - Clickar en noticia
-    Y PPB002-CAPF00204 - Clickar en categoria noticia
     Y PPB002-CAPF00204 - Clickar en todas las noticias
 
 

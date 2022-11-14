@@ -1,11 +1,14 @@
 package org.medioAmbiente.PPB003.CAP_F_057.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -68,6 +71,8 @@ public class MyPage extends PageObject {
     }
 
     public void clickarTwitter() throws InterruptedException{
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"footer\"]/div/div[1]/div/div[1]/div/figure[1]/a/img")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Twitter.click();
@@ -167,34 +172,60 @@ public class MyPage extends PageObject {
 
     public void clickarConocenos() throws InterruptedException{
         Conocenos.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1)[8]")));
+        getDriver().navigate().back();
     }
 
     public void clickarContacto() throws InterruptedException{
-        getDriver().navigate().back();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 100)");
         Contacto.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1)[8]")));
+        getDriver().navigate().back();
     }
 
     public void clickarEnlacesInteres() throws InterruptedException{
-        getDriver().navigate().back();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 100)");
         Enlace_Interes.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1)[8]")));
+        getDriver().navigate().back();
     }
     public void clickarMapa() throws InterruptedException{
-        getDriver().navigate().back();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 100)");
         Mapa_Web.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Mapa Web')]")));
+        getDriver().navigate().back();
     }
 
     public void clickarManuales() throws InterruptedException{
-        getDriver().navigate().back();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 100)");
         Manuales.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Manuales')])[2]")));
+        getDriver().navigate().back();
     }
 
     public void clickarAccesibilidad()throws InterruptedException {
-        getDriver().navigate().back();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 100)");
         Accesibilidad.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[contains(text(),'Accesibilidad')]")));
+        getDriver().navigate().back();
     }
 
     public void clickarCondicionesUso() throws InterruptedException {
-        getDriver().navigate().back();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 100)");
         Condiciones_Uso.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Condiciones de uso')])[2]")));
     }
 }

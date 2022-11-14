@@ -10,4 +10,8 @@ Característica: PPB002-CAP_F_002_05 - Validar Funcionamiento Componente
     Dado PPB002-CAPF00205 - Accedemos el Portal Web DA
     Cuando PPB002-CAPF00205 - Aceptamos las cookies
     Y PPB002-CAPF00205 - Ubicar Directo A
+    Y PPB002-CAPF00205 - Clickar en Portal de la Caza y la Pesca Continental
+    Y PPB002-CAPF00205 - Clickar en Portal Andaluz del Cambio Climático
     Y PPB002-CAPF00205 - Clickar en Ventana del Visitante
+    Y PPB002-CAPF00205 - Clickar en Canal de Administración Electrónica
+

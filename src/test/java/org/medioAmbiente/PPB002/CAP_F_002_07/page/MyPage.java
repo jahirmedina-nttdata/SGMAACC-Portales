@@ -5,6 +5,7 @@ import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -34,10 +35,15 @@ public class MyPage extends PageObject {
 
 
     public void clickarLoUltimo() throws InterruptedException{
+        WebElement Element = getDriver().findElement(By.xpath("(//div[@class=\"slick-list draggable\"])[4]"));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("arguments[0].scrollIntoView();", Element);
          btnultimo.click();
     }
 
     public void clickarPlanForestal() throws InterruptedException{
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 250)");
         btnplanf.click();
     }
 
@@ -46,6 +52,8 @@ public class MyPage extends PageObject {
     }
 
     public void clickarVerMas() throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
         btnvermas.click();
     }
 }

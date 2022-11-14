@@ -48,10 +48,6 @@ public class MyStep extends ScenarioSteps {
         page.clickarNoticia();
     }
 
-    @net.thucydides.core.annotations.Step
-    public void clickarCategoriaNoti() throws InterruptedException{
-        page.clickarcategoria();
-    }
 
     @net.thucydides.core.annotations.Step
     public void clickarTodos() throws InterruptedException{

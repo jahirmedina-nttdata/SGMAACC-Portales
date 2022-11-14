@@ -38,10 +38,27 @@ public class MyStep extends ScenarioSteps {
         j.executeScript("window.scrollBy(0, 900)");
 
     }
+    @net.thucydides.core.annotations.Step
+    public void clickarPortalCazaPesca() throws InterruptedException {
+        page.clickarPortalCazaPesca();
+
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarPortalAndaluz() throws InterruptedException {
+        page.clickarPortalAndaluz();
+
+    }
 
     @net.thucydides.core.annotations.Step
     public void clickarVentanaVisitante() throws InterruptedException {
         page.clickarVentanaVisitante();
+
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarCanalAdministrativoElectronica() throws InterruptedException {
+        page.clickarCanalAdministrativoElectronica();
 
     }
 

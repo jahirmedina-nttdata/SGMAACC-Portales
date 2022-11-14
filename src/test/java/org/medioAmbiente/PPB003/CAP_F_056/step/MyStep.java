@@ -1,0 +1,44 @@
+package org.medioAmbiente.PPB003.CAP_F_056.step;
+
+import net.thucydides.core.steps.ScenarioSteps;
+import org.medioAmbiente.PPB003.CAP_F_056.page.MyPage;
+import org.openqa.selenium.JavascriptExecutor;
+
+
+public class MyStep extends ScenarioSteps {
+
+    private MyPage page;
+
+    @net.thucydides.core.annotations.Step
+    public void cargarPagina() throws InterruptedException {
+        page.open();
+        getDriver().manage().window().maximize();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void aceptarCookies() throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("document.querySelector(\"#accept-cookies\").click();");
+    }
+
+
+    @net.thucydides.core.annotations.Step
+    public void visualizarRedesSociales() throws InterruptedException {
+        page.visualizarRedesSociales();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarSeguirVentanaVisitanteTwitter() throws InterruptedException {
+        page.clickarSeguirVentanaVisitanteTwitter();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarSeguirVentanaVisitanteFacebook() throws InterruptedException {
+        page.clickarSeguirVentanaVisitanteFacebook();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarSeguirInfocaTwitter() throws InterruptedException {
+        page.clickarSeguirInfocaTwitter();
+    }
+}

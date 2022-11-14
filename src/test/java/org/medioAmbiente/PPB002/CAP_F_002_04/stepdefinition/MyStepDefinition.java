@@ -37,14 +37,10 @@ public class MyStepDefinition {
         myStep.clickarNoticia();
     }
 
-    @Y("^PPB002-CAPF00204 - Clickar en categoria noticia$")
-    public void Clickar_En_Categoria_Noticia()throws InterruptedException {
-        myStep.clickarCategoriaNoti();
-    }
-
     @Y("^PPB002-CAPF00204 - Clickar en todas las noticias$")
     public void Clickar_En_Todas_Las_Noticias()throws InterruptedException {
         myStep.clickarTodos();
+
     }
 }
 

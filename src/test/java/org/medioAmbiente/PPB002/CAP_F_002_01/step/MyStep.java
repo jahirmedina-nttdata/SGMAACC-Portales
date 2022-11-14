@@ -49,7 +49,7 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void filtracionBusquedad() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 300)");
+        page.filtracionBusquedad();
+
     }
 }

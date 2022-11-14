@@ -25,6 +25,6 @@ public class MyPage extends PageObject {
 
 
     public void ubicarCarrusel() throws InterruptedException {
-        Thread.sleep(3000);
+        waitFor(5).second();
     }
 }

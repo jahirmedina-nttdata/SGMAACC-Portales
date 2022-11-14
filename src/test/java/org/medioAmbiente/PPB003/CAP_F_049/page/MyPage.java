@@ -16,7 +16,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"layout_56\"]")
     private WebElementFacade Menu;
 
-    @FindBy(xpath = "//*[@id=\"layout_67\"]")
+    @FindBy(xpath = "(//*[@id=\"layout_67\"])[1]")
     private WebElementFacade Submenu;
 
     public void clickarSubmenu() throws InterruptedException {

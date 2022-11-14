@@ -18,7 +18,6 @@ public class MyStep extends ScenarioSteps {
     public void acceptCookies() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
-        j.executeScript("window.scrollBy(0, 100)");
 
     }
 
@@ -30,17 +29,12 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void ubicarContenidoDestacado() throws InterruptedException {
-
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("document.querySelector(\"#accept-cookies\").click();");
-        j.executeScript("window.scrollBy(0, 900)");
+        page.ubicarContenidoDestacado();
 
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarMasBuscado() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 100)");
         page.clickarMasBuscado();
     }
 

@@ -5,6 +5,7 @@ import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -28,6 +29,11 @@ public class MyPage extends PageObject {
     private WebElementFacade btnmasbuscado;
 
 
+    public void ubicarContenidoDestacado() throws InterruptedException {
+        WebElement Element = getDriver().findElement(By.xpath("(//div[@class=\"slick-list draggable\"])[4]"));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("arguments[0].scrollIntoView();", Element);
+    }
     public void clickarMasBuscado() throws InterruptedException {
         btnmasbuscado.click();
     }

@@ -40,7 +40,7 @@ public class MyPage extends PageObject {
 
 
     public void ubicarCarrusel() throws InterruptedException {
-        Thread.sleep(3000);
+        waitFor(4).second();
     }
 
     public void clickarGeodiversidad() throws InterruptedException {

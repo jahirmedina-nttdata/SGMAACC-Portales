@@ -26,9 +26,25 @@ public class MyStepDefinition {
     public void Ubicar_Directo_A() throws InterruptedException{
         myStep.ubicarDirectoA();
     }
+
+    @Y("^PPB002-CAPF00205 - Clickar en Portal de la Caza y la Pesca Continental$")
+    public void Clickar_En_Portal_De_La_Caza_Y_La_Pesca_Continental() throws InterruptedException{
+        myStep.clickarPortalCazaPesca();
+    }
+
+    @Y("^PPB002-CAPF00205 - Clickar en Portal Andaluz del Cambio Climático$")
+    public void Clickar_En_Portal_Andaluz_Del_Cambio_Climático() throws InterruptedException{
+        myStep.clickarPortalAndaluz();
+    }
+
     @Y("^PPB002-CAPF00205 - Clickar en Ventana del Visitante$")
     public void Clickar_En_Ventana_Del_Visitante() throws InterruptedException{
         myStep.clickarVentanaVisitante();
+    }
+
+    @Y("^PPB002-CAPF00205 - Clickar en Canal de Administración Electrónica$")
+    public void Clickar_En_Canal_De_Administración_Electrónica() throws InterruptedException{
+        myStep.clickarCanalAdministrativoElectronica();
     }
 
 }
