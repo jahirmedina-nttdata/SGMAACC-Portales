@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_052
+@PPB003-CAP_F_052 @bloqued
 
 Característica: PPB003-CAP_F_052 - Visualizacion de Banner
   Como un usuario

@@ -1,5 +1,5 @@
 #language: es
-@PPB004-CAP_FN_002
+@PPB004-CAP_FN_002 @bloqued
 
 Característica: PPB004-CAP_FN_002 - Autenticacion de Usuario
   Como un usuario registrado

@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_003  @bloqued
+@PPB003-CAP_F_003 @bloqued
 
 Característica: PPB003-CAP_F_003 - Codigo RENPA
   Como un usuario

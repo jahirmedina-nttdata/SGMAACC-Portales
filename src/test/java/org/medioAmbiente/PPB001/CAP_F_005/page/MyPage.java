@@ -11,7 +11,6 @@ import org.openqa.selenium.support.FindBy;
 
 
 public class MyPage extends PageObject {
-
     @FindBy(xpath = "//*[@id=\"portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_PubL15h3Rd3R\"]/div/div/div/ul/li[1]/a")
     private WebElementFacade btnTwitter;
 

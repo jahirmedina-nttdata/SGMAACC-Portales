@@ -1,5 +1,5 @@
 #language: es
-@PPB004-CAP_FC_014
+@PPB004-CAP_FC_014 @bloqued
 
 Característica: PPB004-CAP_FC_014 - Visualizacion Componente Destacamos
   Como usuario comun

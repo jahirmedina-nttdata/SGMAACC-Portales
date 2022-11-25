@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_065
+@PPB003-CAP_F_065 @bloqued
 
 Característica: PPB003-CAP_F_065 - Visualizacion Noticia
   Como un usuario

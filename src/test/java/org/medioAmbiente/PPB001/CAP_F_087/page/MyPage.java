@@ -28,9 +28,10 @@ public class MyPage extends PageObject {
     public void seleccionarFicha() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"reflex-grid resultados\"]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Siguiente.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"reflex-grid resultados\"]")));
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, -document.body.scrollHeight)");
         Noticia_Andalucia.click();
     }

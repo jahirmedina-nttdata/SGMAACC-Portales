@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_126
+@PPB003-CAP_F_126 @skip @KO
 
 Característica: PPB003-CAP_F_126 - Compartir Actividad por redes sociales
   Como un usuario comun

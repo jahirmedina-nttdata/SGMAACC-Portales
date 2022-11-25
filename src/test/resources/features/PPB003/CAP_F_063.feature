@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_063
+@PPB003-CAP_F_063 @bloqued
 
 Característica: PPB003-CAP_F_063 - Visualizacion de Elmentos
   Como un usuario

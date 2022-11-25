@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_007
+@PPB003-CAP_F_007 @bloqued
 
 Característica: PPB003-CAP_F_007 - Compartir ficha
   Como un usuario

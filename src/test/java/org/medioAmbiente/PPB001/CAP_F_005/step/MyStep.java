@@ -1,5 +1,8 @@
 package org.medioAmbiente.PPB001.CAP_F_005.step;
 
+import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
+import net.serenitybdd.core.pages.PageObject;
+import net.thucydides.core.util.EnvironmentVariables;
 import org.medioAmbiente.PPB001.CAP_F_005.page.MyPage;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.openqa.selenium.JavascriptExecutor;
@@ -12,11 +15,14 @@ public class MyStep extends ScenarioSteps {
 
     private MyPage myPage;
 
+    private EnvironmentVariables env;
     private String prntw;
     private String popwnd;
 
+
     @net.thucydides.core.annotations.Step
     public void cargarPagina() throws InterruptedException {
+     //   myPage.setDefaultBaseUrl(EnvironmentSpecificConfiguration.from(env).getProperty("endpoint") + "/medioambiente/portal/actualidad");
         myPage.open();
         getDriver().manage().window().maximize();
     }

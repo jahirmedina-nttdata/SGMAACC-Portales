@@ -1,5 +1,5 @@
 #language: es
-@PPB004-CAP_FN_005
+@PPB004-CAP_FN_005 @bloqued
 
 Característica: PPB004-CAP_FN_005 - Buscador Avanzado
   Como usuario comun

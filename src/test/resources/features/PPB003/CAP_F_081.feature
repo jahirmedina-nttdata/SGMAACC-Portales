@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_081
+@PPB003-CAP_F_081 @bloqued
 
 Característica: PPB003-CAP_F_081 - Visualizar Traduccion
   Como un usuario autenticado

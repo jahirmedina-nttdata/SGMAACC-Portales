@@ -1,6 +1,6 @@
 #language: es
 
-@PPB002-CAP_F_002_05
+@PPB002-CAP_F_002_05 @skip @KO
 Característica: PPB002-CAP_F_002_05 - Validar Funcionamiento Componente
   Como un usuario comun
   Quiero acceder a la pagina principal

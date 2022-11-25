@@ -28,17 +28,17 @@ public class MyPage extends PageObject {
 
 
     public void seleccionarTipoDeEspacio() throws InterruptedException {
-        Tipo_Espacio.click();
-        Monumento_Natural.click();
+        //Tipo_Espacio.click();
+       // Monumento_Natural.click();
     }
 
     public void seleccionarNombreDeEspacio() throws InterruptedException {
-        Nombre_Espacio.click();
-        Encina_Peana.click();
+       // Nombre_Espacio.click();
+       // Encina_Peana.click();
     }
 
     public void clickarBuscar() throws InterruptedException {
-        btnBuscar.click();
+      //  btnBuscar.click();
     }
 
 }

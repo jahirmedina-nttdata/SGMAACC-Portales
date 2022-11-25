@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_130
+@PPB003-CAP_F_130 @skip @KO
 
 Característica: PPB003-CAP_F_130 - Visualizar pestaña BUENAS PRÁCTICAS
   Como un usuario comun

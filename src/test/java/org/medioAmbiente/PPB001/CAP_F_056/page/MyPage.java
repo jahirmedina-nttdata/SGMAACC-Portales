@@ -28,17 +28,17 @@ public class MyPage extends PageObject {
 
 
     public void seleccionarAreaRecreativa() throws InterruptedException {
-        Tipo_Equipamiento.click();
-        Area_Recreativa.click();
+       // Tipo_Equipamiento.click();
+       // Area_Recreativa.click();
     }
 
     public void seleccionarCadiz() throws InterruptedException {
-        Lista_Provincias.click();
-        Cadiz.click();
+       // Lista_Provincias.click();
+      //  Cadiz.click();
     }
 
     public void clickarBuscar() throws InterruptedException {
-        btnBuscar.click();
+      //  btnBuscar.click();
     }
 
 }

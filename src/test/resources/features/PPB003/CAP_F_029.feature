@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_029
+@PPB003-CAP_F_029 @bloqued
 
 Característica: PPB003-CAP_F_029 - Visualizar apartado descargas
   Como un usuario

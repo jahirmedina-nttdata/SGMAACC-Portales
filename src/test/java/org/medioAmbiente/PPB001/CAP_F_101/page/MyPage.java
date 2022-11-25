@@ -48,13 +48,12 @@ public class MyPage extends PageObject {
 
 
     public void seleccionarTipoEspacio() throws InterruptedException {
+        Tipo_Espacio.waitUntilClickable();
         Tipo_Espacio.click();
         Monumento_Natural.click();
     }
 
     public void seleccionarProvincia() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor)getDriver();
-        j.executeScript("window.scrollBy(0, -150)");
         Lista_Provincia.click();
         Almeria.click();
     }
@@ -70,15 +69,12 @@ public class MyPage extends PageObject {
     }
 
     public void clickarBuscar() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor)getDriver();
-        j.executeScript("window.scrollBy(0, 150)");
         btnBuscar.click();
     }
 
     public void validarBusqueda() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor)getDriver();
-        j.executeScript("window.scrollBy(0, -document.body.scrollHeight)");
-
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
         String titulo = Validar_Titulo.getText();
         String categoria = Validar_Categoria.getText();
 

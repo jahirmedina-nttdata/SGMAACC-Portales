@@ -1,5 +1,5 @@
 #language: es
-@PPB006-CAP_FC_009
+@PPB006-CAP_FC_009 @bloqued
 
 Característica: PPB006-CAP_FC_009 - Visualizacion Carrusel Destacados
   Como un usuario comun

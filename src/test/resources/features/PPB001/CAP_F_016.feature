@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_016
+@PPB001-CAP_F_016 @bloqued
 
 Característica: PPB001-CAP_F_016 - Visualizar Buscador de galerías Audio, Imágenes y Video
   Como un usuario comun

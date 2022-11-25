@@ -1,5 +1,5 @@
 #language: es
-@PPB006-CAP_FC_002
+@PPB006-CAP_FC_002 @bloqued
 
 Característica: PPB006-CAP_FC_002 - Visualizacion de Cabecera
   Como un usuario comun
