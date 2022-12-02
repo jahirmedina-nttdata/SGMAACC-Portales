@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_114 @bloqued
+@PPB001-CAP_F_114
 
 Característica: PPB001-CAP_F_114 - Visualizar Busqueda utilizando filtro Usuario y Estado
   Como un usuario autenticado
@@ -13,5 +13,6 @@ Característica: PPB001-CAP_F_114 - Visualizar Busqueda utilizando filtro Usuari
     Y PPB001-CAPF114 - Clickar boton lupa
     Y PPB001-CAPF114 - Seleccionar opcion TODO del listado Correspondencia
     Y PPB001-CAPF114 - Escribir Admin CMAOT en el cuadro de texto usuario creador
-    Y PPB001-CAPF114 - Escribir Borrador en el cuadro de texto estado
-    Y PPB001-CAPF114 - Clickar search
+    Y PPB001-CAPF114 - Seleccionar Estado Borrador
+    Y PPB001-CAPF114 - Clickar boton Buscar
+    Entonces PPB001-CAPF114 - Validar Busqueda

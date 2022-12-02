@@ -8,7 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 import org.junit.Assert;
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/publicaciones?categoryVal=")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/publicaciones?categoryVal=")
 
 
 public class MyPage extends PageObject {

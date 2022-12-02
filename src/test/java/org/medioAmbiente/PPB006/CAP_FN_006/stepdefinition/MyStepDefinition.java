@@ -5,6 +5,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB006.CAP_FN_006.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -23,7 +25,7 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB006-CAPFN006 - Visualizar buscador CAPFC002$")
-    public void Visualizar_Buscador_CAPFC002()throws InterruptedException {
+    public void Visualizar_Buscador_CAPFC002()throws InterruptedException, URISyntaxException {
         myStep.visualizarCAPFC02();
     }
 

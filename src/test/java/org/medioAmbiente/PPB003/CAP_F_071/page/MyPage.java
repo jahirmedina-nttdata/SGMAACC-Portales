@@ -6,12 +6,15 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import javax.swing.*;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/")
 
 
 public class MyPage extends PageObject {
@@ -57,7 +60,11 @@ public class MyPage extends PageObject {
     }
 
     public void accederUserInvalido() throws InterruptedException {
-        Salir.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'cmaot_testing testing')]")));
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Salir).click().perform();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_com_liferay_login_web_portlet_LoginPortlet_login\"]")));
         Usuario.sendKeys("cmaot_testing");
         Password.sendKeys("Liferay" + "\n");
         waitFor(1).second();

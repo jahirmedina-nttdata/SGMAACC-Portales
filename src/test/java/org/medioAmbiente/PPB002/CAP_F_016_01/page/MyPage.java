@@ -14,7 +14,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.List;
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/el-tiempo")
+@DefaultUrl("/medioambiente/portal/el-tiempo")
 
 
 public class MyPage extends PageObject {

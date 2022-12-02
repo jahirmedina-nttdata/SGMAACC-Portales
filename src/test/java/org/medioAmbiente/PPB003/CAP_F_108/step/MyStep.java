@@ -4,6 +4,8 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB003.CAP_F_108.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
+import java.net.URISyntaxException;
+
 
 public class MyStep extends ScenarioSteps {
 
@@ -19,6 +21,11 @@ public class MyStep extends ScenarioSteps {
     public void aceptarCookies() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void autenticarUsuario() throws InterruptedException, URISyntaxException {
+        page.autenticarUsuario();
     }
 
     @net.thucydides.core.annotations.Step

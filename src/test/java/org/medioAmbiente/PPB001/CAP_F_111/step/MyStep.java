@@ -30,4 +30,14 @@ public class MyStep extends ScenarioSteps {
     public void buscarPorTexto() throws InterruptedException {
         page.buscarPorTexto();
     }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarBuscar() throws InterruptedException {
+        page.clickarBuscar();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void validarBusqueda() throws InterruptedException {
+        page.validarBusqueda();
+    }
 }

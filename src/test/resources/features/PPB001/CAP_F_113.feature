@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_113 @bloqued
+@PPB001-CAP_F_113
 
 Característica: PPB001-CAP_F_113 - Visualizar Busqueda utilizando filtro Estado
   Como un usuario autenticado
@@ -11,5 +11,6 @@ Característica: PPB001-CAP_F_113 - Visualizar Busqueda utilizando filtro Estado
     Cuando PPB001-CAPF113 - Acepto Cookies
     Y PPB001-CAPF113 - Autentico usuario
     Y PPB001-CAPF113 - Clickar boton lupa
-    Y PPB001-CAPF113 - Escribir Borrador en el cuadro de texto estado
-    Y PPB001-CAPF113 - Clickar search
+    Y PPB001-CAPF113 - Seleccionar estado borrador
+    Y PPB001-CAPF113 - Clickar boton Buscar
+    Entonces PPB001-CAPF113 - Valida busqueda

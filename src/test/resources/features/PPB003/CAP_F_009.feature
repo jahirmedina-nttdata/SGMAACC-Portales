@@ -9,8 +9,9 @@ Característica: PPB003-CAP_F_009 - Añadir Favoritos
   Escenario: Cargando Portal Referencial
     Dado PPB003-CAPF009 - Accedo al Navegador
     Y PPB003-CAPF009 - Aceptar Cookies
+    Y PPB003-CAPF009 - Autenticarse
     Y PPB003-CAPF009 - Clickar Añadir Favoritos
-
+    Entonces PPB003-CAPF009 - Verifica cambio de color del icono
 
 
 

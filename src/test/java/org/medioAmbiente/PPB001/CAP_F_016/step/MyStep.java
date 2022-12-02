@@ -4,6 +4,8 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB001.CAP_F_016.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
+import java.net.URISyntaxException;
+
 
 public class MyStep extends ScenarioSteps {
 
@@ -25,7 +27,7 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarImagenPorTexto() throws InterruptedException {
+    public void buscarImagenPorTexto() throws InterruptedException, URISyntaxException {
         myPage.buscarImagenPorTexto();
     }
 
@@ -45,7 +47,7 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarVideoPorTexto() throws InterruptedException {
+    public void buscarVideoPorTexto() throws InterruptedException, URISyntaxException {
         myPage.buscarVideoPorTexto();
     }
 

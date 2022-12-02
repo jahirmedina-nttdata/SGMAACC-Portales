@@ -8,7 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/caza-y-pesca/buscador")
+@DefaultUrl("/medioambiente/portal/web/caza-y-pesca/buscador")
 
 
 public class MyPage extends PageObject {

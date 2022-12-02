@@ -11,7 +11,7 @@ import org.junit.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/noticias?categoryVal=")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/noticias?categoryVal=")
 
 
 public class MyPage extends PageObject {

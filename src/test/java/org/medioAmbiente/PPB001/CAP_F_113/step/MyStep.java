@@ -30,4 +30,20 @@ public class MyStep extends ScenarioSteps {
     public void clickarLupa() throws InterruptedException {
         page.clickarLupa();
     }
+
+    @net.thucydides.core.annotations.Step
+    public void seleccionarEstadoBorrador() throws InterruptedException {
+        page.seleccionarEstadoBorrador();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarBuscar() throws InterruptedException {
+        page.clickarBuscar();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void validarBusqueda() throws InterruptedException {
+        page.validarBusqueda();
+    }
+
 }

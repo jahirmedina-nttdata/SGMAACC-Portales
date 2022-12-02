@@ -6,7 +6,7 @@ import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/la-estrategia-en-andalucia")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/la-estrategia-en-andalucia")
 
 
 public class MyPage extends PageObject {

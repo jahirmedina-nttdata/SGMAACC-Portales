@@ -13,7 +13,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/home")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/home")
 
 
 public class MyPage extends PageObject {

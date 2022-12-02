@@ -1,6 +1,7 @@
 package org.medioAmbiente.PPB001.CAP_F_113.stepdefinition;
 
 import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB001.CAP_F_113.step.MyStep;
@@ -30,13 +31,19 @@ public class MyStepDefinition {
         myStep.clickarLupa();
     }
 
-    @Y("^PPB001-CAPF113 - Escribir Borrador en el cuadro de texto estado$")
-    public void Escribir_Borrador_En_El_Cuadro_De_Texto_Estado()throws InterruptedException {
+    @Y("^PPB001-CAPF113 - Seleccionar estado borrador$")
+    public void Seleccionar_Estado_Borrador()throws InterruptedException {
+        myStep.seleccionarEstadoBorrador();
     }
 
-    @Y("^PPB001-CAPF113 - Clickar search$")
-    public void Clickar_Search()throws InterruptedException {
+    @Y("^PPB001-CAPF113 - Clickar boton Buscar$")
+    public void Clickar_Boton_Buscar()throws InterruptedException {
+        myStep.clickarBuscar();
+    }
 
+    @Entonces("^PPB001-CAPF113 - Valida busqueda$")
+    public void Valida_Busqueda()throws InterruptedException {
+        myStep.validarBusqueda();
     }
 }
 

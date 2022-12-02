@@ -1,14 +1,19 @@
 package org.medioAmbiente.PPB003.CAP_F_076.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
 
 
 public class MyPage extends PageObject {
@@ -38,25 +43,38 @@ public class MyPage extends PageObject {
     private WebElementFacade Validar_Modificacion;
 
 
+
     public void autenticarUsuario() throws InterruptedException {
         Usuario.sendKeys("cmaot_testing");
         Password.sendKeys("Liferay*21" + "\n");
-        Planifica_Visitas.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'cmaot_testing testing')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Planifica_Visitas).click().perform();
     }
 
     public void clikarEditarVisita() throws InterruptedException {
-        Editar_Visita.click();
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Editar_Visita).click().perform();
     }
 
     public void modificarVisita() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"yui3-widget-bd modal-body\"]")));
         Nombre_Visita.clear();
         Nombre_Visita.sendKeys("EL MARTINETE");
         Fecha_Hasta.clear();
-        btnGuardar.click();
+        Actions action = new Actions(getDriver());
+        action.moveToElement(btnGuardar).click().perform();
     }
 
     public void validarModificacion() throws InterruptedException {
-        waitFor(2).second();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'EL MARTINETE')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
         String validar = Validar_Modificacion.getText();
         if (validar.contains("EL MARTINETE")) {
             Assert.assertTrue(true);

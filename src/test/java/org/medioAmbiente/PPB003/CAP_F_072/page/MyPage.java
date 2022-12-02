@@ -1,15 +1,19 @@
 package org.medioAmbiente.PPB003.CAP_F_072.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
 
 
 public class MyPage extends PageObject {
@@ -27,7 +31,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"portlet_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet\"]//li[3]/button/a")
     private WebElementFacade Idioma;
 
-    @FindBy(xpath = "//*[@id=\"_com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet_breadcrumbs-defaultScreen\"]//li[2]/span")
+    @FindBy(xpath = "(//h1[@class=\"evr-visitcollage__title\"]/a)[1]")
     private WebElementFacade Validar_Idioma;
 
 
@@ -37,16 +41,22 @@ public class MyPage extends PageObject {
     }
 
     public void seleccionarIdioma() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 200)");
-        Select_Idioma.click();
-        Idioma.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'cmaot_testing testing')]")));
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Select_Idioma).click()
+                .perform();
+        action.moveToElement(Idioma).click()
+                .perform();
     }
 
     public void validarIdioma() throws InterruptedException {
-        waitFor(3).second();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[@class=\"evr-visitcollage__title\"]/a)[1]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
         String validar = Validar_Idioma.getText();
-        if(validar.equals("Espace Personnel")) {
+        if(validar.equals("Planifiez votre visite")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide Idioma");

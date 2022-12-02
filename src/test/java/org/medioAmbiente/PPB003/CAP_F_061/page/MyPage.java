@@ -11,13 +11,13 @@ import java.util.Iterator;
 import java.util.Set;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/actividades?categoryVal=")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/actividades?categoryVal=")
 
 
 public class MyPage extends PageObject {
     private String prntw;
     private String popwnd;
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_YS0LmvJ3MRL7_follow_reading_asset1\"]")
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_YS0LmvJ3MRL7_follow_reading_asset2\"]")
     private WebElementFacade Actividad_Buceo;
 
     @FindBy(xpath = "//*[@id=\"_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_QYwm8uHC3ojh_tabs1686584798332686932737884698220183TabsSection\"]/div/div[2]/div/h3/a")
@@ -28,7 +28,7 @@ public class MyPage extends PageObject {
         Actividad_Buceo.click();
         waitFor(2).second();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 800)");
+        j.executeScript("window.scrollBy(0, 850)");
         Reservar_Visita.click();
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration

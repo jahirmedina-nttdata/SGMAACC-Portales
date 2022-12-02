@@ -14,7 +14,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/")
 
 
 

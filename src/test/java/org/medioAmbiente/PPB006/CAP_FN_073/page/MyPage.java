@@ -8,7 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/organismos-de-referencia")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/organismos-de-referencia")
 
 
 public class MyPage extends PageObject {

@@ -16,7 +16,7 @@ import java.io.File;
 import java.net.URL;
 import java.util.Optional;
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/home")
+@DefaultUrl("/medioambiente/portal/home")
 
 
 public class MyPage extends PageObject {

@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
 
 
 public class MyPage extends PageObject {
@@ -32,26 +32,34 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_CpKE9LAiUNvt_pagination\"]/li[6]/a")
     private WebElementFacade Paginador;
 
+    @FindBy(xpath = "//*[@id=\"heading\"]//div[2]/h1/a/img[1]")
+    private WebElementFacade Ventana_Visitante;
+
     public void autenticarUsuario() throws InterruptedException {
         Usuario.sendKeys("cmaot_testing");
         Password.sendKeys("Liferay*21" + "\n");
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'cmaot_testing testing')]")));
     }
 
     public void ejecutarCAPF103() throws InterruptedException {
-        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/");
-        Actions actions = new Actions(getDriver());
-        actions.moveToElement(Menu)
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Ventana_Visitante).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class=\"slick-list draggable\"])[1]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
+        action.moveToElement(Menu)
                 .perform();
-        actions.moveToElement(SubMenu)
-                .perform();
-        SubMenu.click();
+        action.moveToElement(SubMenu).click().perform();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Galería Multimedia')]")));
     }
 
     public void seleccionarPaginador() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_CpKE9LAiUNvt_pagination\"]/li[6]/a")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Paginador.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
     }
 }

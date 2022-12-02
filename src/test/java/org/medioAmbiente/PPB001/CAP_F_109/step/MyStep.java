@@ -30,4 +30,19 @@ public class MyStep extends ScenarioSteps {
     public void accederContenidoWeb() throws InterruptedException {
         page.accederContenidoWeb();
     }
+
+    @net.thucydides.core.annotations.Step
+    public void añadirCategoria() throws InterruptedException {
+        page.añadirCategoria();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void relacionarContenido() throws InterruptedException {
+        page.relacionarContenido();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void eliminarCategoria() throws InterruptedException {
+        page.eliminarCategoria();
+    }
 }

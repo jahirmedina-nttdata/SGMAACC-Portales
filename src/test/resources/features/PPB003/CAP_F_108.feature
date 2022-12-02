@@ -9,6 +9,7 @@ Característica: PPB003-CAP_F_108 - Visualizacion check ocultar actividades espe
   Escenario: Cargando Portal e Referencia
     Dado PPB003-CAPF108 - Accedo al Navegador
     Y PPB003-CAPF108 - Aceptar Cookies
+    Y PPB003-CAPF108 - Autenticar usuario
     Y PPB003-CAPF108 - Seleccionar espacio natural
     Y PPB003-CAPF108 - Check ocultar actividades especificas
 

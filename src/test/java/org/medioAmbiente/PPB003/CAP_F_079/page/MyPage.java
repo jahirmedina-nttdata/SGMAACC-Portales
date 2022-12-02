@@ -7,10 +7,11 @@ import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
 
 
 public class MyPage extends PageObject {
@@ -28,7 +29,8 @@ public class MyPage extends PageObject {
         Usuario.sendKeys("cmaot_testing");
         Password.sendKeys("Liferay*21" + "\n");
         waitFor(1).second();
-        Planifica_Visitas.click();
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Planifica_Visitas).click().perform();
     }
 
     public void clikariconoPapelera() throws InterruptedException {

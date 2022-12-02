@@ -22,7 +22,6 @@ public class MyStep extends ScenarioSteps {
 
     @net.thucydides.core.annotations.Step
     public void cargarPagina() throws InterruptedException {
-     //   myPage.setDefaultBaseUrl(EnvironmentSpecificConfiguration.from(env).getProperty("endpoint") + "/medioambiente/portal/actualidad");
         myPage.open();
         getDriver().manage().window().maximize();
     }

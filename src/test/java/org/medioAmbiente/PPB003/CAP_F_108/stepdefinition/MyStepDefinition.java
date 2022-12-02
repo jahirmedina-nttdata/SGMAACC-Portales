@@ -5,6 +5,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_108.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -19,6 +21,11 @@ public class MyStepDefinition {
     @Y("^PPB003-CAPF108 - Aceptar Cookies$")
     public void Aceptar_Cookies() throws InterruptedException{
         myStep.aceptarCookies();
+    }
+
+    @Y("^PPB003-CAPF108 - Autenticar usuario$")
+    public void Autenticar_Usuario()throws InterruptedException, URISyntaxException {
+        myStep.autenticarUsuario();
     }
 
     @Y("^PPB003-CAPF108 - Seleccionar espacio natural$")

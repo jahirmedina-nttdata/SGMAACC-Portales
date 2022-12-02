@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/efectos-e-impactos")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/efectos-e-impactos")
 
 
 public class MyPage extends PageObject {

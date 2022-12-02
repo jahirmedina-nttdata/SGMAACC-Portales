@@ -6,7 +6,7 @@ import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/la-perspectiva-del-cambio-climático-en-la-evaluacion-ambiental")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/la-perspectiva-del-cambio-climático-en-la-evaluacion-ambiental")
 
 
 public class MyPage extends PageObject {

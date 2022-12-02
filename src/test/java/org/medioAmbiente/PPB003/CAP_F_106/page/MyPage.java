@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/")
 
 
 public class MyPage extends PageObject {
@@ -36,15 +36,15 @@ public class MyPage extends PageObject {
     }
 
     public void Visualizar_Paginador() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_CpKE9LAiUNvt_pagination\"]/li[6]/a")));
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
+      //  WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+      //  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_CpKE9LAiUNvt_pagination\"]/li[6]/a")));
+      //  JavascriptExecutor j = (JavascriptExecutor) getDriver();
+      //  j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
     }
 
     public void seleccionarPaginador() throws InterruptedException {
-        Paginador.click();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
+       // Paginador.click();
+      //  WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+      //  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
     }
 }

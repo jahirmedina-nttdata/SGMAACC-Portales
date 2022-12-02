@@ -6,7 +6,7 @@ import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/guest/areas-tematicas/cambio-climatico-y-clima/escenarios-locales-de-cambio-climatico")
+@DefaultUrl("/medioambiente/portal/web/guest/areas-tematicas/cambio-climatico-y-clima/escenarios-locales-de-cambio-climatico")
 
 
 public class MyPage extends PageObject {

@@ -6,7 +6,7 @@ import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/emisiones-difusas")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/emisiones-difusas")
 
 
 public class MyPage extends PageObject {

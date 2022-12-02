@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/mitigacion")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/mitigacion")
 
 
 public class MyPage extends PageObject {
@@ -23,7 +23,7 @@ public class MyPage extends PageObject {
 
     public void visualizarDiseño()throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 980)");
+        j.executeScript("window.scrollBy(0, 600)");
     }
     public void accederContenido() throws InterruptedException {
         Contenido.click();

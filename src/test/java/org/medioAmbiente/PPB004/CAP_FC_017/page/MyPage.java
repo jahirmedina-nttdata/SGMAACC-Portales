@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/caza-y-pesca/terrenos-cinegéticos")
+@DefaultUrl("/medioambiente/portal/web/caza-y-pesca/terrenos-cinegéticos")
 
 
 

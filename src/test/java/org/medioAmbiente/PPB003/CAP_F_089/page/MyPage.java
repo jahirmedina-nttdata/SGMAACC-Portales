@@ -9,14 +9,17 @@ import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
 
 
 public class MyPage extends PageObject {
@@ -33,7 +36,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//button[@class=\"evr-btn--add-pas\"]")
     private WebElementFacade Añadir_Pasaporte;
 
-    @FindBy(xpath = "//button[@id=\"_Pasaportemodule_INSTANCE_vXEUJGmerZqu_delete-5186748\"]")
+    @FindBy(xpath = "//button[@id=\"_Pasaportemodule_INSTANCE_vXEUJGmerZqu_delete-5186748\"]//img")
     private WebElementFacade Eliminar_Pasaporte;
 
     @FindBy(xpath = "//*[@id=\"_Pasaportemodule_INSTANCE_vXEUJGmerZqu_follow_reading_1\"]/article/div/div[2]/span[2]")
@@ -43,29 +46,37 @@ public class MyPage extends PageObject {
     private WebElementFacade Usuario_Contenido;
 
 
-    public void autenticarUsuario() throws InterruptedException {
+    public void autenticarUsuario() throws InterruptedException, URISyntaxException {
         Usuario.sendKeys("cmaot_testing");
         Password.sendKeys("Liferay*21" + "\n");
-        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/detalle-buscador-mapa/-/asset_publisher/Jlbxh2qB3NwR/content/parque-natural-bah-c3-ada-de-c-c3-a1diz/255035");
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 500)");
-        Añadir_Pasaporte.click();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'cmaot_testing testing')]")));
+        getDriver().get(new URI(getDriver().getCurrentUrl()).resolve("/medioambiente/portal/web/ventanadelvisitante/detalle-buscador-mapa/-/asset_publisher/Jlbxh2qB3NwR/content/parque-natural-bah-c3-ada-de-c-c3-a1diz/255035").toString());
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 350)");
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Añadir_Pasaporte).click().perform();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class=\"evr-btn--delete-pas\"]")));
-        Usuario_Contenido.click();
-        Pasaporte_Ecoturista.click();
+        action.moveToElement(Usuario_Contenido).click().perform();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'cmaot_testing testing')]")));
+        j.executeScript("window.scrollBy(0, 200)");
+        action.moveToElement(Pasaporte_Ecoturista).click().perform();
     }
 
     public void clikarCancelarPasaporte() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"evr-photographytitle__title\"]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 300)");
-        Eliminar_Pasaporte.click();
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Eliminar_Pasaporte).click().perform();
         Alert alert = getDriver().switchTo().alert();
         alert.dismiss();
     }
 
     public void clikarAceptarPasaporte() throws InterruptedException {
-        Eliminar_Pasaporte.click();
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Eliminar_Pasaporte).click().perform();
         Alert alert = getDriver().switchTo().alert();
         alert.accept();
     }

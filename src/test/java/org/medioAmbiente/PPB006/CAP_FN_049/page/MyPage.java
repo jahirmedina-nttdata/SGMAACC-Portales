@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/adaptacion")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/adaptacion")
 
 
 public class MyPage extends PageObject {

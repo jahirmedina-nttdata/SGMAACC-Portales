@@ -1,6 +1,7 @@
 package org.medioAmbiente.PPB001.CAP_F_110.stepdefinition;
 
 import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB001.CAP_F_110.step.MyStep;
@@ -25,8 +26,8 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB001-CAPF110 - Acceder a la opcion Preview Contenido Web$")
-    public void Acceder_A_La_Opcion_Preview_Contenido_Web()throws InterruptedException {
+    @Entonces("^PPB001-CAPF110 - Validar Preview Contenido Web$")
+    public void Validar_Preview_Contenido_Web()throws InterruptedException {
         myStep.accederContenidoWeb();
     }
 }

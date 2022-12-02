@@ -6,6 +6,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_088.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -28,7 +30,7 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB003-CAPF088 - Clickar añadir Pasaporte Ecoturista$")
-    public void Clickar_Añadir_Pasaporte_Ecoturista()throws InterruptedException {
+    public void Clickar_Añadir_Pasaporte_Ecoturista()throws InterruptedException, URISyntaxException {
         myStep.clikarAñadirPasaporte();
     }
 

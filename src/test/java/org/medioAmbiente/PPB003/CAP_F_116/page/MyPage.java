@@ -8,7 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/guest/buscador-de-revistas-y-boletines")
+@DefaultUrl("/medioambiente/portal/web/guest/buscador-de-revistas-y-boletines")
 
 
 public class MyPage extends PageObject {

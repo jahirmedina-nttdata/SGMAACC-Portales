@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_111 @bloqued
+@PPB001-CAP_F_111
 
 Característica: PPB001-CAP_F_111 - Acceso a preview-journal-module
   Como un usuario autenticado
@@ -11,4 +11,5 @@ Característica: PPB001-CAP_F_111 - Acceso a preview-journal-module
     Cuando PPB001-CAPF111 - Acepto Cookies
     Y PPB001-CAPF111 - Autentico usuario
     Y PPB001-CAPF111 - Escribir AVES en el cuadro de texto
-    Y PPB001-CAPF111 - Clickar search
+    Y PPB001-CAPF111 - Clickar boton Buscar
+    Entonces PPB001-CAPF111 - Validar Busqueda

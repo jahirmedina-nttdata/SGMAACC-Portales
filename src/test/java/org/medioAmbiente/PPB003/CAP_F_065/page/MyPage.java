@@ -8,7 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/noticias-detalle/-/asset_publisher/pUmOGVAxEAjQ/content/el-milano-real-anida-en-c-c3-b3rdoba/20151")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/noticias-detalle/-/asset_publisher/pUmOGVAxEAjQ/content/el-milano-real-anida-en-c-c3-b3rdoba/20151")
 
 
 public class MyPage extends PageObject {

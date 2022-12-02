@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/la-ley-del-cambio-climatico-y-transicion-energetica")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/la-ley-del-cambio-climatico-y-transicion-energetica")
 
 
 public class MyPage extends PageObject {

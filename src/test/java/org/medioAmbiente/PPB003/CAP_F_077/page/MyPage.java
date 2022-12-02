@@ -9,6 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -20,7 +21,7 @@ import java.awt.event.KeyEvent;
 import java.time.Instant;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
 
 
 public class MyPage extends PageObject {
@@ -53,26 +54,35 @@ public class MyPage extends PageObject {
     public void autenticarUsuario() throws InterruptedException {
         Usuario.sendKeys("cmaot_testing");
         Password.sendKeys("Liferay*21" + "\n");
-        waitFor(1).second();
-        Planifica_Visitas.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'cmaot_testing testing')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Planifica_Visitas).click().perform();
     }
 
     public void clikarEliminarVisita() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 100)");
-        Eliminar_Visita.click();
+        j.executeScript("window.scrollBy(0, 150)");
+        Eliminar_Visita.waitUntilClickable();
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Eliminar_Visita).click().perform();
     }
 
     public void clickarCancelar() throws InterruptedException{
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Edita tu visita')]")));
-        btnEliminar.click();
+        Actions action = new Actions(getDriver());
+        action.moveToElement(btnEliminar).click().perform();
         Alert alert = getDriver().switchTo().alert();
         alert.dismiss();
     }
 
     public void clickarAceptar() throws InterruptedException {
-        btnEliminar.click();
+        btnEliminar.waitUntilClickable();
+        Actions action = new Actions(getDriver());
+        action.moveToElement(btnEliminar).click().perform();
         Alert alert = getDriver().switchTo().alert();
         alert.accept();
     }

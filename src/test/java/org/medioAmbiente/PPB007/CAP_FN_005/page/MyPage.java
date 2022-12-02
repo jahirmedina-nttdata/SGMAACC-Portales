@@ -5,7 +5,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cae/")
+@DefaultUrl("/medioambiente/portal/web/cae/")
 
 
 public class MyPage extends PageObject {

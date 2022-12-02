@@ -6,7 +6,7 @@ import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/caza-y-pesca/")
+@DefaultUrl("/medioambiente/portal/web/caza-y-pesca/")
 
 
 public class MyPage extends PageObject {

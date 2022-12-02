@@ -12,8 +12,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/home")
+
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/home")
 
 
 public class MyPage extends PageObject {
@@ -51,47 +54,54 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_j9REwhPrNDhF_pagination\"]/li[1]/a")
     private WebElementFacade Primera;
 
+    @FindBy(xpath = "//a[@title=\"Portal Andaluz de Cambio Climático\"]")
+    private WebElementFacade Portal_CC;
 
 
-    public void visualizarCAPFC02() throws InterruptedException {
-        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/buscador");
+
+    public void visualizarCAPFC02() throws InterruptedException, URISyntaxException {
+        getDriver().get(new URI(getDriver().getCurrentUrl()).resolve("/medioambiente/portal/web/cambio-climatico/buscador").toString());
         Busqueda_Avan.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 100)");
 
         Texto_Buscar.sendKeys("Huella"+ "\n");
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class=\"evr-form-results__item-title\"])[1]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         btnLimpiar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Lista.click();
         Categoria.click();
         btnBuscar.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class=\"evr-form-results__item-title\"])[1]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         btnLimpiar.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class=\"evr-form-results__item-title\"])[1]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Enlace)
                 .perform();
-
         String textflotante = Enlace.getAttribute("title");
         if(textflotante.equals("Nuevos visores de adaptación de las costas al cambio climático")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide el Texto");
         }
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("window.scrollBy(0, document.body.scrollHeight)");
+        Sig.waitUntilClickable();
         Sig.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class=\"evr-form-results__item-title\"])[1]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Ultimo.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class=\"evr-form-results__item-title\"])[1]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Atras.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class=\"evr-form-results__item-title\"])[1]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Primera.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
     }
 
     public void visualizarCAPFC03() throws InterruptedException{
-        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/home");
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, -document.body.scrollHeight)");
+        Portal_CC.click();
         j.executeScript("window.scrollBy(0, 100)");
     }
 

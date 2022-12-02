@@ -6,12 +6,13 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
 
 
 public class MyPage extends PageObject {
@@ -32,14 +33,19 @@ public class MyPage extends PageObject {
     public void autenticarUsuario() throws InterruptedException {
         Usuario.sendKeys("cmaot_testing");
         Password.sendKeys("Liferay*21" + "\n");
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'cmaot_testing testing')]")));
     }
 
     public void clikarTarjetaPasaporte() throws InterruptedException {
-        Pasaporte_Ecoturista.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 200)");
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Pasaporte_Ecoturista).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 40);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"evr-photographytitle__title\"]")));
         j.executeScript("window.scrollBy(0, 300)");
-        Tarjeta_Pasaporte.click();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 60);
+        action.moveToElement(Tarjeta_Pasaporte).click().perform();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class=\"evr-carrusel-banner__txt\"]")));
     }
 }

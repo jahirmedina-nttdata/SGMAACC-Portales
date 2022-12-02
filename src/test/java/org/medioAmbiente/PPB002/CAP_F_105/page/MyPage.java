@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/acceso-rediam/catalogo")
+@DefaultUrl("/medioambiente/portal/acceso-rediam/catalogo")
 
 
 public class MyPage extends PageObject {

@@ -19,7 +19,7 @@ public class MyStep extends ScenarioSteps {
     public void aceptarCookies() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
-        j.executeScript("window.scrollBy(0, 850)");
+        j.executeScript("window.scrollBy(0, 950)");
     }
 
     @net.thucydides.core.annotations.Step

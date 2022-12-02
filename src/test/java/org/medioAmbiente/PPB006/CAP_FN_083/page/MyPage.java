@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/el-pacto-verde-europeo-y-el-marco-normativo-nacional")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/el-pacto-verde-europeo-y-el-marco-normativo-nacional")
 
 
 public class MyPage extends PageObject {

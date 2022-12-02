@@ -11,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.junit.Assert;
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/actua")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/actua")
 
 
 

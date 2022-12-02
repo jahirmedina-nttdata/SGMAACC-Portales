@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/avisos?categoryVal=")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/avisos?categoryVal=")
 
 
 public class MyPage extends PageObject {

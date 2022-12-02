@@ -6,17 +6,18 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/guest/buscador-publicacion?categoryVal=")
+@DefaultUrl("/medioambiente/portal/web/guest/buscador-publicacion?categoryVal=")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_GFwsFY3Uow8r_resultsDiv\"]//a")
+    @FindBy(xpath = "//a[@title=\"Aullidos en Sierra Morena\"]")
     private WebElementFacade sinfecha;
 
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_GFwsFY3Uow8r_searchTextInput\"]")
@@ -91,7 +92,11 @@ public class MyPage extends PageObject {
     public void visualizarSinFecha() throws InterruptedException {
 
         txtbusquedad.sendKeys("Aullidos" + "\n");
-        sinfecha.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinfecha.waitUntilClickable();
+        getDriver().findElement(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_GFwsFY3Uow8r_resultsDiv\"]/div/div/div/div/div[2]/a")).click();
+        //sinfecha.click();
 
     }
 
@@ -102,6 +107,9 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Lobezno" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinSubtitulo.waitUntilClickable();
         sinSubtitulo.click();
 
     }
@@ -114,6 +122,9 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Mediterranean Forests" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinText.waitUntilClickable();
         sinText.click();
     }
 
@@ -125,7 +136,7 @@ public class MyPage extends PageObject {
         txtbusquedad.sendKeys("Recetario de comida" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 250)");
+        j.executeScript("window.scrollBy(0, 150)");
     }
 
 
@@ -135,8 +146,10 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("SIOSE Andalucía" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        sinCredito.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinCredito.waitUntilClickable();
+        sinCredito.click();
         j.executeScript("window.scrollBy(0, 250)");
     }
 
@@ -147,6 +160,9 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Growing" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinFichero.waitUntilClickable();
         sinFichero.click();
     }
 
@@ -157,8 +173,10 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("La Gobernanza" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        sinUrl.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinUrl.waitUntilClickable();
+        sinUrl.click();
         j.executeScript("window.scrollBy(0, 250)");
     }
 
@@ -169,6 +187,9 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("emisiones a la atmósfera" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinImage.waitUntilClickable();
         sinImage.click();
     }
 
@@ -179,6 +200,9 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Agenda 21" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinBliblioteca.waitUntilClickable();
         sinBliblioteca.click();
     }
 
@@ -189,8 +213,10 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Aurora" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        sinSerie.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinSerie.waitUntilClickable();
+        sinSerie.click();
         j.executeScript("window.scrollBy(0, 250)");
     }
 
@@ -201,8 +227,10 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Jaén Renacentista" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        sinautor.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinautor.waitUntilClickable();
+        sinautor.click();
         j.executeScript("window.scrollBy(0, 250)");
     }
 
@@ -213,8 +241,10 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Paisajes de Andalucía" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        sinNotas.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinNotas.waitUntilClickable();
+        sinNotas.click();
         j.executeScript("window.scrollBy(0, 250)");
     }
 
@@ -225,6 +255,9 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Geoparque" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinArchivo.waitUntilClickable();
         sinArchivo.click();
     }
 
@@ -235,6 +268,9 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Siente el Bosque" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinDerecho.waitUntilClickable();
         sinDerecho.click();
     }
 
@@ -245,6 +281,9 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Entremijos" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        descarga.waitUntilClickable();
         descarga.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"dwnArchivo\"]")));
         btndescarga.click();
@@ -257,6 +296,9 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Cádiz y Málaga" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        documento.waitUntilClickable();
         documento.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"dwnDoc\"]")));
         btndocumento.click();
@@ -271,6 +313,9 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Cádiz y Málaga" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        documento.waitUntilClickable();
         documento.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_FytOUWH22K7t_3348136\"]//li[2]//img")));
         btnUrl.click();
@@ -283,6 +328,9 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Málaga industrial" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        interactivo.waitUntilClickable();
         interactivo.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"dwnInterc\"]")));
         btnInteractivo.click();
@@ -297,6 +345,9 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Nudibranquios" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        biblioteca.waitUntilClickable();
         biblioteca.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_FytOUWH22K7t_3074891\"]//p/a/img\n")));
         btnBiblioteca.click();

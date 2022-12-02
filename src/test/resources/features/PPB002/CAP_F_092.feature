@@ -1,7 +1,7 @@
 #language: es
 @PPB002-CAP_F_092 @skip @KO
 
-Característica: PPB002-CAP_F_091 - Visualizacion detalle Planificacion
+Característica: PPB002-CAP_F_092 - Visualizacion detalle Planificacion
   Como un usuario comun
   Quiero acceder al portal
   Para visualizar detalle Planificacion

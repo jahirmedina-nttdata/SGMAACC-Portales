@@ -8,7 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/plan-andaluz-accion-clima-2021-2030")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/plan-andaluz-accion-clima-2021-2030")
 
 
 public class MyPage extends PageObject {

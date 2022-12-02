@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/c/portal/login")
+@DefaultUrl("/medioambiente/portal/c/portal/login")
 
 
 public class MyPage extends PageObject {

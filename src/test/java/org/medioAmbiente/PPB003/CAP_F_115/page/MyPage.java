@@ -8,7 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/buscador-publicacion")
+@DefaultUrl("/medioambiente/portal/buscador-publicacion")
 
 
 public class MyPage extends PageObject {

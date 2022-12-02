@@ -9,7 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/la-estrategia-en-andalucia")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/la-estrategia-en-andalucia")
 
 
 public class MyPage extends PageObject {

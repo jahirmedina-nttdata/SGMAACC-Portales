@@ -7,12 +7,13 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
 
 
 public class MyPage extends PageObject {
@@ -30,19 +31,21 @@ public class MyPage extends PageObject {
     private WebElementFacade Lista_Favoritos;
 
 
-
-
     public void autenticarUsuario() throws InterruptedException {
         Usuario.sendKeys("cmaot_testing");
         Password.sendKeys("Liferay*21" + "\n");
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'cmaot_testing testing')]")));
     }
 
     public void clikarTarjetaAñadida() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Favoritos')]")));
-        Favoritos.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 500)");
-        Lista_Favoritos.click();
+        j.executeScript("window.scrollBy(0, 200)");
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Favoritos).click().perform();
+        j.executeScript("window.scrollBy(0, 350)");
+        action.moveToElement(Lista_Favoritos).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title=\"Ir a Buscador de Espacios Naturales y Equipamientos\"]")));
     }
 }

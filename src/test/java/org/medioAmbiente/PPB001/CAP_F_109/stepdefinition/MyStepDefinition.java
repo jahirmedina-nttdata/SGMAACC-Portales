@@ -32,14 +32,17 @@ public class MyStepDefinition {
 
     @Y("^PPB001-CAPF109 - Añadir categoria$")
     public void Añadir_Categoria()throws InterruptedException {
+        myStep.añadirCategoria();
     }
 
     @Y("^PPB001-CAPF109 - Relacionar contenido$")
     public void Relacionar_Contenido()throws InterruptedException {
+        myStep.relacionarContenido();
     }
 
     @Y("^PPB001-CAPF109 - Eliminar categoria$")
     public void Eliminar_Categoria()throws InterruptedException {
+        myStep.eliminarCategoria();
     }
 
     @Y("^PPB001-CAPF109 - Eliminar contenido$")

@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/c/portal/login")
+@DefaultUrl("/medioambiente/portal/c/portal/login")
 
 
 public class MyPage extends PageObject {

@@ -12,7 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import java.util.Iterator;
 import java.util.Set;
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cae/")
+@DefaultUrl("/medioambiente/portal/web/cae/")
 
 
 public class MyPage extends PageObject {

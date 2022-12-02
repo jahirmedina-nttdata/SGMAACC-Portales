@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/")
 
 
 public class MyPage extends PageObject {
@@ -38,7 +38,7 @@ public class MyPage extends PageObject {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 550)");
 
-        List<WebElement> lista = getDriver().findElements(By.xpath("//div[@class=\"evr-content-links\"]"));
+        List<WebElement> lista = getDriver().findElements(By.xpath("(//div[@class=\"portlet-content\"])[6]"));
         if (lista.size() != 0) {
             Assert.assertTrue(true);
         } else {

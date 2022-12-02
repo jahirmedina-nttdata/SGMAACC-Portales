@@ -7,7 +7,7 @@ import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/actualidad")
+@DefaultUrl("/medioambiente/portal/actualidad")
 
 
 public class MyPage extends PageObject {

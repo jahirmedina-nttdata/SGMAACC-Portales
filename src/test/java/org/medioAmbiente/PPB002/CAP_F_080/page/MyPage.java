@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/guest/buscador-imagenes?categoryVal=")
+@DefaultUrl("/medioambiente/portal/web/guest/buscador-imagenes?categoryVal=")
 
 
 public class MyPage extends PageObject {

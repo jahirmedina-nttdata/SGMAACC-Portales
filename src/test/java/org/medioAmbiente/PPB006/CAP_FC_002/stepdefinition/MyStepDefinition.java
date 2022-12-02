@@ -5,6 +5,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB006.CAP_FC_002.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -28,7 +30,7 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB006-CAPFC002 - Acceder a buscador avanzado$")
-    public void Acceder_A_Buscador_Avanzado() throws InterruptedException{
+    public void Acceder_A_Buscador_Avanzado() throws InterruptedException, URISyntaxException {
         myStep.accederBuscador();
     }
 

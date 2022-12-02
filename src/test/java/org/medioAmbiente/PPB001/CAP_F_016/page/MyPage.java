@@ -3,11 +3,16 @@ package org.medioAmbiente.PPB001.CAP_F_016.page;
 
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
+import net.thucydides.core.configuration.SystemPropertiesConfiguration;
 import net.thucydides.core.pages.PageObject;
+import net.thucydides.core.webdriver.Configuration;
 import org.openqa.selenium.support.FindBy;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/buscador-audios")
+
+@DefaultUrl("/medioambiente/portal/buscador-audios")
 
 
 public class MyPage extends PageObject {
@@ -18,7 +23,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_RBLh8ZKfwq6q_searchTextInput\"]")
     private WebElementFacade Buscador_Texto_Video;
 
-    @FindBy(xpath = "//*[@id=\"evr-formFilters\"]/div[2]/div[2]/label")
+    @FindBy(xpath = "//label[@class=\"evr-form-search__more-filter\"]")
     private WebElementFacade Apartado_Avanzada;
 
     @FindBy(xpath = "//*[@id=\"evr-formFilters\"]/div[2]/div[2]/label")
@@ -54,8 +59,8 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//div[contains(text(),'Agua')]")
     private WebElementFacade Tema_Video;
 
-    public void buscarImagenPorTexto() throws InterruptedException {
-        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/buscador-imagenes");
+    public void buscarImagenPorTexto() throws InterruptedException, URISyntaxException {
+        getDriver().get(new URI(getDriver().getCurrentUrl()).resolve("/medioambiente/portal/buscador-imagenes").toString());
         Buscador_Especifico.sendKeys("Reserva" + "\n");
     }
 
@@ -82,8 +87,8 @@ public class MyPage extends PageObject {
         btnBuscar.click();
     }
 
-    public void buscarVideoPorTexto() throws InterruptedException {
-        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/buscador-videos");
+    public void buscarVideoPorTexto() throws InterruptedException, URISyntaxException {
+        getDriver().get(new URI(getDriver().getCurrentUrl()).resolve("/medioambiente/portal/buscador-videos").toString());
         Buscador_Texto_Video.sendKeys("Webinar");
         btnBuscar_Video.click();
     }
@@ -110,6 +115,4 @@ public class MyPage extends PageObject {
         Tema_Video.click();
         btnBuscar_Video.click();
     }
-
-
 }

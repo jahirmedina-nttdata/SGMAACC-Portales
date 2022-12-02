@@ -6,6 +6,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_089.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -23,7 +25,7 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB003-CAPF089 - Autentico usuario$")
-    public void Autentico_Usuario()throws InterruptedException {
+    public void Autentico_Usuario()throws InterruptedException, URISyntaxException {
         myStep.autenticarUsuario();
     }
 

@@ -8,7 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cambio-climatico/organos-de-participacion")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/organos-de-participacion")
 
 
 public class MyPage extends PageObject {

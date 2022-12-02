@@ -6,6 +6,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB001.CAP_F_016.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -42,7 +44,7 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB001-CAPF016 - Buscar Imagenes por texto$")
-    public void Buscar_Imagenes_Por_Texto() throws InterruptedException {
+    public void Buscar_Imagenes_Por_Texto() throws InterruptedException, URISyntaxException {
         myStep.buscarImagenPorTexto();
     }
     @Y("^PPB001-CAPF016 - Buscar Imagenes por tema$")
@@ -61,7 +63,7 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB001-CAPF016 - Buscar Video por texto$")
-    public void Buscar_Video_Por_Texto() throws InterruptedException {
+    public void Buscar_Video_Por_Texto() throws InterruptedException, URISyntaxException {
         myStep.buscarVideoPorTexto();
     }
     @Y("^PPB001-CAPF016 - Buscar Video por tema$")

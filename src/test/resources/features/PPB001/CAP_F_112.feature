@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_112 @bloqued
+@PPB001-CAP_F_112
 
 Característica: PPB001-CAP_F_112 - Visualizar Busqueda
   Como un usuario autenticado
@@ -12,4 +12,5 @@ Característica: PPB001-CAP_F_112 - Visualizar Busqueda
     Y PPB001-CAPF112 - Autentico usuario
     Y PPB001-CAPF112 - Clickar boton lupa
     Y PPB001-CAPF112 - Escribir Admin CMAOT en el cuadro de texto nombre de usuario
-    Y PPB001-CAPF112 - Clickar search
+    Y PPB001-CAPF112 - Clickar boton Buscar
+    Entonces PPB001-CAPF112 - Validar Busqueda
