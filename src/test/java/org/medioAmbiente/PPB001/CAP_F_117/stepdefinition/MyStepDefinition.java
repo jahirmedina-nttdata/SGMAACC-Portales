@@ -25,6 +25,11 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
+    @Y("^PPB001-CAPF117 - Acceder al Preview Contenidos Web$")
+    public void Acceder_Al_Preview_Contenidos_Web()throws InterruptedException {
+        myStep.accederPreviewContenidosWeb();
+    }
+
     @Y("^PPB001-CAPF117 - Cambiar numero de entradas$")
     public void Cambiar_Numero_De_Entradas()throws InterruptedException {
         myStep.cambiarNroEntradas();

@@ -5,6 +5,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_015.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -21,8 +23,13 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
+    @Y("^PPB003-CAPF015 - Autenticar usuario$")
+    public void Autenticar_Usuario() throws InterruptedException{
+        myStep.autenticarUsuario();
+    }
+
     @Y("^PPB003-CAPF015 - Ejecutar CAPF003$")
-    public void Ejecutar_CAPF003()throws InterruptedException {
+    public void Ejecutar_CAPF003()throws InterruptedException, URISyntaxException {
         myStep.ejecutarCAPF003();
     }
     @Y("^PPB003-CAPF015 - Consultar codigo RENPA para validar Fecha de Declaracion$")

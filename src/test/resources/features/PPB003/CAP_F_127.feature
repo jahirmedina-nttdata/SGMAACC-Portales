@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_127 @skip @KO
+@PPB003-CAP_F_127
 
 Característica: PPB003-CAP_F_127 - Visualizar pestaña Datos de Interes
   Como un usuario comun

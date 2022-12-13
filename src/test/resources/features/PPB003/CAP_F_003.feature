@@ -10,6 +10,7 @@ Característica: PPB003-CAP_F_003 - Codigo RENPA
     Dado PPB003-CAPF003 - Accedo al Navegador
     Y PPB003-CAPF003 - Aceptar Cookies
     Y PPB003-CAPF003 - Autentico usuario
+    Y PPB003-CAPF003 - Accedo al Espacio natural y equipamiento
     Y PPB003-CAPF003 - Clickar icono editar
     Entonces PPB003-CAPF003 - Visualiza codigo RENPA
 

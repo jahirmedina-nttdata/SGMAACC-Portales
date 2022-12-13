@@ -30,4 +30,14 @@ public class MyStep extends ScenarioSteps {
     public void accederPublicaciones() throws InterruptedException {
         page.accederPublicaciones();
     }
+
+    @net.thucydides.core.annotations.Step
+    public void configurarPaginador() throws InterruptedException {
+        page.configurarPaginador();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void recargarPagina() throws InterruptedException {
+        page.recargarPagina();
+    }
 }

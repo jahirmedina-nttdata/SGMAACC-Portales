@@ -8,6 +8,9 @@ import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+
 
 @DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
 
@@ -62,8 +65,8 @@ public class MyPage extends PageObject {
         Registrarme.click();
     }
 
-    public void rellenarCamposInvalidos() throws InterruptedException {
-        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/registro");
+    public void rellenarCamposInvalidos() throws InterruptedException, URISyntaxException {;
+        getDriver().get(new URI(getDriver().getCurrentUrl()).resolve("/medioambiente/portal/web/ventanadelvisitante/registro").toString());
         Usuario.sendKeys("analista_qa");
         Email.sendKeys("analista30");
         Password.sendKeys("@utomatizador*30");

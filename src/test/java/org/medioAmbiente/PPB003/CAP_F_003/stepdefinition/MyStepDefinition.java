@@ -6,6 +6,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_003.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -26,6 +28,11 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
+    @Y("^PPB003-CAPF003 - Accedo al Espacio natural y equipamiento$")
+    public void Accedo_Al_Espacio_Natural_Y_Equipamiento()throws InterruptedException, URISyntaxException {
+        myStep.accederEspacioNatural();
+    }
+
     @Y("^PPB003-CAPF003 - Clickar icono editar$")
     public void Clickar_Icono_Editar()throws InterruptedException {
         myStep.clikarIconoEditar();
@@ -33,6 +40,7 @@ public class MyStepDefinition {
 
     @Entonces("^PPB003-CAPF003 - Visualiza codigo RENPA$")
     public void Visualiza_Codigo_RENPA()throws InterruptedException {
+        myStep.visualizarCodigoRENPA();
     }
 }
 

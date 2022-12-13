@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_103 @bloqued
+@PPB003-CAP_F_103
 
 Característica: PPB003-CAP_F_103 - Aumentar numero de resultados
   Como un usuario

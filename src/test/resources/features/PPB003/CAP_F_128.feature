@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_128 @skip @KO
+@PPB003-CAP_F_128
 
 Característica: PPB003-CAP_F_128 - Visualizar pestaña EQUIPAMIENTOS RELACIONADOS
   Como un usuario comun

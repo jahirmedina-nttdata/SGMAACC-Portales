@@ -30,4 +30,9 @@ public class MyStep extends ScenarioSteps {
     public void accederContenidoWeb() throws InterruptedException {
         page.accederContenidoWeb();
     }
+
+    @net.thucydides.core.annotations.Step
+    public void validarListado() throws InterruptedException {
+        page.validarListado();
+    }
 }

@@ -1,12 +1,15 @@
 package org.medioAmbiente.PPB003.CAP_F_064.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -107,6 +110,8 @@ public class MyPage extends PageObject {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Ventana_Visitante.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@title=\"Ir a Ventana del Visitante\"])[1]")));
         getDriver().navigate().back();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Twitter.click();
@@ -194,23 +199,30 @@ public class MyPage extends PageObject {
         getDriver().switchTo().window(prntw);
 
         Conocenos.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"evr-title\"]")));
         getDriver().navigate().back();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Contacto.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"evr-title\"]")));
         getDriver().navigate().back();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Enlace_Interes.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"evr-title\"]")));
         getDriver().navigate().back();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Mapa_Web.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Mapa Web')]")));
         getDriver().navigate().back();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Manuales.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"evr-title\"]")));
         getDriver().navigate().back();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Accesibilidad.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@id=\"evr-menu-block__title-principal\"]")));
         getDriver().navigate().back();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Condiciones_Uso.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@id=\"evr-menu-block__title-principal\"]")));
     }
 }

@@ -1,11 +1,20 @@
 package org.medioAmbiente.PPB007.CAP_FN_002.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
 
 @DefaultUrl("/medioambiente/portal/c/portal/login")
 
@@ -21,10 +30,24 @@ public class MyPage extends PageObject {
     public void autenticaUsuario() throws InterruptedException {
         Usuario.sendKeys("cmaot_testing");
         Password.sendKeys("Liferay*21"+ "\n");
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@data-title=\"Menú\"]")));
     }
 
-    public void accederCAE() throws InterruptedException {
-        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/cae/");
+    public void accederCAE() throws InterruptedException, URISyntaxException {
+        getDriver().get(new URI(getDriver().getCurrentUrl()).resolve("/medioambiente/portal/web/cae").toString());
+    }
+
+    public void validarAutenticacion() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@data-title=\"Menú\"]")));
+        List<WebElement> Menu = getDriver().findElements(By.xpath("//a[@data-title=\"Menú\"]"));
+        List<WebElement> Portal = getDriver().findElements(By.xpath("//a[@title=\"Canal de Administración Electrónica\"]"));
+        if (Menu.size() != 0 && Portal.size() !=0) {
+            Assert.assertTrue(true);
+        } else {
+            Assert.fail("Autenticacion incorrecta");
+        }
     }
 
 }

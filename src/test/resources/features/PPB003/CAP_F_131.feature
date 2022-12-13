@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_131 @skip @KO
+@PPB003-CAP_F_131
 
 Característica: PPB003-CAP_F_131 - Visualizar pestaña PUBLICACION
   Como un usuario comun

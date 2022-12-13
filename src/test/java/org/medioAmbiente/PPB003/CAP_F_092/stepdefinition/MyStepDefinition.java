@@ -1,6 +1,8 @@
 package org.medioAmbiente.PPB003.CAP_F_092.stepdefinition;
 
+import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_092.step.MyStep;
@@ -15,8 +17,8 @@ public class MyStepDefinition {
         myStep.cargarPagina();
     }
 
-    @Y("^PPB003-CAPF092 - Aceptar Cookies$")
-    public void Aceptar_Cookies() throws InterruptedException{
+    @Cuando("^PPB003-CAPF092 - Acepto Cookies$")
+    public void Acepto_Cookies() throws InterruptedException{
         myStep.aceptarCookies();
     }
 
@@ -25,9 +27,14 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF092 - Acceder al menu vertical Contenido Web$")
-    public void Acceder_Al_Menu_Vertical_Contenido_Web()throws InterruptedException {
+    @Y("^PPB003-CAPF092 - Acceder al Contenido Web$")
+    public void Acceder_Al_Contenido_Web()throws InterruptedException {
         myStep.accederContenidoWeb();
+    }
+
+    @Entonces("^PPB003-CAPF092 - Validar listado$")
+    public void Validar_Listado()throws InterruptedException {
+        myStep.validarListado();
     }
 }
 

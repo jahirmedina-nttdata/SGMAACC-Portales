@@ -30,4 +30,24 @@ public class MyStep extends ScenarioSteps {
     public void accederContenidoWeb() throws InterruptedException {
         page.accederContenidoWeb();
     }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarContenidoWeb() throws InterruptedException {
+        page.buscarContenidoWeb();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void modificarBannerDestacado() throws InterruptedException {
+        page.modificarBannerDestacado();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void validarModificacionBannerDestacado() throws InterruptedException {
+        page.validarModificacionBannerDestacado();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void dejarVacioCampoBannerDestacado() throws InterruptedException {
+        page.dejarVacioCampoBannerDestacado();
+    }
 }

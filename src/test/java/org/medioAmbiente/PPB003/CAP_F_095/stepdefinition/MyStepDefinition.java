@@ -32,10 +32,12 @@ public class MyStepDefinition {
 
     @Y("^PPB003-CAPF095 - Configurar paginador$")
     public void Configurar_Paginador()throws InterruptedException {
+        myStep.configurarPaginador();
     }
 
     @Y("^PPB003-CAPF095 - Recargar pagina$")
     public void Recargar_Pagina()throws InterruptedException {
+        myStep.recargarPagina();
     }
 }
 

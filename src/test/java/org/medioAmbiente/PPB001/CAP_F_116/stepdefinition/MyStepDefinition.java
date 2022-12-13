@@ -25,33 +25,34 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB001-CAPF116 - Clickar paginador$")
-    public void Clickar_Paginador()throws InterruptedException {
-        myStep.clickarPaginador();
+    @Y("^PPB001-CAPF116 - Clickar siguiente paginador$")
+    public void Clickar_Siguiente_Paginador()throws InterruptedException {
+        myStep.clickarSiguientePaginador();
     }
 
-    @Y("^PPB001-CAPF116 - Clickar siguiente$")
-    public void Clickar_Siguiente()throws InterruptedException {
+    @Y("^PPB001-CAPF116 - Clickar siguiente paginador en la ultima pagina$")
+    public void Clickar_Siguiente_Paginador_En_La_Ultima_Pagina()throws InterruptedException {
+        myStep.clickarSiguientePaginadorEnUltimaPagina();
     }
 
-    @Y("^PPB001-CAPF116 - Clickar siguiente en la ultima pagina$")
-    public void Clickar_Siguiente_En_La_Ultima_Pagina()throws InterruptedException {
+    @Y("^PPB001-CAPF116 - Clickar anterior paginador$")
+    public void Clickar_Anterior_Paginador()throws InterruptedException {
+        myStep.clickarAnteriorPaginador();
     }
 
-    @Y("^PPB001-CAPF116 - Clickar anterior$")
-    public void Clickar_Anterior()throws InterruptedException {
+    @Y("^PPB001-CAPF116 - Clickar anterior paginador en la primera pagina$")
+    public void Clickar_Anterior_Paginador_En_La_Primera_Pagina()throws InterruptedException {
+        myStep.clickarAnteriorPaginadorEnPrimeraPagina();
     }
 
-    @Y("^PPB001-CAPF116 - Clickar anterior en la primera pagina$")
-    public void Clickar_Anterior_En_La_Primera_Pagina()throws InterruptedException {
-    }
-
-    @Y("^PPB001-CAPF116 - Avanzar una pagina$")
-    public void Avanzar_Una_Pagina()throws InterruptedException {
+    @Y("^PPB001-CAPF116 - Clickar cualquier paginador$")
+    public void Clickar_Cualquier_Paginador()throws InterruptedException {
+        myStep.clickarCualquierPaginador();
     }
 
     @Y("^PPB001-CAPF116 - Clickar mismo paginador$")
     public void Clickar_Mismo_Paginador()throws InterruptedException {
+        myStep.clickarMismoPaginador();
     }
 }
 

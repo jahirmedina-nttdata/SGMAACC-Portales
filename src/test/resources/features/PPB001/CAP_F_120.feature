@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_120 @bloqued
+@PPB001-CAP_F_120
 
 Característica: PPB001-CAP_F_120 - Modificar numero de resultado
   Como un usuario autenticado
@@ -10,5 +10,6 @@ Característica: PPB001-CAP_F_120 - Modificar numero de resultado
     Dado PPB001-CAPF120 - Accedo al Navegador
     Cuando PPB001-CAPF120 - Acepto Cookies
     Y PPB001-CAPF120 - Autentico usuario
+    Y PPB001-CAPF120 - Acceder al Contenido Web
     Y PPB001-CAPF120 - Cambiar numero de entradas
 

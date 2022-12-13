@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_095 @bloqued
+@PPB003-CAP_F_095
 
 Característica: PPB003-CAP_F_095 - Aumentar numero de resultados
   Como un usuario autenticado

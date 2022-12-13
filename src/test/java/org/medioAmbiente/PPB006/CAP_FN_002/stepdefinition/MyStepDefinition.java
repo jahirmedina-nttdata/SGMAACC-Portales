@@ -1,9 +1,12 @@
 package org.medioAmbiente.PPB006.CAP_FN_002.stepdefinition;
 
 import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB006.CAP_FN_002.step.MyStep;
+
+import java.net.URISyntaxException;
 
 public class MyStepDefinition {
 
@@ -27,7 +30,12 @@ public class MyStepDefinition {
         myStep.autenticaUsuario();
     }
 
-    @Y("^PPB006-CAPFN002 - Validar usuario autenticado$")
+    @Y("^PPB006-CAPFN002 - Acceder al Portal Andaluz Cambio Climatico$")
+    public void Acceder_Al_Portal_Andaluz_Cambio_Climatico()throws InterruptedException, URISyntaxException {
+        myStep.accederPortalCambioClimatico();
+    }
+
+    @Entonces("^PPB006-CAPFN002 - Validar usuario autenticado$")
     public void Validar_Usuario_Autenticado() throws InterruptedException{
         myStep.validarUsuario();
     }

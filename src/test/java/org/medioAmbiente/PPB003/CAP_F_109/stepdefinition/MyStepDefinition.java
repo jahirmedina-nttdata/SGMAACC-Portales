@@ -25,17 +25,29 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF109 - Acceder al menu vertical contenido Web$")
-    public void Acceder_Al_Menu_Vertical_Contenido_Web()throws InterruptedException {
+    @Y("^PPB003-CAPF109 - Acceder al contenido Web$")
+    public void Acceder_Al_Contenido_Web()throws InterruptedException {
         myStep.accederContenidoWeb();
     }
 
-    @Y("^PPB003-CAPF109 - Modificar campo Observacion y Fotografia de fauna$")
-    public void Modificar_Campo_Observacion_Y_Fotografia_De_Fauna()throws InterruptedException {
+    @Y("^PPB003-CAPF109 - Buscar contenido Web$")
+    public void Buscar_Contenido_Web()throws InterruptedException {
+        myStep.buscarContenidoWeb();
     }
 
-    @Y("^PPB003-CAPF109 - Dejar campo vacio$")
-    public void Dejar_Campo_Vacio()throws InterruptedException {
+    @Y("^PPB003-CAPF109 - Modificar Banner destacado$")
+    public void Modificar_Banner_Destacado()throws InterruptedException {
+        myStep.modificarBannerDestacado();
+    }
+
+    @Y("^PPB003-CAPF109 - Validar modificacion de banner destacado$")
+    public void Validar_Modificacion_De_Banner_Destacado()throws InterruptedException {
+        myStep.validarModificacionBannerDestacado();
+    }
+
+    @Y("^PPB003-CAPF109 - Dejar vacio banner destacado$")
+    public void Dejar_Vacio_Banner_Destacado()throws InterruptedException {
+        myStep.dejarVacioCampoBannerDestacado();
     }
 }
 

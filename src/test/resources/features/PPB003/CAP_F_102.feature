@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_102 @bloqued
+@PPB003-CAP_F_102
 
 Característica: PPB003-CAP_F_102 - Visualizar Paginador
   Como un usuario
@@ -10,7 +10,7 @@ Característica: PPB003-CAP_F_102 - Visualizar Paginador
     Dado PPB003-CAPF102 - Accedo al Navegador
     Y PPB003-CAPF102 - Aceptar Cookies
     Y PPB003-CAPF102 - Autentico usuario
-    Y PPB003-CAPF102 - Visualizar paginador
+    Y PPB003-CAPF102 - Acceder al submenu Avisos
     Y PPB003-CAPF102 - Seleccionar paginador
 
 

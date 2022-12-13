@@ -1,16 +1,17 @@
 #language: es
-@PPB003-CAP_F_092 @bloqued
+@PPB003-CAP_F_092
 
 Característica: PPB003-CAP_F_092 - Incrementar numeros de resultados
   Como un usuario autenticado
   Quiero acceder al portal
-  Para visualizar menu vertical
+  Para visualizar resultados
 
   Escenario: Cargando Portal de referencia
     Dado PPB003-CAPF092 - Accedo al Navegador
-    Y PPB003-CAPF092 - Aceptar Cookies
+    Cuando PPB003-CAPF092 - Acepto Cookies
     Y PPB003-CAPF092 - Autentico usuario
-    Y PPB003-CAPF092 - Acceder al menu vertical Contenido Web
+    Y PPB003-CAPF092 - Acceder al Contenido Web
+    Entonces PPB003-CAPF092 - Validar listado
 
 
 

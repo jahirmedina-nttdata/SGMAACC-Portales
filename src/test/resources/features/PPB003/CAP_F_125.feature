@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_125 @skip @KO
+@PPB003-CAP_F_125
 
 Característica: PPB003-CAP_F_125 - Visualizar funcionalidad de Actividades
   Como un usuario comun

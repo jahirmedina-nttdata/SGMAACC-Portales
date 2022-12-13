@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Optional;
 
@@ -52,8 +54,8 @@ public class MyPage extends PageObject {
     }
 
     public void clickNopermitir() throws AWTException {
-        getDriver().close();
-        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/home");
+         getDriver().close();
+         open();
         waitFor(7).second();
         Robot robot = new  Robot();
         try {

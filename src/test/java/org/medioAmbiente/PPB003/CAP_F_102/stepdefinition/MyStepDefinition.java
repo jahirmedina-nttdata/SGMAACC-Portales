@@ -25,13 +25,14 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF102 - Visualizar paginador$")
-    public void Visualizar_Paginador()throws InterruptedException {
-        myStep.visualizarPaginador();
+    @Y("^PPB003-CAPF102 - Acceder al submenu Avisos$")
+    public void Acceder_Al_Submenu_Avisos()throws InterruptedException {
+        myStep.accederSubmenuAvisos();
     }
 
     @Y("^PPB003-CAPF102 - Seleccionar paginador$")
     public void Seleccionar_Paginador()throws InterruptedException {
+        myStep.seleccionarPaginador();
     }
 }
 

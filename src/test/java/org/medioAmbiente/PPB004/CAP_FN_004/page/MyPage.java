@@ -9,6 +9,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+
 
 @DefaultUrl("/medioambiente/portal/web/caza-y-pesca/")
 
@@ -73,8 +76,8 @@ public class MyPage extends PageObject {
         Enlace.click();
     }
 
-    public void visualizarCAPFN05() throws InterruptedException{
-        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/caza-y-pesca/buscador");
+    public void visualizarCAPFN05() throws InterruptedException, URISyntaxException {
+        getDriver().get(new URI(getDriver().getCurrentUrl()).resolve("/medioambiente/portal/web/caza-y-pesca/buscador").toString());
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Limpiar.click();

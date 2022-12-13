@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.net.URISyntaxException;
 
 
 public class MyStep extends ScenarioSteps {

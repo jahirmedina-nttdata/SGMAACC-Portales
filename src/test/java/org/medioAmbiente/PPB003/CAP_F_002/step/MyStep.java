@@ -4,6 +4,8 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB003.CAP_F_002.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
+import java.net.URISyntaxException;
+
 
 public class MyStep extends ScenarioSteps {
 
@@ -27,7 +29,7 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void accederVentanaVisitante() throws InterruptedException {
+    public void accederVentanaVisitante() throws InterruptedException, URISyntaxException {
         page.accederVentanaVisitante();
     }
 

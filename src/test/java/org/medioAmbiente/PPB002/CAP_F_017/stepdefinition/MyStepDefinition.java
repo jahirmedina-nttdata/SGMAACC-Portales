@@ -8,6 +8,7 @@ import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB002.CAP_F_017.step.MyStep;
 
 import java.awt.*;
+import java.net.URISyntaxException;
 
 public class MyStepDefinition {
 

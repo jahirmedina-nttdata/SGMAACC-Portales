@@ -27,7 +27,18 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void elegirContenido() throws InterruptedException {
-        page.elegirContenido();
+    public void accederPreviewContenidosWeb() throws InterruptedException {
+        page.accederPreviewContenidosWeb();
     }
+
+    @net.thucydides.core.annotations.Step
+    public void previsualizarSinSitio() throws InterruptedException {
+        page.previsualizarSinSitio();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void previsualizarContenido() throws InterruptedException {
+        page.previsualizarContenido();
+    }
+
 }

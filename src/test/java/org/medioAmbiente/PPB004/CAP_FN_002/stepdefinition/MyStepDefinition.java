@@ -7,6 +7,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB004.CAP_FN_002.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -32,9 +34,14 @@ public class MyStepDefinition {
         myStep.escriboContraseña(contraseña);
     }
 
-    @Entonces("^PPB004-CAPFN002 - Validamos el usuario$")
-    public void Validamos_El_Usuario() throws InterruptedException{
+    @Y("^PPB004-CAPFN002 - Accedo al Portal de Caza y Pesca$")
+    public void Accedo_Al_Portal_De_Caza_Y_Pesca() throws InterruptedException, URISyntaxException {
+        myStep.accesoPortalCazaPesca();
+    }
 
+    @Entonces("^PPB004-CAPFN002 - Validamos autenticacion en Portal Caza y Pesca$")
+    public void Validamos_Autenticacion_En_Portal_Caza_Y_Pesca() throws InterruptedException{
+        myStep.validarautenticacionPortal();
     }
 
 

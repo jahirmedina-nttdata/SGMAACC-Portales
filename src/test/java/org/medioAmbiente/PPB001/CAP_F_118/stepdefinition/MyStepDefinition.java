@@ -1,6 +1,7 @@
 package org.medioAmbiente.PPB001.CAP_F_118.stepdefinition;
 
 import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB001.CAP_F_118.step.MyStep;
@@ -25,17 +26,19 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB001-CAPF118 - Elegir contenido$")
-    public void Elegir_Contenido()throws InterruptedException {
-        myStep.elegirContenido();
+    @Y("^PPB001-CAPF118 - Acceder al Preview Contenidos Web$")
+    public void Acceder_Al_Preview_Contenidos_Web()throws InterruptedException {
+        myStep.accederPreviewContenidosWeb();
+    }
+
+    @Y("^PPB001-CAPF118 - Previsualizar contenido sin seleccionar sitio$")
+    public void Previsualizar_Contenido_Sin_Seleccionar_Sitio()throws InterruptedException {
+        myStep.previsualizarSinSitio();
     }
 
     @Y("^PPB001-CAPF118 - Previsualizar contenido$")
     public void Previsualizar_Contenido()throws InterruptedException {
-    }
-
-    @Y("^PPB001-CAPF118 - Clickar Previsualizar$")
-    public void Clickar_Previsualizar()throws InterruptedException {
+        myStep.previsualizarContenido();
     }
 
 }

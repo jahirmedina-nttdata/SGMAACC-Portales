@@ -6,6 +6,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_002.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -27,7 +29,7 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB003-CAPF002 - Acceder a Ventana Visitante$")
-    public void Acceder_A_Ventana_Visitante()throws InterruptedException {
+    public void Acceder_A_Ventana_Visitante()throws InterruptedException, URISyntaxException {
         myStep.accederVentanaVisitante();
     }
 

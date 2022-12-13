@@ -6,6 +6,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_035.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -27,7 +29,7 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB003-CAPF035 - Ejecuta CAPF003$")
-    public void Ejecuta_CAPF003()throws InterruptedException {
+    public void Ejecuta_CAPF003()throws InterruptedException, URISyntaxException {
         myStep.EjecutaCAPF003();
     }
 

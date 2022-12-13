@@ -25,9 +25,14 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB001-CAPF119 - Acceder menu Contenido Web$")
-    public void Acceder_Menu_Contenido_Web()throws InterruptedException {
+    @Y("^PPB001-CAPF119 - Acceder al Contenido Web$")
+    public void Acceder_Al_Contenido_Web()throws InterruptedException {
         myStep.accederContenidoWeb();
+    }
+
+    @Y("^PPB001-CAPF119 - Validar listado$")
+    public void Validar_Listado()throws InterruptedException {
+        myStep.validarListado();
     }
 }
 

@@ -33,13 +33,18 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_agurN6e4v7Bv_pagination\"]/li[3]/a")
     private WebElementFacade Paginador;
 
+    @FindBy(xpath = "(//a[@title=\"Ir a Ventana del Visitante\"]/img)[1]")
+    private WebElementFacade Ventana_Visitante;
+
     public void autenticarUsuario() throws InterruptedException {
         Usuario.sendKeys("cmaot_testing");
         Password.sendKeys("Liferay*21" + "\n");
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'cmaot_testing testing')]")));
     }
 
     public void ejecutarCAPF099() throws InterruptedException {
-        getDriver().navigate().to("https://servintegra.cma.junta-andalucia.es/medioambiente/portal/web/ventanadelvisitante/");
+        Ventana_Visitante.click();
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Menu)
                 .perform();
@@ -50,9 +55,10 @@ public class MyPage extends PageObject {
 
     public void seleccionarPaginador() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_agurN6e4v7Bv_pagination\"]/li[3]/a")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
-        Paginador.click();
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(Paginador).click().perform();
     }
 }

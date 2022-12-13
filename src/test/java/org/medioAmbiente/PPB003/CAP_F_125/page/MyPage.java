@@ -20,23 +20,38 @@ import java.util.List;
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"layout_56\"]")
+    @FindBy(xpath = "(//li[@id=\"layout_56\"])[1]")
     private WebElementFacade Menu;
 
-    @FindBy(xpath = "//*[@id=\"layout_60\"]")
+    @FindBy(xpath = "(//a[contains(text(),'Actividades')])[1]")
     private WebElementFacade SubMenu;
 
-    @FindBy(xpath = "//input[@title=\"Buscar por palabras\"]")
-    private WebElementFacade buscarTexto;
+    @FindBy(xpath = "//a[@id=\"_AssetSearchPlugin_INSTANCE_YS0LmvJ3MRL7_follow_reading_asset2\"]")
+    private WebElementFacade Ficha_Buceo;
 
-    @FindBy(xpath = "//button/span[contains(text(),'Buscar')]")
-    private WebElementFacade btnBuscar;
+    @FindBy(xpath = "(//a[@id=\"_AssetSearchPlugin_INSTANCE_YS0LmvJ3MRL7_follow_reading_asset2\"]//img)[2]")
+    private WebElementFacade Buceo;
 
-    @FindBy(xpath = "//button/span[contains(text(),'EXPORTAR RESULTADOS')]")
-    private WebElementFacade btnExportar;
+    @FindBy(xpath = "//button[@data-button-type=\"stop\"]//img")
+    private WebElementFacade btnStop;
 
-    @FindBy(xpath = "(//span[@class=\"evr-article-collage-map__title\"])[2]")
-    private WebElementFacade Validar_Resultado;
+    @FindBy(xpath = "//button[@data-button-type=\"play\"]//img")
+    private WebElementFacade btnPlay;
+
+    @FindBy(xpath = "//button[@aria-label=\"Left\"]//img")
+    private WebElementFacade btnAnterior;
+
+    @FindBy(xpath = "//button[@aria-label=\"Right\"]//img")
+    private WebElementFacade btnSiguiente;
+
+    @FindBy(xpath = "//button[@aria-label=\"Last Picture\"]//img")
+    private WebElementFacade btnPrimeraPag;
+
+    @FindBy(xpath = "//button[@aria-label=\"Next Picture\"]")
+    private WebElementFacade btnUltimaPag;
+
+    @FindBy(xpath = "//div[@class=\"evr-carrusel slick-initialized slick-slider\"]")
+    private WebElementFacade Deslizar;
 
 
     public void seleccionarMenu() throws InterruptedException {
@@ -47,52 +62,60 @@ public class MyPage extends PageObject {
 
     public void seleccionarSubmenu() throws InterruptedException {
         Actions actions = new Actions(getDriver());
-        actions.moveToElement(SubMenu)
-                .perform();
-        SubMenu.click();
+        actions.moveToElement(SubMenu).click().perform();
     }
 
     public void pulsarActividadBuceo() throws InterruptedException {
-
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Actividades')]")));
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(Ficha_Buceo).perform();
+        actions.moveToElement(Buceo).click().perform();
     }
 
 
     public void visualizarCarrusel() throws InterruptedException {
-
-
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Buceo')]")));
+        waitFor(3).second();
     }
 
     public void pulsarPausarCarrusel() throws InterruptedException {
-
-
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 100)");
+        btnStop.click();
     }
 
     public void pulsarReanudarCarrusel() throws InterruptedException {
-
+        btnPlay.click();
     }
 
     public void pulsarAnteriorImagen() throws InterruptedException {
-
+        btnAnterior.click();
     }
 
     public void deslizarCarruselalaDerecha() throws InterruptedException {
-
+        Actions actions = new Actions(getDriver());
+        actions.dragAndDropBy(Deslizar,300,0)
+                .perform();
     }
 
     public void pulsarSiguienteImagen() throws InterruptedException {
-
+        btnSiguiente.click();
     }
 
     public void deslizarCarruselalaIzquierda() throws InterruptedException {
-
+        Actions actions = new Actions(getDriver());
+        actions.dragAndDropBy(Deslizar,-300,0)
+                .perform();
     }
 
     public void pulsarIrAlaPrimeraImagen() throws InterruptedException {
-
+        btnPrimeraPag.click();
     }
 
     public void pulsarIrAlaUltimaImagen() throws InterruptedException {
-
+        btnUltimaPag.click();
     }
 
 }

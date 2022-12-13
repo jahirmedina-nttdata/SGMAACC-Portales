@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_129 @skip @KO
+@PPB003-CAP_F_129
 
 Característica: PPB003-CAP_F_129 - Visualizar pestaña ESPACIOS NATURALES
   Como un usuario comun

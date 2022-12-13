@@ -5,6 +5,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB007.CAP_FN_002.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -26,14 +28,14 @@ public class MyStepDefinition {
         myStep.autenticaUsuario();
     }
 
-    @Y("^PPB007-CAPFN002 - Acceder al Canal de Administracion Electronica$")
-    public void Acceder_Al_Canal_De_Administracion_Electronica()throws InterruptedException {
+    @Y("^PPB007-CAPFN002 - Acceder al Canal de Administración Electronica$")
+    public void Acceder_Al_Canal_De_Administración_Electronica()throws InterruptedException, URISyntaxException {
         myStep.accederCAE();
     }
 
-    @Y("^PPB007-CAPFN002 - Validar menu vertical$")
-    public void Validar_Menu_Vertical()throws InterruptedException {
-
+    @Y("^PPB007-CAPFN002 - Validar autenticacion y acceso$")
+    public void Validar_Autenticacion_Y_Acceso()throws InterruptedException {
+        myStep.validarAutenticacion();
     }
 }
 

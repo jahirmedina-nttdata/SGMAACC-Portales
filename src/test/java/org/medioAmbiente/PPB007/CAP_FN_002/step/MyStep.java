@@ -4,6 +4,8 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB007.CAP_FN_002.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
+import java.net.URISyntaxException;
+
 
 public class MyStep extends ScenarioSteps {
 
@@ -27,7 +29,12 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void accederCAE() throws InterruptedException {
+    public void accederCAE() throws InterruptedException, URISyntaxException {
         page.accederCAE();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void validarAutenticacion() throws InterruptedException {
+        page.validarAutenticacion();
     }
 }

@@ -6,6 +6,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB004.CAP_FN_003.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -39,7 +41,7 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB004-CAPFN003 - Visualizar CAP_FC_004$")
-    public void Visualizar_CAP_FC_04() throws InterruptedException {
+    public void Visualizar_CAP_FC_04() throws InterruptedException, URISyntaxException {
         myStep.ejecutarFC04();
     }
 }

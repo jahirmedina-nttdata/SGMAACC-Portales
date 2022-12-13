@@ -4,6 +4,8 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB003.CAP_F_003.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
+import java.net.URISyntaxException;
+
 
 public class MyStep extends ScenarioSteps {
 
@@ -27,7 +29,17 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
+    public void accederEspacioNatural() throws InterruptedException, URISyntaxException {
+        page.accederEspacioNatural();
+    }
+
+    @net.thucydides.core.annotations.Step
     public void clikarIconoEditar() throws InterruptedException {
         page.clikarIconoEditar();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void visualizarCodigoRENPA() throws InterruptedException {
+        page.visualizarCodigoRENPA();
     }
 }

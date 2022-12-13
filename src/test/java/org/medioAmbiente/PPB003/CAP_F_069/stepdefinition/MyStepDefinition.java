@@ -5,6 +5,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_069.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -32,7 +34,7 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB003-CAPF069 - Rellenar campos invalidos$")
-    public void Rellenar_Campos_Invalidos()throws InterruptedException {
+    public void Rellenar_Campos_Invalidos()throws InterruptedException, URISyntaxException {
         myStep.rellenarCamposInvalidos();
     }
 }

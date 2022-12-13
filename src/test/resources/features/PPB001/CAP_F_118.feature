@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_118 @bloqued
+@PPB001-CAP_F_118
 
 Característica: PPB001-CAP_F_118 - Previsualizar contenido Web
   Como un usuario autenticado
@@ -10,7 +10,7 @@ Característica: PPB001-CAP_F_118 - Previsualizar contenido Web
     Dado PPB001-CAPF118 - Accedo al Navegador
     Cuando PPB001-CAPF118 - Acepto Cookies
     Y PPB001-CAPF118 - Autentico usuario
-    Y PPB001-CAPF118 - Elegir contenido
+    Y PPB001-CAPF118 - Acceder al Preview Contenidos Web
+    Y PPB001-CAPF118 - Previsualizar contenido sin seleccionar sitio
     Y PPB001-CAPF118 - Previsualizar contenido
-    Y PPB001-CAPF118 - Clickar Previsualizar
 
