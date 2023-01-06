@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_013  @skip @KO
+@PPB002-CAP_F_013 @bloqued
 
 Característica: PPB002-CAP_F_013 - Buscador Agenda
   Como un usuario comun
@@ -10,9 +10,9 @@ Característica: PPB002-CAP_F_013 - Buscador Agenda
     Dado PPB002-CAPF013 - Cargando el Navegador
     Cuando PPB002-CAPF013 - Se haya cargado la web
     Y PPB002-CAPF013 - Aceptar las cookies
-    Y PPB002-CAPF013 - Selecciono icono de calendario y mes posterior
-    Y PPB002-CAPF013 - Selecciono incono de fecha y año posterior
-    Y PPB002-CAPF013 - Clickar dia
+    Y PPB002-CAPF013 - Selecciono mes posterior
+    Y PPB002-CAPF013 - Selecciono año posterior
+    Y PPB002-CAPF013 - Clickar sobre un dia
 
 
 

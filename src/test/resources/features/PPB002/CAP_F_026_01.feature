@@ -1,7 +1,7 @@
 #language: es
-@PPB002-CAP_F_026-01 @skip @KO
+@PPB002-CAP_F_026_01
 
-Característica: PPB002-CAP_F_026-01 - Distributiva - Temas
+Característica: PPB002-CAP_F_026_01 - Componente Proyectos Europeos
   Como un usuario comun
   Quiero acceder al portal
   Para visualizar contenido
@@ -11,8 +11,10 @@ Característica: PPB002-CAP_F_026-01 - Distributiva - Temas
     Dado PPB002-CAPF02601 - Cargando el Navegador
     Cuando PPB002-CAPF02601 - Se haya cargado la web
     Y PPB002-CAPF02601 - Aceptar las cookies
-    Y PPB002-CAPF02601 - Ubicar tarjeta
-    Y PPB002-CAPF02601 - Clickar tarjeta
+    Y PPB002-CAPF02601 - Ubicarse en la seccion PROYECTOS EUROPEOS
+    Y PPB002-CAPF02601 - Deslizar componente
+    Y PPB002-CAPF02601 - Posicionar puntero en tarjeta
+    Y PPB002-CAPF02601 - Clickar Tarjeta
 
 
 

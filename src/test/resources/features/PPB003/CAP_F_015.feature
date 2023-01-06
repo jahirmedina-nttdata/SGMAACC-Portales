@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_015 @skip @KO
+@PPB003-CAP_F_015 @bloqued
 
 Característica: PPB003-CAP_F_015 - Validar Ficha Tecnica
   Como un usuario

@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_022 @skip @KO
+@PPB002-CAP_F_022 @bloqued
 
 Característica: PPB002-CAP_F_022 - Proximos eventos lateral
   Como un usuario comun

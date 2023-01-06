@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_090 @skip @KO
+@PPB002-CAP_F_090 @bloqued
 
 Característica: PPB002-CAP_F_090 - Visualizacion detalle Servicio OGC
   Como un usuario comun
@@ -10,6 +10,7 @@ Característica: PPB002-CAP_F_090 - Visualizacion detalle Servicio OGC
     Dado PPB002-CAPF090 - Cargando el Navegador
     Cuando PPB002-CAPF090 - Se haya cargado la web
     Y PPB002-CAPF090 - Aceptar las cookies
+    Y PPB002-CAPF090 - Mostrar contenido del detalle
     Y PPB002-CAPF090 - Mostrar sin fecha
     Y PPB002-CAPF090 - Mostrar sin subtitulo
     Y PPB002-CAPF090 - Mostrar sin texto

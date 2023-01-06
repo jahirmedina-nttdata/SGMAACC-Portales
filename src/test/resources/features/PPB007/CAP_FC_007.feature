@@ -1,5 +1,5 @@
 #language: es
-@PPB007-CAP_FC_007 @skip @KO
+@PPB007-CAP_FC_007
 
 Característica: PPB007-CAP_FC_007 - Visualizacion Destacamos con descripcion
   Como un usuario comun

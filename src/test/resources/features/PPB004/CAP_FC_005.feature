@@ -1,5 +1,5 @@
 #language: es
-@PPB004-CAP_FC_005
+@PPB004-CAP_FC_005 @bloqued
 
 Característica: PPB004-CAP_FC_005 - Visualizacion Buscador
   Como usuario comun

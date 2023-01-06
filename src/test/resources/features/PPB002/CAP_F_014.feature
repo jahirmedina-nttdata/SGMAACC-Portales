@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_014  @skip @KO
+@PPB002-CAP_F_014 @bloqued
 
 Característica: PPB002-CAP_F_014 - Proximos Eventos
   Como un usuario comun

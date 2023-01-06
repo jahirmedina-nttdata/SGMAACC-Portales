@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_024 @skip @KO
+@PPB002-CAP_F_024
 
 Característica: PPB002-CAP_F_024 - Componentes Destacados
   Como un usuario comun
@@ -10,7 +10,8 @@ Característica: PPB002-CAP_F_024 - Componentes Destacados
     Dado PPB002-CAPF024 - Cargando el Navegador
     Cuando PPB002-CAPF024 - Se haya cargado la web
     Y PPB002-CAPF024 - Aceptar las cookies
-    Y PPB002-CAPF024 - Visualizo destacado
+    Y PPB002-CAPF024 - Ubicarse en el apartado Destacados
+    Y PPB002-CAPF024 - Clickar Contenido
 
 
 

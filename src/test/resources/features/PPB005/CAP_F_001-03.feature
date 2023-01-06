@@ -1,5 +1,5 @@
 #language: es
-@PPB005-CAP_F_001-03 @skip @KO
+@PPB005-CAP_F_001-03
 
 Característica: PPB005-CAP_F_001-03 - Menu Navegacion
   Como un usuario comun
@@ -10,6 +10,7 @@ Característica: PPB005-CAP_F_001-03 - Menu Navegacion
     Dado PPB005-CAPF00103 - Accedo al portal
     Y PPB005-CAPF00103 - Acepto Cookies
     Y PPB005-CAPF00103 - Mostrar menu
-    Y PPB005-CAPF00103 - Accedo enlace
+    Y PPB005-CAPF00103 - Posicionar puntero en menu
+    Y PPB005-CAPF00103 - Accedo al submenu
 
 

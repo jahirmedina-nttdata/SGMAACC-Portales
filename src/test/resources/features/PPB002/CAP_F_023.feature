@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_023 @skip @KO
+@PPB002-CAP_F_023
 
 Característica: PPB002-CAP_F_023 - Componentes Basicos
   Como un usuario comun
@@ -10,8 +10,7 @@ Característica: PPB002-CAP_F_023 - Componentes Basicos
     Dado PPB002-CAPF023 - Cargando el Navegador
     Cuando PPB002-CAPF023 - Se haya cargado la web
     Y PPB002-CAPF023 - Aceptar las cookies
-    Y PPB002-CAPF023 - Visualizo sin texto ni imagen
-    Y PPB002-CAPF023 - Visualizo con texto e imagen
+    Y PPB002-CAPF023 - Visualizar Contenido
 
 
 

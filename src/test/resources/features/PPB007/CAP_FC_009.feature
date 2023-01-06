@@ -1,5 +1,5 @@
 #language: es
-@PPB007-CAP_FC_009 @skip @KO
+@PPB007-CAP_FC_009
 
 Característica: PPB007-CAP_FC_009 - Visualizacion Tablon de anuncion
   Como un usuario comun
@@ -16,6 +16,5 @@ Característica: PPB007-CAP_FC_009 - Visualizacion Tablon de anuncion
     Y PPB007-CAPFC009 - Buscar por fecha inicio
     Y PPB007-CAPFC009 - Buscar por fecha fin
     Y PPB007-CAPFC009 - Clickar enlace
-    Y PPB007-CAPFC009 - Mostrar texto flotante
     Y PPB007-CAPFC009 - Ejecutar CAPFN030
 

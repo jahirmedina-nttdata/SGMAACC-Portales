@@ -7,6 +7,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB005.CAP_F_001_01.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -33,7 +35,7 @@ public class MyStepDefinition {
     }
 
     @Entonces("^PPB005-CAPF00101 - realizamos click en el boton Acceder$")
-    public void Realizamos_Click_En_El_Boton_Acceder() throws InterruptedException {
+    public void Realizamos_Click_En_El_Boton_Acceder() throws InterruptedException, URISyntaxException {
         myStep.clickAcceder();
     }
 

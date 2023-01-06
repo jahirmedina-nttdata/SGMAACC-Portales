@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_011  @skip @KO
+@PPB002-CAP_F_011 @bloqued
 
 Característica: PPB002-CAP_F_011 - Buscador Lateral
   Como un usuario comun
@@ -10,12 +10,11 @@ Característica: PPB002-CAP_F_011 - Buscador Lateral
     Dado PPB002-CAPF011 - Cargando el Navegador
     Cuando PPB002-CAPF011 - Se haya cargado la web
     Y PPB002-CAPF011 - Aceptar las cookies
-    Y PPB002-CAPF011 - Escribimos texto
-    Y PPB002-CAPF011 - Selecciono provincia y enter
-    Y PPB002-CAPF011 - Selecciono fecha desde y enter
-    Y PPB002-CAPF011 - Selecciono fecha hasta y enter
-    Y PPB002-CAPF011 - Selecciono fecha desde-hasta y enter
-    Y PPB002-CAPF011 - Clickar en buscar
+    Y PPB002-CAPF011 - Buscar por texto
+    Y PPB002-CAPF011 - Buscar por Provincia
+    Y PPB002-CAPF011 - Buscar por fecha desde
+    Y PPB002-CAPF011 - Buscar por fecha hasta
+    Y PPB002-CAPF011 - Buscar por todos los campos
 
 
 

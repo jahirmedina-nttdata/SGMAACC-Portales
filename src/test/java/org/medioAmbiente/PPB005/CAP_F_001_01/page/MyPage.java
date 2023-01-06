@@ -7,6 +7,9 @@ import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+
 
 @DefaultUrl("/medioambiente/portal/c/portal/login")
 
@@ -35,8 +38,10 @@ public class MyPage extends PageObject {
     }
 
 
-    public void clickAcceder() throws InterruptedException {
+    public void clickAcceder() throws InterruptedException, URISyntaxException {
         btnAcceder.click();
+        waitFor(2).second();
+        getDriver().get(new URI(getDriver().getCurrentUrl()).resolve("/medioambiente/portal/web/portal-conocimiento").toString());
     }
 
 }

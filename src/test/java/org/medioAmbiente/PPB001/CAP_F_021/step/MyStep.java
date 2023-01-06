@@ -4,6 +4,8 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB001.CAP_F_021.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
+import java.sql.SQLException;
+
 
 public class MyStep extends ScenarioSteps {
 
@@ -41,7 +43,7 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void validarResultado() throws InterruptedException {
+    public void validarResultado() throws InterruptedException, SQLException {
         myPage.validarResultado();
     }
 }

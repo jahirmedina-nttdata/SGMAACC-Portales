@@ -1,5 +1,5 @@
 #language: es
-@PPB005-CAP_F_001-04 @skip @KO
+@PPB005-CAP_F_001-04
 
 Característica: PPB005-CAP_F_001-04 - Noticias Home
   Como un usuario comun
@@ -10,6 +10,6 @@ Característica: PPB005-CAP_F_001-04 - Noticias Home
     Dado PPB005-CAPF00104 - Accedo al portal
     Y PPB005-CAPF00104 - Acepto Cookies
     Y PPB005-CAPF00104 - Mostrar seccion noticias
-    Y PPB005-CAPF00104 - Accedo enlace
+    Y PPB005-CAPF00104 - Accedo a noticia
 
 

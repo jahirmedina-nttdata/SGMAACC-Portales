@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_010  @skip @KO
+@PPB002-CAP_F_010
 
 Característica: PPB002-CAP_F_010 - Noticias Actualidad
   Como un usuario comun
@@ -10,6 +10,7 @@ Característica: PPB002-CAP_F_010 - Noticias Actualidad
     Dado PPB002-CAPF010 - Cargando el Navegador
     Cuando PPB002-CAPF010 - Se haya cargado la web
     Y PPB002-CAPF010 - Aceptar las cookies
+    Y PPB002-CAPF010 - Ir a la seccion noticia
     Y PPB002-CAPF010 - Clickar sobre texto
     Y PPB002-CAPF010 - Clickar categoria
     Y PPB002-CAPF010 - Clickar ver todas las noticias

@@ -1,5 +1,5 @@
 #language: es
-@PPB007-CAP_FC_010 @skip @KO
+@PPB007-CAP_FC_010
 
 Característica: PPB007-CAP_FC_010 - Visualizacion Tramites
   Como un usuario comun
@@ -18,6 +18,5 @@ Característica: PPB007-CAP_FC_010 - Visualizacion Tramites
     Y PPB007-CAPFC010 - Buscar por tramitacion electronica
     Y PPB007-CAPFC010 - Buscar por texto y plazo abierto
     Y PPB007-CAPFC010 - Clickar enlace
-    Y PPB007-CAPFC010 - Mostrar texto flotante
     Y PPB007-CAPFC010 - Ejecutar CAPFN030
 

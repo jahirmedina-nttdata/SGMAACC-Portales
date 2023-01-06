@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_008  @skip @KO
+@PPB002-CAP_F_008
 
 Característica: PPB002-CAP_F_008 - Carrusel secundario
   Como un usuario comun
@@ -10,7 +10,9 @@ Característica: PPB002-CAP_F_008 - Carrusel secundario
     Dado PPB002-CAPF008 - Cargando el Navegador
     Cuando PPB002-CAPF008 - Se haya cargado la web
     Y PPB002-CAPF008 - Aceptar las cookies
-    Y PPB002-CAPF008 - Clickar boton carrusel
+    Y PPB002-CAPF008 - Clickar flecha siguiente
+    Y PPB002-CAPF008 - Clickar flecha anterior
+    Y PPB002-CAPF008 - Clickar bullet
     Y PPB002-CAPF008 - Clickar enlace
 
 

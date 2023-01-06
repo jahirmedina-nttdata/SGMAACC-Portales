@@ -1,5 +1,5 @@
 #language: es
-@PPB007-CAP_FC_004 @skip @KO
+@PPB007-CAP_FC_004 @bloqued
 
 Característica: PPB007-CAP_FC_004 - Visualizacion Tramites laterales
   Como un usuario comun

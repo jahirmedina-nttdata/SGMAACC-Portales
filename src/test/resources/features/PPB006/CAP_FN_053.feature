@@ -1,5 +1,5 @@
 #language: es
-@PPB006-CAP_FN_053 @skip @KO
+@PPB006-CAP_FN_053 @Bloqued
 
 Característica: PPB006-CAP_FN_053 - Visualizacion Te puede interesar
   Como un usuario comun

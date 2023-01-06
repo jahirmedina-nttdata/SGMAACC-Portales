@@ -7,6 +7,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB001.CAP_F_021.step.MyStep;
 
+import java.sql.SQLException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -38,7 +40,7 @@ public class MyStepDefinition {
     }
 
     @Entonces("^PPB001-CAPF021 - Validar resultado$")
-    public void Validar_Resultado() throws InterruptedException {
+    public void Validar_Resultado() throws InterruptedException, SQLException {
         myStep.validarResultado();
     }
 
