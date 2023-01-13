@@ -18,17 +18,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "(//a[@title=\"Guías Didácticas de Educación Ambiental\"])[1]")
-    private WebElementFacade Texto_Flotante;
-
-    @FindBy(xpath = "(//a[@title=\"Buenas prácticas del mes\"])[1]")
-    private WebElementFacade Campaña;
-
+    @FindBy(xpath = "(//a[@title=\"VER TODOS LOS EVENTOS\"])[2]")
+    private WebElementFacade btnVerTodos;
 
 
     public void clickarDetalleContenido() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 100)");
+        j.executeScript("window.scrollBy(0, 200)");
+    }
+
+    public void clickarBotonTodosLosEventos() throws InterruptedException {
+        Actions action = new Actions(getDriver());
+        action.moveToElement(btnVerTodos).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Buscador en agenda')])[2]")));
     }
 
 

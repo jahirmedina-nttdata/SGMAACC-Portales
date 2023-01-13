@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_090 @bloqued
+@PPB002-CAP_F_090
 
 Característica: PPB002-CAP_F_090 - Visualizacion detalle Servicio OGC
   Como un usuario comun

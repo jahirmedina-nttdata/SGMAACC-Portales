@@ -27,14 +27,19 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
+    @Y("PPB002-CAPF014 - Ubicarse en la seccion Proximos Eventos$")
+    public void Ubicarse_En_La_Seccion_Proximos_Eventos() throws InterruptedException{
+        myStep.ubicarseProximosEventos();
+    }
 
     @Y("PPB002-CAPF014 - Clickar titulo$")
     public void Clickar_Titulo() throws InterruptedException{
-
+        myStep.clickarTitulo();
     }
 
-    @Y("PPB002-CAPF014 - Clickar mas$")
-    public void Clickar_Mas() throws InterruptedException{
+    @Y("PPB002-CAPF014 - Clickar en el icono mas$")
+    public void Clickar_En_El_Icono_Mas() throws InterruptedException{
+        myStep.clickarIconoMas();
     }
 }
 

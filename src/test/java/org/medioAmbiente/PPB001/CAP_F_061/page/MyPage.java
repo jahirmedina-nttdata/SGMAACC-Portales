@@ -12,4 +12,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class MyPage extends PageObject {
 
+    public void seleccionarPaginador() throws InterruptedException{
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 550)");
+    }
 }

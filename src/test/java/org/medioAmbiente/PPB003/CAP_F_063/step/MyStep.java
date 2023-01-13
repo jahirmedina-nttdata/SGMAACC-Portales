@@ -22,6 +22,11 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
+    public void visualizarVideos() throws InterruptedException {
+        page.visualizarVideos();
+    }
+
+    @net.thucydides.core.annotations.Step
     public void clickarElemento() throws InterruptedException {
         page.clickarElemento();
     }

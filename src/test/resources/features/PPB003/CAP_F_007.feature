@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_007 @bloqued
+@PPB003-CAP_F_007
 
 Característica: PPB003-CAP_F_007 - Compartir ficha
   Como un usuario
@@ -12,7 +12,6 @@ Característica: PPB003-CAP_F_007 - Compartir ficha
     Y PPB003-CAPF007 - Compartir en Facebook
     Y PPB003-CAPF007 - Compartir en Twitter
     Y PPB003-CAPF007 - Compartir en Pinterest
-    Y PPB003-CAPF007 - Compartir en WhatsApp
     Y PPB003-CAPF007 - Compartir por Correo
 
 

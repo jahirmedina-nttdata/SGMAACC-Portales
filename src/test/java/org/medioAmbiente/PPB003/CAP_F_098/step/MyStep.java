@@ -21,10 +21,6 @@ public class MyStep extends ScenarioSteps {
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
     }
 
-    @net.thucydides.core.annotations.Step
-    public void autenticarUsuario() throws InterruptedException {
-        page.autenticarUsuario();
-    }
 
     @net.thucydides.core.annotations.Step
     public void visualizarPaginador() throws InterruptedException {

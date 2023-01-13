@@ -33,5 +33,8 @@ public class MyStep extends ScenarioSteps {
         page.buscadorAvanzado();
     }
 
-
+    @net.thucydides.core.annotations.Step
+    public void validarNumeroDeBusqueda() throws InterruptedException {
+        page.validarNumeroDeBusqueda();
+    }
 }

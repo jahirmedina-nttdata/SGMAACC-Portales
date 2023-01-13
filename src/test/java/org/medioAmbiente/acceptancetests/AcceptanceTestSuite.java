@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
   //     , tags = "(@PPB003-CAP_F_128 or @PPB003-CAP_F_129 or @PPB003-CAP_F_130 or @PPB003-CAP_F_131 or @PPB004-CAP_FN_002 or @PPB006-CAP_FN_002 or @PPB007-CAP_FN_002)"
    //  , tags = "(@PPB003-CAP_F_002 or @PPB003-CAP_F_048 or @PPB003-CAP_F_049 or @PPB003-CAP_F_050 or @PPB003-CAP_F_051 or @PPB003-CAP_F_053 or @PPB003-CAP_F_054 or @PPB003-CAP_F_056 or @PPB003-CAP_F_057 or @PPB003-CAP_F_120 or @PPB003-CAP_F_121 or @PPB003-CAP_F_122 or @PPB003-CAP_F_123 or @PPB003-CAP_F_124 or @PPB003-CAP_F_132)"
 
-      , tags = "@PPB007-CAP_FC_010"
+      , tags = "@PPB005-CAP_F_001-07"
         )
 
 public class AcceptanceTestSuite {}

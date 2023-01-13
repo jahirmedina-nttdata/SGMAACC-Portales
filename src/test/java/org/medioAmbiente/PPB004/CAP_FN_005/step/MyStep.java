@@ -27,17 +27,37 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarconTexto() throws InterruptedException {
-        page.clickarconTexto();
+    public void buscarPorTexto() throws InterruptedException {
+        page.buscarPorTexto();
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarTema() throws InterruptedException{
-        page.seleccionarTema();
+    public void buscarPorTema() throws InterruptedException{
+        page.buscarPorTema();
     }
 
     @net.thucydides.core.annotations.Step
-    public void navegarVistas()throws InterruptedException {
-        page.navegarVistas();
+    public void buscarPorTextoYTema()throws InterruptedException {
+        page.buscarPorTextoYTema();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorFechaDePublicacionAscendentemente()throws InterruptedException {
+        page.buscarPorFechaDePublicacionAscendentemente();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorTituloAscendente()throws InterruptedException {
+        page.buscarPorTituloAscendente();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorTituloDescendente()throws InterruptedException {
+        page.buscarPorTituloDescendente();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void validarFuncionamientoDePaginador()throws InterruptedException {
+        page.validarFuncionamientoDePaginador();
     }
 }

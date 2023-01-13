@@ -34,17 +34,17 @@ public class MyStepDefinition {
     }
     @Y("^PPB003-CAPF015 - Consultar codigo RENPA para validar Fecha de Declaracion$")
     public void Consultar_Codigo_RENPA_Para_Validar_Fecha_De_Declaracion()throws InterruptedException {
-
+        myStep.consultarRenpaParaValidarFechaDeclaracion();
     }
 
-    @Y("^PPB003-CAPF015 - Consultar codigo RENPA para validar Datos Tecnicos$")
-    public void Consultar_Codigo_RENPA_Para_Validar_Datos_Tecnicos()throws InterruptedException {
-
+    @Y("^PPB003-CAPF015 - Consultar codigo RENPA para validar Municipio$")
+    public void Consultar_Codigo_RENPA_Para_Validar_Municipio()throws InterruptedException {
+        myStep.consultarRenpaParaValidarMunicipio();
     }
 
     @Y("^PPB003-CAPF015 - Consultar codigo RENPA para validar Superficie Total$")
     public void Consultar_Codigo_RENPA_Para_Validar_Superficie_Total()throws InterruptedException {
-
+        myStep.consultarRenpaParaValidarSuperficieTotal();
     }
 }
 

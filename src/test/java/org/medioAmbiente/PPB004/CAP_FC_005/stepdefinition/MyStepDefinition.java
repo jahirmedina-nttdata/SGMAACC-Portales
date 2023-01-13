@@ -1,6 +1,7 @@
 package org.medioAmbiente.PPB004.CAP_FC_005.stepdefinition;
 
 import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB004.CAP_FC_005.step.MyStep;
@@ -32,6 +33,11 @@ public class MyStepDefinition {
     @Y("^PPB004-CAPFC005 - Acceder buscador avanzado$")
     public void Acceder_Buscador_Avanzado()throws InterruptedException, URISyntaxException {
         myStep.buscadorAvanzado();
+    }
+
+    @Entonces("^PPB004-CAPFC005 - Validar numero de busqueda$")
+    public void Validar_Numero_De_Busqueda()throws InterruptedException {
+        myStep.validarNumeroDeBusqueda();
     }
 
 }

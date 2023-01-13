@@ -34,7 +34,7 @@ public class MyStepDefinition {
 
     @Y("^PPB002-CAPF022 - Clickar todos los eventos$")
     public void Clickar_Todos_Los_Eventos() throws InterruptedException{
-
+        myStep.clickarBotonTodosLosEventos();
     }
 
 }

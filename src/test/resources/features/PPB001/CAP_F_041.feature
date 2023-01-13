@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_041 @bloqued
+@PPB001-CAP_F_041
 
 Característica: PPB001-CAP_F_041 - Validar Busqueda en galeria multimeria
   Como un usuario comun

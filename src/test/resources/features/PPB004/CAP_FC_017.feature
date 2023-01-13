@@ -1,5 +1,5 @@
 #language: es
-@PPB004-CAP_FC_017 @bloqued
+@PPB004-CAP_FC_017
 
 Característica: PPB004-CAP_FC_017 - Visualizacion de Terrenos Cinegeticos
   Como usuario comun

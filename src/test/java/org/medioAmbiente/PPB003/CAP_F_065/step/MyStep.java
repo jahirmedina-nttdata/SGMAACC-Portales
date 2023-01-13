@@ -22,7 +22,23 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void visualizar_Noticia() throws InterruptedException {
-        page.visualizar_Noticia();
+    public void visualizaFechaYCategoria() throws InterruptedException {
+        page.visualizaFechaYCategoria();
     }
+
+    @net.thucydides.core.annotations.Step
+    public void visualizaTituloDeContenido() throws InterruptedException {
+        page.visualizaTituloDeContenido();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void visualizaTextoDeNoticia() throws InterruptedException {
+        page.visualizaTextoDeNoticia();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void visualizaImagenDeNoticia() throws InterruptedException {
+        page.visualizaImagenDeNoticia();
+    }
+
 }

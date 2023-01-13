@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_079 @bloqued
+@PPB003-CAP_F_079 @skip @KO
 
 Característica: PPB003-CAP_F_079 - Eliminar Ficha Planifica tu Visita
   Como un usuario

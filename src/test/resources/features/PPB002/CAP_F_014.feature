@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_014 @bloqued
+@PPB002-CAP_F_014
 
 Característica: PPB002-CAP_F_014 - Proximos Eventos
   Como un usuario comun
@@ -10,8 +10,9 @@ Característica: PPB002-CAP_F_014 - Proximos Eventos
     Dado PPB002-CAPF014 - Cargando el Navegador
     Cuando PPB002-CAPF014 - Se haya cargado la web
     Y PPB002-CAPF014 - Aceptar las cookies
+    Y PPB002-CAPF014 - Ubicarse en la seccion Proximos Eventos
     Y PPB002-CAPF014 - Clickar titulo
-    Y PPB002-CAPF014 - Clickar mas
+    Y PPB002-CAPF014 - Clickar en el icono mas
 
 
 

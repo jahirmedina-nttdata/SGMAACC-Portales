@@ -20,4 +20,14 @@ public class MyStep extends ScenarioSteps {
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
     }
+
+    @net.thucydides.core.annotations.Step
+    public void ubicarteEnTambienTePuedeInteresar() throws InterruptedException {
+        page.ubicarteEnTambienTePuedeInteresar();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarTituloDeImagen() throws InterruptedException {
+        page.clickarTituloDeImagen();
+    }
 }

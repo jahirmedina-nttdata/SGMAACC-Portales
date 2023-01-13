@@ -23,7 +23,7 @@ public class MyStepDefinition {
 
     @Y("^PPB001-CAPF061 - Seleccionar el paginador$")
     public void Seleccionar_El_Paginador() throws InterruptedException {
-
+        myStep.seleccionarPaginador();
     }
 
     @Y("^PPB001-CAPF061 - Clickar siguiente pagina$")

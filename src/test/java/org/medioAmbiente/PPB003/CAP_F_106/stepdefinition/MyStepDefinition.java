@@ -20,9 +20,9 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF106 - Acceder buscador de espacios naturales$")
-    public void Acceder_Buscador_De_Espacios_Naturales()throws InterruptedException {
-        myStep.accederEspaciosNaturales();
+    @Y("^PPB003-CAPF106 - Buscar Espacio Natural$")
+    public void Buscar_Espacio_Natural()throws InterruptedException {
+        myStep.buscarEspacioNatural();
     }
 
     @Y("^PPB003-CAPF106 - Visualizar paginador$")

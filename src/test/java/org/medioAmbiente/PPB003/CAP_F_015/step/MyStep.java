@@ -33,4 +33,19 @@ public class MyStep extends ScenarioSteps {
     public void ejecutarCAPF003() throws InterruptedException, URISyntaxException {
         page.ejecutarCAPF003();
     }
+
+    @net.thucydides.core.annotations.Step
+    public void consultarRenpaParaValidarFechaDeclaracion() throws InterruptedException {
+        page.consultarRenpaParaValidarFechaDeclaracion();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void consultarRenpaParaValidarMunicipio() throws InterruptedException {
+        page.consultarRenpaParaValidarMunicipio();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void consultarRenpaParaValidarSuperficieTotal() throws InterruptedException {
+        page.consultarRenpaParaValidarSuperficieTotal();
+    }
 }

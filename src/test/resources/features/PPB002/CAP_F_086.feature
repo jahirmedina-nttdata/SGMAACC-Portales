@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_086 @skip @KO
+@PPB002-CAP_F_086
 
 Característica: PPB002-CAP_F_086 - Visualizacion detalle Noticia
   Como un usuario comun

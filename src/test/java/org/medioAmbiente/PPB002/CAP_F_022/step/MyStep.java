@@ -26,5 +26,9 @@ public class MyStep extends ScenarioSteps {
         page.clickarDetalleContenido();
     }
 
+    @net.thucydides.core.annotations.Step
+    public void clickarBotonTodosLosEventos() throws InterruptedException {
+        page.clickarBotonTodosLosEventos();
+    }
 
 }

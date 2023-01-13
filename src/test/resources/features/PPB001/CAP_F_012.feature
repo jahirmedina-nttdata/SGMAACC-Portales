@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_012 @bloqued
+@PPB001-CAP_F_012
 
 Característica: PPB001-CAP_F_012 - Visualizar Buscador generico y avanzado
   Como un usuario comun

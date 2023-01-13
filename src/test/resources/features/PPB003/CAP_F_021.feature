@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_021 @bloqued
+@PPB003-CAP_F_021
 
 Característica: PPB003-CAP_F_021 - Visualizar Pestaña Actividades
   Como un usuario

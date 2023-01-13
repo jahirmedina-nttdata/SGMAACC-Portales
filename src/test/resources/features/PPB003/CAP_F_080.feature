@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_080 @bloqued
+@PPB003-CAP_F_080 @skip @KO
 
 Característica: PPB003-CAP_F_080 - Visualizacion Planifica tu Visita
   Como un usuario

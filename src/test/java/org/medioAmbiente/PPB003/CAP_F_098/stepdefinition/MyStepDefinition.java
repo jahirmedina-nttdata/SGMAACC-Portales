@@ -20,11 +20,6 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF098 - Autentico usuario$")
-    public void Autentico_Usuario()throws InterruptedException {
-        myStep.autenticarUsuario();
-    }
-
     @Y("^PPB003-CAPF098 - Visualizar paginador$")
     public void Visualizar_Paginador()throws InterruptedException {
         myStep.visualizarPaginador();

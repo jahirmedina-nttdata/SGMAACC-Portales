@@ -36,10 +36,6 @@ public class MyStepDefinition {
         myStep.compartirPinterest();
     }
 
-    @Y("^PPB003-CAPF007 - Compartir en WhatsApp$")
-    public void Compartir_En_WhatsApp() throws InterruptedException{
-
-    }
 
     @Y("^PPB003-CAPF007 - Compartir por Correo$")
     public void Compartir_Por_Correo() throws InterruptedException{

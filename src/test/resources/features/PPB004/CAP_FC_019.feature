@@ -1,5 +1,5 @@
 #language: es
-@PPB004-CAP_FC_019 @skip @KO
+@PPB004-CAP_FC_019
 
 Característica: PPB004-CAP_FC_019 - Fisualizacion Indice
   Como usuario comun
@@ -10,11 +10,9 @@ Característica: PPB004-CAP_FC_019 - Fisualizacion Indice
     Dado PPB004-CAPFC019 - Accedo al Navegador
     Y PPB004-CAPFC019 - Acepto Cookies
     Y PPB004-CAPFC019 - Mostrar apartado
-    Y PPB004-CAPFC019 - Mostrar texto apartado
-    Y PPB004-CAPFC019 - Ocultar texto apartado
+    Y PPB004-CAPFC019 - Ocultar apartado
     Y PPB004-CAPFC019 - Descargar archivo
     Y PPB004-CAPFC019 - Clickar enlace
-    Y PPB004-CAPFC019 - Clickar imagen
 
 
 

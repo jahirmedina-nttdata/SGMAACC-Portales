@@ -65,5 +65,7 @@ public class MyPage extends PageObject {
 
     public void clickarSobreDia() throws InterruptedException {
         Select_Dia.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 80);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(text(),\"Buscador agenda por días\")]")));
     }
 }

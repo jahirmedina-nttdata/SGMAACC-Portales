@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_075 @bloqued
+@PPB001-CAP_F_075
 
 Característica: PPB001-CAP_F_075 - Navegar entre paginas de resultados Avisos
   Como un usuario comun

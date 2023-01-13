@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_061 @bloqued
+@PPB001-CAP_F_061
 
 Característica: PPB001-CAP_F_061 - Navegar entre paginas de resultados Agenda
   Como un usuario comun

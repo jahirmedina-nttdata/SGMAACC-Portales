@@ -1,5 +1,5 @@
 #language: es
-@PPB004-CAP_FC_005 @bloqued
+@PPB004-CAP_FC_005
 
 Característica: PPB004-CAP_FC_005 - Visualizacion Buscador
   Como usuario comun
@@ -11,7 +11,7 @@ Característica: PPB004-CAP_FC_005 - Visualizacion Buscador
     Y PPB004-CAPFC005 - Acepto Cookies
     Y PPB004-CAPFC005 - Mostrar buscador general
     Y PPB004-CAPFC005 - Acceder buscador avanzado
-
+    Entonces PPB004-CAPFC005 - Validar numero de busqueda
 
 
 

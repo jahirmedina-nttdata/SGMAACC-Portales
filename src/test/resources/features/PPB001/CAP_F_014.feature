@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_014 @skip @KO
+@PPB001-CAP_F_014
 
 Característica: PPB001-CAP_F_014 - Visualizar Buscador de Eventos
   Como un usuario comun
@@ -12,5 +12,8 @@ Característica: PPB001-CAP_F_014 - Visualizar Buscador de Eventos
     Y PPB001-CAPF014 - Buscar por texto
     Y PPB001-CAPF014 - Buscar por tipo de evento
     Y PPB001-CAPF014 - Buscar por provincia
-    Y PPB001-CAPF014 - Fecha Inicio y Fin
+    Y PPB001-CAPF014 - Buscar por Fecha Desde y Hasta
+    Y PPB001-CAPF014 - Ordenar por fecha de publicacion ascendentemente
+    Y PPB001-CAPF014 - Ordenar por Titulo ascendentemente
+    Y PPB001-CAPF014 - Ordenar por Titulo descendentemente
     Y PPB001-CAPF014 - Buscar por todos los filtros

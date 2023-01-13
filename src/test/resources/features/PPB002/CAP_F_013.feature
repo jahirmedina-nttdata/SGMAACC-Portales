@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_013 @bloqued
+@PPB002-CAP_F_013
 
 Característica: PPB002-CAP_F_013 - Buscador Agenda
   Como un usuario comun

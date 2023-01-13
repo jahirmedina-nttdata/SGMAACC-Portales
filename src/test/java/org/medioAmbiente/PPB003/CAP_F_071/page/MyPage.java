@@ -76,17 +76,4 @@ public class MyPage extends PageObject {
         }
     }
 
-    public void clickarOlvideContraseña() throws InterruptedException {
-        Olvide_Contraseña.click();
-    }
-
-    public void rellenarFormulario() throws InterruptedException {
-        Recuperar_User.sendKeys("Automatizador");
-        Texto_Captcha.sendKeys(" " + "\n");
-    }
-
-    public void clickarAcceder() throws InterruptedException {
-        Enlace_Acceder.click();
-    }
-
 }

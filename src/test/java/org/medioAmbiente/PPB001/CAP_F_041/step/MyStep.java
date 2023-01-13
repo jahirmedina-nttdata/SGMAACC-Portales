@@ -36,4 +36,9 @@ public class MyStep extends ScenarioSteps {
     public void clickarBuscar() throws InterruptedException {
         myPage.clickarBuscar();
     }
+
+    @net.thucydides.core.annotations.Step
+    public void validarResultado() throws InterruptedException {
+        myPage.validarResultado();
+    }
 }

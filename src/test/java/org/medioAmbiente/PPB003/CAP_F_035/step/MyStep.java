@@ -29,7 +29,17 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void EjecutaCAPF003() throws InterruptedException, URISyntaxException {
-        page.EjecutaCAPF003();
+    public void EjecutarCAPF003() throws InterruptedException, URISyntaxException {
+        page.EjecutarCAPF003();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void consultarCodigoEquipamientoParaValidarEspaciosRelacionados() throws InterruptedException {
+        page.consultarCodigoEquipamientoParaValidarEspaciosRelacionados();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void consultarCodigoEquipamientoParaValidarEspacioNatural() throws InterruptedException{
+        page.consultarCodigoEquipamientoParaValidarEspacioNatural();
     }
 }

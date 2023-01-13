@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_021 @bloqued
+@PPB001-CAP_F_021
 
 Característica: PPB001-CAP_F_021 - Acceso al buscador de espacios naturales
   Como un usuario comun

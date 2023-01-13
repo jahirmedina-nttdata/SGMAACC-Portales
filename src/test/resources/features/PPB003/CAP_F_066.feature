@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_066 @skip @KO
+@PPB003-CAP_F_066
 
 Característica: PPB003-CAP_F_066 - Visualizar Detalle evento
   Como un usuario
@@ -9,13 +9,15 @@ Característica: PPB003-CAP_F_066 - Visualizar Detalle evento
   Escenario: Cargando Portal Referencial
     Dado PPB003-CAPF066 - Accedo al Navegador
     Y PPB003-CAPF066 - Aceptar Cookies
-    Y PPB003-CAPF066 - Compartir en Facebook
-    Y PPB003-CAPF066 - Compartir en Twitter
-    Y PPB003-CAPF066 - Compartir en Pinterest
-    Y PPB003-CAPF066 - Compartir en WhatsApp
+    Y PPB003-CAPF066 - Visualizar Titulo
+    Y PPB003-CAPF066 - Visualizar Texto
+    Y PPB003-CAPF066 - Visualizar Imagen
+    Y PPB003-CAPF066 - Visualizar campo Fecha
+    Y PPB003-CAPF066 - Compartir por Facebook
+    Y PPB003-CAPF066 - Compartir por Twitter
+    Y PPB003-CAPF066 - Compartir por Pinterest
     Y PPB003-CAPF066 - Compartir por Correo
-    Y PPB003-CAPF033 - Visualizar evento
-    Y PPB003-CAPF033 - Clickar pagina web del evento
+
 
 
 

@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_043 @skip @KO
+@PPB002-CAP_F_043
 
 Característica: PPB002-CAP_F_043 - Listado de enlaces lateral
   Como un usuario comun
@@ -10,8 +10,8 @@ Característica: PPB002-CAP_F_043 - Listado de enlaces lateral
     Dado PPB002-CAPF043 - Cargando el Navegador
     Cuando PPB002-CAPF043 - Se haya cargado la web
     Y PPB002-CAPF043 - Aceptar las cookies
-    Y PPB002-CAPF043 - Mostrar contenido sin enlace
-    Y PPB002-CAPF043 - Posicionar puntero
+    Y PPB002-CAPF043 - Visualizar componente Mas sobre Catalogo
+    Y PPB002-CAPF043 - Posicionar puntero en enlace
     Y PPB002-CAPF043 - Clickar enlace
 
 

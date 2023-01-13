@@ -21,6 +21,11 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
+    @Y("^PPB003-CAPF063 - Visualizar lista de videos$")
+    public void Visualizar_Lista_De_Videos()throws InterruptedException {
+        myStep.visualizarVideos();
+    }
+
     @Y("^PPB003-CAPF063 - Clickar elemento$")
     public void Clickar_Elemento()throws InterruptedException {
         myStep.clickarElemento();

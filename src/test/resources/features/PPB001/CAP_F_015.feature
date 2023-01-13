@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_015 @skip @KO
+@PPB001-CAP_F_015
 
 Característica: PPB001-CAP_F_015 - Visualizar Buscador de Noticias
   Como un usuario comun
@@ -10,6 +10,9 @@ Característica: PPB001-CAP_F_015 - Visualizar Buscador de Noticias
     Dado PPB001-CAPF015 - Accedo al Navegador
     Cuando PPB001-CAPF015 - Acepto Cookies
     Y PPB001-CAPF015 - Buscar por texto
-    Y PPB001-CAPF015 - Fecha Inicio y Fin
-    Y PPB001-CAPF015 - Buscar por provincia
+    Y PPB001-CAPF015 - Buscar por Fecha Desde y Hasta
+    Y PPB001-CAPF015 - Buscar por Temática
+    Y PPB001-CAPF015 - Ordenar por fecha de publicacion ascendentemente
+    Y PPB001-CAPF015 - Ordenar por Titulo ascendentemente
+    Y PPB001-CAPF015 - Ordenar por Titulo descendentemente
     Y PPB001-CAPF015 - Buscar por todos los filtros

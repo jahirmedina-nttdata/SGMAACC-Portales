@@ -21,9 +21,34 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF065 - Visualizar noticia$")
-    public void Visualizar_Noticia()throws InterruptedException {
-        myStep.visualizar_Noticia();
+    @Y("^PPB003-CAPF065 - Visualiza fecha y categoria$")
+    public void Visualiza_Fecha_Y_Categoria()throws InterruptedException {
+        myStep.visualizaFechaYCategoria();
+    }
+
+    @Y("^PPB003-CAPF065 - Visualiza titulo del contenido$")
+    public void Visualiza_Titulo_Del_Contenido()throws InterruptedException {
+        myStep.visualizaTituloDeContenido();
+    }
+
+    @Y("^PPB003-CAPF065 - Visualiza texto de la noticia$")
+    public void Visualiza_Texto_De_La_Noticia()throws InterruptedException {
+        myStep.visualizaTextoDeNoticia();
+    }
+
+    @Y("^PPB003-CAPF065 - Visualiza imagen de la noticia$")
+    public void Visualiza_Imagen_De_La_Noticia()throws InterruptedException {
+        myStep.visualizaImagenDeNoticia();
+    }
+
+    @Y("^PPB003-CAPF065 - Visualiza video de la noticia$")
+    public void Visualiza_Video_De_La_Noticia()throws InterruptedException {
+
+    }
+
+    @Y("^PPB003-CAPF065 - Pulsar play en video de noticia$")
+    public void Pulsar_Play_En_Video_De_Noticia()throws InterruptedException {
+
     }
 
 }

@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_015 @bloqued
+@PPB002-CAP_F_015
 
 Característica: PPB002-CAP_F_015 - Tambien te puede interesar
   Como un usuario comun

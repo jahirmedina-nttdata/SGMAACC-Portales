@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_026 @bloqued
+@PPB001-CAP_F_026
 
 Característica: PPB001-CAP_F_026 - Visualizar busqueda de Espacios Naturales y Equipamiento
   Como un usuario comun

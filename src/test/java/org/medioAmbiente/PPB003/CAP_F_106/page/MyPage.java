@@ -12,39 +12,42 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/buscador-de-espacios-naturales-y-equipamientos")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"layout_56\"]")
-    private WebElementFacade Menu;
+    @FindBy(xpath = "//span[@title=\"Seleccionar Provincia\"]")
+    private WebElementFacade SelectProvincia;
 
-    @FindBy(xpath = "//*[@id=\"layout_60\"]/a")
-    private WebElementFacade SubMenu;
+    @FindBy(xpath = "//div[contains(text(),\"CÁDIZ\")]")
+    private WebElementFacade Provincia;
 
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_CpKE9LAiUNvt_pagination\"]/li[6]/a")
+    @FindBy(xpath = "//li[@class=\"page_number pag_num_5\"]/a")
     private WebElementFacade Paginador;
 
-    public void accederEspaciosNaturales() throws InterruptedException {
+    @FindBy(xpath = "//button[@id=\"_AssetSearchPlugin_INSTANCE_rbJEpPKqmqSg_searchButton\"]/span")
+    private WebElementFacade btnBuscar;
+
+    public void buscarEspacioNatural() throws InterruptedException {
         Actions actions = new Actions(getDriver());
-        actions.moveToElement(Menu)
-                .perform();
-        actions.moveToElement(SubMenu)
-                .perform();
-        SubMenu.click();
+        actions.moveToElement(SelectProvincia).click().perform();
+        actions.moveToElement(Provincia).click().perform();
+        actions.moveToElement(btnBuscar).click().perform();
     }
 
     public void Visualizar_Paginador() throws InterruptedException {
-      //  WebDriverWait wait = new WebDriverWait(getDriver(), 20);
-      //  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"_AssetSearchPlugin_INSTANCE_CpKE9LAiUNvt_pagination\"]/li[6]/a")));
-      //  JavascriptExecutor j = (JavascriptExecutor) getDriver();
-      //  j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),\"Resultados\")]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
+        waitFor(1).second();
     }
 
     public void seleccionarPaginador() throws InterruptedException {
-       // Paginador.click();
-      //  WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-      //  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(Paginador).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
     }
 }

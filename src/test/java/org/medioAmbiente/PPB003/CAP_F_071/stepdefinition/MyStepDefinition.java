@@ -35,20 +35,5 @@ public class MyStepDefinition {
     public void Acceder_Usuario_Invalido()throws InterruptedException {
         myStep.accederUserInvalido();
     }
-
-    @Y("^PPB003-CAPF071 - Clickar He olvidado mi contraseña$")
-    public void Clickar_He_Olvidado_Mi_Contraseña()throws InterruptedException {
-        myStep.clickarOlvideContraseña();
-    }
-
-    @Y("^PPB003-CAPF071 - Rellenar formulario recuperacion de contraseña$")
-    public void Rellenar_Formulario_Recuperacion_De_Contraseña()throws InterruptedException {
-        myStep.rellenarFormulario();
-    }
-
-    @Y("^PPB003-CAPF071 - Clickar Acceder$")
-    public void Clickar_Acceder()throws InterruptedException {
-        myStep.clickarAcceder();
-    }
 }
 

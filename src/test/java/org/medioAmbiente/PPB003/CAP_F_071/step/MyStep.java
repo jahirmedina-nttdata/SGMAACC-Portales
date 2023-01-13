@@ -35,19 +35,4 @@ public class MyStep extends ScenarioSteps {
     public void accederUserInvalido() throws InterruptedException {
         page.accederUserInvalido();
     }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarOlvideContraseña() throws InterruptedException {
-        page.clickarOlvideContraseña();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void rellenarFormulario() throws InterruptedException {
-        page.rellenarFormulario();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarAcceder() throws InterruptedException {
-        page.clickarAcceder();
-    }
 }

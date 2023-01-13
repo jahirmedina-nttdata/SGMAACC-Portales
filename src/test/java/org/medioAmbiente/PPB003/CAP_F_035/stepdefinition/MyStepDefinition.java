@@ -23,22 +23,24 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF035 - Autentico usuario$")
-    public void Autentico_Usuario()throws InterruptedException {
+    @Y("^PPB003-CAPF035 - Autenticar usuario$")
+    public void Autenticar_Usuario()throws InterruptedException {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF035 - Ejecuta CAPF003$")
-    public void Ejecuta_CAPF003()throws InterruptedException, URISyntaxException {
-        myStep.EjecutaCAPF003();
+    @Y("^PPB003-CAPF035 - Ejecutar CAPF003$")
+    public void Ejecutar_CAPF003()throws InterruptedException, URISyntaxException {
+        myStep.EjecutarCAPF003();
     }
 
-    @Y("^PPB003-CAPF035 - Obtener codigo RENPA$")
-    public void Obtener_Codigo_RENPA()throws InterruptedException {
+    @Y("^PPB003-CAPF035 - Consultar codigo Equipamiento para validar Espacios relacionados$")
+    public void Consultar_Codigo_Equipamiento_Para_Validar_Espacios_Relacionados()throws InterruptedException {
+        myStep.consultarCodigoEquipamientoParaValidarEspaciosRelacionados();
     }
 
-    @Y("^PPB003-CAPF035 - Consulta codigo RENPA$")
-    public void Consulta_Codigo_RENPA()throws InterruptedException {
+    @Y("^PPB003-CAPF035 - Consultar codigo Equipamiento para validar Espacio natural$")
+    public void Consultar_Codigo_Equipamiento_Para_Validar_Espacio_Natural()throws InterruptedException {
+        myStep.consultarCodigoEquipamientoParaValidarEspacioNatural();
     }
 }
 

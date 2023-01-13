@@ -30,11 +30,12 @@ public class MyStepDefinition {
 
     @Y("PPB002-CAPF015 - Ubicarte en la seccion Tambien te puede interesar$")
     public void Ubicarte_En_La_Seccion_Tambien_Te_Puede_Interesar() throws InterruptedException{
-
+        myStep.ubicarteEnTambienTePuedeInteresar();
     }
 
     @Y("PPB002-CAPF015 - Clickar titulo de imagen$")
     public void Clickar_Titulo_De_Imagen() throws InterruptedException{
+        myStep.clickarTituloDeImagen();
     }
 }
 
