@@ -1,5 +1,5 @@
 #language: es
-@PPB007-CAP_FN_005 @bloqued
+@PPB007-CAP_FN_005
 
 Característica: PPB007-CAP_FN_005 - Visualizacion ultimo dias
   Como un usuario comun
@@ -8,6 +8,6 @@ Característica: PPB007-CAP_FN_005 - Visualizacion ultimo dias
   Escenario: Cargando Portal de referencia
     Dado PPB007-CAPFN005 - Accedo al Navegador
     Y PPB007-CAPFN005 - Acepto Cookies
-    Y PPB007-CAPFN005 - Visualizar CAPFC002
-    Y PPB007-CAPFN005 - Visualizar CAPFC004
+    Y PPB007-CAPFN005 - Visualizar Titulo ULTIMOS DIAS PARA
+    Y PPB007-CAPFN005 - Visualizar contenido
 

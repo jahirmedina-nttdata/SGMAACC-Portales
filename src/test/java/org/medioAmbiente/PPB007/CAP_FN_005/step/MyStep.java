@@ -22,7 +22,7 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void visualizarCAPFC002() throws InterruptedException {
-        page.visualizarCAPFC002();
+    public void visualizarTituloUltimosDiasPara() throws InterruptedException {
+        page.visualizarTituloUltimosDiasPara();
     }
 }

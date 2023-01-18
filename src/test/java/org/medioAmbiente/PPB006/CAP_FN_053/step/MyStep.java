@@ -22,4 +22,23 @@ public class MyStep extends ScenarioSteps {
     }
 
 
+    @net.thucydides.core.annotations.Step
+    public void ubicarseEnLaSeccionTambienTePuedeInteresar() throws InterruptedException {
+        page.ubicarseEnLaSeccionTambienTePuedeInteresar();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void visualizaTitulo() throws InterruptedException {
+        page.visualizaTitulo();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void navegarEnElComponente() throws InterruptedException {
+        page.navegarEnElComponente();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void posicionarPunteroEnTexto() throws InterruptedException {
+        page.posicionarPunteroEnTexto();
+    }
 }

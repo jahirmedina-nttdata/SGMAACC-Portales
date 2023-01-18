@@ -56,6 +56,21 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_j9REwhPrNDhF_pagination\"]/li[1]/a")
     private WebElementFacade Primera;
 
+    @FindBy(xpath = "//li[@class=\"page_number pag_num_2\"]/a")
+    private WebElementFacade Pagina;
+
+    @FindBy(xpath = "//div[contains(text(),\"Fecha de publicación ascendente\")]")
+    private WebElementFacade Publicacion_Asc;
+
+    @FindBy(xpath = "//div[contains(text(),\"Título ascendente\")]")
+    private WebElementFacade Titulo_Asc;
+
+    @FindBy(xpath = "//div[contains(text(),\"Título descendente\")]")
+    private WebElementFacade Titulo_Desc;
+
+    @FindBy(xpath = "//span[@title=\"ordenacion-resultados\"]")
+    private WebElementFacade Lista_Ordenacion;
+
     public void visualizarBuscador() throws InterruptedException{
         List<WebElement> lista = getDriver().findElements(By.xpath("//div[@id=\"searchDiv\"]"));
         if (lista.size() != 0) {
@@ -69,20 +84,72 @@ public class MyPage extends PageObject {
         getDriver().get(new URI(getDriver().getCurrentUrl()).resolve("/medioambiente/portal/web/cambio-climatico/buscador").toString());
         Busqueda_Avan.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 100)");
+        j.executeScript("window.scrollBy(0, 150)");
     }
 
-    public void visualizarCAPFC0201() throws InterruptedException{
+    public void buscarPorTexto() throws InterruptedException{
         Texto_Buscar.sendKeys("Huella"+ "\n");
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    }
+
+    public void buscarPorColectivo() throws InterruptedException {
         btnLimpiar.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Lista.click();
         Categoria.click();
         btnBuscar.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    }
+
+    public void ordenarPorFechaDePublicacionAscendente() throws InterruptedException {
+        Actions action = new Actions(getDriver());
+        action.moveToElement(btnLimpiar).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        action.moveToElement(Lista_Ordenacion).click().perform();
+        action.moveToElement(Publicacion_Asc).click().perform();
+        action.moveToElement(btnBuscar).click().perform();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    }
+
+    public void ordenarPorTituloAscendente() throws InterruptedException {
+        Actions action = new Actions(getDriver());
+        action.moveToElement(btnLimpiar).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        action.moveToElement(Lista_Ordenacion).click().perform();
+        action.moveToElement(Titulo_Asc).click().perform();
+        action.moveToElement(btnBuscar).click().perform();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    }
+
+    public void ordenarPorTituloDescendente() throws InterruptedException {
+        Actions action = new Actions(getDriver());
+        action.moveToElement(btnLimpiar).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        action.moveToElement(Lista_Ordenacion).click().perform();
+        action.moveToElement(Titulo_Desc).click().perform();
+        action.moveToElement(btnBuscar).click().perform();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    }
+
+    public void buscarPorTextoYColectivo() throws InterruptedException {
         btnLimpiar.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        Texto_Buscar.sendKeys("Evolución");
+        Lista.click();
+        Categoria.click();
+        btnBuscar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    }
+
+    public void posicionarPunteroEnTexto() throws InterruptedException {
+        btnLimpiar.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Enlace)
@@ -93,16 +160,54 @@ public class MyPage extends PageObject {
         }else{
             Assert.fail("No Coincide el Texto");
         }
+    }
+
+    public void visualizarPaginacion() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
-        Sig.waitUntilClickable();
-        Sig.click();
+    }
+
+    public void pulsarPaginador() throws InterruptedException {
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Pagina).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        Ultimo.click();
+    }
+
+    public void pulsarSiguiente() throws InterruptedException {
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Sig).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        Atras.click();
+    }
+
+    public void pulsarUltimaPagina() throws InterruptedException {
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Ultimo).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        Primera.click();
+    }
+
+    public void pulsarAnterior() throws InterruptedException {
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Atras).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    }
+
+    public void pulsarPrimeraPagina() throws InterruptedException {
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Primera).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    }
+
+    public void validarCantidadDeResultados() throws InterruptedException {
+        List<WebElement> resultados = getDriver().findElements(By.xpath("//div[@class=\"evr-form-results__item-title\"]"));
+        if (resultados.size() == 9) {
+            Assert.assertTrue(true);
+        } else {
+            Assert.fail("No existe cantidad de resultados");
+        }
     }
 }

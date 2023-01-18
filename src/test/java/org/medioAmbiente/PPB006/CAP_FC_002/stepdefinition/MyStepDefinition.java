@@ -34,11 +34,76 @@ public class MyStepDefinition {
         myStep.accederBuscador();
     }
 
-    @Y("^PPB006-CAPFC002 - Visualizar CAP_FC_002_1$")
-    public void Visualizar_CAP_FC_002_1()throws InterruptedException {
-        myStep.visualizarCAPFC0201();
+    @Y("^PPB006-CAPFC002 - Buscar por Texto$")
+    public void Buscar_Por_Texto()throws InterruptedException {
+        myStep.buscarPorTexto();
     }
 
+    @Y("^PPB006-CAPFC002 - Buscar por Colectivo$")
+    public void Buscar_Por_Colectivo()throws InterruptedException {
+        myStep.buscarPorColectivo();
+    }
+
+    @Y("^PPB006-CAPFC002 - Ordenar por fecha de publicacion ascendente$")
+    public void Ordenar_Por_Fecha_De_Publicacion_Ascendente()throws InterruptedException {
+        myStep.ordenarPorFechaDePublicacionAscendente();
+    }
+
+    @Y("^PPB006-CAPFC002 - Ordenar por titulo ascendente$")
+    public void Ordenar_Por_Titulo_Ascendente()throws InterruptedException {
+        myStep.ordenarPorTituloAscendente();
+    }
+
+
+    @Y("^PPB006-CAPFC002 - Ordenar por titulo descendente$")
+    public void Ordenar_Por_Titulo_Descendente()throws InterruptedException {
+        myStep.ordenarPorTituloDescendente();
+    }
+
+    @Y("^PPB006-CAPFC002 - Buscar por Texto y colectivo$")
+    public void Buscar_Por_Texto_Y_Colectivo()throws InterruptedException {
+        myStep.buscarPorTextoYColectivo();
+    }
+
+    @Y("^PPB006-CAPFC002 - Posicionar puntero en texto$")
+    public void Posicionar_Puntero_En_Texto()throws InterruptedException {
+        myStep.posicionarPunteroEnTexto();
+    }
+
+    @Y("^PPB006-CAPFC002 - Visualizar paginacion$")
+    public void Visualizar_Paginacion()throws InterruptedException {
+        myStep.visualizarPaginacion();
+    }
+
+    @Y("^PPB006-CAPFC002 - Pulsar paginador$")
+    public void Pulsar_Paginador()throws InterruptedException {
+        myStep.pulsarPaginador();
+    }
+
+    @Y("^PPB006-CAPFC002 - Pulsar siguiente$")
+    public void Pulsar_Siguiente()throws InterruptedException {
+        myStep.pulsarSiguiente();
+    }
+
+    @Y("^PPB006-CAPFC002 - Pulsar Ultima pagina$")
+    public void Pulsar_Ultima_Pagina()throws InterruptedException {
+        myStep.pulsarUltimaPagina();
+    }
+
+    @Y("^PPB006-CAPFC002 - Pulsar anterior$")
+    public void Pulsar_Anterior()throws InterruptedException {
+        myStep.pulsarAnterior();
+    }
+
+    @Y("^PPB006-CAPFC002 - Pulsar Primera pagina$")
+    public void Pulsar_Primera_Pagina()throws InterruptedException {
+        myStep.pulsarPrimeraPagina();
+    }
+
+    @Y("^PPB006-CAPFC002 - Validar cantidad de resultados$")
+    public void Validar_Cantidad_De_Resultados()throws InterruptedException {
+        myStep.validarCantidadDeResultados();
+    }
 
 }
 

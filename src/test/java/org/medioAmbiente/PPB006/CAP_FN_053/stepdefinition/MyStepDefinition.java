@@ -22,13 +22,26 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB006-CAPFN053 - Visualizar titulo CAP_FC_004$")
-    public void Visualizar_Titulo_CAP_FC_004()throws InterruptedException {
+    @Y("^PPB006-CAPFN053 - Ubicarse en la seccion Tambien te puede interesar$")
+    public void Ubicarse_En_La_Seccion_Tambien_Te_Puede_Interesar()throws InterruptedException {
+        myStep.ubicarseEnLaSeccionTambienTePuedeInteresar();
     }
 
-    @Y("^PPB006-CAPFN053 - Visualizar contenido CAP_FC_006$")
-    public void Visualizar_Contenido_CAP_FC_006()throws InterruptedException {
+    @Y("^PPB006-CAPFN053 - Visualiza el titulo$")
+    public void Visualiza_El_Titulo()throws InterruptedException {
+        myStep.visualizaTitulo();
     }
+
+    @Y("^PPB006-CAPFN053 - Navegar en el componente$")
+    public void Navegar_En_El_Componente()throws InterruptedException {
+        myStep.navegarEnElComponente();
+    }
+
+    @Y("^PPB006-CAPFN053 - Posicionar puntero en texto$")
+    public void Posicionar_Puntero_En_Texto()throws InterruptedException {
+        myStep.posicionarPunteroEnTexto();
+    }
+
 
 }
 

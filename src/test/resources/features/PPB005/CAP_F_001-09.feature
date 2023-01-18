@@ -1,5 +1,5 @@
 #language: es
-@PPB005-CAP_F_001-09 @skip @KO
+@PPB005-CAP_F_001-09
 
 Característica: PPB005-CAP_F_001-09 - Visualizacion Menu Navegacion
   Como un usuario comun
@@ -9,10 +9,9 @@ Característica: PPB005-CAP_F_001-09 - Visualizacion Menu Navegacion
   Escenario: Cargando Portal de referencia
     Dado PPB005-CAPF00109 - Accedo al portal
     Y PPB005-CAPF00109 - Acepto Cookies
-    Y PPB005-CAPF00109 - Clickar menu inicio
-    Y PPB005-CAPF00109 - Clickar submenu inicio
-    Y PPB005-CAPF00109 - Clickar menu desarrollo
-    Y PPB005-CAPF00109 - Clickar submenu desarrollo
+    Y PPB005-CAPF00109 - Visualizar menu lateral izquierdo
+    Y PPB005-CAPF00109 - Pulsar menu lateral izquierdo
+    Y PPB005-CAPF00109 - Pulsar submenu lateral
 
 
 

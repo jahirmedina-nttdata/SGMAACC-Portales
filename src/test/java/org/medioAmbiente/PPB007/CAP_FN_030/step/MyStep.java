@@ -1,7 +1,7 @@
-package org.medioAmbiente.PPB006.CAP_FC_009.step;
+package org.medioAmbiente.PPB007.CAP_FN_030.step;
 
 import net.thucydides.core.steps.ScenarioSteps;
-import org.medioAmbiente.PPB006.CAP_FC_009.page.MyPage;
+import org.medioAmbiente.PPB007.CAP_FN_030.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
 
@@ -19,37 +19,35 @@ public class MyStep extends ScenarioSteps {
     public void aceptarCookies() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
-        j.executeScript("window.scrollBy(0, 100)");
     }
 
     @net.thucydides.core.annotations.Step
-    public void visualizarCarrusel() throws InterruptedException {
-        page.visualizarCarrusel();
+    public void visualizarPaginador() throws InterruptedException {
+        page.visualizarPaginador();
     }
 
     @net.thucydides.core.annotations.Step
-    public void accederContenido() throws InterruptedException {
-        page.accederContenido();
+    public void clickarPaginador() throws InterruptedException {
+        page.clickarPaginador();
     }
 
     @net.thucydides.core.annotations.Step
-    public void validarTextoflotante() throws InterruptedException{
-        page.validarTextoflotante();
+    public void clickarSiguiente() throws InterruptedException {
+        page.clickarSiguiente();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarBullet() throws InterruptedException{
-        page.clickarBullet();
+    public void clickarUltimaPagina() throws InterruptedException {
+        page.clickarUltimaPagina();
     }
 
     @net.thucydides.core.annotations.Step
-    public void deslizarIzquierda() throws InterruptedException{
-        page.deslizarIzquierda();
+    public void clickarAnterior() throws InterruptedException {
+        page.clickarAnterior();
     }
+
     @net.thucydides.core.annotations.Step
-    public void deslizarDerecha() throws InterruptedException{
-        page.deslizarDerecha();
+    public void clickarPrimeraPagina() throws InterruptedException {
+        page.clickarPrimeraPagina();
     }
-
-
 }

@@ -22,13 +22,13 @@ public class MyStepDefinition {
     }
 
 
-    @Y("^PPB007-CAPFN005 - Visualizar CAPFC002$")
-    public void Visualizar_CAPFC002()throws InterruptedException {
-        myStep.visualizarCAPFC002();
+    @Y("^PPB007-CAPFN005 - Visualizar Titulo ULTIMOS DIAS PARA$")
+    public void Visualizar_Titulo_ULTIMOS_DIAS_PARA()throws InterruptedException {
+        myStep.visualizarTituloUltimosDiasPara();
     }
 
-    @Y("^PPB007-CAPFN005 - Visualizar CAPFC004$")
-    public void Visualizar_CAPFC004()throws InterruptedException {
+    @Y("^PPB007-CAPFN005 - Visualizar contenido$")
+    public void Visualizar_Contenido()throws InterruptedException {
 
     }
 }

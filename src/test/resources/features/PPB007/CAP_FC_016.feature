@@ -1,5 +1,5 @@
 #language: es
-@PPB007-CAP_FC_016 @bloqued
+@PPB007-CAP_FC_016
 
 Característica: PPB007-CAP_FC_016 - Visualizacion de contenido Pie de pagina
   Como usuario comun

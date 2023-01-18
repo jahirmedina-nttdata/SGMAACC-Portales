@@ -82,6 +82,11 @@ public class MyStepDefinition {
         myStep.clickarMapa();
     }
 
+    @Y("^PPB006-CAPFC013 - Clickar Proteccion de datos$")
+    public void Clickar_Proteccion_De_Datos() throws InterruptedException{
+        myStep.clickarProteccionDeDatos();
+    }
+
 
     @Y("^PPB006-CAPFC013 - Clickar Accesibilidad$")
     public void Clickar_Accesibilidad() throws InterruptedException{

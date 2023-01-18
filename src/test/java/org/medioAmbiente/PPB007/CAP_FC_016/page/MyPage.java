@@ -1,11 +1,14 @@
 package org.medioAmbiente.PPB007.CAP_FC_016.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -106,35 +109,47 @@ public class MyPage extends PageObject {
 
     public void clickarCambioClimatico() throws InterruptedException{
         Portal_CambioClimatico.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Portal Andaluz de Cambio Climático')]")));
+        getDriver().navigate().back();
     }
 
     public void clickarVentanVisitante() throws InterruptedException{
-        getDriver().navigate().back();
         Ventana_Visitante.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@title=\"Ir a Ventana del Visitante\"])[1]")));
+        getDriver().navigate().back();
     }
 
     public void clickarAtencionCiudadania()throws InterruptedException {
-        getDriver().navigate().back();
         Atencion_Ciudadania.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title=\"Portal Ambiental de Andalucía\"]")));
+        getDriver().navigate().back();
     }
 
     public void clickarTramites()throws InterruptedException {
-        getDriver().navigate().back();
         Tramites.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title=\"Canal de Administración Electrónica\"]")));
+        getDriver().navigate().back();
     }
 
     public void clickarHerramientas()throws InterruptedException {
-        getDriver().navigate().back();
         Herramientas_Centralizada.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class=\"logotipo\"]")));
+        getDriver().navigate().back();
     }
 
     public void clickarCarpetaCiudadana()throws InterruptedException {
-        getDriver().navigate().back();
         Carpeta_Ciudadana.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id=\"block-terra-page-title\"]")));
+        getDriver().navigate().back();
     }
 
     public void clickarTwitter() throws InterruptedException{
-        getDriver().navigate().back();
         Twitter.click();
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
@@ -216,21 +231,30 @@ public class MyPage extends PageObject {
 
     public void clickarMapa() throws InterruptedException{
         Mapa_WEb.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title=\"Canal de Administración Electrónica\"]")));
+        getDriver().navigate().back();
     }
 
 
     public void clickarAccesibilidad()throws InterruptedException {
-        getDriver().navigate().back();
         Accesibilidad.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title=\"Canal de Administración Electrónica\"]")));
+        getDriver().navigate().back();
     }
 
     public void clickarProteccionDatos()throws InterruptedException {
-        getDriver().navigate().back();
         Proteccion_Datos.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title=\"Canal de Administración Electrónica\"]")));
+        getDriver().navigate().back();
     }
 
     public void clickarCondicionesUso() throws InterruptedException {
-        getDriver().navigate().back();
         Condicion_Uso.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title=\"Canal de Administración Electrónica\"]")));
+
     }
 }

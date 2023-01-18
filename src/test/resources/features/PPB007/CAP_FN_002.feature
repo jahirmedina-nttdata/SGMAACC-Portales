@@ -1,5 +1,5 @@
 #language: es
-@PPB007-CAP_FN_002 @skip @KO
+@PPB007-CAP_FN_002
 
 Característica: PPB007-CAP_FN_002 - Autenticacion de Usuario
   Como un usuario comun

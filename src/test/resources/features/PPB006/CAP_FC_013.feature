@@ -1,5 +1,5 @@
 #language: es
-@PPB006-CAP_FC_013 @bloqued
+@PPB006-CAP_FC_013
 
 Característica: PPB006-CAP_FC_013 - Visualizacion de contenido Pie de pagina
   Como usuario comun
@@ -21,6 +21,7 @@ Característica: PPB006-CAP_FC_013 - Visualizacion de contenido Pie de pagina
     Y PPB006-CAPFC013 - Clickar logo Junta de Andalucia
     Y PPB006-CAPFC013 - Clickar logo Union Europea
     Y PPB006-CAPFC013 - Clickar Mapa web
+    Y PPB006-CAPFC013 - Clickar Proteccion de datos
     Y PPB006-CAPFC013 - Clickar Accesibilidad
     Y PPB006-CAPFC013 - Clickar Condiciones de uso
 

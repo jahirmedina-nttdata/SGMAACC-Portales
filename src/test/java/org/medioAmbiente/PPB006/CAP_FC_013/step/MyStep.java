@@ -10,8 +10,7 @@ import java.util.Set;
 public class MyStep extends ScenarioSteps {
 
     private MyPage page;
-    private String prntw;
-    private String popwnd;
+
 
     @net.thucydides.core.annotations.Step
     public void cargarPagina() throws InterruptedException {
@@ -58,91 +57,36 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void clickarTwitter() throws InterruptedException{
         page.clickarTwitter();
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarFacebook() throws InterruptedException{
         page.clickarFacebook();
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarInstagram() throws InterruptedException{
         page.clickarInstagram();
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
     }
 
     @net.thucydides.core.annotations.Step
     public void clikarlogoJunta() throws InterruptedException{
         page.clikarlogoJunta();
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarlogoUnion() throws InterruptedException {
         page.clickarlogoUnion();
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
     }
 
     @net.thucydides.core.annotations.Step
     public void clickarMapa() throws InterruptedException {
         page.clickarMapa();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarProteccionDeDatos() throws InterruptedException {
+        page.clickarProteccionDeDatos();
     }
 
     @net.thucydides.core.annotations.Step

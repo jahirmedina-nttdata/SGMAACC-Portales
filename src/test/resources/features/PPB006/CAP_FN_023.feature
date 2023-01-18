@@ -1,5 +1,5 @@
 #language: es
-@PPB006-CAP_FN_023 @skip @KO
+@PPB006-CAP_FN_023
 
 Característica: PPB006-CAP_FN_023 - Visualizacion Tambien te puede interesar
   Como un usuario comun
@@ -9,8 +9,10 @@ Característica: PPB006-CAP_FN_023 - Visualizacion Tambien te puede interesar
   Escenario: Cargando Portal de referencia
     Dado PPB006-CAPFN023 - Accedo al Navegador
     Y PPB006-CAPFN023 - Acepto Cookies
-    Y PPB006-CAPFN023 - Visualizar titulo CAP_FC_004
-    Y PPB006-CAPFN023 - Visualizar areas CAP_FC_006
+    Y PPB006-CAPFN023 - Ubicarse en la seccion Tambien te puede interesar
+    Y PPB006-CAPFN023 - Visualiza el titulo
+    Y PPB006-CAPFN023 - Navegar en el componente
+    Y PPB006-CAPFN023 - Posicionar puntero en texto
 
 
 

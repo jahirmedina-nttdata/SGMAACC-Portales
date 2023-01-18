@@ -1,7 +1,7 @@
-package org.medioAmbiente.PPB007.CAP_FC_004.step;
+package org.medioAmbiente.PPB005.CAP_F_001_11.step;
 
 import net.thucydides.core.steps.ScenarioSteps;
-import org.medioAmbiente.PPB007.CAP_FC_004.page.MyPage;
+import org.medioAmbiente.PPB005.CAP_F_001_11.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
 
@@ -21,4 +21,13 @@ public class MyStep extends ScenarioSteps {
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
     }
 
+    @net.thucydides.core.annotations.Step
+    public void ubicarseEnSeccionNoticias() throws InterruptedException {
+        page.ubicarseEnSeccionNoticias();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void pulsarEnNoticias() throws InterruptedException{
+        page.pulsarEnNoticias();
+    }
 }

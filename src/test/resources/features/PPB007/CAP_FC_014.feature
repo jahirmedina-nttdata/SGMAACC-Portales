@@ -1,5 +1,5 @@
 #language: es
-@PPB007-CAP_FC_014 @skip @KO
+@PPB007-CAP_FC_014
 
 Característica: PPB007-CAP_FC_014 - Visualizacion Camino migas
   Como un usuario comun
@@ -11,5 +11,5 @@ Característica: PPB007-CAP_FC_014 - Visualizacion Camino migas
     Y PPB007-CAPFC014 - Visualizar camino migas
     Y PPB007-CAPFC014 - Posicionar puntero
     Y PPB007-CAPFC014 - Clickar elemento padre
-    Y PPB007-CAPFC014 - Clickar pagina actual
+    Y PPB007-CAPFC014 - Clickar miga actual
 
