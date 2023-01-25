@@ -36,10 +36,14 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorTexto() throws InterruptedException {
-        myPage.buscarPorTexto();
+    public void seleccionarProvinciaAlmeria() throws InterruptedException {
+        myPage.seleccionarProvinciaAlmeria();
     }
 
+    @net.thucydides.core.annotations.Step
+    public void seleccionarTipoEquipamientoSenderoSeñalizado() throws InterruptedException {
+        myPage.seleccionarTipoEquipamientoSenderoSeñalizado();
+    }
 
     @net.thucydides.core.annotations.Step
     public void pulsarBuscar() throws InterruptedException {
@@ -52,7 +56,7 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void pulsarExportarResultados() throws InterruptedException {
-        myPage.pulsarExportarResultados();
+    public void pulsarLimpiar() throws InterruptedException {
+        myPage.pulsarLimpiar();
     }
 }

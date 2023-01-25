@@ -1,18 +1,19 @@
 #language: es
 @PPB002-CAP_F_017
 
-Característica: PPB002-CAP_F_017 - Visualizar tiempo en tema
+Característica: PPB002-CAP_F_017 - Listado varios
   Como un usuario comun
-  Quiero seleccionar una provincia
-  Para visualizar el tiempo
+  Quiero acceder al portal
+  Para visualizar listado
 
-  Escenario: Cargando el Portal Web
+  Escenario: Cargando el Portal de Referencia
     Dado PPB002-CAPF017 - Cargando el Navegador
     Cuando PPB002-CAPF017 - Se haya cargado la web
-    Y PPB002-CAPF017 - Click permitir geolocalizar
     Y PPB002-CAPF017 - Aceptar las cookies
-    Y PPB002-CAPF017 - Click no permitir geolocalizar
-    Y PPB002-CAPF017 - Seleccionar provincia
+    Y PPB002-CAPF017 - Ubicarse en el listado
+    Y PPB002-CAPF017 - Posicionar cursos en listado
+    Y PPB002-CAPF017 - Clickar en colabora
+
 
 
 

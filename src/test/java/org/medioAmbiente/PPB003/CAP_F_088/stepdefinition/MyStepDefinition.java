@@ -6,8 +6,6 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_088.step.MyStep;
 
-import java.net.URISyntaxException;
-
 public class MyStepDefinition {
 
     @Steps
@@ -29,19 +27,19 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF088 - Clickar añadir Pasaporte Ecoturista$")
-    public void Clickar_Añadir_Pasaporte_Ecoturista()throws InterruptedException, URISyntaxException {
-        myStep.clikarAñadirPasaporte();
+    @Y("^PPB003-CAPF088 - Clickar Pasaporte Ecoturista$")
+    public void Clickar_Pasaporte_Ecoturista()throws InterruptedException {
+        myStep.clikarPasaporte();
     }
 
-    @Entonces("^PPB003-CAPF088 - Validar Pasaporte añadido$")
-    public void Validar_Pasaporte_Añadido()throws InterruptedException {
-        myStep.validarPasaporte();
+    @Entonces("^PPB003-CAPF088 - Valido permisos$")
+    public void Valido_Permisos()throws InterruptedException {
+        myStep.validarPermiso();
     }
 
-    @Y("^PPB003-CAPF088 - Clickar eliminar Pasaporte$")
-    public void Clickar_Eliminar_Pasaporte()throws InterruptedException {
-        myStep.clickarEliminarPasaporte();
+    @Y("^PPB003-CAPF088 - Valido lista de Pasaportes$")
+    public void Valido_Lista_De_Pasaportes()throws InterruptedException {
+        myStep.validarPasaportes();
     }
 }
 

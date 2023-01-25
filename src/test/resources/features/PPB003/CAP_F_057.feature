@@ -1,34 +1,17 @@
 #language: es
 @PPB003-CAP_F_057
 
-Característica: PPB003-CAP_F_057 - Visualizacion de contenido Pie de pagina
-  Como usuario comun
-  Quiero acceder al pie de pagina
-  Para acceder a los enlaces
+Característica: PPB003-CAP_F_057 - Visualizacion de sugerencia del Mes, noticias y avisos
+  Como un usuario
+  Quiero acceder al portal
+  Para visualizar sugerencia
 
-  Escenario: Enlaces Pie de pagina
+  Escenario: Cargando Portal Ventana visitante
     Dado PPB003-CAPF057 - Accedo al Navegador
-    Y PPB003-CAPF057 - Acepto Cookies
-    Y PPB003-CAPF057 - Clickar Ventana de visitante
-    Y PPB003-CAPF057 - Clickar icono Twitter
-    Y PPB003-CAPF057 - Clickar icono Facebook
-    Y PPB003-CAPF057 - Clickar icono Instagram
-    Y PPB003-CAPF057 - Clickar icono Pinterest
-    Y PPB003-CAPF057 - Clickar logo Union Europea
-    Y PPB003-CAPF057 - Clickar logo Junta de Andalucia
-    Y PPB003-CAPF057 - Clickar Conocenos
-    Y PPB003-CAPF057 - Clickar Contacto
-    Y PPB003-CAPF057 - Clickar Enlaces de interes
-    Y PPB003-CAPF057 - Clickar Mapa web
-    Y PPB003-CAPF057 - Clickar Manuales
-    Y PPB003-CAPF057 - Clickar Accesibilidad
-    Y PPB003-CAPF057 - Clickar Condiciones de uso
-
-
-
-
-
-
-
+    Y PPB003-CAPF057 - Aceptar Cookies
+    Y PPB003-CAPF057 - Visualizar apartado Redes Sociales
+    Y PPB003-CAPF057 - Clickar Seguir en Ventana Visitante de Twitter
+    Y PPB003-CAPF057 - Clickar Seguir pagina en Ventana Visitante de Facebook
+    Y PPB003-CAPF057 - Clickar Seguir en Infoca de Twitter
 
 

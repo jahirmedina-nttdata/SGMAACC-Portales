@@ -6,8 +6,6 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_083.step.MyStep;
 
-import java.net.URISyntaxException;
-
 public class MyStepDefinition {
 
     @Steps
@@ -29,19 +27,19 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF083 - Clickar añadir Favorito$")
-    public void Clickar_Añadir_Favorito()throws InterruptedException, URISyntaxException {
-        myStep.clikarAñadirFavoritos();
+    @Y("^PPB003-CAPF083 - Clickar Favoritos$")
+    public void Clickar_Favoritos()throws InterruptedException {
+        myStep.clikarFavoritos();
     }
 
-    @Entonces("^PPB003-CAPF083 - Validar Favorito añadido$")
-    public void Validar_Favorito_Añadido()throws InterruptedException {
-        myStep.validarAñadido();
+    @Entonces("^PPB003-CAPF083 - Valido permisos$")
+    public void Valido_Permisos()throws InterruptedException {
+        myStep.validarPermiso();
     }
 
-    @Y("^PPB003-CAPF083 - Clickar eliminar favorito$")
-    public void Clickar_Eliminar_Favorito()throws InterruptedException {
-        myStep.clickarEliminarFavorito();
+    @Y("^PPB003-CAPF083 - Valido lista de Favoritos$")
+    public void Valido_Lista_De_Favoritos()throws InterruptedException {
+        myStep.validarFavoritos();
     }
 }
 

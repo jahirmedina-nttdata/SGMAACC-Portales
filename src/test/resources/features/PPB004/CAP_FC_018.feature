@@ -1,28 +1,20 @@
 #language: es
 @PPB004-CAP_FC_018
 
-Característica: PPB004-CAP_FC_018 - Buscador Tramites
+Característica: PPB004-CAP_FC_018 - Navegar vistas del buscador
   Como usuario comun
   Quiero acceder al portal
-  Para validar buscador
+  Para navegar por las vistas del navegador
 
-  Escenario: Cargar Buscador Tramites
+  Escenario: Visualizar vistas
     Dado PPB004-CAPFC018 - Accedo al Navegador
     Y PPB004-CAPFC018 - Acepto Cookies
-    Y PPB004-CAPFC018 - Mostrar buscador
-    Y PPB004-CAPFC018 - Clickar en buscar
-    Y PPB004-CAPFC018 - Buscar por texto
-    Y PPB004-CAPFC018 - Buscar por categoria
-    Y PPB004-CAPFC018 - Buscar por plazo abierto
-    Y PPB004-CAPFC018 - Buscar por tramitacion electronica
-    Y PPB004-CAPFC018 - Buscar por texto y plazo abierto
-    Y PPB004-CAPFC018 - Acceder al contenido
-    Y PPB004-CAPFC018 - Validar texto flotante
-    Y PPB004-CAPFC018 - Realizar CAP_FC_020
-
-
-
-
+    Y PPB004-CAPFC018 - Mostrar numeracion
+    Y PPB004-CAPFC018 - Clickar pagina2
+    Y PPB004-CAPFC018 - Clickar Adelante
+    Y PPB004-CAPFC018 - Clickar Ultima pagina
+    Y PPB004-CAPFC018 - Clickar Atras
+    Y PPB004-CAPFC018 - Clickar Primera pagina
 
 
 

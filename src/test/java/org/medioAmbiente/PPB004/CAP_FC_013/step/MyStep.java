@@ -22,18 +22,18 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void mostrarMenu() throws InterruptedException {
+    public void mostrarColumnas() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 350)");
+        j.executeScript("window.scrollBy(0, 400)");
     }
 
     @net.thucydides.core.annotations.Step
-    public void posicionarPuntero()throws InterruptedException {
-        page.posicionarPuntero();
+    public void navegarContenido()throws InterruptedException {
+        page.navegarContenido();
     }
 
     @net.thucydides.core.annotations.Step
-    public void accederPag()throws InterruptedException {
-        page.accederPag();
+    public void validarTextFlotante()throws InterruptedException {
+        page.validarTextFlotante();
     }
 }

@@ -10,131 +10,63 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 
-@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/agenda-detalle/-/asset_publisher/8V5Nnbc5fv7a/content/turismo-de-estero.-motor-para-la-diversificaci-c3-b3n-empresarial/20151")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/noticias-detalle/-/asset_publisher/pUmOGVAxEAjQ/content/el-milano-real-anida-en-c-c3-b3rdoba/20151")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//a[@class=\"jssocials-share-link evr-social-network__jssocials-share-link\"]/i")
-    private WebElementFacade Activar;
+    @FindBy(xpath = "//p[@class=\"evr-subtitle\"]")
+    private WebElementFacade Titulo;
 
-    @FindBy(xpath = "//div[@class=\"jssocials-share jssocials-share-email\"]/a")
-    private WebElementFacade Correo;
+    @FindBy(xpath = "(//p[@class=\"audio-date evr-detailsnews__date\"])[1]")
+    private WebElementFacade Fecha;
 
-    @FindBy(xpath = "//div[@class=\"jssocials-share jssocials-share-facebook\"]/a")
-    private WebElementFacade Facebook;
+    @FindBy(xpath = "(//p[@class=\"audio-date evr-detailsnews__date\"]/span[2])[1]")
+    private WebElementFacade Categoria;
 
-    @FindBy(xpath = "//div[@class=\"jssocials-share jssocials-share-twitter\"]/a")
-    private WebElementFacade Twitter;
 
-    @FindBy(xpath = "//div[@class=\"jssocials-share jssocials-share-pinterest\"]/a")
-    private WebElementFacade Pinterest;
 
-    private String prntw;
-    private String popwnd;
-    public void visualizarTitulo() throws InterruptedException {
-        waitFor(1).second();
-        List<WebElement> titulo = getDriver().findElements(By.xpath("//p[@class=\"evr-article-layout__title\"]"));
-        if (titulo.size() != 0) {
-            Assert.assertTrue(true);
-        } else {
-            Assert.fail("No existe Titulo");
-        }
-    }
-
-    public void visualizarTexto() throws InterruptedException {
+    public void visualizaFechaYCategoria() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 850)");
-        waitFor(1).second();
-        List<WebElement> text = getDriver().findElements(By.xpath("//div[@class=\"evr-article-layout__paragraph evr-article-layout__description\"]"));
-        if (text.size() != 0) {
+        j.executeScript("window.scrollBy(0, 80)");
+        String fechaText = Fecha.getText();
+        String categoriaText = Categoria.getText();
+        if(fechaText.contains("07 de abril de 2021") && categoriaText.contains("Biodiversidad")) {
+            Assert.assertTrue(true);
+        }else{
+            Assert.fail("Informacion no valida");
+        }
+    }
+
+    public void visualizaTituloDeContenido() throws InterruptedException {
+        String tituloText = Titulo.getText();
+        if(tituloText.contains("El milano real anida en Córdoba")) {
+            Assert.assertTrue(true);
+        }else{
+            Assert.fail("Informacion no valida");
+        }
+    }
+
+    public void visualizaTextoDeNoticia() throws InterruptedException {
+        List<WebElement> texto = getDriver().findElements(By.xpath("//div[@class=\"evr-detalle__txt evr-detailsnews__txt\"]/p"));
+        if (texto.size() != 0) {
             Assert.assertTrue(true);
         } else {
             Assert.fail("No existe Texto");
         }
     }
 
-    public void visualizarImagen() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, - document.body.scrollHeight)");
-        List<WebElement> img = getDriver().findElements(By.xpath("//figure[@class=\"evr-article-layout__paragraph-fig\"]"));
-        if (img.size() != 0) {
+    public void visualizaImagenDeNoticia() throws InterruptedException {
+        List<WebElement> imagen = getDriver().findElements(By.xpath("//figure[@class=\"evr-detailsnews__figure evr-modal-selector playimag\"]"));
+        if (imagen.size() != 0) {
             Assert.assertTrue(true);
         } else {
-            Assert.fail("No existe Texto");
+            Assert.fail("No existe Imagen");
         }
+        waitFor(2).second();
+
     }
-
-    public void visualizarCampoFecha() throws InterruptedException {
-        List<WebElement> img = getDriver().findElements(By.xpath("//div[@class=\"evr-box-event__body\"]"));
-        if (img.size() != 0) {
-            Assert.assertTrue(true);
-        } else {
-            Assert.fail("No existe Texto");
-        }
-    }
-
-
-    public void compartirPorFacebook() throws InterruptedException {
-        Facebook.click();
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
-    }
-
-
-    public void compartirPorTwitter() throws InterruptedException {
-        Twitter.click();
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
-    }
-
-    public void compartirPorPinterest() throws InterruptedException {
-        Activar.click();
-        Pinterest.click();
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
-    }
-
-
-    public void compartirPorCorreo() throws InterruptedException {
-        Correo.click();
-        getDriver().close();
-    }
-
-
 }

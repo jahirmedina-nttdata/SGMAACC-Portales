@@ -1,10 +1,10 @@
 #language: es
-@PPB002-CAP_F_081 @skip @KO
+@PPB002-CAP_F_081
 
-Característica: PPB002-CAP_F_081 - Detalle Normativa
+Característica: PPB002-CAP_F_081 - Visualizacion detalle Tramite
   Como un usuario comun
   Quiero acceder al portal
-  Para visualizar normativa
+  Para visualizar detalle Tramite
 
   Escenario: Cargando el Portal de Referencia
     Dado PPB002-CAPF081 - Cargando el Navegador
@@ -13,17 +13,33 @@ Característica: PPB002-CAP_F_081 - Detalle Normativa
     Y PPB002-CAPF081 - Mostrar sin fecha
     Y PPB002-CAPF081 - Mostrar sin subtitulo
     Y PPB002-CAPF081 - Mostrar sin texto
-    Y PPB002-CAPF081 - Mostrar sin norma
-    Y PPB002-CAPF081 - Mostrar sin emisor
-    Y PPB002-CAPF081 - Mostrar sin aprobacion
-    Y PPB002-CAPF081 - Mostrar sin nr de publicacion
-    Y PPB002-CAPF081 - Mostrar sin ambito
-    Y PPB002-CAPF081 - Mostrar sin fecha de publicacion
-    Y PPB002-CAPF081 - Mostrar sin descarga
+    Y PPB002-CAPF081 - Mostrar sin texto miniatura
+    Y PPB002-CAPF081 - Mostrar sin requisitos
+    Y PPB002-CAPF081 - Mostrar sin afectados
+    Y PPB002-CAPF081 - Mostrar sin organos
+    Y PPB002-CAPF081 - Mostrar sin lugar
+    Y PPB002-CAPF081 - Mostrar sin observaciones
+    Y PPB002-CAPF081 - Mostrar sin fecha de plazo
+    Y PPB002-CAPF081 - Mostrar sin periodo
+    Y PPB002-CAPF081 - Mostrar sin plazo de notificacion
+    Y PPB002-CAPF081 - Mostrar sin silencio administrativo
+    Y PPB002-CAPF081 - Mostrar sin modelo
+    Y PPB002-CAPF081 - Mostrar sin seguimiento
+    Y PPB002-CAPF081 - Mostrar sin documentacion
     Y PPB002-CAPF081 - Mostrar sin enlace
-    Y PPB002-CAPF081 - Mostrar sin modificaciones
-    Y PPB002-CAPF081 - Mostrar sin ficheros
+    Y PPB002-CAPF081 - Mostrar sin enlace de tramitacion
+    Y PPB002-CAPF081 - Mostrar sin presentacion telematica
+    Y PPB002-CAPF081 - Mostrar sin justificante telematico
+    Y PPB002-CAPF081 - Mostrar sin notificacion telematica
+    Y PPB002-CAPF081 - Mostrar sin seguimiento de expediente
+    Y PPB002-CAPF081 - Mostrar sin pago
 
+
+
+
+
+
+    
 
 
 

@@ -22,43 +22,8 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void mostrarCarrusel() throws InterruptedException  {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 800)");
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarBullets() throws InterruptedException {
-        page.clickarBullets();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void puntearCard() throws InterruptedException {
-        page.puntearCard();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void moverIzquierda() throws InterruptedException {
-      page.moverIzquierda();
-    }
-    @net.thucydides.core.annotations.Step
-    public void moverDerecha() throws InterruptedException {
-        page.moverDerecha();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarAnuncio()throws InterruptedException {
-        page.clickarAnuncio();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void puntearVertodo() throws InterruptedException {
-        page.puntearVertodo();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarVertodo()throws InterruptedException {
-        page.clickarVertodo();
+    public void mostrarContenido() throws InterruptedException {
+        page.mostrarContenido();
     }
 
 

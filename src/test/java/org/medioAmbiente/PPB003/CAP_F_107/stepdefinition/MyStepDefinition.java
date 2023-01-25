@@ -15,20 +15,24 @@ public class MyStepDefinition {
         myStep.cargarPagina();
     }
 
-
     @Y("^PPB003-CAPF107 - Aceptar Cookies$")
     public void Aceptar_Cookies() throws InterruptedException{
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF107 - Seleccionar espacio natural$")
-    public void Seleccionar_Espacio_Natural()throws InterruptedException {
-        myStep.seleccionarEspacioNatural();
+    @Y("^PPB003-CAPF107 - Buscar Espacio Natural$")
+    public void Buscar_Espacio_Natural()throws InterruptedException {
+        myStep.buscarEspacioNatural();
     }
 
-    @Y("^PPB003-CAPF107 - Seleccionar pestaña actividades$")
-    public void Seleccionar_Pestaña_Actividades()throws InterruptedException {
-        myStep.seleccionarPestaña();
+    @Y("^PPB003-CAPF107 - Visualizar paginador$")
+    public void Visualizar_Paginador()throws InterruptedException {
+        myStep.Visualizar_Paginador();
+    }
+
+    @Y("^PPB003-CAPF107 - Seleccionar paginador$")
+    public void Seleccionar_Paginador()throws InterruptedException {
+        myStep.seleccionarPaginador();
     }
 }
 

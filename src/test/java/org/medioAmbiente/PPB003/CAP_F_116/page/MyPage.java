@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 
-@DefaultUrl("/medioambiente/portal/web/guest/buscador-de-revistas-y-boletines")
+@DefaultUrl("/medioambiente/portal/buscador-publicacion")
 
 
 public class MyPage extends PageObject {
@@ -24,7 +24,7 @@ public class MyPage extends PageObject {
     private WebElementFacade Paginador;
 
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_GFwsFY3Uow8r_resultsDiv\"]//div[2]//div[2]/a")
-    private WebElementFacade Revista;
+    private WebElementFacade Publicacion;
 
     public void clickarPaginador() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
@@ -34,12 +34,12 @@ public class MyPage extends PageObject {
         Paginador.click();
     }
 
-    public void seleccionarRevista() throws InterruptedException {
+    public void seleccionarPublicacion() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 200)");
-        Revista.click();
+        Publicacion.click();
     }
 
     public void retrocederPagina() throws InterruptedException {
@@ -48,7 +48,7 @@ public class MyPage extends PageObject {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 1000)");
-        waitFor(4).second();
+        waitFor(3).second();
         List<WebElement> lista = getDriver().findElements(By.xpath("//li[@class=\"page_number active pag_num_6\"]/a"));
         if (lista.size() != 0) {
             Assert.assertTrue(true);

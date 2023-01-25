@@ -26,10 +26,14 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarMenuPublicaciones() throws InterruptedException {
-        myPage.seleccionarMenuPublicaciones();
+    public void seleccionarMenu() throws InterruptedException {
+        myPage.seleccionarMenu();
     }
 
+    @net.thucydides.core.annotations.Step
+    public void seleccionarSubmenu() throws InterruptedException {
+        myPage.seleccionarSubmenu();
+    }
 
     @net.thucydides.core.annotations.Step
     public void buscarPorTexto() throws InterruptedException {
@@ -48,7 +52,7 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void pulsarFormatoPDF() throws InterruptedException {
-        myPage.pulsarFormatoPDF();
+    public void pulsarExportarResultados() throws InterruptedException {
+        myPage.pulsarExportarResultados();
     }
 }

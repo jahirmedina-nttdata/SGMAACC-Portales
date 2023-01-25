@@ -22,9 +22,8 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void mostrarColumnas() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 400)");
+    public void mostrarContenido() throws InterruptedException {
+        page.mostrarContenido();
     }
 
     @net.thucydides.core.annotations.Step

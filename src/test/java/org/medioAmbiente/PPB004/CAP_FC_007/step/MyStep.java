@@ -22,8 +22,8 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void mostrarCarrusel() throws InterruptedException {
-        page.mostrarCarrusel();
+    public void mostrarTexto() throws InterruptedException {
+           page.mostrarTexto();
     }
 
 

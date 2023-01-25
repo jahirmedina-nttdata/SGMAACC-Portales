@@ -27,17 +27,32 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void accederPublicaciones() throws InterruptedException {
-        page.accederPublicaciones();
+    public void accederContenidoWeb() throws InterruptedException {
+        page.accederContenidoWeb();
     }
 
     @net.thucydides.core.annotations.Step
-    public void configurarPaginador() throws InterruptedException {
-        page.configurarPaginador();
+    public void accederCarpetaAvisos() throws InterruptedException {
+        page.accederCarpetaAvisos();
     }
 
     @net.thucydides.core.annotations.Step
-    public void recargarPagina() throws InterruptedException {
-        page.recargarPagina();
+    public void copiarResumenADescripcion() throws InterruptedException {
+        page.copiarResumenADescripcion();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarPublicar() throws InterruptedException {
+        page.clickarPublicar();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void validarCambio() throws InterruptedException {
+        page.validarCambio();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void copiarDescripcionAResumen() throws InterruptedException {
+        page.copiarDescripcionAResumen();
     }
 }

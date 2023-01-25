@@ -1,7 +1,6 @@
 package org.medioAmbiente.PPB003.CAP_F_081.stepdefinition;
 
 import io.cucumber.java.es.Dado;
-import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_081.step.MyStep;
@@ -16,7 +15,6 @@ public class MyStepDefinition {
         myStep.cargarPagina();
     }
 
-
     @Y("^PPB003-CAPF081 - Aceptar Cookies$")
     public void Aceptar_Cookies() throws InterruptedException{
         myStep.aceptarCookies();
@@ -24,21 +22,17 @@ public class MyStepDefinition {
 
     @Y("^PPB003-CAPF081 - Autentico usuario$")
     public void Autentico_Usuario()throws InterruptedException {
-        myStep.autenticoUsuario();
+        myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF081 - Cambiar Idioma$")
-    public void Cambiar_Idioma()throws InterruptedException {
-        myStep.cambiarIdioma();
+    @Y("^PPB003-CAPF081 - Clickar ficha Planifica tu Visita$")
+    public void Clickar_Ficha_Planifica_Tu_Visita()throws InterruptedException {
+        myStep.clickarFicha();
     }
 
-    @Entonces("^PPB003-CAPF081 - Validar traduccion$")
-    public void Validar_Traduccion()throws InterruptedException {
-        myStep.validarTraduccion();
-    }
+    @Y("^PPB003-CAPF081 - Visualizar acceso a ficha$")
+    public void Visualizar_Acceso_A_ficha() throws InterruptedException{
 
-    @Y("^PPB003-CAPF081 - Seleccionar tarjeta visita$")
-    public void Seleccionar_Tarjeta_Visita()throws InterruptedException {
     }
 }
 

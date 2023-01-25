@@ -4,6 +4,8 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB003.CAP_F_082.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
+import java.net.URISyntaxException;
+
 
 public class MyStep extends ScenarioSteps {
 
@@ -22,22 +24,23 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void autenticarUsuario() throws InterruptedException {
-        page.autenticarUsuario();
+    public void autenticoUsuario() throws InterruptedException {
+        page.autenticoUsuario();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clikarFavoritos() throws InterruptedException {
-        page.clikarFavoritos();
+    public void cambiarIdioma() throws InterruptedException {
+        page.cambiarIdioma();
     }
 
     @net.thucydides.core.annotations.Step
-    public void validarPermiso() throws InterruptedException {
-        page.validarPermiso();
+    public void accederAEspacioNatural() throws InterruptedException, URISyntaxException {
+        page.accederAEspacioNatural();
     }
 
     @net.thucydides.core.annotations.Step
-    public void validarFavoritos() throws InterruptedException {
-        page.validarFavoritos();
+    public void validarTraduccion() throws InterruptedException {
+        page.validarTraduccion();
     }
+
 }

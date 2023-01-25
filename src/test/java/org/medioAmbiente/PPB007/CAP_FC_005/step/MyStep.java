@@ -22,14 +22,10 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void visualizarElementos() throws InterruptedException {
-        page.visualizarElementos();
+    public void visualizarContenido() throws InterruptedException {
+        page.visualizarContenido();
     }
 
-    @net.thucydides.core.annotations.Step
-    public void posicionarPunteroEnElemento() throws InterruptedException {
-        page.posicionarPunteroEnElemento();
-    }
 
     @net.thucydides.core.annotations.Step
     public void clickarEnlace() throws InterruptedException {
@@ -39,16 +35,6 @@ public class MyStep extends ScenarioSteps {
     @net.thucydides.core.annotations.Step
     public void mostrarTextoFlotante() throws InterruptedException {
         page.mostrarTextoFlotante();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void posicionarPunteroEnBotonCarpetaCiudadana() throws InterruptedException {
-        page.posicionarPunteroEnBotonCarpetaCiudadana();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarBotonCarpetaCiudadana() throws InterruptedException {
-        page.clickarBotonCarpetaCiudadana();
     }
 
 }

@@ -22,31 +22,16 @@ public class MyStepDefinition {
         myStep.cargarPagina();
     }
 
-    @Y("^PPB002-CAPF008 - Aceptar las cookies$")
-    public void Aceptar_LasCookies() throws InterruptedException{
-        myStep.aceptarCookies();
-    }
-
-    @Y("^PPB002-CAPF008 - Clickar flecha siguiente$")
-    public void Clickar_Flecha_Siguiente() throws InterruptedException{
-        myStep.clickarFlechaSiguiente();
-    }
-
-    @Y("^PPB002-CAPF008 - Clickar flecha anterior$")
-    public void Clickar_Flecha_Anterior() throws InterruptedException{
-        myStep.clickarFlechaAnterior();
-    }
-
-    @Y("^PPB002-CAPF008 - Clickar bullet$")
-    public void Clickar_Bullet() throws InterruptedException{
-        myStep.clickarBullet();
-    }
-
-    @Y("^PPB002-CAPF008 - Clickar enlace$")
-    public void Clickar_Enlace() throws InterruptedException{
-        myStep.clickarEnlace();
+    @Y("^PPB002-CAPF008 - Ubicamos el apartado Destacados$")
+    public void Ubicamos_El_Apartado_Destacados() throws InterruptedException{
+        myStep.ubicarDestacados();
     }
 
 
+    @Y("PPB002-CAPF008 - Clickar en Premios y concursos$")
+    public void Clickar_En_Premios_Y_Concursos() throws InterruptedException{
+        myStep.clickarPremiosConsurso();
+
+    }
 }
 

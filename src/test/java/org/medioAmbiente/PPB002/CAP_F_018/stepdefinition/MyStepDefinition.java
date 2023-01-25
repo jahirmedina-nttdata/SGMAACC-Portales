@@ -27,26 +27,15 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB002-CAPF018 - Clickar flecha siguiente$")
-    public void Clickar_Flecha_Siguiente() throws InterruptedException{
-        myStep.clickarFlechaSiguiente();
+    @Y("^PPB002-CAPF018 - Ubicarse en el apartado Destacados$")
+    public void Ubicarse_En_El_Apartado_Destacados() throws InterruptedException{
+        myStep.ubicarseEnDestacados();
     }
 
-    @Y("^PPB002-CAPF018 - Clickar flecha anterior$")
-    public void Clickar_Flecha_Anterior() throws InterruptedException{
-        myStep.clickarFlechaAnterior();
+    @Y("^PPB002-CAPF018 - Clickar Contenido$")
+    public void Clickar_Contenido() throws InterruptedException{
+        myStep.ClickarContenido();
     }
-
-    @Y("^PPB002-CAPF018 - Clickar bullet$")
-    public void Clickar_Bullet() throws InterruptedException{
-        myStep.clickarBullet();
-    }
-
-    @Y("^PPB002-CAPF018 - Clickar enlace$")
-    public void Clickar_Enlace() throws InterruptedException{
-        myStep.clickarEnlace();
-    }
-
 
 }
 

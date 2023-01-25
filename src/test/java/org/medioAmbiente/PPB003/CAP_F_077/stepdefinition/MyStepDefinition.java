@@ -5,9 +5,6 @@ import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_077.step.MyStep;
-import org.openqa.selenium.NoAlertPresentException;
-
-import java.awt.*;
 
 public class MyStepDefinition {
 
@@ -29,24 +26,19 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF077 - Clickar eliminar visita$")
-    public void Clickar_Eliminar_Visita()throws InterruptedException {
-        myStep.clikarEliminarVisita();
+    @Y("^PPB003-CAPF077 - Clickar editar visita$")
+    public void Clickar_Editar_Visita()throws InterruptedException {
+        myStep.clikarEditarVisita();
     }
 
-    @Y("^PPB003-CAPF077 - Clickar cancelar eliminacion$")
-    public void Clickar_Cancelar_Eliminacion() throws InterruptedException{
-        myStep.clickarCancelar();
+    @Y("^PPB003-CAPF077 - Modificar visita$")
+    public void Modificar_Visita()throws InterruptedException {
+        myStep.modificarVisita();
     }
 
-    @Y("^PPB003-CAPF077 - Clickar aceptar eliminacion$")
-    public void Clickar_Aceptar_Eliminacion()throws InterruptedException {
-        myStep.clickarAceptar();
-    }
-
-    @Entonces("^PPB003-CAPF077 - Validar visita eliminada$")
-    public void Validar_Visita_Eliminada()throws InterruptedException {
-        myStep.validarEliminacion();
+    @Entonces("^PPB003-CAPF077 - Validar visita modificada$")
+    public void Validar_Visita_Modificada()throws InterruptedException {
+        myStep.validarModificacion();
     }
 }
 

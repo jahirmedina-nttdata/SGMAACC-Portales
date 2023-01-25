@@ -27,19 +27,20 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF087 - Clickar Pasaporte Ecoturista$")
-    public void Clickar_Pasaporte_Ecoturista()throws InterruptedException {
-        myStep.clikarPasaporte();
+    @Y("^PPB003-CAPF087 - Seleccionar idioma$")
+    public void Seleccionar_Idioma()throws InterruptedException {
+        myStep.seleccionarIdioma();
     }
 
-    @Entonces("^PPB003-CAPF087 - Valido permisos$")
-    public void Valido_Permisos()throws InterruptedException {
-        myStep.validarPermiso();
+    @Y("^PPB003-CAPF087 - Clickar ficha añadida$")
+    public void Clickar_Ficha_Añadida()throws InterruptedException {
+        myStep.clickarFicha();
     }
 
-    @Y("^PPB003-CAPF087 - Valido lista de Pasaportes$")
-    public void Valido_Lista_De_Pasaportes()throws InterruptedException {
-        myStep.validarPasaportes();
+    @Entonces("^PPB003-CAPF087 - Validar Traduccion$")
+    public void Validar_Traduccion()throws InterruptedException {
+        myStep.validarTraduccion();
     }
+
 }
 

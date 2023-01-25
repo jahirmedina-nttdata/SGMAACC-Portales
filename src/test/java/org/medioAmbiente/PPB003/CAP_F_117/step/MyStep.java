@@ -27,17 +27,12 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarEnlace() throws InterruptedException {
-        page.clickarEnlace();
+    public void seleccionarRevista() throws InterruptedException {
+        page.seleccionarRevista();
     }
 
     @net.thucydides.core.annotations.Step
     public void retrocederPagina() throws InterruptedException {
         page.retrocederPagina();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void validarCacheoDePaginador() throws InterruptedException {
-        page.validarCacheoDePaginador();
     }
 }

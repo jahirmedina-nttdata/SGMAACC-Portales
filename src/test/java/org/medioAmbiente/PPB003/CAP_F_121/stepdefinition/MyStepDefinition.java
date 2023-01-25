@@ -32,14 +32,14 @@ public class MyStepDefinition {
         myStep.seleccionarSubmenu();
     }
 
-    @Y("^PPB003-CAPF121 - Seleccionar provincia Almeria$")
-    public void Seleccionar_Provincia_Almeria() throws InterruptedException {
-        myStep.seleccionarProvinciaAlmeria();
+    @Y("^PPB003-CAPF121 - Seleccionar tipo de espacio Parque Natural$")
+    public void Seleccionar_Tipo_De_Espacio_Parque_Natural() throws InterruptedException {
+        myStep.seleccionarParqueNatural();
     }
 
-    @Y("^PPB003-CAPF121 - Seleccionar tipo equipamiento Sendero señalizado$")
-    public void Seleccionar_Tipo_Equipamiento_Sendero_Señalizado() throws InterruptedException {
-        myStep.seleccionarTipoEquipamientoSenderoSeñalizado();
+    @Y("^PPB003-CAPF121 - Seleccionar nombre de espacio Sierra de Aracena y picos de Aroche$")
+    public void Seleccionar_Nombre_De_Espacio_Sierra_De_Aracena_Y_Picos_De_Aroche() throws InterruptedException {
+        myStep.seleccionarSierradeAracenayPicosdeAroche();
     }
 
     @Y("^PPB003-CAPF121 - Pulsar el boton Buscar$")

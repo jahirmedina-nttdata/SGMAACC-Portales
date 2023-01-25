@@ -21,19 +21,19 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
+    @Y("^PPB003-CAPF072 - Clickar icono$")
+    public void Clickar_Icono()throws InterruptedException {
+        myStep.clickarIcono();
+    }
+
     @Y("^PPB003-CAPF072 - Acceder usuario$")
     public void Acceder_Usuario()throws InterruptedException {
         myStep.accederUsuario();
     }
 
-    @Y("^PPB003-CAPF072 - Seleccionar idioma$")
-    public void Seleccionar_Idioma()throws InterruptedException {
-        myStep.seleccionarIdioma();
-    }
-
-    @Y("^PPB003-CAPF072 - Validar idioma$")
-    public void Validar_Idioma()throws InterruptedException {
-        myStep.validarIdioma();
+    @Y("^PPB003-CAPF072 - Acceder usuario invalido$")
+    public void Acceder_Usuario_Invalido()throws InterruptedException {
+        myStep.accederUserInvalido();
     }
 }
 

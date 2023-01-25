@@ -1,42 +1,22 @@
 #language: es
-@PPB002-CAP_F_096 @skip @KO
 
-Característica: PPB002-CAP_F_096 - Visualizacion detalle indice
+@PPB002-CAP_F_096
+Característica: PPB002-CAP_F_096 - Visualizar de Últimas Incorporaciones al Catálogo
   Como un usuario comun
-  Quiero acceder al portal
-  Para visualizar detalle indice
+  Quiero acceder a la pagina principal
+  Para visualizar componentes carrusel
 
-  Escenario: Cargando el Portal de Referencia
+  Escenario: Cargando el Portal Web
     Dado PPB002-CAPF096 - Cargando el Navegador
-    Cuando PPB002-CAPF096 - Se haya cargado la web
-    Y PPB002-CAPF096 - Aceptar las cookies
-    Y PPB002-CAPF096 - Mostrar sin fecha
-    Y PPB002-CAPF096 - Mostrar sin subtitulo
-    Y PPB002-CAPF096 - Mostrar sin texto
-    Y PPB002-CAPF096 - Mostrar sin texto miniatura
-    Y PPB002-CAPF096 - Mostrar sin imagen
-    Y PPB002-CAPF096 - Mostrar sin galeria
-    Y PPB002-CAPF096 - Mostrar sin apartado
-    Y PPB002-CAPF096 - Cambiar imagenes
-    Y PPB002-CAPF096 - Clickar imagen
-    Y PPB002-CAPF096 - Clickar apartado
-    Y PPB002-CAPF096 - Clickar enlace
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+    Cuando PPB002-CAPF096 - Acepta las Cookies
+    Y PPB002-CAPF096 - Ubicarse en el apartado ÚLTIMAS INCORPORACIONES AL CATÁLOGO
+    Y PPB002-CAPF096 - Posicionar el puntero encima del card
+    Y PPB002-CAPF096 - Arrastrar hacia la izquierda
+    Y PPB002-CAPF096 - Arrastrar hacia la derecha
+    Y PPB002-CAPF096 - Clickar flecha derecha
+    Y PPB002-CAPF096 - Clickar flecha izquierda
+    Y PPB002-CAPF096 - Accede a cualquier enlace
+    Entonces PPB002-CAPF096 - Validar acceso correcto
 
 
 

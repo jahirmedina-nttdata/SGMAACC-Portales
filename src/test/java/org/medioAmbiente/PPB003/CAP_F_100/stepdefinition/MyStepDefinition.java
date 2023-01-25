@@ -1,7 +1,6 @@
 package org.medioAmbiente.PPB003.CAP_F_100.stepdefinition;
 
 import io.cucumber.java.es.Dado;
-import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_100.step.MyStep;
@@ -16,25 +15,29 @@ public class MyStepDefinition {
         myStep.cargarPagina();
     }
 
-
     @Y("^PPB003-CAPF100 - Aceptar Cookies$")
     public void Aceptar_Cookies() throws InterruptedException{
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF100 - Autenticar usuario$")
-    public void Autenticar_Usuario()throws InterruptedException {
+    @Y("^PPB003-CAPF100 - Autentico usuario$")
+    public void Autentico_Usuario()throws InterruptedException {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF100 - Ejecutar CAPF099$")
-    public void Ejecutar_CAPF099()throws InterruptedException {
-        myStep.ejecutarCAPF099();
+    @Y("^PPB003-CAPF100 - Acceder al submenu Noticias$")
+    public void Acceder_Al_Submenu_Noticias()throws InterruptedException {
+        myStep.accederNoticias();
     }
 
-    @Y("^PPB003-CAPF100 - Seleccionar paginador$")
-    public void Seleccionar_Paginador()throws InterruptedException {
-        myStep.seleccionarPaginador();
+    @Y("^PPB003-CAPF100 - Configurar paginador$")
+    public void Configurar_Paginador()throws InterruptedException {
+        myStep.configurarPaginador();
+    }
+
+    @Y("^PPB003-CAPF100 - Recargar pagina$")
+    public void Recargar_Pagina()throws InterruptedException {
+        myStep.recargarPagina();
     }
 }
 

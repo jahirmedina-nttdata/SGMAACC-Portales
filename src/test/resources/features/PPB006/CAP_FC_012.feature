@@ -1,16 +1,33 @@
 #language: es
 @PPB006-CAP_FC_012
 
-Característica: PPB006-CAP_FC_012 - Funcionamiento Menu navegacion
-  Como un usuario comun
-  Quiero acceder al portal
-  Para navegar por menu
+Característica: PPB006-CAP_FC_012 - Visualizacion de contenido Pie de pagina
+  Como usuario comun
+  Quiero acceder al pie de pagina
+  Para acceder a los enlaces
 
-  Escenario: Cargando Web Referencial
+  Escenario: Enlaces Pie de pagina
     Dado PPB006-CAPFC012 - Accedo al Navegador
-    Y PPB006-CAPFC012 - Aceptar Cookies
-    Y PPB006-CAPFC012 - Posicionarme en menu
-    Y PPB006-CAPFC012 - Clickar submenu
+    Y PPB006-CAPFC012 - Acepto Cookies
+    Y PPB006-CAPFC012 - Clickar Portal Ambiental
+    Y PPB006-CAPFC012 - Clickar Portal Caza
+    Y PPB006-CAPFC012 - Clickar Ventana de visitante
+    Y PPB006-CAPFC012 - Clickar Canal de Administracion
+    Y PPB006-CAPFC012 - Clickar Plan Andaluz
+    Y PPB006-CAPFC012 - Clickar Preguntas Frecuentes
+    Y PPB006-CAPFC012 - Clickar icono Twitter
+    Y PPB006-CAPFC012 - Clickar icono Facebook
+    Y PPB006-CAPFC012 - Clickar icono Instagram
+    Y PPB006-CAPFC012 - Clickar logo Junta de Andalucia
+    Y PPB006-CAPFC012 - Clickar logo Union Europea
+    Y PPB006-CAPFC012 - Clickar Mapa web
+    Y PPB006-CAPFC012 - Clickar Proteccion de datos
+    Y PPB006-CAPFC012 - Clickar Accesibilidad
+    Y PPB006-CAPFC012 - Clickar Condiciones de uso
+
+
+
+
 
 
 

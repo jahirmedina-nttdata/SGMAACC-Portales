@@ -27,17 +27,17 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void clikarPasaporte() throws InterruptedException {
-        page.clikarPasaporte();
+    public void seleccionarIdioma() throws InterruptedException {
+        page.seleccionarIdioma();
     }
 
     @net.thucydides.core.annotations.Step
-    public void validarPermiso() throws InterruptedException {
-        page.validarPermiso();
+    public void clickarFicha() throws InterruptedException {
+        page.clickarFicha();
     }
 
     @net.thucydides.core.annotations.Step
-    public void validarPasaportes() throws InterruptedException {
-        page.validarPasaportes();
+    public void validarTraduccion() throws InterruptedException {
+        page.validarTraduccion();
     }
 }

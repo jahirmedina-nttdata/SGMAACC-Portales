@@ -20,24 +20,13 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF099 - Autentico usuario$")
-    public void Autentico_Usuario()throws InterruptedException {
-        myStep.autenticarUsuario();
+    @Y("^PPB003-CAPF099 - Visualizar paginador$")
+    public void Visualizar_Paginador()throws InterruptedException {
+        myStep.visualizarPaginador();
     }
 
-    @Y("^PPB003-CAPF099 - Acceder al submenu Noticias$")
-    public void Acceder_Al_Submenu_Noticias()throws InterruptedException {
-        myStep.accederNoticias();
-    }
-
-    @Y("^PPB003-CAPF099 - Configurar paginador$")
-    public void Configurar_Paginador()throws InterruptedException {
-        myStep.configurarPaginador();
-    }
-
-    @Y("^PPB003-CAPF099 - Recargar pagina$")
-    public void Recargar_Pagina()throws InterruptedException {
-        myStep.recargarPagina();
+    @Y("^PPB003-CAPF099 - Seleccionar paginador$")
+    public void Seleccionar_Paginador()throws InterruptedException {
     }
 }
 

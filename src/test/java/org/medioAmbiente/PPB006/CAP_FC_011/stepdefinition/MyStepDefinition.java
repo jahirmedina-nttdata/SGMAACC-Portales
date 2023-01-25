@@ -22,26 +22,18 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB006-CAPFC011 - Visualizar camino de migas$")
-    public void Visualizar_Camino_De_Migas()throws InterruptedException {
-        myStep.visualizarCaminoMiga();
+    @Y("^PPB006-CAPFC011 - Posicionarme en menu$")
+    public void Posicionarme_En_Menu()throws InterruptedException {
+        myStep.posicionarMenu();
     }
 
 
-    @Y("^PPB006-CAPFC011 - Posicionar puntero$")
-    public void Posicionar_Puntero()throws InterruptedException {
-        myStep.posicionarPuntero();
+    @Y("^PPB006-CAPFC011 - Clickar submenu$")
+    public void Clickar_Submenu()throws InterruptedException {
+        myStep.clickarSubmenu();
     }
 
-    @Y("^PPB006-CAPFC011 - Clickar pagina padre$")
-    public void Clickar_Pagina_Padre()throws InterruptedException {
-        myStep.clickarPadre();
-    }
 
-    @Y("^PPB006-CAPFC011 - Clickar pagina actual$")
-    public void Clickar_Pagina_Actual()throws InterruptedException {
-        myStep.clickarActual();
-    }
 
 
 }

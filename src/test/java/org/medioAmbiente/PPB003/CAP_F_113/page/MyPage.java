@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 
-@DefaultUrl("/medioambiente/portal/web/guest/buscador-de-noticias")
+@DefaultUrl("/medioambiente/portal/web/guest/buscador-videos")
 
 
 public class MyPage extends PageObject {
@@ -24,7 +24,7 @@ public class MyPage extends PageObject {
     private WebElementFacade Paginador;
 
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_RBLh8ZKfwq6q_resultsDiv\"]//div[2]//div[2]/a")
-    private WebElementFacade Contenido_Noticia;
+    private WebElementFacade Contenido_Video;
 
     public void clickarPaginador() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
@@ -34,12 +34,12 @@ public class MyPage extends PageObject {
         Paginador.click();
     }
 
-    public void seleccionarNoticia() throws InterruptedException {
+    public void seleccionarVideo() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 200)");
-        Contenido_Noticia.click();
+        Contenido_Video.click();
     }
 
     public void retrocederPagina() throws InterruptedException {
@@ -49,7 +49,7 @@ public class MyPage extends PageObject {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 1000)");
         waitFor(1).second();
-        j.executeScript("window.scrollBy(0, 600)");
+        j.executeScript("window.scrollBy(0, 300)");
         waitFor(2).second();
         List<WebElement> lista = getDriver().findElements(By.xpath("//li[@class=\"page_number active pag_num_5\"]/a"));
         if (lista.size() != 0) {

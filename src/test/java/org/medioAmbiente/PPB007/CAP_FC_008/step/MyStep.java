@@ -28,13 +28,48 @@ public class MyStep extends ScenarioSteps {
 
 
     @net.thucydides.core.annotations.Step
-    public void desplegarContenido() throws InterruptedException {
-        page.desplegarContenido();
+    public void buscarSinFiltros() throws InterruptedException {
+        page.buscarSinFiltros();
     }
 
     @net.thucydides.core.annotations.Step
-    public void ocultarContenido() throws InterruptedException {
-        page.ocultarContenido();
+    public void buscarPorTexto() throws InterruptedException {
+        page.buscarPorTexto();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorTipo() throws InterruptedException {
+        page.buscarPorTipo();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorTematica() throws InterruptedException {
+        page.buscarPorTematica();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorPlazoAbierto() throws InterruptedException {
+        page.buscarPorPlazoAbierto();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorTramitacionElectronica() throws InterruptedException {
+        page.buscarPorTramitacionElectronica();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorTextoYPlazoAbierto() throws InterruptedException {
+        page.buscarPorTextoYPlazoAbierto();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarEnlace() throws InterruptedException {
+        page.clickarEnlace();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void ejecutarCAPFN029() throws InterruptedException {
+        page.ejecutarCAPFN029();
     }
 
 }

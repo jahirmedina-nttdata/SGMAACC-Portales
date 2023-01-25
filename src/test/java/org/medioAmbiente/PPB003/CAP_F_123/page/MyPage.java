@@ -13,40 +13,46 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 @DefaultUrl("/medioambiente/portal/web/ventanadelvisitante")
 
 
 public class MyPage extends PageObject {
-    private String prntw;
-    private String popwnd;
-    @FindBy(xpath = "//*[@id=\"layout_18\"]")
+
+    @FindBy(xpath = "//*[@id=\"layout_56\"]")
     private WebElementFacade Menu;
 
-    @FindBy(xpath = "(//input[@title=\"Buscar\"])[2]")
+    @FindBy(xpath = "//*[@id=\"layout_60\"]")
+    private WebElementFacade SubMenu;
+
+    @FindBy(xpath = "//input[@title=\"Buscar por palabras\"]")
     private WebElementFacade buscarTexto;
 
     @FindBy(xpath = "//button/span[contains(text(),'Buscar')]")
     private WebElementFacade btnBuscar;
 
-    @FindBy(xpath = "(//span[contains(text(),'Formato PDF')])[1]")
-    private WebElementFacade Ver_PDF;
+    @FindBy(xpath = "//button/span[contains(text(),'EXPORTAR RESULTADOS')]")
+    private WebElementFacade btnExportar;
 
-    @FindBy(xpath = "(//tr[3]//p[@class=\"evr-table-simple__thumb-txt\"])[1]")
+    @FindBy(xpath = "(//span[@class=\"evr-article-collage-map__title\"])[2]")
     private WebElementFacade Validar_Resultado;
 
 
-    public void seleccionarMenuPublicaciones() throws InterruptedException {
-        Menu.click();
+    public void seleccionarMenu() throws InterruptedException {
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(Menu)
+                .perform();
     }
 
+    public void seleccionarSubmenu() throws InterruptedException {
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(SubMenu)
+                .perform();
+        SubMenu.click();
+    }
 
     public void buscarPorTexto() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@title=\"Buscar\"])[2]")));
         buscarTexto.sendKeys("Sierra de Aracena");
     }
 
@@ -56,12 +62,13 @@ public class MyPage extends PageObject {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 150)");
+        j.executeScript("window.scrollBy(0, 900)");
 
     }
 
     public void validarBusqueda() throws InterruptedException {
-        List<WebElement> lista = getDriver().findElements(By.xpath("//div[@class=\"evr-table-simple\"]"));
+        waitFor(1).second();
+        List<WebElement> lista = getDriver().findElements(By.xpath("//div[@class=\"evr-map-result__paragraph\"]"));
         if (lista.size() != 0) {
             Assert.assertTrue(true);
         } else {
@@ -69,7 +76,7 @@ public class MyPage extends PageObject {
         }
 
         String validacion = Validar_Resultado.getText();
-        if(validacion.contains("Sierra de Aracena")) {
+        if(validacion.contains("SIERRA DE ARACENA")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("Informacion valida");
@@ -77,21 +84,11 @@ public class MyPage extends PageObject {
 
     }
 
-    public void pulsarFormatoPDF() throws InterruptedException {
-        Ver_PDF.click();
-        Set<String> wnd = getDriver().getWindowHandles();
-        // window handles iteration
-        Iterator<String> i = wnd.iterator();
-        prntw = i.next();
-        popwnd = i.next();
-        // switching pop up window handle id
-        getDriver().switchTo().window(popwnd);
-        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
-        waitFor(9).second();
-        // closes pop up window
-        getDriver().close();
-        // switching parent window handle id
-        getDriver().switchTo().window(prntw);
+    public void pulsarExportarResultados() throws InterruptedException {
+        btnExportar.click();
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, -200)");
+        waitFor(5).second();
     }
 
 }

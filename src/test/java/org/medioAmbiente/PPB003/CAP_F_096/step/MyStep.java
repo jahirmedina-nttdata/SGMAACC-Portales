@@ -22,7 +22,22 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarPaginador() throws InterruptedException {
-        page.seleccionarPaginador();
+    public void autenticarUsuario() throws InterruptedException {
+        page.autenticarUsuario();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void accederPublicaciones() throws InterruptedException {
+        page.accederPublicaciones();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void configurarPaginador() throws InterruptedException {
+        page.configurarPaginador();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void recargarPagina() throws InterruptedException {
+        page.recargarPagina();
     }
 }

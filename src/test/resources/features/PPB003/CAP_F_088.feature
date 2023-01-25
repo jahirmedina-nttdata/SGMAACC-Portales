@@ -1,18 +1,18 @@
 #language: es
 @PPB003-CAP_F_088
 
-Característica: PPB003-CAP_F_088 - Añadir y Quitar Pasaporte
+Característica: PPB003-CAP_F_088 - Visualizacion Pasaporte Ecoturista
   Como un usuario autenticado
   Quiero acceder al portal
-  Para añadir y quitar pasaporte
+  Para visualizar pasaporte
 
-  Escenario: Cargando Portal de Referencia
+  Escenario: Cargando Portal de referencia
     Dado PPB003-CAPF088 - Accedo al Navegador
     Y PPB003-CAPF088 - Aceptar Cookies
     Y PPB003-CAPF088 - Autentico usuario
-    Y PPB003-CAPF088 - Clickar añadir Pasaporte Ecoturista
-    Entonces PPB003-CAPF088 - Validar Pasaporte añadido
-    Y PPB003-CAPF088 - Clickar eliminar Pasaporte
+    Y PPB003-CAPF088 - Clickar Pasaporte Ecoturista
+    Entonces PPB003-CAPF088 - Valido permisos
+    Y PPB003-CAPF088 - Valido lista de Pasaportes
 
 
 

@@ -6,6 +6,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB001.CAP_F_014.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -22,43 +24,61 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB001-CAPF014 - Buscar por texto$")
-    public void Buscar_Por_Texto() throws InterruptedException {
-        myStep.buscarPorTexto();
+    @Y("^PPB001-CAPF014 - Buscar Audio por texto$")
+    public void Buscar_Audio_Por_Texto() throws InterruptedException {
+
     }
-    @Y("^PPB001-CAPF014 - Buscar por tipo de evento$")
-    public void Buscar_Por_Tipo_De_Evento() throws InterruptedException {
-        myStep.buscarPorEvento();
+    @Y("^PPB001-CAPF014 - Buscar Audio por tema$")
+    public void Buscar_Audio_Por_Tema() throws InterruptedException {
+
     }
 
-    @Y("^PPB001-CAPF014 - Buscar por provincia$")
-    public void Buscar_Por_Provincia() throws InterruptedException {
-        myStep.buscarPorProvincia();
+    @Y("^PPB001-CAPF014 - Buscar Audio por fecha$")
+    public void Buscar_Audio_Por_Fecha() throws InterruptedException {
+
     }
 
-    @Y("^PPB001-CAPF014 - Buscar por Fecha Desde y Hasta$")
-    public void Buscar_Por_Fecha_Desde_Y_Hasta() throws InterruptedException {
-        myStep.buscarPorFechaDesdeYHasta();
+    @Y("^PPB001-CAPF014 - Buscar Audio por filtros$")
+    public void Buscar_Audio_Por_Filtros() throws InterruptedException {
+
     }
 
-    @Y("^PPB001-CAPF014 - Ordenar por fecha de publicacion ascendentemente$")
-    public void Ordenar_Por_Fecha_De_Publicacion_Ascendentemente() throws InterruptedException {
-        myStep.ordenarFechaDePublicacionAscendentemente();
+    @Y("^PPB001-CAPF014 - Buscar Imagenes por texto$")
+    public void Buscar_Imagenes_Por_Texto() throws InterruptedException, URISyntaxException {
+        myStep.buscarImagenPorTexto();
+    }
+    @Y("^PPB001-CAPF014 - Buscar Imagenes por tema$")
+    public void Buscar_Imagenes_Por_Tema() throws InterruptedException {
+        myStep.buscarImagenPorTema();
     }
 
-    @Y("^PPB001-CAPF014 - Ordenar por Titulo ascendentemente$")
-    public void Ordenar_Por_Titulo_Ascendentemente() throws InterruptedException {
-        myStep.ordenarPorTituloAscendentemente();
+    @Y("^PPB001-CAPF014 - Buscar Imagenes por fecha$")
+    public void Buscar_Imagenes_Por_Fecha() throws InterruptedException {
+        myStep.buscarImagenPorFecha();
     }
 
-    @Y("^PPB001-CAPF014 - Ordenar por Titulo descendentemente$")
-    public void Ordenar_Por_Titulo_Descendentemente() throws InterruptedException {
-        myStep.ordenarPorTituloDescendentemente();
+    @Y("^PPB001-CAPF014 - Buscar Imagenes por filtros$")
+    public void Buscar_Imagenes_Por_Filtros() throws InterruptedException {
+        myStep.buscarImagenPorFiltros();
     }
 
-    @Y("^PPB001-CAPF014 - Buscar por todos los filtros$")
-    public void Buscar_Por_Todos_Los_Filtros() throws InterruptedException {
-        myStep.buscarPorTodosLosFiltros();
+    @Y("^PPB001-CAPF014 - Buscar Video por texto$")
+    public void Buscar_Video_Por_Texto() throws InterruptedException, URISyntaxException {
+        myStep.buscarVideoPorTexto();
+    }
+    @Y("^PPB001-CAPF014 - Buscar Video por tema$")
+    public void Buscar_Video_Por_Tema() throws InterruptedException {
+        myStep.buscarVideoPorTema();
+    }
+
+    @Y("^PPB001-CAPF014 - Buscar Video por fecha$")
+    public void Buscar_Video_Por_Fecha() throws InterruptedException {
+        myStep.buscarVideoPorFecha();
+    }
+
+    @Y("^PPB001-CAPF014 - Buscar Video por filtros$")
+    public void Buscar_Video_Por_Filtros() throws InterruptedException {
+        myStep.buscarVideoPorFiltros();
     }
 }
 

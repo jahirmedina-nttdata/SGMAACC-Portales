@@ -1,50 +1,67 @@
 package org.medioAmbiente.PPB002.CAP_F_014.page;
 
 
-import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
-
-@DefaultUrl("/medioambiente/portal/web/guest/actualidad/agenda-eventos")
+@DefaultUrl("/medioambiente/portal/el-tiempo")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "(//a[@title=\"Taller presencial gestión del litoral y educación ambiental en Andalucía. Málaga (Andalucía oriental)\"])[1]")
-    private WebElementFacade Titulo_Evento;
+    @FindBy(xpath = "//*[@id=\"_cmaotAemetModule_INSTANCE_a9pE4goNitHU_complete-view\"]//a")
+    private WebElementFacade Enlace;
 
-    @FindBy(xpath = "(//a[@title=\"Taller presencial gestión del litoral y educación ambiental en Andalucía. Málaga (Andalucía oriental)\"]/../a[@title=\"[ + ] Más\"])[1]")
-    private WebElementFacade Icono_Mas;
+    public void cargarpagina() throws AWTException {
+       open();
+       waitFor(5).second();
+        Robot robot = new  Robot();
+        try {
+            robot.keyPress(KeyEvent.VK_TAB);
+            robot.keyRelease(KeyEvent.VK_TAB);
+            robot.keyPress(KeyEvent.VK_TAB);
+            robot.keyRelease(KeyEvent.VK_TAB);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
 
-    public void ubicarseProximosEventos() throws InterruptedException{
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    public void aceptarCookies() throws InterruptedException {
+
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 700)");
+        j.executeScript("document.querySelector(\"#accept-cookies\").click();");
     }
 
-    public void clickarTitulo() throws InterruptedException{
-        Actions action = new Actions(getDriver());
-        action.moveToElement(Titulo_Evento).click().perform();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Taller presencial gestión del litoral')])[2]")));
+    public void visualizarTiempo() throws InterruptedException {
+        List<WebElement> Provincia = getDriver().findElements(By.xpath("//*[@id=\"_cmaotAemetModule_INSTANCE_a9pE4goNitHU_provincia-button\"]"));
+        List<WebElement> Municipio = getDriver().findElements(By.xpath("//*[@id=\"_cmaotAemetModule_INSTANCE_a9pE4goNitHU_municipio-button\"]"));
+        if (Provincia.size() != 0 && Municipio.size() !=0) {
+            Assert.assertTrue(true);
+        } else {
+            Assert.fail("No existe Provincia y Municipio");
+        }
+
     }
 
-    public void clickarIconoMas() throws InterruptedException{
-        getDriver().navigate().back();
-        Actions action = new Actions(getDriver());
-        action.moveToElement(Icono_Mas).click().perform();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Taller presencial gestión del litoral')])[2]")));
+    public void clickarEnlace()throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 300)");
+        List<WebElement> enlace = getDriver().findElements(By.xpath("//*[@id=\"_cmaotAemetModule_INSTANCE_a9pE4goNitHU_complete-view\"]//a"));
+        if (enlace.size() != 0) {
+            Enlace.click();
+        }else{
+        }
     }
-
 }

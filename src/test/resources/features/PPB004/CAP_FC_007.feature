@@ -1,15 +1,15 @@
 #language: es
 @PPB004-CAP_FC_007
 
-Característica: PPB004-CAP_FC_007 - Visualizacion Buscador
+Característica: PPB004-CAP_FC_007 - Visualizacion Texto
   Como usuario comun
-  Quiero acceder buscador
-  Para visualizar campos
+  Quiero acceder al portal
+  Para visualizar textos
 
-  Escenario: Cargando el Buscador
+  Escenario: Cargando el Portal de Referencia
     Dado PPB004-CAPFC007 - Accedo al Navegador
     Y PPB004-CAPFC007 - Acepto Cookies
-    Y PPB004-CAPFC007 - Mostrar carrusel
+    Y PPB004-CAPFC007 - Mostrar texto
 
 
 

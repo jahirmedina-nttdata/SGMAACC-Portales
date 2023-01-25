@@ -3,9 +3,6 @@ package org.medioAmbiente.PPB003.CAP_F_077.step;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB003.CAP_F_077.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoAlertPresentException;
-
-import java.awt.*;
 
 
 public class MyStep extends ScenarioSteps {
@@ -30,22 +27,17 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void clikarEliminarVisita() throws InterruptedException {
-        page.clikarEliminarVisita();
+    public void clikarEditarVisita() throws InterruptedException {
+        page.clikarEditarVisita();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarCancelar() throws InterruptedException{
-        page.clickarCancelar();
+    public void modificarVisita() throws InterruptedException {
+        page.modificarVisita();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarAceptar() throws InterruptedException {
-        page.clickarAceptar();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void validarEliminacion() throws InterruptedException {
-        page.validarEliminacion();
+    public void validarModificacion() throws InterruptedException {
+        page.validarModificacion();
     }
 }

@@ -1,6 +1,7 @@
 package org.medioAmbiente.PPB003.CAP_F_095.stepdefinition;
 
 import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_095.step.MyStep;
@@ -25,19 +26,34 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF095 - Acceder al menu Publicaciones$")
-    public void Acceder_Al_Menu_Publicaciones()throws InterruptedException {
-        myStep.accederPublicaciones();
+    @Y("^PPB003-CAPF095 - Acceder a contenido web$")
+    public void Acceder_A_Contenido_Web()throws InterruptedException {
+        myStep.accederContenidoWeb();
     }
 
-    @Y("^PPB003-CAPF095 - Configurar paginador$")
-    public void Configurar_Paginador()throws InterruptedException {
-        myStep.configurarPaginador();
+    @Y("^PPB003-CAPF095 - Acceder a carpeta Avisos$")
+    public void Acceder_A_Carpeta_Avisos()throws InterruptedException {
+        myStep.accederCarpetaAvisos();
     }
 
-    @Y("^PPB003-CAPF095 - Recargar pagina$")
-    public void Recargar_Pagina()throws InterruptedException {
-        myStep.recargarPagina();
+    @Y("^PPB003-CAPF095 - Copiar Resumen a descripcion$")
+    public void Copiar_Resumen_A_Descripcion()throws InterruptedException {
+        myStep.copiarResumenADescripcion();
+    }
+
+    @Y("^PPB003-CAPF095 - Clickar Publicar$")
+    public void Clickar_Publicar()throws InterruptedException {
+        myStep.clickarPublicar();
+    }
+
+    @Entonces("^PPB003-CAPF095 - Validar cambio$")
+    public void Validar_Cambio()throws InterruptedException {
+        myStep.validarCambio();
+    }
+
+    @Y("^PPB003-CAPF095 - Copiar Descripcion a Resumen$")
+    public void Copiar_Descripcion_A_Resumen()throws InterruptedException {
+        myStep.copiarDescripcionAResumen();
     }
 }
 

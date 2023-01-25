@@ -27,8 +27,8 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarRevista() throws InterruptedException {
-        page.seleccionarRevista();
+    public void seleccionarPublicacion() throws InterruptedException {
+        page.seleccionarPublicacion();
     }
 
     @net.thucydides.core.annotations.Step

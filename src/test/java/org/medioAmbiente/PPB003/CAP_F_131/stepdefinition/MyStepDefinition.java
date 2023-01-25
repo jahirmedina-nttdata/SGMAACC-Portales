@@ -5,8 +5,7 @@ import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
-import org.medioAmbiente.PPB003.CAP_F_131.Step.MyStep;
-
+import org.medioAmbiente.PPB003.CAP_F_131.step.MyStep;
 
 public class MyStepDefinition {
 
@@ -23,14 +22,24 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF131 - Clickar pestaña PUBLICACIONES$")
-    public void Clickar_Pestaña_PUBLICACIONES() throws InterruptedException {
-        myStep.clickarPublicaciones();
+    @Y("^PPB003-CAPF131 - Seleccionar tipo de espacio LUGAR DE IMPORTANCIA COMUNITARIA")
+    public void Seleccionar_Tipo_De_Espacio_LUGAR_DE_IMPORTANCIA_COMUNITARIA() throws InterruptedException {
+        myStep.seleccionarImportanciaComunitaria();
     }
 
-    @Entonces("^PPB003-CAPF131 - Validar Tarjetas$")
-    public void Validar_Tarjetas() throws InterruptedException {
-        myStep.validarTarjetas();
+    @Y("^PPB003-CAPF131 - Seleccionar nombre de espacio DUNAS DEL ODIEL$")
+    public void Seleccionar_Nombre_De_Espacio_DUNAS_DEL_ODIEL() throws InterruptedException {
+        myStep.seleccionarDunasOdiel();
+    }
+
+    @Y("^PPB003-CAPF131 - Clickar buscar$")
+    public void Clickar_Buscar() throws InterruptedException {
+        myStep.clickarBuscar();
+    }
+
+    @Entonces("^PPB003-CAPF131 - Validar resultado$")
+    public void Validar_Resultado() throws InterruptedException {
+        myStep.validarResultado();
     }
 
 }

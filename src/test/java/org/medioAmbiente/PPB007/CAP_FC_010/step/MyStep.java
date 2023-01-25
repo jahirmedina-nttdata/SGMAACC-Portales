@@ -22,54 +22,24 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void visualizarContenido() throws InterruptedException {
-        page.visualizarContenido();
+    public void visualizarCaminoMigas() throws InterruptedException {
+        page.visualizarCaminoMigas();
     }
 
 
     @net.thucydides.core.annotations.Step
-    public void buscarSinFiltros() throws InterruptedException {
-        page.buscarSinFiltros();
+    public void posicionarPuntero() throws InterruptedException {
+        page.posicionarPuntero();
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorTexto() throws InterruptedException {
-        page.buscarPorTexto();
+    public void clickarElementoPadre() throws InterruptedException {
+        page.clickarElementoPadre();
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorTipo() throws InterruptedException {
-        page.buscarPorTipo();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void buscarPorTematica() throws InterruptedException {
-        page.buscarPorTematica();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void buscarPorPlazoAbierto() throws InterruptedException {
-        page.buscarPorPlazoAbierto();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void buscarPorTramitacionElectronica() throws InterruptedException {
-        page.buscarPorTramitacionElectronica();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void buscarPorTextoYPlazoAbierto() throws InterruptedException {
-        page.buscarPorTextoYPlazoAbierto();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarEnlace() throws InterruptedException {
-        page.clickarEnlace();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void ejecutarCAPFN030() throws InterruptedException {
-        page.ejecutarCAPFN030();
+    public void clickarMigaActual() throws InterruptedException {
+        page.clickarMigaActual();
     }
 
 }

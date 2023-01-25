@@ -8,7 +8,8 @@ import org.openqa.selenium.JavascriptExecutor;
 public class MyStep extends ScenarioSteps {
 
     private MyPage page;
-
+    private String prntw;
+    private String popwnd;
     @net.thucydides.core.annotations.Step
     public void cargarPagina() throws InterruptedException {
         page.open();
@@ -16,30 +17,14 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void aceptarCookies() throws InterruptedException {
+    public void ubicarDestacados() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
+        j.executeScript("window.scrollBy(0, 500)");
     }
 
-    @net.thucydides.core.annotations.Step
-    public void clickarFlechaSiguiente() throws InterruptedException {
-        page.clickarFlechaSiguiente();
+    public void clickarPremiosConsurso() throws InterruptedException{
+        page.clickarPremiosConsurso();
+
     }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarFlechaAnterior() throws InterruptedException {
-        page.clickarFlechaAnterior();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarBullet() throws InterruptedException {
-        page.clickarBullet();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarEnlace() throws InterruptedException {
-        page.clickarEnlace();
-    }
-
-
 }

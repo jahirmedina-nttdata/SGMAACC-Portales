@@ -15,15 +15,29 @@ public class MyStepDefinition {
         myStep.cargarPagina();
     }
 
-
     @Y("^PPB003-CAPF096 - Aceptar Cookies$")
     public void Aceptar_Cookies() throws InterruptedException{
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF096 - Seleccionar paginador$")
-    public void Seleccionar_Paginador()throws InterruptedException {
-        myStep.seleccionarPaginador();
+    @Y("^PPB003-CAPF096 - Autentico usuario$")
+    public void Autentico_Usuario()throws InterruptedException {
+        myStep.autenticarUsuario();
+    }
+
+    @Y("^PPB003-CAPF096 - Acceder al menu Publicaciones$")
+    public void Acceder_Al_Menu_Publicaciones()throws InterruptedException {
+        myStep.accederPublicaciones();
+    }
+
+    @Y("^PPB003-CAPF096 - Configurar paginador$")
+    public void Configurar_Paginador()throws InterruptedException {
+        myStep.configurarPaginador();
+    }
+
+    @Y("^PPB003-CAPF096 - Recargar pagina$")
+    public void Recargar_Pagina()throws InterruptedException {
+        myStep.recargarPagina();
     }
 }
 

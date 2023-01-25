@@ -1,7 +1,6 @@
 package org.medioAmbiente.PPB003.CAP_F_117.stepdefinition;
 
 import io.cucumber.java.es.Dado;
-import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_117.step.MyStep;
@@ -27,19 +26,14 @@ public class MyStepDefinition {
         myStep.clickarPaginador();
     }
 
-    @Y("^PPB003-CAPF117 - Clickar enlace$")
-    public void Clickar_Enlace()throws InterruptedException {
-        myStep.clickarEnlace();
+    @Y("^PPB003-CAPF117 - Seleccionar revista$")
+    public void Seleccionar_Revista()throws InterruptedException {
+        myStep.seleccionarRevista();
     }
 
     @Y("^PPB003-CAPF117 - Retroceder pagina$")
     public void Retroceder_Pagina()throws InterruptedException {
         myStep.retrocederPagina();
-    }
-
-    @Entonces("^PPB003-CAPF117 - Validar cacheo de paginador$")
-    public void Validar_Cacheo_De_Paginador()throws InterruptedException {
-        myStep.validarCacheoDePaginador();
     }
 }
 

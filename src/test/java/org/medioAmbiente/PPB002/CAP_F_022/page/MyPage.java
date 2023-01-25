@@ -5,7 +5,6 @@ import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
-import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -13,25 +12,26 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("/medioambiente/portal/web/guest/actualidad/participa-y-colabora")
+@DefaultUrl("/medioambiente/portal/web/guest/areas-tematicas")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "(//a[@title=\"VER TODOS LOS EVENTOS\"])[2]")
-    private WebElementFacade btnVerTodos;
+    @FindBy(xpath = "//a[@title=\"Memorias anuales de seguimiento del Plan Andaluz Medio Ambiente\"]")
+    private WebElementFacade Contenido_Destacado;
 
 
-    public void clickarDetalleContenido() throws InterruptedException {
+    public void ubicarseEnDestacados() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 200)");
+        j.executeScript("window.scrollBy(0, 300)");
+
     }
 
-    public void clickarBotonTodosLosEventos() throws InterruptedException {
+    public void clickarContenido() throws InterruptedException {
         Actions action = new Actions(getDriver());
-        action.moveToElement(btnVerTodos).click().perform();
+        action.moveToElement(Contenido_Destacado).click().perform();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Buscador en agenda')])[2]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Memorias anuales de seguimiento del Plan Andaluz Medio Ambiente')])[2]")));
     }
 
 

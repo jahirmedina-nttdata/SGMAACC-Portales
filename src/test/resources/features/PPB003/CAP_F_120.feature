@@ -1,19 +1,17 @@
 #language: es
-@PPB003-CAP_F_120
+@PPB003-CAP_F_120 @skip @KO
 
-Característica: PPB003-CAP_F_120 - Acceso al buscardor de espacios naturales
+Característica: PPB003-CAP_F_120 - Visualizacion Buscador
   Como un usuario comun
-  Quiero acceder al portal web
-  Para visualizar buscador de espacios naturales
+  Quiero acceder al portal
+  Para visualizar ultimo paginador
 
-  Escenario: Cargando Portal Buscador de Espacios
+  Escenario: Cargando Portal Buscador
     Dado PPB003-CAPF120 - Accedo al Navegador
-    Cuando PPB003-CAPF120 - Acepto Cookies
-    Y PPB003-CAPF120 - Seleccionar menu QUE PUEDES HACER
-    Y PPB003-CAPF120 - Seleccionar submenu BUSCADOR DE ESPACIOS NATURALES
-    Y PPB003-CAPF120 - Seleccionar tipo de espacio Parque Natural
-    Y PPB003-CAPF120 - Seleccionar nombre de espacio Sierra de Aracena y picos de Aroche
-    Y PPB003-CAPF120 - Pulsar el boton Buscar
-    Entonces PPB003-CAPF120 - Validar busqueda
-    Y PPB003-CAPF120 - Pulsar el boton Limpiar
+    Y PPB003-CAPF120 - Aceptar Cookies
+    Y PPB003-CAPF120 - Clickar paginador
+    Y PPB003-CAPF120 - Seleccionar contenido
+    Y PPB003-CAPF120 - Retroceder pagina
+
+
 

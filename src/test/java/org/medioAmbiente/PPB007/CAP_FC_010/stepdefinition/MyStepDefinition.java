@@ -21,54 +21,24 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB007-CAPFC010 - Visualizar contenido$")
-    public void Visualizar_Contenido()throws InterruptedException {
-        myStep.visualizarContenido();
+    @Y("^PPB007-CAPFC010 - Visualizar camino migas$")
+    public void Visualizar_Camino_Migas()throws InterruptedException {
+        myStep.visualizarCaminoMigas();
     }
 
-    @Y("^PPB007-CAPFC010 - Buscar sin filtros$")
-    public void Buscar_Sin_Filtros()throws InterruptedException {
-        myStep.buscarSinFiltros();
+    @Y("^PPB007-CAPFC010 - Posicionar puntero$")
+    public void Posicionar_Puntero()throws InterruptedException {
+        myStep.posicionarPuntero();
     }
 
-    @Y("^PPB007-CAPFC010 - Buscar por texto$")
-    public void Buscar_Por_Texto()throws InterruptedException {
-        myStep.buscarPorTexto();
+    @Y("^PPB007-CAPFC010 - Clickar elemento padre$")
+    public void Clickar_Elemento_Padre()throws InterruptedException {
+        myStep.clickarElementoPadre();
     }
 
-    @Y("^PPB007-CAPFC010 - Buscar por tipo$")
-    public void Buscar_Por_Tipo()throws InterruptedException {
-        myStep.buscarPorTipo();
-    }
-
-    @Y("^PPB007-CAPFC010 - Buscar por tematica$")
-    public void Buscar_Por_Tematica()throws InterruptedException {
-        myStep.buscarPorTematica();
-    }
-
-    @Y("^PPB007-CAPFC010 - Buscar por plazo abierto$")
-    public void Buscar_Por_Plazo_Abierto()throws InterruptedException {
-        myStep.buscarPorPlazoAbierto();
-    }
-
-    @Y("^PPB007-CAPFC010 - Buscar por tramitacion electronica$")
-    public void Buscar_Por_Tramitacion_Electronica()throws InterruptedException {
-        myStep.buscarPorTramitacionElectronica();
-    }
-
-    @Y("^PPB007-CAPFC010 - Buscar por texto y plazo abierto$")
-    public void Buscar_Por_Texto_Y_Plazo_Abierto()throws InterruptedException {
-        myStep.buscarPorTextoYPlazoAbierto();
-    }
-
-    @Y("^PPB007-CAPFC010 - Clickar enlace$")
-    public void Clickar_Enlace()throws InterruptedException {
-        myStep.clickarEnlace();
-    }
-
-    @Y("^PPB007-CAPFC010 - Ejecutar CAPFN030$")
-    public void Ejecutar_CAPFN030()throws InterruptedException {
-        myStep.ejecutarCAPFN030();
+    @Y("^PPB007-CAPFC010 - Clickar miga actual$")
+    public void Clickar_Miga_Actual()throws InterruptedException {
+        myStep.clickarMigaActual();
     }
 
 }

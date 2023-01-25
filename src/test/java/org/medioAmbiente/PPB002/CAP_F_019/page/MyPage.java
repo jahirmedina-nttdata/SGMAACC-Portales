@@ -18,36 +18,36 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//a[@title=\"Participa\"]")
+    @FindBy(xpath = "(//a[@title=\"Guías Didácticas de Educación Ambiental\"])[1]")
     private WebElementFacade Texto_Flotante;
 
-    @FindBy(xpath = "//a[@title=\"Colabora\"]")
-    private WebElementFacade Enlace_Colabora;
+    @FindBy(xpath = "(//a[@title=\"Buenas prácticas del mes\"])[1]")
+    private WebElementFacade Campaña;
 
 
-    public void ubicarseEnListado() throws InterruptedException {
+
+    public void ubicarseSeccionQuePuedoHacer() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 500)");
+        j.executeScript("window.scrollBy(0, 1000)");
     }
 
-    public void posicionarCursosEnListado() throws InterruptedException {
+    public void posicionarPuntero() throws InterruptedException {
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Texto_Flotante)
                 .perform();
-
         String textflotante = Texto_Flotante.getAttribute("title");
 
-        if(textflotante.equals("Participa")) {
+        if(textflotante.contains("Guías Didácticas de Educación Ambiental")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide el Texto");
         }
     }
 
-    public void clickarEnColabora() throws InterruptedException{
+    public void comprobarQueNavegueAlContenido() throws InterruptedException {
         Actions action = new Actions(getDriver());
-        action.moveToElement(Enlace_Colabora).click().perform();
+        action.moveToElement(Campaña).click().perform();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Colabora')])[2]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[contains(text(),'Buenas prácticas del mes')]")));
     }
 }

@@ -21,24 +21,20 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB004-CAPFC011 - Mostrar Listado$")
-    public void Mostrar_Listado()throws InterruptedException {
-        myStep.mostrarListado();
+    @Y("^PPB004-CAPFC011 - Mostrar menu$")
+    public void Mostrar_Menu()throws InterruptedException {
+        myStep.mostrarMenu();
     }
 
-    @Y("^PPB004-CAPFC011 - Mostrar animacion$")
-    public void Mostrar_Animacion()throws InterruptedException {
-        myStep.mostrarAnimacion();
+
+    @Y("^PPB004-CAPFC011 - Posicionar puntero$")
+    public void Posicionar_Puntero()throws InterruptedException  {
+        myStep.posicionarPuntero();
     }
 
-    @Y("^PPB004-CAPFC011 - Clickar enlace$")
-    public void Clickar_Enlace()throws InterruptedException {
-        myStep.clickarEnlace();
-    }
-
-    @Y("^PPB004-CAPFC011 - Validar texto flotante$")
-    public void Validar_Texto_Flotante()throws InterruptedException {
-        myStep.validarTextoFlotante();
+    @Y("^PPB004-CAPFC011 - Acceder a pagina$")
+    public void Acceder_A_Pagina() throws InterruptedException{
+        myStep.accederPag();
     }
 }
 

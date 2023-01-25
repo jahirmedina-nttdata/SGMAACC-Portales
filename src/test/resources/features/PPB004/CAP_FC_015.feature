@@ -1,17 +1,18 @@
 #language: es
 @PPB004-CAP_FC_015
 
-Característica: PPB004-CAP_FC_015 - Visualizacion Columnas Destacamos
+Característica: PPB004-CAP_FC_015 - Visualizacion de Terrenos Cinegeticos
   Como usuario comun
   Quiero acceder al portal
-  Para visualizar seccion destacamos
+  Para visualizar contenido
 
-  Escenario: Cargar el Portal de Referencia
+  Escenario: Cargar Portal de Referencia
     Dado PPB004-CAPFC015 - Accedo al Navegador
     Y PPB004-CAPFC015 - Acepto Cookies
-    Y PPB004-CAPFC015 - Mostrar columnas
-    Y PPB004-CAPFC015 - Navegar en contenido
+    Y PPB004-CAPFC015 - Mostrar contenido
+    Y PPB004-CAPFC015 - Acceder al contenido
     Y PPB004-CAPFC015 - Validar texto flotante
+
 
 
 

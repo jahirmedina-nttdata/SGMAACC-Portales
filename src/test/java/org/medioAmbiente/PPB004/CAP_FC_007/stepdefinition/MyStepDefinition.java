@@ -21,10 +21,9 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-
-    @Y("^PPB004-CAPFC007 - Mostrar carrusel$")
-    public void Mostrar_Carrusel()throws InterruptedException {
-        myStep.mostrarCarrusel();
+    @Y("^PPB004-CAPFC007 - Mostrar texto$")
+    public void Mostrar_Texto()throws InterruptedException {
+        myStep.mostrarTexto();
     }
 
 

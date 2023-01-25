@@ -9,33 +9,33 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 
-@DefaultUrl("/medioambiente/portal/web/caza-y-pesca/caza")
+@DefaultUrl("/medioambiente/portal/web/caza-y-pesca/especies-cinegéticas")
 
 
 
 public class MyPage extends PageObject {
 
 
-    @FindBy(xpath = "//*[@id=\"portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_MRclJosGKC5I\"]//li[1]//a")
-    private WebElementFacade pagina;
+    @FindBy(xpath = "//*[@id=\"portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_VTr3UpWfPhP8\"]//div[2]//div[4]//h2/a")
+    private WebElementFacade Enlace;
 
-
-    public void posicionarPuntero() throws InterruptedException{
-
+    public void navegarContenido()throws InterruptedException  {
+        Enlace.click();
+        getDriver().navigate().back();
+    }
+    public void validarTextFlotante() throws InterruptedException{
         Actions actions = new Actions(getDriver());
-        actions.moveToElement(pagina)
+        actions.moveToElement(Enlace)
                 .perform();
 
-        String textflotante = pagina.getAttribute("title");
+        String textflotante = Enlace.getAttribute("title");
 
-        if(textflotante.equals("SERVICIO DE ATENCIÓN CIUDADANA")) {
+        if(textflotante.equals("Especies cinegéticas de predadores")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide el Texto");
         }
     }
 
-    public void accederPag()throws InterruptedException  {
-        pagina.click();
-    }
+
 }

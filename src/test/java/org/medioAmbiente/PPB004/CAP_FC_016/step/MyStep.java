@@ -22,14 +22,44 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void visualizarCarrusel() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 1000)");
+    public void mostrarBuscador() throws InterruptedException {
+        page.mostrarBuscador();
+    }
+
+
+    @net.thucydides.core.annotations.Step
+    public void clickarBuscar() throws InterruptedException {
+        page.clickarBuscar();
     }
 
     @net.thucydides.core.annotations.Step
-    public void navegarContenido()throws InterruptedException {
-        page.navegarContenido();
+    public void buscarPortexto() throws InterruptedException{
+        page.buscarPortexto();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorCateg() throws InterruptedException {
+        page.buscarPorCateg();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorPlazo() throws InterruptedException {
+        page.buscarPorPlazo();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorTramitacion() throws InterruptedException {
+        page.buscarPorTramitacion();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorTextoPlazo() throws InterruptedException {
+        page.buscarPorTextoPlazo();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void accederContenido() throws InterruptedException {
+        page.accederContenido();
     }
 
     @net.thucydides.core.annotations.Step
@@ -38,27 +68,7 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarBullet() throws InterruptedException{
-        page.clickarBullet();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void deslizarIzquierda() throws InterruptedException {
-        page.deslizarIzquierda();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void deslizarDerecha() throws InterruptedException {
-        page.deslizarDerecha();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarFDerecha() throws InterruptedException{
-        page.clickarFDerecha();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarFIzquierda() throws InterruptedException{
-        page.clickarFIzquierda();
+    public void ejecutarcaso() throws InterruptedException{
+        page.ejecutarcaso();
     }
 }

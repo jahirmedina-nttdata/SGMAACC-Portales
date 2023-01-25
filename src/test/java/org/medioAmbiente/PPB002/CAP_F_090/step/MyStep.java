@@ -3,14 +3,19 @@ package org.medioAmbiente.PPB002.CAP_F_090.step;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB002.CAP_F_090.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 
 
 public class MyStep extends ScenarioSteps {
 
     private MyPage page;
+    private String prntw;
+    private String popwnd;
+    //private String driver;
+    public static WebDriver driver;
 
     @net.thucydides.core.annotations.Step
-    public void cargarPagina() throws InterruptedException {
+    public void cargandoNavegador() throws InterruptedException {
         page.open();
         getDriver().manage().window().maximize();
     }
@@ -22,13 +27,18 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void mostrarContenidoDelDetalle() throws InterruptedException {
-        page.mostrarContenidoDelDetalle();
+    public void posicionarSobreMenu() throws InterruptedException {
+        page.posicionarSobreMenu();
     }
 
     @net.thucydides.core.annotations.Step
-    public void mostrarSinVisor() throws InterruptedException {
-        page.mostrarSinVisor();
+    public void pulsarSubmenu() throws InterruptedException {
+        page.pulsarSubmenu();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void validarNavegacion() throws InterruptedException {
+        page.validarNavegacion();
     }
 
 }

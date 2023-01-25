@@ -22,18 +22,12 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void autenticoUsuario() throws InterruptedException {
-        page.autenticoUsuario();
+    public void autenticarUsuario() throws InterruptedException {
+        page.autenticarUsuario();
     }
 
     @net.thucydides.core.annotations.Step
-    public void cambiarIdioma() throws InterruptedException {
-        page.cambiarIdioma();
+    public void clickarFicha() throws InterruptedException {
+        page.clickarFicha();
     }
-
-    @net.thucydides.core.annotations.Step
-    public void validarTraduccion() throws InterruptedException {
-        page.validarTraduccion();
-    }
-
 }

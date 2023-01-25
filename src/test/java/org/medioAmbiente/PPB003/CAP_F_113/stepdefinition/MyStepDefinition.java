@@ -26,9 +26,9 @@ public class MyStepDefinition {
         myStep.clickarPaginador();
     }
 
-    @Y("^PPB003-CAPF113 - Seleccionar noticia$")
-    public void Seleccionar_Noticia()throws InterruptedException {
-        myStep.seleccionarNoticia();
+    @Y("^PPB003-CAPF113 - Seleccionar video$")
+    public void Seleccionar_Video()throws InterruptedException {
+        myStep.seleccionarVideo();
     }
 
     @Y("^PPB003-CAPF113 - Retroceder pagina$")

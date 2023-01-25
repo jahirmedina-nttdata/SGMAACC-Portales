@@ -22,53 +22,32 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void mostrarBuscador() throws InterruptedException {
-        page.mostrarBuscador();
-    }
-
-
-    @net.thucydides.core.annotations.Step
-    public void clickarBuscar() throws InterruptedException {
-        page.clickarBuscar();
+    public void mostrarNumeracion() throws InterruptedException {
+        page.mostrarNumeracion();
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPortexto() throws InterruptedException{
-        page.buscarPortexto();
+    public void clickarPagina() throws InterruptedException{
+        page.clickarPagina();
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorCateg() throws InterruptedException {
-        page.buscarPorCateg();
+    public void clickarSiguiente() throws InterruptedException{
+        page.clickarSiguiente();
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorPlazo() throws InterruptedException {
-        page.buscarPorPlazo();
+    public void clickarUltimaPag() throws InterruptedException{
+        page.clickarUltimaPag();
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorTramitacion() throws InterruptedException {
-        page.buscarPorTramitacion();
+    public void clickarAtras() throws InterruptedException {
+        page.clickarAtras();
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorTextoPlazo() throws InterruptedException {
-        page.buscarPorTextoPlazo();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void accederContenido() throws InterruptedException {
-        page.accederContenido();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void validarTextFlotante()throws InterruptedException {
-        page.validarTextFlotante();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void ejecutarcaso() throws InterruptedException{
-        page.ejecutarcaso();
+    public void clickarPrimeraPg() throws InterruptedException{
+        page.clickarPrimeraPg();
     }
 }

@@ -6,6 +6,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB002.CAP_F_015.step.MyStep;
 
+import java.awt.*;
+
 public class MyStepDefinition {
 
     @Steps
@@ -18,8 +20,12 @@ public class MyStepDefinition {
     }
 
     @Cuando("^PPB002-CAPF015 - Se haya cargado la web$")
-    public void Se_Haya_Cargado_LaWeb() throws InterruptedException{
+    public void Se_Haya_Cargado_LaWeb() throws AWTException {
         myStep.cargarPagina();
+    }
+
+    @Y("^PPB002-CAPF015 - Click permitir geolocalizar$")
+    public void Click_Permitir_Geolocalizar() throws AWTException{
     }
 
     @Y("^PPB002-CAPF015 - Aceptar las cookies$")
@@ -27,15 +33,14 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-
-    @Y("PPB002-CAPF015 - Ubicarte en la seccion Tambien te puede interesar$")
-    public void Ubicarte_En_La_Seccion_Tambien_Te_Puede_Interesar() throws InterruptedException{
-        myStep.ubicarteEnTambienTePuedeInteresar();
+    @Y("^PPB002-CAPF015 - Click no permitir geolocalizar$")
+    public void Click_No_Permitir_Geolocalizar() throws AWTException{
+        myStep.clickNopermitir();
     }
 
-    @Y("PPB002-CAPF015 - Clickar titulo de imagen$")
-    public void Clickar_Titulo_De_Imagen() throws InterruptedException{
-        myStep.clickarTituloDeImagen();
+    @Y("^PPB002-CAPF015 - Seleccionar provincia$")
+    public void Seleccionar_Provincia() throws InterruptedException {
+        myStep.seleccionarProvin();
     }
 }
 

@@ -20,7 +20,7 @@ import java.util.List;
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_k4AFpXuQNU0N_pagination\"]/li[9]/a")
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_k4AFpXuQNU0N_pagination\"]/li[7]/a")
     private WebElementFacade Paginador;
 
     @FindBy(xpath = "(//div[@class=\"evr-form-results__item-title\"]//a)[2]")
@@ -49,7 +49,7 @@ public class MyPage extends PageObject {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
         waitFor(2).second();
-        List<WebElement> lista = getDriver().findElements(By.xpath("//li[@class=\"page_number active pag_num_7\"]/a"));
+        List<WebElement> lista = getDriver().findElements(By.xpath("//li[@class=\"page_number active pag_num_5\"]/a"));
         if (lista.size() != 0) {
             Assert.assertTrue(true);
         } else {

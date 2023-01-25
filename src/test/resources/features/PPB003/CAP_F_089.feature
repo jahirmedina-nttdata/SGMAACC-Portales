@@ -1,18 +1,18 @@
 #language: es
 @PPB003-CAP_F_089
 
-Característica: PPB003-CAP_F_089 - Eliminar Pasaporte
+Característica: PPB003-CAP_F_089 - Añadir y Quitar Pasaporte
   Como un usuario autenticado
   Quiero acceder al portal
-  Para eliminar pasaporte
+  Para añadir y quitar pasaporte
 
   Escenario: Cargando Portal de Referencia
     Dado PPB003-CAPF089 - Accedo al Navegador
     Y PPB003-CAPF089 - Aceptar Cookies
     Y PPB003-CAPF089 - Autentico usuario
-    Y PPB003-CAPF089 - Clickar eliminar-cancelar Pasaporte
-    Y PPB003-CAPF089 - Clickar eliminar-aceptar Pasaporte
-    Entonces PPB003-CAPF089 - Validar Pasaporte eliminado
+    Y PPB003-CAPF089 - Clickar añadir Pasaporte Ecoturista
+    Entonces PPB003-CAPF089 - Validar Pasaporte añadido
+    Y PPB003-CAPF089 - Clickar eliminar Pasaporte
 
 
 

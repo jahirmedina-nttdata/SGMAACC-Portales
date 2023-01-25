@@ -17,14 +17,24 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void ubicarDestacados() throws InterruptedException {
+    public void aceptarCookies() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
-        j.executeScript("window.scrollBy(0, 500)");
     }
 
-    public void clickarPremiosConsurso() throws InterruptedException{
-        page.clickarPremiosConsurso();
+    public void irSeccionNoticia() throws InterruptedException{
+        page.irSeccionNoticia();
+    }
 
+    public void clickarSobreTexto() throws InterruptedException{
+        page.clickarSobreTexto();
+    }
+
+    public void clickarCategoria() throws InterruptedException{
+        page.clickarCategoria();
+    }
+
+    public void clickarVerTodasLasNoticias() throws InterruptedException{
+        page.clickarVerTodasLasNoticias();
     }
 }

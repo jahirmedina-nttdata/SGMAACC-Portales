@@ -2,6 +2,7 @@ package org.medioAmbiente.PPB002.CAP_F_090.stepdefinition;
 
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB002.CAP_F_090.step.MyStep;
@@ -13,74 +14,26 @@ public class MyStepDefinition {
 
 
     @Dado("^PPB002-CAPF090 - Cargando el Navegador$")
-    public void Cargando_El_Navegador() {
-
+    public void Cargando_El_Navegador() throws InterruptedException {
+        myStep.cargandoNavegador();
     }
-
-    @Cuando("^PPB002-CAPF090 - Se haya cargado la web$")
-    public void Se_Haya_Cargado_LaWeb() throws InterruptedException {
-        myStep.cargarPagina();
-    }
-
-    @Y("^PPB002-CAPF090 - Aceptar las cookies$")
-    public void Aceptar_Las_Cookies() throws InterruptedException {
+    @Cuando("^PPB002-CAPF090 - Acepta las Cookies")
+    public void Acepta_Cookies() throws InterruptedException {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB002-CAPF090 - Mostrar contenido del detalle$")
-    public void Mostrar_Contenido_Del_Detalle() throws InterruptedException {
-        myStep.mostrarContenidoDelDetalle();
+    @Y("^PPB002-CAPF090 - Posicionar sobre el menu Actualidad")
+    public void Posicionar_Sobre_El_Menu_Actualidad() throws InterruptedException {
+        myStep.posicionarSobreMenu();
+    }
+    @Y("^PPB002-CAPF090 - Pulsar sobre el submenu Agenda y Eventos")
+    public void Pulsar_Sobre_El_Submenu_Agenda_Y_Eventos() throws InterruptedException {
+        myStep.pulsarSubmenu();
     }
 
-    @Y("^PPB002-CAPF090 - Mostrar sin fecha$")
-    public void Mostrar_SinFecha() throws InterruptedException {
-
+    @Entonces("^PPB002-CAPF090 - Validar navegacion correcta")
+    public void Validar_Navegacion_Correcta() throws InterruptedException {
+        myStep.validarNavegacion();
     }
-
-    @Y("^PPB002-CAPF090 - Mostrar sin subtitulo$")
-    public void Mostrar_SinSubtitulo() throws InterruptedException {
-
-    }
-
-    @Y("^PPB002-CAPF090 - Mostrar sin texto$")
-    public void Mostrar_SinTexto() throws InterruptedException {
-
-    }
-
-
-    @Y("^PPB002-CAPF090 - Mostrar sin texto miniatura$")
-    public void Mostrar_Sin_Texto_Miniatura() throws InterruptedException {
-
-    }
-
-    @Y("^PPB002-CAPF090 - Mostrar sin serie inicio$")
-    public void Mostrar_Sin_Serie_Inicio() throws InterruptedException {
-
-    }
-
-    @Y("^PPB002-CAPF090 - Mostrar sin serie final$")
-    public void Mostrar_Sin_Serie_Final() throws InterruptedException {
-
-    }
-
-    @Y("^PPB002-CAPF090 - Mostrar sin fecha de datos$")
-    public void Mostrar_Sin_Fecha_De_Datos() throws InterruptedException {
-
-    }
-
-    @Y("^PPB002-CAPF090 - Mostrar sin Url$")
-    public void Mostrar_Sin_Url() throws InterruptedException {
-
-    }
-
-    @Y("^PPB002-CAPF090 - Mostrar sin visor$")
-    public void Mostrar_Sin_Visor() throws InterruptedException {
-        myStep.mostrarSinVisor();
-    }
-
-    @Y("^PPB002-CAPF090 - Mostrar sin caracteristicas servicio$")
-    public void Mostrar_Sin_Caracteristicas_Servicio() throws InterruptedException {
-    }
-
 }
 

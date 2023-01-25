@@ -1,64 +1,40 @@
 package org.medioAmbiente.PPB006.CAP_FC_010.page;
 
 
-import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
-import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("/medioambiente/portal/web/cambio-climatico/")
+@DefaultUrl("/medioambiente/portal/web/cambio-climatico/emisiones-difusas")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "(//div[@title=\"Compensación de emisiones de GEI\"])[2]")
-    private WebElementFacade Contenido;
+    @FindBy(xpath = "//*[@id=\"_com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet_breadcrumbs-defaultScreen\"]//ul/li[3]/a")
+    private WebElementFacade Miga_Padre;
 
-    @FindBy(xpath = "//button[contains(text(),'1')]")
-    private WebElementFacade Bullet;
+    @FindBy(xpath = "//*[@id=\"_com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet_breadcrumbs-defaultScreen\"]//ul/li[3]")
+    private WebElementFacade Miga_Actual;
 
-    @FindBy(xpath = "(//div[@title=\"Aplicación Huella de Carbono Municipal (HCM)\"])[1]")
-    private WebElementFacade Ficha;
-
-
-
-    public void visualizarContenido() throws InterruptedException {
-        WebElement Element = getDriver().findElement(By.xpath("//h3[contains(text(),'EMPRESAS')]"));
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("arguments[0].scrollIntoView();", Element);
-        waitFor(5).second();
-    }
-
-    public void accederEnlace() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@title=\"Compensación de emisiones de GEI\"])[2]")));
-        Contenido.click();
-
+    public void visualizarCaminoMiga() throws InterruptedException{
+        waitFor(1).second();
     }
 
     public void posicionarPuntero() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"evr-menu-block__title-principal\"]")));
-        getDriver().navigate().back();
-        Bullet.click();
         Actions actions = new Actions(getDriver());
-        actions.moveToElement(Ficha)
+        actions.moveToElement(Miga_Padre)
                 .perform();
-        String textflotante = Ficha.getAttribute("title");
+    }
 
-        if(textflotante.contains("Aplicación Huella de Carbono Municipal (HCM)")) {
-            Assert.assertTrue(true);
-        }else{
-            Assert.fail("No Coincide el Texto");
-        }
+    public void clickarPadre() throws InterruptedException{
+        Miga_Padre.click();
+    }
+
+    public void clickarActual() throws InterruptedException{
+        Miga_Actual.click();
     }
 
 

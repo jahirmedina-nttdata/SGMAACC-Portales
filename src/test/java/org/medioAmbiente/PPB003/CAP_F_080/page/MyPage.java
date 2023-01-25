@@ -31,7 +31,7 @@ public class MyPage extends PageObject {
         action.moveToElement(Planifica_Visitas).click().perform();
     }
 
-    public void clickarFicha() throws InterruptedException {
+    public void clikariconoPapelera() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 100)");
     }

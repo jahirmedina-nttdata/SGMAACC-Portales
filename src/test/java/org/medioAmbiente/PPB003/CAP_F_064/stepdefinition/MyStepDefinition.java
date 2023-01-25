@@ -21,19 +21,14 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF064 - Visualizar Header CAPF048$")
-    public void Visualizar_Header_CAPF048()throws InterruptedException {
-        myStep.visualizarCAPF048();
+    @Y("^PPB003-CAPF064 - Visualizar lista de videos$")
+    public void Visualizar_Lista_De_Videos()throws InterruptedException {
+        myStep.visualizarVideos();
     }
 
-    @Y("^PPB003-CAPF064 - Visualizar Menu CAPF049$")
-    public void Visualizar_Menu_CAPF049()throws InterruptedException {
-        myStep.visualizarCAPF049();
-    }
-
-    @Y("^PPB003-CAPF064 - Visualizar Footer CAPF057$")
-    public void Visualizar_Footer_CAPF057()throws InterruptedException {
-        myStep.visualizarCAPF057();
+    @Y("^PPB003-CAPF064 - Clickar elemento$")
+    public void Clickar_Elemento()throws InterruptedException {
+        myStep.clickarElemento();
     }
 
 }

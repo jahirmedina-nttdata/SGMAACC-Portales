@@ -2,37 +2,34 @@ package org.medioAmbiente.PPB002.CAP_F_014.step;
 
 import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB002.CAP_F_014.page.MyPage;
-import org.openqa.selenium.JavascriptExecutor;
+
+import java.awt.*;
 
 
 public class MyStep extends ScenarioSteps {
 
     private MyPage page;
 
+
     @net.thucydides.core.annotations.Step
-    public void cargarPagina() throws InterruptedException {
-        page.open();
-       getDriver().manage().window().maximize();
+    public void cargarPagina() throws AWTException{
+        page.cargarpagina();
     }
+
 
     @net.thucydides.core.annotations.Step
     public void aceptarCookies() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor)getDriver();
-        j.executeScript("document.querySelector(\"#accept-cookies\").click();");
+        page.aceptarCookies();
+    }
+
+
+    @net.thucydides.core.annotations.Step
+    public void visualizarTiempo() throws InterruptedException {
+        page.visualizarTiempo();
     }
 
     @net.thucydides.core.annotations.Step
-    public void ubicarseProximosEventos() throws InterruptedException {
-       page.ubicarseProximosEventos();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarTitulo() throws InterruptedException {
-        page.clickarTitulo();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarIconoMas() throws InterruptedException {
-        page.clickarIconoMas();
+    public void clickarEnlace() throws InterruptedException {
+        page.clickarEnlace();
     }
 }

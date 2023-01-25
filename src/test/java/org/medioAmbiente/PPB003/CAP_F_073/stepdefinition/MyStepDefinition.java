@@ -1,7 +1,6 @@
 package org.medioAmbiente.PPB003.CAP_F_073.stepdefinition;
 
 import io.cucumber.java.es.Dado;
-import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_073.step.MyStep;
@@ -22,24 +21,19 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF073 - Autentico usuario$")
-    public void Autentico_Usuario()throws InterruptedException {
-        myStep.autenticarUsuario();
+    @Y("^PPB003-CAPF073 - Acceder usuario$")
+    public void Acceder_Usuario()throws InterruptedException {
+        myStep.accederUsuario();
     }
 
-    @Y("^PPB003-CAPF073 - Clickar Planifica tu visita$")
-    public void Clickar_Planifica_Tu_Visita()throws InterruptedException {
-        myStep.clikarPlanificaVisita();
+    @Y("^PPB003-CAPF073 - Seleccionar idioma$")
+    public void Seleccionar_Idioma()throws InterruptedException {
+        myStep.seleccionarIdioma();
     }
 
-    @Entonces("^PPB003-CAPF073 - Valido permisos$")
-    public void Valido_Permisos()throws InterruptedException {
-        myStep.validarPermiso();
-    }
-
-    @Y("^PPB003-CAPF073 - Valido lista de visitas$")
-    public void Valido_Lista_De_Visitas()throws InterruptedException {
-        myStep.validarListado();
+    @Y("^PPB003-CAPF073 - Validar idioma$")
+    public void Validar_Idioma()throws InterruptedException {
+        myStep.validarIdioma();
     }
 }
 

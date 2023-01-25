@@ -27,7 +27,7 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarFicha() throws InterruptedException {
-        page.clickarFicha();
+    public void clikariconoPapelera() throws InterruptedException {
+        page.clikariconoPapelera();
     }
 }

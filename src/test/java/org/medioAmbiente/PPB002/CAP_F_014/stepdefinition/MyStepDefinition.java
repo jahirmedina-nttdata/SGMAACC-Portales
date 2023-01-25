@@ -1,10 +1,11 @@
 package org.medioAmbiente.PPB002.CAP_F_014.stepdefinition;
 
-import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB002.CAP_F_014.step.MyStep;
+
+import java.awt.*;
 
 public class MyStepDefinition {
 
@@ -12,13 +13,8 @@ public class MyStepDefinition {
     private MyStep myStep;
 
 
-    @Dado("^PPB002-CAPF014 - Cargando el Navegador$")
-    public void Cargando_El_Navegador() {
-
-    }
-
-    @Cuando("^PPB002-CAPF014 - Se haya cargado la web$")
-    public void Se_Haya_Cargado_LaWeb() throws InterruptedException{
+    @Dado("^PPB002-CAPF014 - Se haya cargado la web$")
+    public void Se_Haya_Cargado_LaWeb() throws AWTException {
         myStep.cargarPagina();
     }
 
@@ -27,19 +23,14 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("PPB002-CAPF014 - Ubicarse en la seccion Proximos Eventos$")
-    public void Ubicarse_En_La_Seccion_Proximos_Eventos() throws InterruptedException{
-        myStep.ubicarseProximosEventos();
+    @Y("^PPB002-CAPF014 - Visualizar detalle de tiempo$")
+    public void Visualizar_Detalle_De_Tiempo() throws InterruptedException{
+        myStep.visualizarTiempo();
     }
 
-    @Y("PPB002-CAPF014 - Clickar titulo$")
-    public void Clickar_Titulo() throws InterruptedException{
-        myStep.clickarTitulo();
-    }
-
-    @Y("PPB002-CAPF014 - Clickar en el icono mas$")
-    public void Clickar_En_El_Icono_Mas() throws InterruptedException{
-        myStep.clickarIconoMas();
+    @Y("^PPB002-CAPF014 - Clickar enlace$")
+    public void Clickar_Enlace() throws InterruptedException {
+        myStep.clickarEnlace();
     }
 }
 

@@ -22,16 +22,30 @@ public class MyStepDefinition {
         myStep.cargarPagina();
     }
 
-    @Y("^PPB002-CAPF009 - Ubicamos el apartado Destacados$")
-    public void Ubicamos_El_Apartado_Destacados() throws InterruptedException{
-        myStep.ubicarDestacados();
+    @Y("^PPB002-CAPF009 - Aceptar las cookies$")
+    public void Aceptar_Las_Cookies() throws InterruptedException{
+        myStep.aceptarCookies();
     }
 
 
-    @Y("PPB002-CAPF009 - Clickar en Premios y concursos$")
-    public void Clickar_En_Premios_Y_Concursos() throws InterruptedException{
-        myStep.clickarPremiosConsurso();
+    @Y("PPB002-CAPF009 - Ir a la seccion noticia$")
+    public void Ir_A_La_Seccion_Noticia() throws InterruptedException{
+        myStep.irSeccionNoticia();
+    }
 
+    @Y("PPB002-CAPF009 - Clickar sobre texto$")
+    public void Clickar_Sobre_Texto() throws InterruptedException{
+        myStep.clickarSobreTexto();
+    }
+
+    @Y("PPB002-CAPF009 - Clickar categoria$")
+    public void Clickar_Categoria() throws InterruptedException{
+        myStep.clickarCategoria();
+    }
+
+    @Y("PPB002-CAPF009 - Clickar ver todas las noticias$")
+    public void Clickar_Ver_Todas_Las_Noticias() throws InterruptedException{
+        myStep.clickarVerTodasLasNoticias();
     }
 }
 

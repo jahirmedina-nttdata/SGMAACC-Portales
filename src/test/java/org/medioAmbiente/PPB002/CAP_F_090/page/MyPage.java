@@ -1,63 +1,55 @@
 package org.medioAmbiente.PPB002.CAP_F_090.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
-import org.openqa.selenium.JavascriptExecutor;
+import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("/medioambiente/portal/web/guest/acceso-rediam/geoportal/servicios-ogc/catalogo-de-servicios-web?categoryVal=")
+@DefaultUrl("/medioambiente/portal/home")
 
 
 public class MyPage extends PageObject {
+    private String prntw;
+    private String popwnd;
+    @FindBy(xpath = "(//li[@class=\"evr-main-navigation__portal-item dropdown\"])[2]")
+    private WebElementFacade Actualidad;
 
-    @FindBy(xpath = "//a[@title=\"REDIAM. WMS Siose Andalucía. Escala 1:10.000. Año 2016. Ocupación del suelo\"]")
-    private WebElementFacade Detalle_Contenido;
+    @FindBy(xpath = "(//span[contains(text(),'NOTICIAS Y DESTACADOS')])[1]")
+    private WebElementFacade Noticias_Destacados;
 
-    @FindBy(xpath = "//button/span[contains(text(),'Buscar')]")
-    private WebElementFacade btnBuscar;
-
-    @FindBy(xpath = "//input[@title=\"Buscar\"]")
-    private WebElementFacade textBuscar;
-
-    @FindBy(xpath = "//a[@title=\"REDIAM. WFS Riesgos naturales\"]")
-    private WebElementFacade SinVisor;
+    @FindBy(xpath = "(//h1)[6]")
+    private WebElementFacade Validar_Pagina;
 
 
-    public void mostrarContenidoDelDetalle() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 250)");
-        Actions action = new Actions(getDriver());
-        action.moveToElement(btnBuscar).click().perform();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
-        action.moveToElement(Detalle_Contenido).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//h1[@id=\"evr-menu-block__title-principal\"]")));
-        j.executeScript("window.scrollBy(0, 250)");
-        waitFor(1).second();
-        j.executeScript("window.scrollBy(0, 600)");
-        waitFor(2).second();
+    public void posicionarSobreMenu() throws InterruptedException {
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(Actualidad)
+                .perform();
     }
 
-    public void mostrarSinVisor() throws InterruptedException {
-        getDriver().navigate().back();
-        textBuscar.sendKeys("Riesgos naturales");
-        Actions action = new Actions(getDriver());
-        action.moveToElement(btnBuscar).click().perform();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
-        action.moveToElement(SinVisor).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//h1[@id=\"evr-menu-block__title-principal\"]")));
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 250)");
-        waitFor(1).second();
-        j.executeScript("window.scrollBy(0, 600)");
-        waitFor(1).second();
+    public void pulsarSubmenu()throws InterruptedException {
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(Noticias_Destacados)
+                .perform();
+        Noticias_Destacados.click();
     }
 
+    public void validarNavegacion()throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Noticias y destacados')])[2]")));
+
+        String validacion = Validar_Pagina.getText();
+        if(validacion.equals("Noticias y destacados")) {
+            Assert.assertTrue(true);
+        }else{
+            Assert.fail("Pagina incorrecta");
+        }
+    }
 }

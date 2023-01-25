@@ -1,84 +1,53 @@
 package org.medioAmbiente.PPB002.CAP_F_017.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
-import org.openqa.selenium.By;
+import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.io.File;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.Optional;
 
-@DefaultUrl("/medioambiente/portal/home")
+@DefaultUrl("/medioambiente/portal/web/guest/actualidad/participa-y-colabora")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"ui-id-5\"]")
-    private WebElementFacade provincia;
+    @FindBy(xpath = "//a[@title=\"Participa\"]")
+    private WebElementFacade Texto_Flotante;
 
-    @FindBy(xpath = "//*[@id=\"_cmaotAemetModule_INSTANCE_A3m3T_provincia-button\"]/span[2]")
-    private WebElementFacade Listprovincia;
+    @FindBy(xpath = "//a[@title=\"Colabora\"]")
+    private WebElementFacade Enlace_Colabora;
 
-    public void cargarPagina()throws AWTException {
-        open();
-        waitFor(7).second();
-        Robot robot = new  Robot();
-        try {
-            robot.keyPress(KeyEvent.VK_TAB);
-            robot.keyRelease(KeyEvent.VK_TAB);
-            robot.keyPress(KeyEvent.VK_TAB);
-            robot.keyRelease(KeyEvent.VK_TAB);
-            robot.keyPress(KeyEvent.VK_ENTER);
-            robot.keyRelease(KeyEvent.VK_ENTER);
 
-        }catch (Exception e){
-            e.printStackTrace();
+    public void ubicarseEnListado() throws InterruptedException {
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 500)");
+    }
+
+    public void posicionarCursosEnListado() throws InterruptedException {
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(Texto_Flotante)
+                .perform();
+
+        String textflotante = Texto_Flotante.getAttribute("title");
+
+        if(textflotante.equals("Participa")) {
+            Assert.assertTrue(true);
+        }else{
+            Assert.fail("No Coincide el Texto");
         }
     }
 
-
-    public void aceptarCookies() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("document.querySelector(\"#accept-cookies\").click();");
-        waitFor(5).second();
-    }
-
-    public void clickNopermitir() throws AWTException {
-         getDriver().close();
-         open();
-        waitFor(7).second();
-        Robot robot = new  Robot();
-        try {
-            robot.keyPress(KeyEvent.VK_TAB);
-            robot.keyRelease(KeyEvent.VK_TAB);
-            robot.keyPress(KeyEvent.VK_ENTER);
-            robot.keyRelease(KeyEvent.VK_ENTER);
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-    public void seleccionarProvin()throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("document.querySelector(\"#accept-cookies\").click();");
-        Listprovincia.click();
-        provincia.click();
+    public void clickarEnColabora() throws InterruptedException{
+        Actions action = new Actions(getDriver());
+        action.moveToElement(Enlace_Colabora).click().perform();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'°C')]")));
-
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Colabora')])[2]")));
     }
-
-
-
 }

@@ -26,13 +26,18 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF080 - Clickar ficha Planifica tu Visita$")
-    public void Clickar_Ficha_Planifica_Tu_Visita()throws InterruptedException {
-        myStep.clickarFicha();
+    @Y("^PPB003-CAPF080 - Clickar icono papelera$")
+    public void Clickar_Icono_Papelera()throws InterruptedException {
+        myStep.clikariconoPapelera();
     }
 
-    @Y("^PPB003-CAPF080 - Visualizar acceso a ficha$")
-    public void Visualizar_Acceso_A_ficha() throws InterruptedException{
+    @Y("^PPB003-CAPF080 - Clickar cancelar eliminacion$")
+    public void Clickar_Cancelar_Eliminacion() throws InterruptedException{
+
+    }
+
+    @Entonces("^PPB003-CAPF080 - Validar ficha eliminada$")
+    public void Validar_Ficha_Eliminada()throws InterruptedException {
 
     }
 }

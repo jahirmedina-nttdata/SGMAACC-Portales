@@ -21,14 +21,9 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB007-CAPFC005 - Visualizar elementos$")
-    public void Visualizar_Elementos()throws InterruptedException {
-        myStep.visualizarElementos();
-    }
-
-    @Y("^PPB007-CAPFC005 - Posicionar puntero en elemento$")
-    public void Posicionar_Puntero_En_Elemento()throws InterruptedException {
-        myStep.posicionarPunteroEnElemento();
+    @Y("^PPB007-CAPFC005 - Visualizar contenido$")
+    public void Visualizar_Contenido()throws InterruptedException {
+        myStep.visualizarContenido();
     }
 
     @Y("^PPB007-CAPFC005 - Clickar enlace$")
@@ -41,14 +36,5 @@ public class MyStepDefinition {
         myStep.mostrarTextoFlotante();
     }
 
-    @Y("^PPB007-CAPFC005 - Posicionar puntero en boton Carpeta Ciudadana$")
-    public void Posicionar_Puntero_En_Boton_Carpeta_Ciudadana()throws InterruptedException {
-        myStep.posicionarPunteroEnBotonCarpetaCiudadana();
-    }
-
-    @Y("^PPB007-CAPFC005 - Clickar boton Carpeta Ciudadana$")
-    public void Clickar_Boton_Carpeta_Ciudadana()throws InterruptedException {
-        myStep.clickarBotonCarpetaCiudadana();
-    }
 }
 

@@ -2,9 +2,12 @@ package org.medioAmbiente.PPB003.CAP_F_126.stepdefinition;
 
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_126.step.MyStep;
+
+import java.sql.SQLException;
 
 public class MyStepDefinition {
 
@@ -21,25 +24,24 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF126 - Compartir en Facebook$")
-    public void Compartir_En_Facebook() throws InterruptedException {
-        myStep.compartirEnFacebook();
+    @Y("^PPB003-CAPF126 - Seleccionar Area Recreativa")
+    public void Seleccionar_Area_Recreativa() throws InterruptedException {
+        myStep.seleccionarAreaRecreativa();
     }
 
-    @Y("^PPB003-CAPF126 - Compartir en Twitter$")
-    public void Compartir_En_Twitter() throws InterruptedException {
-        myStep.compartirEnTwitter();
+    @Y("^PPB003-CAPF126 - Seleccionar provincia Almeria$")
+    public void Seleccionar_Provincia_Almeria() throws InterruptedException {
+        myStep.seleccionarAlmeria();
     }
 
-    @Y("^PPB003-CAPF126 - Compartir en Pinterest$")
-    public void Compartir_En_Pinterest() throws InterruptedException {
-        myStep.compartirEnPinterest();
+    @Y("^PPB003-CAPF126 - Clickar buscar$")
+    public void Clickar_Buscar() throws InterruptedException {
+        myStep.clickarBuscar();
     }
 
-
-    @Y("^PPB003-CAPF126 - Compartir por Correo$")
-    public void Compartir_Por_Correo() throws InterruptedException {
-        myStep.compartirPorCorreo();
+    @Entonces("^PPB003-CAPF126 - Validar resultado$")
+    public void Validar_Resultado() throws InterruptedException, SQLException {
+        myStep.validarResultado();
     }
 
 }

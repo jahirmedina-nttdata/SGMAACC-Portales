@@ -27,8 +27,8 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarVideo() throws InterruptedException {
-        page.seleccionarVideo();
+    public void seleccionarContenido() throws InterruptedException {
+        page.seleccionarContenido();
     }
 
     @net.thucydides.core.annotations.Step

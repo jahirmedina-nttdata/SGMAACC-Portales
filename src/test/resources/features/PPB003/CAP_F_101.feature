@@ -1,19 +1,17 @@
 #language: es
 @PPB003-CAP_F_101
 
-Característica: PPB003-CAP_F_101 - Aumentar numero de resultados
-  Como un usuario
+Característica: PPB003-CAP_F_101 - Validacion paginador
+  Como un usuario autenticado
   Quiero acceder al portal
   Para visualizar paginador
 
-  Escenario: Cargando Portal Avisos
+  Escenario: Cargando Portal Noticias
     Dado PPB003-CAPF101 - Accedo al Navegador
     Y PPB003-CAPF101 - Aceptar Cookies
-    Y PPB003-CAPF101 - Autentico usuario
-    Y PPB003-CAPF101 - Acceder al submenu Avisos
-    Y PPB003-CAPF101 - Configurar paginador
-    Y PPB003-CAPF101 - Recargar pagina
-
+    Y PPB003-CAPF101 - Autenticar usuario
+    Y PPB003-CAPF101 - Ejecutar CAPF099
+    Y PPB003-CAPF101 - Seleccionar paginador
 
 
 

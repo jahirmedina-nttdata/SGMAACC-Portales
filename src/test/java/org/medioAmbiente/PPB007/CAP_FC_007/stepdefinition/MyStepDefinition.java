@@ -26,14 +26,39 @@ public class MyStepDefinition {
         myStep.visualizarContenido();
     }
 
+    @Y("^PPB007-CAPFC007 - Buscar sin filtros$")
+    public void Buscar_Sin_Filtros()throws InterruptedException {
+        myStep.buscarSinFiltros();
+    }
+
+    @Y("^PPB007-CAPFC007 - Buscar por texto$")
+    public void Buscar_Por_Texto()throws InterruptedException {
+        myStep.buscarPorTexto();
+    }
+
+    @Y("^PPB007-CAPFC007 - Buscar por provincia$")
+    public void Buscar_Por_Provincia()throws InterruptedException {
+        myStep.buscarPorProvincia();
+    }
+
+    @Y("^PPB007-CAPFC007 - Buscar por fecha inicio$")
+    public void Buscar_Por_Fecha_Inicio()throws InterruptedException {
+        myStep.buscarPorFechaInicio();
+    }
+
+    @Y("^PPB007-CAPFC007 - Buscar por fecha fin$")
+    public void Buscar_Por_Fecha_Fin()throws InterruptedException {
+        myStep.buscarPorFechaFin();
+    }
+
     @Y("^PPB007-CAPFC007 - Clickar enlace$")
     public void Clickar_Enlace()throws InterruptedException {
         myStep.clickarEnlace();
     }
 
-    @Y("^PPB007-CAPFC007 - Mostrar texto flotante$")
-    public void Mostrar_Texto_Flotante()throws InterruptedException {
-        myStep.mostrarTextoFlotante();
+    @Y("^PPB007-CAPFC007 - Ejecutar CAPFN029$")
+    public void Ejecutar_CAPFN029()throws InterruptedException {
+        myStep.ejecutarCAPFN029();
     }
 
 }

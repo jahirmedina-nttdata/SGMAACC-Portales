@@ -2,13 +2,9 @@ package org.medioAmbiente.PPB002.CAP_F_017.stepdefinition;
 
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
-import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB002.CAP_F_017.step.MyStep;
-
-import java.awt.*;
-import java.net.URISyntaxException;
 
 public class MyStepDefinition {
 
@@ -22,27 +18,28 @@ public class MyStepDefinition {
     }
 
     @Cuando("^PPB002-CAPF017 - Se haya cargado la web$")
-    public void Se_Haya_Cargado_LaWeb() throws AWTException {
+    public void Se_Haya_Cargado_LaWeb() throws InterruptedException{
         myStep.cargarPagina();
     }
 
-    @Y("^PPB002-CAPF017 - Click permitir geolocalizar$")
-    public void Click_Permitir_Geolocalizar() throws AWTException{
-    }
-
     @Y("^PPB002-CAPF017 - Aceptar las cookies$")
-    public void Aceptar_Las_Cookies() throws InterruptedException{
+    public void Aceptar_LasCookies() throws InterruptedException{
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB002-CAPF017 - Click no permitir geolocalizar$")
-    public void Click_No_Permitir_Geolocalizar() throws AWTException{
-        myStep.clickNopermitir();
+    @Y("^PPB002-CAPF017 - Ubicarse en el listado$")
+    public void Ubicarse_En_El_Listado() throws InterruptedException{
+        myStep.ubicarseEnListado();
     }
 
-    @Y("^PPB002-CAPF017 - Seleccionar provincia$")
-    public void Seleccionar_Provincia() throws InterruptedException {
-        myStep.seleccionarProvin();
+    @Y("^PPB002-CAPF017 - Posicionar cursos en listado$")
+    public void Posicionar_Cursos_En_Listado() throws InterruptedException{
+        myStep.posicionarCursosEnListado();
+    }
+
+    @Y("^PPB002-CAPF017 - Clickar en colabora$")
+    public void Clickar_En_Colabora() throws InterruptedException{
+        myStep.clickarEnColabora();
     }
 }
 

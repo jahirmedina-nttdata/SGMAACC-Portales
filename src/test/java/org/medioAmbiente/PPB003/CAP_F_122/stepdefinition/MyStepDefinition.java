@@ -32,11 +32,15 @@ public class MyStepDefinition {
         myStep.seleccionarSubmenu();
     }
 
-    @Y("^PPB003-CAPF122 - Escribe Sierra de Aracena en el cuadro de busqueda$")
-    public void Escribe_Sierra_De_Aracena_En_El_Cuadro_De_Busqueda() throws InterruptedException {
-        myStep.buscarPorTexto();
+    @Y("^PPB003-CAPF122 - Seleccionar provincia Almeria$")
+    public void Seleccionar_Provincia_Almeria() throws InterruptedException {
+        myStep.seleccionarProvinciaAlmeria();
     }
 
+    @Y("^PPB003-CAPF122 - Seleccionar tipo equipamiento Sendero señalizado$")
+    public void Seleccionar_Tipo_Equipamiento_Sendero_Señalizado() throws InterruptedException {
+        myStep.seleccionarTipoEquipamientoSenderoSeñalizado();
+    }
 
     @Y("^PPB003-CAPF122 - Pulsar el boton Buscar$")
     public void Pulsar_El_Boton_Buscar() throws InterruptedException {
@@ -49,9 +53,9 @@ public class MyStepDefinition {
     }
 
 
-    @Y("^PPB003-CAPF122 - Pulsar el boton EXPORTAR RESULTADOS$")
-    public void Pulsar_El_Boton_EXPORTAR_RESULTADOS() throws InterruptedException {
-        myStep.pulsarExportarResultados();
+    @Y("^PPB003-CAPF122 - Pulsar el boton Limpiar$")
+    public void Pulsar_El_Boton_Limpiar() throws InterruptedException {
+        myStep.pulsarLimpiar();
     }
 
 }

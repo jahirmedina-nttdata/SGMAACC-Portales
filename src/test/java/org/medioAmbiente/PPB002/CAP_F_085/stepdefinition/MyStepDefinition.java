@@ -49,34 +49,80 @@ public class MyStepDefinition {
         myStep.visualizarSinTextominiatura();
     }
 
-    @Y("^PPB002-CAPF085 - Visualizar sin video$")
-    public void Visualizar_Sin_Video() throws InterruptedException {
-        myStep.visualizarSinVideo();
+
+    @Y("^PPB002-CAPF085 - Visualizar sin creditos$")
+    public void Visualizar_Sin_Creditos() throws InterruptedException{
+        myStep.visualizarSinCreditos();
+    }
+
+    @Y("^PPB002-CAPF085 - Visualizar sin fichero$")
+    public void VisualizarSinFichero()throws InterruptedException {
+        myStep.visualizarSinFichero();
+    }
+
+    @Y("^PPB002-CAPF085 - Visualizar sin url$")
+    public void Visualizar_Sin_Url() throws InterruptedException{
+        myStep.visualizarSinUrl();
+    }
+
+    @Y("^PPB002-CAPF085 - Visualizar sin imagen$")
+    public void Visualizar_Sin_Imagen()throws InterruptedException {
+        myStep.visualizarSinImage();
+    }
+
+    @Y("^PPB002-CAPF085 - Visualizar sin url biblioteca$")
+    public void Visualizar_Sin_Url_Biblioteca()throws InterruptedException {
+        myStep.visualizarSinBliblioteca();
+    }
+
+    @Y("^PPB002-CAPF085 - Visualizar sin serie$")
+    public void Visualizar_Sin_Serie()throws InterruptedException {
+        myStep.visualizarSinSerie();
+    }
+
+    @Y("^PPB002-CAPF085 - Visualizar sin autor$")
+    public void Visualizar_Sin_Autor() throws InterruptedException {
+        myStep.visualizarSinActor();
     }
 
     @Y("^PPB002-CAPF085 - Visualizar sin notas$")
-    public void Visualizar_Sin_Notas() throws InterruptedException {
-        myStep.visualizarSinnotas();
+    public void Visualizar_Sin_Notas()throws InterruptedException {
+        myStep.visualizarSinNotas();
     }
 
-    @Y("^PPB002-CAPF085 - Visualizar sin autores$")
-    public void Visualizar_Sin_Autores() throws InterruptedException {
-        myStep.visualizarSinautor();
+    @Y("^PPB002-CAPF085 - Visualizar sin archivos$")
+    public void Visualizar_Sin_Archivos()throws InterruptedException  {
+        myStep.visualizarSinArchivos();
     }
 
     @Y("^PPB002-CAPF085 - Visualizar sin derechos$")
-    public void Visualizar_Sin_Derechos() throws InterruptedException {
-        myStep.visualizarSinderecho();
+    public void Visualizar_Sin_Derechos()throws InterruptedException {
+        myStep.visualizarSinDerechos();
     }
 
-    @Y("^PPB002-CAPF085 - Visualizar video$")
-    public void Visualizar_Video() throws InterruptedException {
-        myStep.visualizarvideo();
+    @Y("^PPB002-CAPF085 - Clickar descarga$")
+    public void Clickar_Descarga()throws InterruptedException {
+        myStep.clickarDercarga();
     }
 
-    @Y("^PPB002-CAPF085 - Visualizar sin direccion$")
-    public void Visualizar_Sin_Direccion() throws InterruptedException {
-        myStep.visualizarSindireccion();
+    @Y("^PPB002-CAPF085 - Clickar documento$")
+    public void Clickar_Documento()throws InterruptedException {
+        myStep.clickarDocument();
+    }
+
+    @Y("^PPB002-CAPF085 - Clickar url$")
+    public void Clickar_Url() throws InterruptedException{
+        myStep.clickarUrl();
+    }
+
+    @Y("^PPB002-CAPF085 - Clickar interactivo$")
+    public void Clickar_Interactivo() throws InterruptedException {
+        myStep.clickarInteractivo();
+    }
+
+    @Y("^PPB002-CAPF085 - Clickar enlace biblioteca$")
+    public void Clickar_Enlace_Biblioteca()throws InterruptedException {
+        myStep.clickarEnlaceBibli();
     }
 }
 

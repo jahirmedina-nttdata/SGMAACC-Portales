@@ -4,13 +4,10 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB006.CAP_FC_013.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
-import java.util.Iterator;
-import java.util.Set;
 
 public class MyStep extends ScenarioSteps {
 
     private MyPage page;
-
 
     @net.thucydides.core.annotations.Step
     public void cargarPagina() throws InterruptedException {
@@ -25,79 +22,22 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarportalAmbiental() throws InterruptedException {
-        page.clickarportalAmbiental();
+    public void visualizarContenido() throws InterruptedException {
+        page.visualizarContenido();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarportalCaza() throws InterruptedException{
-        page.clickarportalCaza();
+    public void mostrarAnimacion() throws InterruptedException {
+       page.mostrarAnimacion();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarVentanVisitante() throws InterruptedException {
-        page.clickarVentanVisitante();
+    public void accederContenido() throws InterruptedException {
+        page.accederContenido();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarCanalAdministracion() throws InterruptedException {
-        page.clickarCanalAdministracion();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void planAndaluz() throws InterruptedException {
-        page.planAndaluz();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarPreguntasFrecuente() throws InterruptedException{
-        page.clickarPreguntasFrecuente();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarTwitter() throws InterruptedException{
-        page.clickarTwitter();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarFacebook() throws InterruptedException{
-        page.clickarFacebook();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarInstagram() throws InterruptedException{
-        page.clickarInstagram();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clikarlogoJunta() throws InterruptedException{
-        page.clikarlogoJunta();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarlogoUnion() throws InterruptedException {
-        page.clickarlogoUnion();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarMapa() throws InterruptedException {
-        page.clickarMapa();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarProteccionDeDatos() throws InterruptedException {
-        page.clickarProteccionDeDatos();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarAccesibilidad() throws InterruptedException {
-        page.clickarAccesibilidad();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void clickarCondicionesUso() throws InterruptedException {
-        page.clickarCondicionesUso();
+    public void validarFlotante() throws InterruptedException {
+        page.validarFlotante();
     }
 }
-
-

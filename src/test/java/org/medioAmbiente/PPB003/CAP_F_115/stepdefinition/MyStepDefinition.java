@@ -26,9 +26,9 @@ public class MyStepDefinition {
         myStep.clickarPaginador();
     }
 
-    @Y("^PPB003-CAPF115 - Seleccionar publicacion$")
-    public void Seleccionar_Publicacion()throws InterruptedException {
-        myStep.seleccionarPublicacion();
+    @Y("^PPB003-CAPF115 - Seleccionar material divulgativo$")
+    public void Seleccionar_Material_Divulgativo()throws InterruptedException {
+        myStep.seleccionarMaterialDivulgativos();
     }
 
     @Y("^PPB003-CAPF115 - Retroceder pagina$")

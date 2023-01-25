@@ -15,16 +15,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 
-@DefaultUrl("/medioambiente/portal/web/guest/buscador-videos")
+@DefaultUrl("/medioambiente/portal/buscador-imagenes?categoryVal=")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_RBLh8ZKfwq6q_pagination\"]/li[7]/a")
+    @FindBy(xpath = "//li[@class=\"page_number pag_num_5\"]/a")
     private WebElementFacade Paginador;
 
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_RBLh8ZKfwq6q_resultsDiv\"]//div[2]//div[2]/a")
-    private WebElementFacade Contenido_Video;
+    @FindBy(xpath = "//a[@title=\"Lince ibérico\"]")
+    private WebElementFacade Contenido;
 
     public void clickarPaginador() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
@@ -34,12 +34,12 @@ public class MyPage extends PageObject {
         Paginador.click();
     }
 
-    public void seleccionarVideo() throws InterruptedException {
+    public void seleccionarContenido() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 200)");
-        Contenido_Video.click();
+        j.executeScript("window.scrollBy(0, 100)");
+        Contenido.click();
     }
 
     public void retrocederPagina() throws InterruptedException {
@@ -47,9 +47,7 @@ public class MyPage extends PageObject {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 1000)");
-        waitFor(1).second();
-        j.executeScript("window.scrollBy(0, 300)");
+        j.executeScript("window.scrollBy(0, 500)");
         waitFor(2).second();
         List<WebElement> lista = getDriver().findElements(By.xpath("//li[@class=\"page_number active pag_num_5\"]/a"));
         if (lista.size() != 0) {

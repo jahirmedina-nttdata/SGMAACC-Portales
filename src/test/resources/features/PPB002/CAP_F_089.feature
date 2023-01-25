@@ -1,50 +1,14 @@
 #language: es
+
 @PPB002-CAP_F_089
-
-Característica: PPB002-CAP_F_089 - Visualizacion detalle Tramite
+Característica: PPB002-CAP_F_089 - Visualizar la Header del Portal Web
   Como un usuario comun
-  Quiero acceder al portal
-  Para visualizar detalle Tramite
+  Quiero acceder a la pagina principal
+  Para validar el funcionamiento del Header
 
-  Escenario: Cargando el Portal de Referencia
+  Escenario: Cargando el Portal Web
     Dado PPB002-CAPF089 - Cargando el Navegador
-    Cuando PPB002-CAPF089 - Se haya cargado la web
-    Y PPB002-CAPF089 - Aceptar las cookies
-    Y PPB002-CAPF089 - Mostrar sin fecha
-    Y PPB002-CAPF089 - Mostrar sin subtitulo
-    Y PPB002-CAPF089 - Mostrar sin texto
-    Y PPB002-CAPF089 - Mostrar sin texto miniatura
-    Y PPB002-CAPF089 - Mostrar sin requisitos
-    Y PPB002-CAPF089 - Mostrar sin afectados
-    Y PPB002-CAPF089 - Mostrar sin organos
-    Y PPB002-CAPF089 - Mostrar sin lugar
-    Y PPB002-CAPF089 - Mostrar sin observaciones
-    Y PPB002-CAPF089 - Mostrar sin fecha de plazo
-    Y PPB002-CAPF089 - Mostrar sin periodo
-    Y PPB002-CAPF089 - Mostrar sin plazo de notificacion
-    Y PPB002-CAPF089 - Mostrar sin silencio administrativo
-    Y PPB002-CAPF089 - Mostrar sin modelo
-    Y PPB002-CAPF089 - Mostrar sin seguimiento
-    Y PPB002-CAPF089 - Mostrar sin documentacion
-    Y PPB002-CAPF089 - Mostrar sin enlace
-    Y PPB002-CAPF089 - Mostrar sin enlace de tramitacion
-    Y PPB002-CAPF089 - Mostrar sin presentacion telematica
-    Y PPB002-CAPF089 - Mostrar sin justificante telematico
-    Y PPB002-CAPF089 - Mostrar sin notificacion telematica
-    Y PPB002-CAPF089 - Mostrar sin seguimiento de expediente
-    Y PPB002-CAPF089 - Mostrar sin pago
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
+    Cuando PPB002-CAPF089 - Acepta las Cookies
+    Y PPB002-CAPF089 - Pulsa sobre imagen Junta de Andalucia
+    Y PPB002-CAPF089 - Pulsa sobre imagen Portal Ambiental de Andalucía
+    Y PPB002-CAPF089 - Posiciona el puntero sobre logo Junta de Andalucia

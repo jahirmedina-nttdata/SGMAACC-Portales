@@ -21,20 +21,44 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB004-CAPFC014 - Mostrar destacamos$")
-    public void Mostrar_Destacamos()throws InterruptedException {
-        myStep.mostrarDestacamos();
+    @Y("^PPB004-CAPFC014 - Visualizar carrusel$")
+    public void Visualizar_Carrusel()throws InterruptedException {
+        myStep.visualizarCarrusel();
     }
 
+    @Y("^PPB004-CAPFC014 - Acceder al contenido$")
+    public void Acceder_Al_Contenido() throws InterruptedException{
+        myStep.navegarContenido();
+    }
 
     @Y("^PPB004-CAPFC014 - Validar texto flotante$")
     public void Validar_Texto_Flotante()throws InterruptedException  {
         myStep.validarTextFlotante();
     }
 
-    @Y("^PPB004-CAPFC014 - Clickar Enlace$")
-    public void Clickar_Enlace() throws InterruptedException{
-        myStep.clickarEnlace();
+
+    @Y("^PPB004-CAPFC014 - Clickar bullet$")
+    public void Clickar_Bullet() throws InterruptedException{
+        myStep.clickarBullet();
+    }
+
+    @Y("^PPB004-CAPFC014 - Deslizar a la izquierda$")
+    public void Deslizar_A_La_Izquierda()throws InterruptedException {
+        myStep.deslizarIzquierda();
+    }
+
+    @Y("^PPB004-CAPFC014 - Deslizar a la derecha$")
+    public void Deslizar_A_La_Derecha()throws InterruptedException {
+        myStep.deslizarDerecha();
+    }
+
+    @Y("^PPB004-CAPFC014 - Clickar flecha derecha$")
+    public void Clickar_Flecha_Derecha() throws InterruptedException {
+        myStep.clickarFDerecha();
+    }
+    @Y("^PPB004-CAPFC014 - Clickar flecha izquierda$")
+    public void Clickar_Flecha_Izquierda() throws InterruptedException {
+        myStep.clickarFIzquierda();
     }
 }
 

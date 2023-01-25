@@ -1,18 +1,16 @@
 #language: es
 @PPB002-CAP_F_008
 
-Característica: PPB002-CAP_F_008 - Carrusel secundario
+Característica: PPB002-CAP_F_008 - Visualizar el apartado Destacado
   Como un usuario comun
-  Quiero navegar en el carrusel
-  Para seleccionar enlace
+  Quiero ubicarme en el apartado Destacado
+  Para seleccionar un contenido
 
-  Escenario: Cargando Carrusel
+  Escenario: Cargando el Portal Actualidad
     Dado PPB002-CAPF008 - Cargando el Navegador
     Cuando PPB002-CAPF008 - Se haya cargado la web
-    Y PPB002-CAPF008 - Aceptar las cookies
-    Y PPB002-CAPF008 - Clickar flecha siguiente
-    Y PPB002-CAPF008 - Clickar flecha anterior
-    Y PPB002-CAPF008 - Clickar bullet
-    Y PPB002-CAPF008 - Clickar enlace
+    Y PPB002-CAPF008 - Ubicamos el apartado Destacados
+    Y PPB002-CAPF008 - Clickar en Premios y concursos
+
 
 

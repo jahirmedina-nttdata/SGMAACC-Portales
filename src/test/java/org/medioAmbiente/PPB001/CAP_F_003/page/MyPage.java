@@ -33,9 +33,6 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id='ahyk_column1_0_averageRatingContent']/a[5]")
     private WebElementFacade btnValorarContenido5;
 
-    public void interacturaScrollAceptarCookies() throws InterruptedException {
-        scrollAceptarCookies.click();
-    }
 
     public void aceptarCookies() throws InterruptedException {
         btnAceptarCookies.click();

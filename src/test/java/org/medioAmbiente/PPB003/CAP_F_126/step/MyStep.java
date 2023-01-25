@@ -4,6 +4,8 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB003.CAP_F_126.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
+import java.sql.SQLException;
+
 
 public class MyStep extends ScenarioSteps {
 
@@ -26,23 +28,22 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void compartirEnFacebook() throws InterruptedException {
-        myPage.compartirEnFacebook();
+    public void seleccionarAreaRecreativa() throws InterruptedException {
+        myPage.seleccionarAreaRecreativa();
     }
 
     @net.thucydides.core.annotations.Step
-    public void compartirEnTwitter() throws InterruptedException {
-        myPage.compartirEnTwitter();
+    public void seleccionarAlmeria() throws InterruptedException {
+        myPage.seleccionarAlmeria();
     }
 
     @net.thucydides.core.annotations.Step
-    public void compartirEnPinterest() throws InterruptedException {
-        myPage.compartirEnPinterest();
+    public void clickarBuscar() throws InterruptedException {
+        myPage.clickarBuscar();
     }
 
-
     @net.thucydides.core.annotations.Step
-    public void compartirPorCorreo() throws InterruptedException {
-        myPage.compartirPorCorreo();
+    public void validarResultado() throws InterruptedException, SQLException {
+        myPage.validarResultado();
     }
 }

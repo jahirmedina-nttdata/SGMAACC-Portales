@@ -28,20 +28,14 @@ public class MyStepDefinition {
     }
 
 
-    @Y("PPB002-CAPF013 - Selecciono mes posterior$")
-    public void Selecciono_Mes_Posterior() throws InterruptedException{
-        myStep.seleccionarMesPosterior();
+    @Y("PPB002-CAPF013 - Ubicarte en la seccion Tambien te puede interesar$")
+    public void Ubicarte_En_La_Seccion_Tambien_Te_Puede_Interesar() throws InterruptedException{
+        myStep.ubicarteEnTambienTePuedeInteresar();
     }
 
-    @Y("PPB002-CAPF013 - Selecciono año posterior$")
-    public void Selecciono_Año_Posterior() throws InterruptedException{
-        myStep.seleccionarAñoPosterior();
+    @Y("PPB002-CAPF013 - Clickar titulo de imagen$")
+    public void Clickar_Titulo_De_Imagen() throws InterruptedException{
+        myStep.clickarTituloDeImagen();
     }
-
-    @Y("PPB002-CAPF013 - Clickar sobre un dia$")
-    public void Clickar_Sobre_Un_Dia() throws InterruptedException{
-        myStep.clickarSobreDia();
-    }
-
 }
 

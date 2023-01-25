@@ -22,12 +22,15 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarEspacioNatural() throws InterruptedException {
-        page.seleccionarEspacioNatural();
+    public void buscarEspacioNatural() throws InterruptedException {
+        page.buscarEspacioNatural();
     }
-
     @net.thucydides.core.annotations.Step
-    public void seleccionarPestaña() throws InterruptedException {
-        page.seleccionarPestaña();
+    public void Visualizar_Paginador() throws InterruptedException {
+        page.Visualizar_Paginador();
+    }
+    @net.thucydides.core.annotations.Step
+    public void seleccionarPaginador() throws InterruptedException {
+        page.seleccionarPaginador();
     }
 }

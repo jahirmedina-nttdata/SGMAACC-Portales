@@ -14,12 +14,21 @@ Característica: PPB002-CAP_F_085 - Visualizar Detalle Video
     Y PPB002-CAPF085 - Visualizar sin subtitulo
     Y PPB002-CAPF085 - Visualizar sin texto
     Y PPB002-CAPF085 - Visualizar sin texto miniatura
-    Y PPB002-CAPF085 - Visualizar sin video
+    Y PPB002-CAPF085 - Visualizar sin creditos
+    Y PPB002-CAPF085 - Visualizar sin fichero
+    Y PPB002-CAPF085 - Visualizar sin url
+    Y PPB002-CAPF085 - Visualizar sin imagen
+    Y PPB002-CAPF085 - Visualizar sin url biblioteca
+    Y PPB002-CAPF085 - Visualizar sin serie
+    Y PPB002-CAPF085 - Visualizar sin autor
     Y PPB002-CAPF085 - Visualizar sin notas
-    Y PPB002-CAPF085 - Visualizar sin autores
+    Y PPB002-CAPF085 - Visualizar sin archivos
     Y PPB002-CAPF085 - Visualizar sin derechos
-    Y PPB002-CAPF085 - Visualizar video
-    Y PPB002-CAPF085 - Visualizar sin direccion
+    Y PPB002-CAPF085 - Clickar descarga
+    Y PPB002-CAPF085 - Clickar documento
+    Y PPB002-CAPF085 - Clickar url
+    Y PPB002-CAPF085 - Clickar interactivo
+    Y PPB002-CAPF085 - Clickar enlace biblioteca
 
 
 

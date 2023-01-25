@@ -1,163 +1,116 @@
 package org.medioAmbiente.PPB001.CAP_F_014.page;
 
 
-import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.net.URI;
+import java.net.URISyntaxException;
 
 
-@DefaultUrl("/medioambiente/portal/web/guest/buscador-agenda")
+@DefaultUrl("/medioambiente/portal/buscador-audios")
 
 
 public class MyPage extends PageObject {
 
-
-    @FindBy(xpath = "//input[@title=\"Buscar\"]")
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_8PWoVRSqGtFp_searchTextInput\"]")
     private WebElementFacade Buscador_Especifico;
+
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_RBLh8ZKfwq6q_searchTextInput\"]")
+    private WebElementFacade Buscador_Texto_Video;
+
+    @FindBy(xpath = "//label[@class=\"evr-form-search__more-filter\"]")
+    private WebElementFacade Apartado_Avanzada;
 
     @FindBy(xpath = "//*[@id=\"evr-formFilters\"]/div[2]/div[2]/label")
     private WebElementFacade Busqueda_Avanzada;
 
-    @FindBy(xpath = "//span[@title=\"category-provincia\"]")
-    private WebElementFacade Lista_Provincia;
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_8PWoVRSqGtFp_startDate\"]")
+    private WebElementFacade Fecha;
 
-    @FindBy(xpath = "//div[contains(text(),\"Cádiz\")]")
-    private WebElementFacade Provincia;
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_RBLh8ZKfwq6q_startDate\"]")
+    private WebElementFacade Fecha_Video;
 
-    @FindBy(xpath = "//input[@placeholder=\"Desde\"]")
-    private WebElementFacade Fecha_Incio;
-
-    @FindBy(xpath = "//input[@placeholder=\"Hasta\"]")
-    private WebElementFacade Fecha_Fin;
-
-    @FindBy(xpath = "//button/span[contains(text(),\"Buscar\")]")
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_8PWoVRSqGtFp_searchButton\"]")
     private WebElementFacade btnBuscar;
+
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_RBLh8ZKfwq6q_searchButton\"]")
+    private WebElementFacade btnBuscar_Video;
 
     @FindBy(xpath = "//*[@id=\"evr-formFilters\"]/div[2]/button[2]/span")
     private WebElementFacade btnLimpiar;
 
-    @FindBy(xpath = "//span[@title=\"category-eventos\"]")
-    private WebElementFacade Lista_Evento;
+    @FindBy(xpath = "//*[@id=\"evr-formFilters\"]/div[2]/button[2]/span")
+    private WebElementFacade btnLimpiar_Video;
 
-    @FindBy(xpath = "//div[contains(text(),\"Curso\")]")
-    private WebElementFacade Evento;
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_8PWoVRSqGtFp_category0-button\"]")
+    private WebElementFacade Lista_Tema;
 
-    @FindBy(xpath = "//span[@title=\"ordenacion-resultados\"]")
-    private WebElementFacade Lista_Ordenacion;
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_RBLh8ZKfwq6q_category0-button\"]")
+    private WebElementFacade ListaTema_Video;
 
-    @FindBy(xpath = "//div[contains(text(),\"Fecha de publicación ascendente\")]")
-    private WebElementFacade Publicacion_Asc;
+    @FindBy(xpath = "//div[contains(text(),'Biodiversidad')]")
+    private WebElementFacade Tema;
 
-    @FindBy(xpath = "//div[contains(text(),\"Título ascendente\")]")
-    private WebElementFacade Titulo_Asc;
+    @FindBy(xpath = "//div[contains(text(),'Agua')]")
+    private WebElementFacade Tema_Video;
 
-    @FindBy(xpath = "//div[contains(text(),\"Título descendente\")]")
-    private WebElementFacade Titulo_Desc;
-
-    @FindBy(xpath = "//div[contains(text(),\"Sevilla\")]")
-    private WebElementFacade Prov_Sevilla;
-
-    @FindBy(xpath = "//div[contains(text(),\"Jornada\")]")
-    private WebElementFacade Evento_Jornada;
-
-    public void buscarPorTexto() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 200)");
-        Buscador_Especifico.sendKeys("Medio Ambiente"+ "\n");
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    public void buscarImagenPorTexto() throws InterruptedException, URISyntaxException {
+        getDriver().get(new URI(getDriver().getCurrentUrl()).resolve("/medioambiente/portal/buscador-imagenes").toString());
+        Buscador_Especifico.sendKeys("Reserva" + "\n");
     }
 
-    public void buscarPorEvento() throws InterruptedException {
-        Actions action = new Actions(getDriver());
-        action.moveToElement(Busqueda_Avanzada).click().perform();
-        action.moveToElement(btnLimpiar).click().perform();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 180)");
-        action.moveToElement(Lista_Evento).click().perform();
-        action.moveToElement(Evento).click().perform();
-        action.moveToElement(btnBuscar).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-    }
-    public void buscarPorProvincia() throws InterruptedException {
-        Actions action = new Actions(getDriver());
-        action.moveToElement(btnLimpiar).click().perform();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        action.moveToElement(Lista_Provincia).click().perform();
-        action.moveToElement(Provincia).click().perform();
-        action.moveToElement(btnBuscar).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    public void buscarImagenPorTema() throws InterruptedException {
+        btnLimpiar.click();
+        Busqueda_Avanzada.click();
+        Lista_Tema.click();
+        Tema.click();
+        btnBuscar.click();
     }
 
-    public void buscarPorFechaDesdeYHasta() throws InterruptedException {
-        Actions action = new Actions(getDriver());
-        action.moveToElement(btnLimpiar).click().perform();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        Fecha_Incio.sendKeys("02/02/2021");
-        Fecha_Fin.sendKeys("02/01/2022");
-        action.moveToElement(btnBuscar).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    public void buscarImagenPorFecha() throws InterruptedException {
+        btnLimpiar.click();
+        Fecha.sendKeys("05/02/2021");
+        btnBuscar.click();
     }
 
-    public void ordenarFechaDePublicacionAscendentemente() throws InterruptedException {
-        Actions action = new Actions(getDriver());
-        action.moveToElement(btnLimpiar).click().perform();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        action.moveToElement(Lista_Ordenacion).click().perform();
-        action.moveToElement(Publicacion_Asc).click().perform();
-        action.moveToElement(btnBuscar).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    public void buscarImagenPorFiltros() throws InterruptedException {
+        btnLimpiar.click();
+        Buscador_Especifico.sendKeys("Berreo de Ciervo");
+        Fecha.sendKeys("01/02/2021");
+        Lista_Tema.click();
+        Tema.click();
+        btnBuscar.click();
     }
 
-    public void ordenarPorTituloAscendentemente() throws InterruptedException {
-        Actions action = new Actions(getDriver());
-        action.moveToElement(btnLimpiar).click().perform();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        action.moveToElement(Lista_Ordenacion).click().perform();
-        action.moveToElement(Titulo_Asc).click().perform();
-        action.moveToElement(btnBuscar).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    public void buscarVideoPorTexto() throws InterruptedException, URISyntaxException {
+        getDriver().get(new URI(getDriver().getCurrentUrl()).resolve("/medioambiente/portal/buscador-videos").toString());
+        Buscador_Texto_Video.sendKeys("Webinar");
+        btnBuscar_Video.click();
     }
 
-    public void ordenarPorTituloDescendentemente() throws InterruptedException {
-        Actions action = new Actions(getDriver());
-        action.moveToElement(btnLimpiar).click().perform();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        action.moveToElement(Lista_Ordenacion).click().perform();
-        action.moveToElement(Titulo_Desc).click().perform();
-        action.moveToElement(btnBuscar).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    public void buscarVideoPorTema() throws InterruptedException {
+        btnLimpiar_Video.click();
+        Apartado_Avanzada.click();
+        ListaTema_Video.click();
+        Tema_Video.click();
+        btnBuscar_Video.click();
     }
 
-    public void buscarPorTodosLosFiltros() throws InterruptedException {
-        Actions action = new Actions(getDriver());
-        action.moveToElement(btnLimpiar).click().perform();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        Buscador_Especifico.sendKeys("Geoparques");
-        action.moveToElement(Lista_Provincia).click().perform();
-        action.moveToElement(Prov_Sevilla).click().perform();
-        action.moveToElement(Lista_Evento).click().perform();
-        action.moveToElement(Evento_Jornada).click().perform();
-        Fecha_Incio.sendKeys("01/02/2022");
-        Fecha_Fin.sendKeys("12/12/2022");
-        action.moveToElement(btnBuscar).click().perform();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 300)");
+    public void buscarVideoPorFecha() throws InterruptedException {
+        btnLimpiar_Video.click();
+        Fecha_Video.sendKeys("05/02/2021");
+        btnBuscar_Video.click();
     }
 
+    public void buscarVideoPorFiltros() throws InterruptedException {
+        btnLimpiar_Video.click();
+        Buscador_Texto_Video.sendKeys("Jornada");
+        Fecha_Video.sendKeys("02/02/2021");
+        ListaTema_Video.click();
+        Tema_Video.click();
+        btnBuscar_Video.click();
+    }
 }

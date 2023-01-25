@@ -28,13 +28,38 @@ public class MyStep extends ScenarioSteps {
 
 
     @net.thucydides.core.annotations.Step
+    public void buscarSinFiltros() throws InterruptedException {
+        page.buscarSinFiltros();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorTexto() throws InterruptedException {
+        page.buscarPorTexto();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorProvincia() throws InterruptedException {
+        page.buscarPorProvincia();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorFechaInicio() throws InterruptedException {
+        page.buscarPorFechaInicio();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorFechaFin() throws InterruptedException {
+        page.buscarPorFechaFin();
+    }
+
+    @net.thucydides.core.annotations.Step
     public void clickarEnlace() throws InterruptedException {
         page.clickarEnlace();
     }
 
     @net.thucydides.core.annotations.Step
-    public void mostrarTextoFlotante() throws InterruptedException {
-        page.mostrarTextoFlotante();
+    public void ejecutarCAPFN029() throws InterruptedException {
+        page.ejecutarCAPFN029();
     }
 
 }

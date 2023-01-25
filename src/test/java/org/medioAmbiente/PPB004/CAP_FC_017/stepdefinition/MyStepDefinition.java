@@ -21,21 +21,24 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB004-CAPFC017 - Mostrar contenido$")
-    public void Mostrar_Contenido()throws InterruptedException {
-        myStep.mostrarContenido();
+    @Y("^PPB004-CAPFC017 - Mostrar apartado$")
+    public void Mostrar_Apartado()throws InterruptedException {
+        myStep.mostrarApartado();
     }
 
-    @Y("^PPB004-CAPFC017 - Acceder al contenido$")
-    public void Acceder_Al_Contenido() throws InterruptedException{
-        myStep.navegarContenido();
+    @Y("^PPB004-CAPFC017 - Ocultar apartado$")
+    public void Ocultar_Apartado() throws InterruptedException {
+        myStep.ocultarApartado();
     }
 
-    @Y("^PPB004-CAPFC017 - Validar texto flotante$")
-    public void Validar_Texto_Flotante()throws InterruptedException  {
-        myStep.validarTextFlotante();
+    @Y("^PPB004-CAPFC017 - Descargar archivo$")
+    public void Descargar_Archivo() throws InterruptedException {
+        myStep.descargarArchivo();
     }
 
-
+    @Y("^PPB004-CAPFC017 - Clickar enlace$")
+    public void Clickar_Enlace() throws InterruptedException  {
+        myStep.clickarEnlace();
+    }
 }
 

@@ -1,17 +1,19 @@
 #language: es
 @PPB002-CAP_F_015
 
-Característica: PPB002-CAP_F_015 - Tambien te puede interesar
+Característica: PPB002-CAP_F_015 - Visualizar tiempo en tema
   Como un usuario comun
-  Quiero acceder al portal
-  Para visualizar contenido
+  Quiero seleccionar una provincia
+  Para visualizar el tiempo
 
-  Escenario: Cargando el Portal de Referencia
+  Escenario: Cargando el Portal Web
     Dado PPB002-CAPF015 - Cargando el Navegador
     Cuando PPB002-CAPF015 - Se haya cargado la web
+    Y PPB002-CAPF015 - Click permitir geolocalizar
     Y PPB002-CAPF015 - Aceptar las cookies
-    Y PPB002-CAPF015 - Ubicarte en la seccion Tambien te puede interesar
-    Y PPB002-CAPF015 - Clickar titulo de imagen
+    Y PPB002-CAPF015 - Click no permitir geolocalizar
+    Y PPB002-CAPF015 - Seleccionar provincia
+
 
 
 

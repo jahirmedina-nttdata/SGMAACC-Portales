@@ -39,8 +39,20 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//a[@data-title=\"Menú\"]")
     private WebElementFacade Menu_Vertical;
 
-    @FindBy(xpath = "//a[contains(text(),'2')]")
-    private WebElementFacade Paginador;
+    @FindBy(xpath = "//a[@id=\"_AssetSearchPlugin_INSTANCE_NnDPygTc2VqD_kldx_column1_0_menu\"]/span")
+    private WebElementFacade Icono_puntos;
+
+    @FindBy(xpath = "//a[@id=\"_AssetSearchPlugin_INSTANCE_NnDPygTc2VqD_kldx__column1__0__menu__configuracion\"]")
+    private WebElementFacade OptionConfig;
+
+    @FindBy(xpath = "//input[@id=\"_com_liferay_portlet_configuration_web_portlet_PortletConfigurationPortlet_delta\"]")
+    private WebElementFacade Delta;
+
+    @FindBy(xpath = "//button/span[contains(text(),'Guardar')]")
+    private WebElementFacade btnGuardar;
+
+    @FindBy(xpath = "(//div[@class=\"evr-article-result__container\"])[1]")
+    private WebElementFacade Posicionar;
 
 
     public void autenticarUsuario() throws InterruptedException {
@@ -50,7 +62,7 @@ public class MyPage extends PageObject {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'cmaot_testing testing')]")));
     }
 
-    public void accederSubmenuAvisos() throws InterruptedException {
+    public void accederAvisos() throws InterruptedException {
         Ventana_Visitante.click();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@id=\"layout_19\"])[1]")));
@@ -62,7 +74,7 @@ public class MyPage extends PageObject {
         actions.moveToElement(Submenu_Aviso).click().perform();
     }
 
-    public void seleccionarPaginador() throws InterruptedException {
+    public void configurarPaginador() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@data-title=\"Menú\"]")));
         Menu_Vertical.click();
@@ -72,11 +84,32 @@ public class MyPage extends PageObject {
         } else {
             Assert.assertTrue(true);
         }
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(Posicionar).perform();
+        actions.moveToElement(Icono_puntos).click().perform();
+        actions.moveToElement(OptionConfig).click().perform();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3[@class=\"modal-title\"]")));
+        WebElement iframe = getDriver().findElement(By.id( "_AssetSearchPlugin_INSTANCE_NnDPygTc2VqD_configurationIframeDialog_iframe_"));
+        getDriver().switchTo().frame(iframe);
+        WebElement Element = getDriver().findElement(By.xpath("//span[contains(text(),'Opciones de resultados')]"));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
+        j.executeScript("arguments[0].scrollIntoView();", Element);
+        Delta.clear();
+        Delta.sendKeys("10");
+        btnGuardar.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'La configuración ha sido actualizada')]")));
+
+    }
+
+    public void recargarPagina() throws InterruptedException {
+        getDriver().navigate().refresh();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
-        Paginador.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
-        j.executeScript("window.scrollBy(0, -document.body.scrollHeight)");
+        List<WebElement> lista = getDriver().findElements(By.xpath("//figure[@class=\"evr-article-result__thumb\"]"));
+        if (lista.size() == 10) {
+            Assert.assertTrue(true);
+        } else {
+            Assert.fail("No existe Lista");
+        }
     }
 }

@@ -27,12 +27,17 @@ public class MyStepDefinition {
 
     @Y("^PPB003-CAPF102 - Acceder al submenu Avisos$")
     public void Acceder_Al_Submenu_Avisos()throws InterruptedException {
-        myStep.accederSubmenuAvisos();
+        myStep.accederAvisos();
     }
 
-    @Y("^PPB003-CAPF102 - Seleccionar paginador$")
-    public void Seleccionar_Paginador()throws InterruptedException {
-        myStep.seleccionarPaginador();
+    @Y("^PPB003-CAPF102 - Configurar paginador$")
+    public void Configurar_Paginador()throws InterruptedException {
+        myStep.configurarPaginador();
+    }
+
+    @Y("^PPB003-CAPF102 - Recargar pagina$")
+    public void Recargar_Pagina()throws InterruptedException {
+        myStep.recargarPagina();
     }
 }
 

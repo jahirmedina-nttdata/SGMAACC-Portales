@@ -21,19 +21,45 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF067 - Visualizar sugerencia del mes$")
-    public void Visualizar_Sugerencia_Del_Mes()throws InterruptedException {
-        myStep.visualizarSugerenciaDelMes();
+    @Y("^PPB003-CAPF067 - Visualizar Titulo$")
+    public void Visualizar_Titulo()throws InterruptedException {
+        myStep.visualizarTitulo();
     }
 
-    @Y("^PPB003-CAPF067 - Clickar enlace Ver Mas$")
-    public void Clickar_Enlace_Ver_Mas()throws InterruptedException {
-        myStep.clickarVerMas();
+    @Y("^PPB003-CAPF067 - Visualizar Texto$")
+    public void Visualizar_Texto()throws InterruptedException {
+        myStep.visualizarTexto();
     }
 
-    @Y("^PPB003-CAPF067 - Clickar descargar documento$")
-    public void Clickar_Descargar_Documento()throws InterruptedException {
-        myStep.clickarDescargarDocumento();
+    @Y("^PPB003-CAPF067 - Visualizar Imagen$")
+    public void Visualizar_Imagen()throws InterruptedException {
+        myStep.visualizarImagen();
     }
+
+    @Y("^PPB003-CAPF067 - Visualizar campo Fecha$")
+    public void Visualizar_Campo_Fecha()throws InterruptedException {
+        myStep.visualizarCampoFecha();
+    }
+
+    @Y("^PPB003-CAPF067 - Compartir por Facebook$")
+    public void Compartir_Por_Facebook()throws InterruptedException {
+        myStep.compartirPorFacebook();
+    }
+
+    @Y("^PPB003-CAPF067 - Compartir por Twitter$")
+    public void Compartir_Por_Twitter()throws InterruptedException {
+        myStep.compartirPorTwitter();
+    }
+
+    @Y("^PPB003-CAPF067 - Compartir por Pinterest$")
+    public void Compartir_Por_Pinterest()throws InterruptedException {
+        myStep.compartirPorPinterest();
+    }
+
+    @Y("^PPB003-CAPF067 - Compartir por Correo$")
+    public void Compartir_Por_Correo()throws InterruptedException {
+        myStep.compartirPorCorreo();
+    }
+
 }
 

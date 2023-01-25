@@ -27,17 +27,12 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void accederAvisos() throws InterruptedException {
-        page.accederAvisos();
+    public void ejecutarCAPF099() throws InterruptedException {
+        page.ejecutarCAPF099();
     }
 
     @net.thucydides.core.annotations.Step
-    public void configurarPaginador() throws InterruptedException {
-        page.configurarPaginador();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void recargarPagina() throws InterruptedException {
-        page.recargarPagina();
+    public void seleccionarPaginador() throws InterruptedException {
+        page.seleccionarPaginador();
     }
 }

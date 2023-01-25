@@ -21,44 +21,9 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB004-CAPFC010 - Mostrar carrusel anuncio$")
-    public void Mostrar_Carrusel_Anuncio()throws InterruptedException {
-        myStep.mostrarCarrusel();
+    @Y("^PPB004-CAPFC010 - Mostrar contenido$")
+    public void Mostrar_Contenido()throws InterruptedException {
+        myStep.mostrarContenido();
     }
-
-    @Y("^PPB004-CAPFC010 - Clickar en bullets$")
-    public void Clickar_En_Bullets()throws InterruptedException {
-        myStep.clickarBullets();
-    }
-    @Y("^PPB004-CAPFC010 - Puntear card$")
-    public void Puntear_Card()throws InterruptedException {
-        myStep.puntearCard();
-    }
-    @Y("^PPB004-CAPFC010 - Mover a la izquierda$")
-    public void Mover_A_La_Izquierda()throws InterruptedException {
-        myStep.moverIzquierda();
-    }
-    @Y("^PPB004-CAPFC010 - Mover a la derecha$")
-    public void Mover_A_La_Derecha()throws InterruptedException {
-        myStep.moverDerecha();
-    }
-
-
-    @Y("^PPB004-CAPFC010 - Clickar titulo anuncio$")
-    public void Clickar_Titulo_Anuncio() throws InterruptedException{
-        myStep.clickarAnuncio();
-    }
-
-    @Y("^PPB004-CAPFC010 - Puntear Ver Todo$")
-    public void Puntear_Ver_Todo() throws InterruptedException {
-        myStep.puntearVertodo();
-    }
-
-    @Y("^PPB004-CAPFC010 - Clickar Ver Todo$")
-    public void Clickar_Ver_Todo()throws InterruptedException {
-        myStep.clickarVertodo();
-    }
-
-
 }
 

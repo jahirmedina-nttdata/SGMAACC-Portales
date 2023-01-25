@@ -22,13 +22,28 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void ubicarseEnDestacados() throws InterruptedException {
-        page.ubicarseEnDestacados();
+    public void comprobarFuncionamientoCarrusel() throws InterruptedException {
+        page.comprobarFuncionamientoCarrusel();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarContenido() throws InterruptedException {
-        page.clickarContenido();
+    public void comprobarFuncionamientoListado() throws InterruptedException {
+        page.comprobarFuncionamientoListado();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void ubicarEnSeccionFiltros() throws InterruptedException {
+        page.ubicarEnSeccionFiltros();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void marcarCheckEnCadaFiltro() throws InterruptedException {
+        page.marcarCheckEnCadaFiltro();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void marcarCheckEnTodosLosFiltros() throws InterruptedException {
+        page.marcarCheckEnTodosLosFiltros();
     }
 
 }

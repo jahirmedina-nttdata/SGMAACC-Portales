@@ -26,20 +26,39 @@ public class MyStepDefinition {
     public void Buscar_Por_Texto() throws InterruptedException {
         myStep.buscarPorTexto();
     }
-    @Y("^PPB001-CAPF012 - Acceder al detalle contenido$")
-    public void Acceder_Al_Detalle_Contenido() throws InterruptedException {
-        myStep.accederContenido();
+    @Y("^PPB001-CAPF012 - Buscar por tipo de evento$")
+    public void Buscar_Por_Tipo_De_Evento() throws InterruptedException {
+        myStep.buscarPorEvento();
     }
 
-    @Y("^PPB001-CAPF012 - Buscar por fecha inicio y fecha fin$")
-    public void Buscar_Por_Fecha_Inicio_Y_Fecha_Fin() throws InterruptedException {
-        myStep.buscarPorFecha();
+    @Y("^PPB001-CAPF012 - Buscar por provincia$")
+    public void Buscar_Por_Provincia() throws InterruptedException {
+        myStep.buscarPorProvincia();
     }
 
-    @Y("^PPB001-CAPF012 - Buscar por tema$")
-    public void Buscar_Por_Tema() throws InterruptedException {
-        myStep.buscarPorTema();
+    @Y("^PPB001-CAPF012 - Buscar por Fecha Desde y Hasta$")
+    public void Buscar_Por_Fecha_Desde_Y_Hasta() throws InterruptedException {
+        myStep.buscarPorFechaDesdeYHasta();
     }
 
+    @Y("^PPB001-CAPF012 - Ordenar por fecha de publicacion ascendentemente$")
+    public void Ordenar_Por_Fecha_De_Publicacion_Ascendentemente() throws InterruptedException {
+        myStep.ordenarFechaDePublicacionAscendentemente();
+    }
+
+    @Y("^PPB001-CAPF012 - Ordenar por Titulo ascendentemente$")
+    public void Ordenar_Por_Titulo_Ascendentemente() throws InterruptedException {
+        myStep.ordenarPorTituloAscendentemente();
+    }
+
+    @Y("^PPB001-CAPF012 - Ordenar por Titulo descendentemente$")
+    public void Ordenar_Por_Titulo_Descendentemente() throws InterruptedException {
+        myStep.ordenarPorTituloDescendentemente();
+    }
+
+    @Y("^PPB001-CAPF012 - Buscar por todos los filtros$")
+    public void Buscar_Por_Todos_Los_Filtros() throws InterruptedException {
+        myStep.buscarPorTodosLosFiltros();
+    }
 }
 

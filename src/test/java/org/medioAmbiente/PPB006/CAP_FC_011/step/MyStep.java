@@ -22,21 +22,13 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void visualizarCaminoMiga() throws InterruptedException {
-        page.visualizarCaminoMiga();
+    public void posicionarMenu() throws InterruptedException {
+       page.posicionarMenu();
     }
 
 
     @net.thucydides.core.annotations.Step
-    public void posicionarPuntero() throws InterruptedException {
-        page.posicionarPuntero();
-    }
-
-    public void clickarPadre() throws InterruptedException {
-        page.clickarPadre();
-    }
-
-    public void clickarActual() throws InterruptedException {
-        page.clickarActual();
+    public void clickarSubmenu() throws InterruptedException {
+        page.clickarSubmenu();
     }
 }

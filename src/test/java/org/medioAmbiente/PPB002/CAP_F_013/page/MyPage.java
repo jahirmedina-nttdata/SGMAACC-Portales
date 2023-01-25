@@ -5,7 +5,6 @@ import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
-import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -13,59 +12,27 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.List;
-
 
 @DefaultUrl("/medioambiente/portal/web/guest/actualidad/agenda-eventos")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//span[@class=\"d-month\"]")
-    private WebElementFacade Select_Mes;
-
-    @FindBy(xpath = "//div[@data-month=\"2\"]")
-    private WebElementFacade Mes_Posterior;
-
-    @FindBy(xpath = "//span[@class=\"d-year\"]")
-    private WebElementFacade Select_Año;
-
-    @FindBy(xpath = "//div[@data-year=\"1\"]")
-    private WebElementFacade Año_Posterior;
-
-    @FindBy(xpath = "//label/text[contains(text(),'14')]")
-    private WebElementFacade Select_Dia;
+    @FindBy(xpath = "(//a[@title=\"Taller presencial gestión del litoral y educación ambiental en Andalucía. Málaga (Andalucía occidental)\"])[2]")
+    private WebElementFacade Titulo_Imagen;
 
 
-    public void seleccionarMesPosterior() throws InterruptedException {
+    public void ubicarteEnTambienTePuedeInteresar() throws InterruptedException{
+        WebElement Element = getDriver().findElement(By.xpath("//img[@alt=\"Taller presencial gestión del litoral y educación ambiental en Andalucía. Málaga (Andalucía occidental)\"]"));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 200)");
-        Actions action = new Actions(getDriver());
-        action.moveToElement(Select_Mes).click().perform();
-        action.moveToElement(Mes_Posterior).click().perform();
-        List<WebElement> lista = getDriver().findElements(By.xpath("//input[@data-date=\"2023-02-01T05:00:00.000Z\"]"));
-        if (lista.size() != 0) {
-            Assert.assertTrue(true);
-        } else {
-            Assert.fail("No se visualiza los dias del mes");
-        }
+        j.executeScript("arguments[0].scrollIntoView();", Element);
     }
 
-    public void seleccionarAñoPosterior() throws InterruptedException {
+    public void clickarTituloDeImagen() throws InterruptedException{
         Actions action = new Actions(getDriver());
-        action.moveToElement(Select_Año).click().perform();
-        action.moveToElement(Año_Posterior).click().perform();
-        List<WebElement> lista = getDriver().findElements(By.xpath("//input[@data-date=\"2024-02-01T05:00:00.000Z\"]"));
-        if (lista.size() != 0) {
-            Assert.assertTrue(true);
-        } else {
-            Assert.fail("No se visualiza los dias del mes");
-        }
+        action.moveToElement(Titulo_Imagen).click().perform();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Taller presencial gestión del litoral')])[2]")));
     }
 
-    public void clickarSobreDia() throws InterruptedException {
-        Select_Dia.click();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 80);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(text(),\"Buscador agenda por días\")]")));
-    }
 }

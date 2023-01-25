@@ -1,7 +1,7 @@
 #language: es
 @PPB003-CAP_F_102
 
-Característica: PPB003-CAP_F_102 - Visualizar Paginador
+Característica: PPB003-CAP_F_102 - Aumentar numero de resultados
   Como un usuario
   Quiero acceder al portal
   Para visualizar paginador
@@ -11,7 +11,8 @@ Característica: PPB003-CAP_F_102 - Visualizar Paginador
     Y PPB003-CAPF102 - Aceptar Cookies
     Y PPB003-CAPF102 - Autentico usuario
     Y PPB003-CAPF102 - Acceder al submenu Avisos
-    Y PPB003-CAPF102 - Seleccionar paginador
+    Y PPB003-CAPF102 - Configurar paginador
+    Y PPB003-CAPF102 - Recargar pagina
 
 
 

@@ -26,16 +26,28 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"layout_60\"]")
     private WebElementFacade SubMenu;
 
-    @FindBy(xpath = "//input[@title=\"Buscar por palabras\"]")
-    private WebElementFacade buscarTexto;
+    @FindBy(xpath = "//span[@title=\"Seleccionar Provincia\"]")
+    private WebElementFacade Select_Provincia;
+
+    @FindBy(xpath = "//div[contains(text(),'ALMERÍA')]")
+    private WebElementFacade Almeria;
+
+    @FindBy(xpath = "//input[@title=\"Seleccione un tipo de equipamiento\"]")
+    private WebElementFacade Tipo_Equipamiento;
+
+    @FindBy(xpath = "(//span[contains(text(),'SENDERO SEÑALIZADO')])[1]")
+    private WebElementFacade Sendero_Señalizado;
+
+    @FindBy(xpath = "//button[contains(text(),'APLICAR')]")
+    private WebElementFacade Aplicar;
 
     @FindBy(xpath = "//button/span[contains(text(),'Buscar')]")
     private WebElementFacade btnBuscar;
 
-    @FindBy(xpath = "//button/span[contains(text(),'EXPORTAR RESULTADOS')]")
-    private WebElementFacade btnExportar;
+    @FindBy(xpath = "//button/span[contains(text(),'Limpiar')]")
+    private WebElementFacade btnLimpiar;
 
-    @FindBy(xpath = "(//span[@class=\"evr-article-collage-map__title\"])[2]")
+    @FindBy(xpath = "(//span[@class=\"evr-article-collage-map__tag\"])[1]")
     private WebElementFacade Validar_Resultado;
 
 
@@ -52,18 +64,25 @@ public class MyPage extends PageObject {
         SubMenu.click();
     }
 
-    public void buscarPorTexto() throws InterruptedException {
-        buscarTexto.sendKeys("Sierra de Aracena");
+    public void seleccionarProvinciaAlmeria() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@title=\"Seleccionar Provincia\"]")));
+        Select_Provincia.click();
+        Almeria.click();
     }
 
+    public void seleccionarTipoEquipamientoSenderoSeñalizado() throws InterruptedException {
+        Tipo_Equipamiento.click();
+        Sendero_Señalizado.click();
+        Aplicar.click();
+    }
 
     public void pulsarBuscar() throws InterruptedException {
         btnBuscar.click();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 900)");
-
+        j.executeScript("window.scrollBy(0, 1000)");
     }
 
     public void validarBusqueda() throws InterruptedException {
@@ -76,19 +95,23 @@ public class MyPage extends PageObject {
         }
 
         String validacion = Validar_Resultado.getText();
-        if(validacion.contains("SIERRA DE ARACENA")) {
+        if(validacion.equals("EQUIPAMIENTO: SENDERO SEÑALIZADO")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("Informacion valida");
         }
-
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, -400)");
+        waitFor(7).second();
     }
 
-    public void pulsarExportarResultados() throws InterruptedException {
-        btnExportar.click();
+    public void pulsarLimpiar() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, -200)");
-        waitFor(5).second();
+        j.executeScript("window.scrollBy(0, -document.body.scrollHeight)");
+        waitFor(1).second();
+        btnLimpiar.click();
+        j.executeScript("window.scrollBy(0, 600)");
+        waitFor(3).second();
     }
 
 }

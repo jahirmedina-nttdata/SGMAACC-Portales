@@ -25,23 +25,23 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB003-CAPF089 - Autentico usuario$")
-    public void Autentico_Usuario()throws InterruptedException, URISyntaxException {
+    public void Autentico_Usuario()throws InterruptedException {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF089 - Clickar eliminar-cancelar Pasaporte$")
-    public void Clickar_Eliminar_Cancelar_Pasaporte()throws InterruptedException {
-        myStep.clikarCancelarPasaporte();
+    @Y("^PPB003-CAPF089 - Clickar añadir Pasaporte Ecoturista$")
+    public void Clickar_Añadir_Pasaporte_Ecoturista()throws InterruptedException, URISyntaxException {
+        myStep.clikarAñadirPasaporte();
     }
 
-    @Y("^PPB003-CAPF089 - Clickar eliminar-aceptar Pasaporte$")
-    public void Clickar_Eliminar_Aceptar_Pasaporte()throws InterruptedException {
-        myStep.clikarAceptarPasaporte();
+    @Entonces("^PPB003-CAPF089 - Validar Pasaporte añadido$")
+    public void Validar_Pasaporte_Añadido()throws InterruptedException {
+        myStep.validarPasaporte();
     }
 
-    @Entonces("^PPB003-CAPF089 - Validar Pasaporte eliminado$")
-    public void Validar_Pasaporte_Eliminado()throws InterruptedException {
-        myStep.validarPasaporteEliminado();
+    @Y("^PPB003-CAPF089 - Clickar eliminar Pasaporte$")
+    public void Clickar_Eliminar_Pasaporte()throws InterruptedException {
+        myStep.clickarEliminarPasaporte();
     }
 }
 

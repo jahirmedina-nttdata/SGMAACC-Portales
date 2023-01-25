@@ -21,16 +21,13 @@ public class MyStep extends ScenarioSteps {
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
     }
 
-    public void seleccionarMesPosterior() throws InterruptedException{
-        page.seleccionarMesPosterior();
+    @net.thucydides.core.annotations.Step
+    public void ubicarteEnTambienTePuedeInteresar() throws InterruptedException {
+        page.ubicarteEnTambienTePuedeInteresar();
     }
 
-    public void seleccionarAñoPosterior() throws InterruptedException{
-        page.seleccionarAñoPosterior();
+    @net.thucydides.core.annotations.Step
+    public void clickarTituloDeImagen() throws InterruptedException {
+        page.clickarTituloDeImagen();
     }
-
-    public void clickarSobreDia() throws InterruptedException{
-        page.clickarSobreDia();
-    }
-
 }

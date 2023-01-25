@@ -6,6 +6,8 @@ import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_082.step.MyStep;
 
+import java.net.URISyntaxException;
+
 public class MyStepDefinition {
 
     @Steps
@@ -24,22 +26,23 @@ public class MyStepDefinition {
 
     @Y("^PPB003-CAPF082 - Autentico usuario$")
     public void Autentico_Usuario()throws InterruptedException {
-        myStep.autenticarUsuario();
+        myStep.autenticoUsuario();
     }
 
-    @Y("^PPB003-CAPF082 - Clickar Favoritos$")
-    public void Clickar_Favoritos()throws InterruptedException {
-        myStep.clikarFavoritos();
+    @Y("^PPB003-CAPF082 - Cambiar Idioma$")
+    public void Cambiar_Idioma()throws InterruptedException {
+        myStep.cambiarIdioma();
     }
 
-    @Entonces("^PPB003-CAPF082 - Valido permisos$")
-    public void Valido_Permisos()throws InterruptedException {
-        myStep.validarPermiso();
+    @Y("^PPB003-CAPF082 - Acceder a espacio natural$")
+    public void Acceder_A_Espacio_Natural()throws InterruptedException, URISyntaxException {
+        myStep.accederAEspacioNatural();
     }
 
-    @Y("^PPB003-CAPF082 - Valido lista de Favoritos$")
-    public void Valido_Lista_De_Favoritos()throws InterruptedException {
-        myStep.validarFavoritos();
+    @Entonces("^PPB003-CAPF082 - Validar traduccion$")
+    public void Validar_Traduccion()throws InterruptedException {
+        myStep.validarTraduccion();
     }
+
 }
 

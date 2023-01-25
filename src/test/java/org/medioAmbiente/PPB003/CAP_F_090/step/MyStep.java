@@ -4,6 +4,8 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB003.CAP_F_090.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
+import java.net.URISyntaxException;
+
 
 public class MyStep extends ScenarioSteps {
 
@@ -22,12 +24,22 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void autenticarUsuario() throws InterruptedException {
+    public void autenticarUsuario() throws InterruptedException, URISyntaxException {
         page.autenticarUsuario();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clikarTarjetaPasaporte() throws InterruptedException {
-        page.clikarTarjetaPasaporte();
+    public void clikarCancelarPasaporte() throws InterruptedException {
+        page.clikarCancelarPasaporte();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clikarAceptarPasaporte() throws InterruptedException {
+        page.clikarAceptarPasaporte();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void validarPasaporteEliminado() throws InterruptedException {
+        page.validarPasaporteEliminado();
     }
 }

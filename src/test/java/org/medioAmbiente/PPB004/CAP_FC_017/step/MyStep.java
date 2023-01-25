@@ -22,17 +22,23 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void mostrarContenido() throws InterruptedException {
-        page.mostrarContenido();
+    public void mostrarApartado() throws InterruptedException {
+        page.mostrarApartado();
+    }
+
+
+    @net.thucydides.core.annotations.Step
+    public void ocultarApartado() throws InterruptedException {
+        page.ocultarApartado();
     }
 
     @net.thucydides.core.annotations.Step
-    public void navegarContenido()throws InterruptedException {
-        page.navegarContenido();
+    public void descargarArchivo() throws InterruptedException{
+        page.descargarArchivo();
     }
 
     @net.thucydides.core.annotations.Step
-    public void validarTextFlotante()throws InterruptedException {
-        page.validarTextFlotante();
+    public void clickarEnlace() throws InterruptedException {
+        page.clickarEnlace();
     }
 }

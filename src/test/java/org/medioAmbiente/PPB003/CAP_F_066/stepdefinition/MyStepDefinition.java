@@ -21,44 +21,34 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF066 - Visualizar Titulo$")
-    public void Visualizar_Titulo()throws InterruptedException {
-        myStep.visualizarTitulo();
+    @Y("^PPB003-CAPF066 - Visualiza fecha y categoria$")
+    public void Visualiza_Fecha_Y_Categoria()throws InterruptedException {
+        myStep.visualizaFechaYCategoria();
     }
 
-    @Y("^PPB003-CAPF066 - Visualizar Texto$")
-    public void Visualizar_Texto()throws InterruptedException {
-        myStep.visualizarTexto();
+    @Y("^PPB003-CAPF066 - Visualiza titulo del contenido$")
+    public void Visualiza_Titulo_Del_Contenido()throws InterruptedException {
+        myStep.visualizaTituloDeContenido();
     }
 
-    @Y("^PPB003-CAPF066 - Visualizar Imagen$")
-    public void Visualizar_Imagen()throws InterruptedException {
-        myStep.visualizarImagen();
+    @Y("^PPB003-CAPF066 - Visualiza texto de la noticia$")
+    public void Visualiza_Texto_De_La_Noticia()throws InterruptedException {
+        myStep.visualizaTextoDeNoticia();
     }
 
-    @Y("^PPB003-CAPF066 - Visualizar campo Fecha$")
-    public void Visualizar_Campo_Fecha()throws InterruptedException {
-        myStep.visualizarCampoFecha();
+    @Y("^PPB003-CAPF066 - Visualiza imagen de la noticia$")
+    public void Visualiza_Imagen_De_La_Noticia()throws InterruptedException {
+        myStep.visualizaImagenDeNoticia();
     }
 
-    @Y("^PPB003-CAPF066 - Compartir por Facebook$")
-    public void Compartir_Por_Facebook()throws InterruptedException {
-        myStep.compartirPorFacebook();
+    @Y("^PPB003-CAPF066 - Visualiza video de la noticia$")
+    public void Visualiza_Video_De_La_Noticia()throws InterruptedException {
+
     }
 
-    @Y("^PPB003-CAPF066 - Compartir por Twitter$")
-    public void Compartir_Por_Twitter()throws InterruptedException {
-        myStep.compartirPorTwitter();
-    }
+    @Y("^PPB003-CAPF066 - Pulsar play en video de noticia$")
+    public void Pulsar_Play_En_Video_De_Noticia()throws InterruptedException {
 
-    @Y("^PPB003-CAPF066 - Compartir por Pinterest$")
-    public void Compartir_Por_Pinterest()throws InterruptedException {
-        myStep.compartirPorPinterest();
-    }
-
-    @Y("^PPB003-CAPF066 - Compartir por Correo$")
-    public void Compartir_Por_Correo()throws InterruptedException {
-        myStep.compartirPorCorreo();
     }
 
 }

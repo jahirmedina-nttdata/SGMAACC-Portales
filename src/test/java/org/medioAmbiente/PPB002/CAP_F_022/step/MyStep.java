@@ -22,13 +22,13 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarDetalleContenido() throws InterruptedException {
-        page.clickarDetalleContenido();
+    public void ubicarseEnDestacados() throws InterruptedException {
+        page.ubicarseEnDestacados();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarBotonTodosLosEventos() throws InterruptedException {
-        page.clickarBotonTodosLosEventos();
+    public void clickarContenido() throws InterruptedException {
+        page.clickarContenido();
     }
 
 }

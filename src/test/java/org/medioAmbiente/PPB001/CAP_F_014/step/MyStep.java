@@ -4,6 +4,8 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB001.CAP_F_014.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
+import java.net.URISyntaxException;
+
 
 public class MyStep extends ScenarioSteps {
 
@@ -25,42 +27,42 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorTexto() throws InterruptedException {
-        myPage.buscarPorTexto();
+    public void buscarImagenPorTexto() throws InterruptedException, URISyntaxException {
+        myPage.buscarImagenPorTexto();
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorEvento() throws InterruptedException {
-        myPage.buscarPorEvento();
+    public void buscarImagenPorTema() throws InterruptedException {
+        myPage.buscarImagenPorTema();
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorProvincia() throws InterruptedException {
-        myPage.buscarPorProvincia();
+    public void buscarImagenPorFecha() throws InterruptedException {
+        myPage.buscarImagenPorFecha();
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorFechaDesdeYHasta() throws InterruptedException {
-        myPage.buscarPorFechaDesdeYHasta();
+    public void buscarImagenPorFiltros() throws InterruptedException {
+        myPage.buscarImagenPorFiltros();
     }
 
     @net.thucydides.core.annotations.Step
-    public void ordenarFechaDePublicacionAscendentemente() throws InterruptedException {
-        myPage.ordenarFechaDePublicacionAscendentemente();
+    public void buscarVideoPorTexto() throws InterruptedException, URISyntaxException {
+        myPage.buscarVideoPorTexto();
     }
 
     @net.thucydides.core.annotations.Step
-    public void ordenarPorTituloAscendentemente() throws InterruptedException {
-        myPage.ordenarPorTituloAscendentemente();
+    public void buscarVideoPorTema() throws InterruptedException {
+        myPage.buscarVideoPorTema();
     }
 
     @net.thucydides.core.annotations.Step
-    public void ordenarPorTituloDescendentemente() throws InterruptedException {
-        myPage.ordenarPorTituloDescendentemente();
+    public void buscarVideoPorFecha() throws InterruptedException {
+        myPage.buscarVideoPorFecha();
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorTodosLosFiltros() throws InterruptedException {
-        myPage.buscarPorTodosLosFiltros();
+    public void buscarVideoPorFiltros() throws InterruptedException {
+        myPage.buscarVideoPorFiltros();
     }
 }

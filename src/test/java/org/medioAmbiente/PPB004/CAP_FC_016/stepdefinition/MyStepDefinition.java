@@ -21,15 +21,46 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB004-CAPFC016 - Visualizar carrusel$")
-    public void Visualizar_Carrusel()throws InterruptedException {
-        myStep.visualizarCarrusel();
+    @Y("^PPB004-CAPFC016 - Mostrar buscador$")
+    public void Mostrar_Buscador()throws InterruptedException {
+        myStep.mostrarBuscador();
+    }
+
+    @Y("^PPB004-CAPFC016 - Clickar en buscar$")
+    public void Clickar_En_Buscar() throws InterruptedException {
+        myStep.clickarBuscar();
+    }
+
+    @Y("^PPB004-CAPFC016 - Buscar por texto$")
+    public void Buscar_Por_Texto() throws InterruptedException {
+        myStep.buscarPortexto();
+    }
+
+    @Y("^PPB004-CAPFC016 - Buscar por categoria$")
+    public void Buscar_Por_Categoria() throws InterruptedException  {
+        myStep.buscarPorCateg();
+    }
+
+    @Y("^PPB004-CAPFC016 - Buscar por plazo abierto$")
+    public void Buscar_Por_Plazo_Abierto() throws InterruptedException {
+        myStep.buscarPorPlazo();
+    }
+
+    @Y("^PPB004-CAPFC016 - Buscar por tramitacion electronica$")
+    public void Buscar_Por_Tramitacion_Electronica() throws InterruptedException {
+        myStep.buscarPorTramitacion();
+    }
+
+    @Y("^PPB004-CAPFC016 - Buscar por texto y plazo abierto$")
+    public void Buscar_Por_Texto_Y_Plazo_Abierto() throws InterruptedException {
+        myStep.buscarPorTextoPlazo();
     }
 
     @Y("^PPB004-CAPFC016 - Acceder al contenido$")
-    public void Acceder_Al_Contenido() throws InterruptedException{
-        myStep.navegarContenido();
+    public void Acceder_Al_Contenido() throws InterruptedException {
+        myStep.accederContenido();
     }
+
 
     @Y("^PPB004-CAPFC016 - Validar texto flotante$")
     public void Validar_Texto_Flotante()throws InterruptedException  {
@@ -37,28 +68,9 @@ public class MyStepDefinition {
     }
 
 
-    @Y("^PPB004-CAPFC016 - Clickar bullet$")
-    public void Clickar_Bullet() throws InterruptedException{
-        myStep.clickarBullet();
-    }
-
-    @Y("^PPB004-CAPFC016 - Deslizar a la izquierda$")
-    public void Deslizar_A_La_Izquierda()throws InterruptedException {
-        myStep.deslizarIzquierda();
-    }
-
-    @Y("^PPB004-CAPFC016 - Deslizar a la derecha$")
-    public void Deslizar_A_La_Derecha()throws InterruptedException {
-        myStep.deslizarDerecha();
-    }
-
-    @Y("^PPB004-CAPFC016 - Clickar flecha derecha$")
-    public void Clickar_Flecha_Derecha() throws InterruptedException {
-        myStep.clickarFDerecha();
-    }
-    @Y("^PPB004-CAPFC016 - Clickar flecha izquierda$")
-    public void Clickar_Flecha_Izquierda() throws InterruptedException {
-        myStep.clickarFIzquierda();
+    @Y("^PPB004-CAPFC016 - Realizar CAP_FC_020$")
+    public void Realizar_CAP_FC_20()throws InterruptedException {
+        myStep.ejecutarcaso();
     }
 }
 

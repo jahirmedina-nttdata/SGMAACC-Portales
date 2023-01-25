@@ -22,18 +22,44 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void visualizarSugerenciaDelMes() throws InterruptedException {
-        page.visualizarSugerenciaDelMes();
+    public void visualizarTitulo() throws InterruptedException {
+        page.visualizarTitulo();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarVerMas() throws InterruptedException {
-        page.clickarVerMas();
+    public void visualizarTexto() throws InterruptedException {
+        page.visualizarTexto();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarDescargarDocumento() throws InterruptedException {
-        page.clickarDescargarDocumento();
+    public void visualizarImagen() throws InterruptedException {
+        page.visualizarImagen();
     }
+
+    @net.thucydides.core.annotations.Step
+    public void visualizarCampoFecha() throws InterruptedException {
+        page.visualizarCampoFecha();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void compartirPorFacebook() throws InterruptedException {
+        page.compartirPorFacebook();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void compartirPorTwitter() throws InterruptedException {
+        page.compartirPorTwitter();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void compartirPorPinterest() throws InterruptedException {
+        page.compartirPorPinterest();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void compartirPorCorreo() throws InterruptedException {
+        page.compartirPorCorreo();
+    }
+
 
 }

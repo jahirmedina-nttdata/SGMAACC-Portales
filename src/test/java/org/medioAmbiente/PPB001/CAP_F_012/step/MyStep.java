@@ -4,9 +4,6 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.medioAmbiente.PPB001.CAP_F_012.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
-import java.util.Iterator;
-import java.util.Set;
-
 
 public class MyStep extends ScenarioSteps {
 
@@ -33,17 +30,37 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void accederContenido() throws InterruptedException {
-        myPage.accederContenido();
+    public void buscarPorEvento() throws InterruptedException {
+        myPage.buscarPorEvento();
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorFecha() throws InterruptedException {
-        myPage.buscarPorFecha();
+    public void buscarPorProvincia() throws InterruptedException {
+        myPage.buscarPorProvincia();
     }
 
     @net.thucydides.core.annotations.Step
-    public void buscarPorTema() throws InterruptedException {
-        myPage.buscarPorTema();
+    public void buscarPorFechaDesdeYHasta() throws InterruptedException {
+        myPage.buscarPorFechaDesdeYHasta();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void ordenarFechaDePublicacionAscendentemente() throws InterruptedException {
+        myPage.ordenarFechaDePublicacionAscendentemente();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void ordenarPorTituloAscendentemente() throws InterruptedException {
+        myPage.ordenarPorTituloAscendentemente();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void ordenarPorTituloDescendentemente() throws InterruptedException {
+        myPage.ordenarPorTituloDescendentemente();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void buscarPorTodosLosFiltros() throws InterruptedException {
+        myPage.buscarPorTodosLosFiltros();
     }
 }

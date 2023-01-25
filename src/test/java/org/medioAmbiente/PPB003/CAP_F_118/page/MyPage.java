@@ -15,43 +15,41 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 
-@DefaultUrl("/medioambiente/portal/web/guest/buscador-agenda-por-dias")
+@DefaultUrl("/medioambiente/portal/web/cae/tramites-y-servicios?categoryVal=")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_uC4fnnj4ZZYH_pagination\"]/li[7]")
+    @FindBy(xpath = "//li[@class=\"page_number pag_num_7\"]/a")
     private WebElementFacade Paginador;
 
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_uC4fnnj4ZZYH_resultsDiv\"]/section/div/div[1]/div/div/a[1]")
-    private WebElementFacade Agenda;
+    @FindBy(xpath = "//a[@title=\"Presentación del Plan de minimización de residuos\"]")
+    private WebElementFacade Enlace;
 
     public void clickarPaginador() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 1000)");
+        j.executeScript("window.scrollBy(0, 600)");
+        waitFor(2).second();
+        j.executeScript("window.scrollBy(0, 500)");
         Paginador.click();
     }
 
-    public void seleccionarAgenda() throws InterruptedException {
+    public void clickarEnlace() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+        WebElement Element = getDriver().findElement(By.xpath("//p[contains(text(),'Mostrando')]"));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 200)");
-        Agenda.click();
+        j.executeScript("arguments[0].scrollIntoView();", Element);
+        Enlace.click();
     }
 
     public void retrocederPagina() throws InterruptedException {
         getDriver().navigate().back();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 1000)");
-        waitFor(1).second();
-        j.executeScript("window.scrollBy(0, 300)");
-        waitFor(2).second();
-        List<WebElement> lista = getDriver().findElements(By.xpath("//li[@class=\"page_number active pag_num_5\"]/a"));
+        waitFor(3).second();
+    }
+
+    public void validarCacheoDePaginador() throws InterruptedException {
+        List<WebElement> lista = getDriver().findElements(By.xpath("//li[@class=\"page_number active pag_num_7\"]"));
         if (lista.size() != 0) {
             Assert.assertTrue(true);
         } else {

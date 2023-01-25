@@ -24,22 +24,22 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void autenticarUsuario() throws InterruptedException, URISyntaxException {
+    public void autenticarUsuario() throws InterruptedException {
         page.autenticarUsuario();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clikarCancelarPasaporte() throws InterruptedException {
-        page.clikarCancelarPasaporte();
+    public void clikarAñadirPasaporte() throws InterruptedException, URISyntaxException {
+        page.clikarAñadirPasaporte();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clikarAceptarPasaporte() throws InterruptedException {
-        page.clikarAceptarPasaporte();
+    public void validarPasaporte() throws InterruptedException {
+        page.validarPasaporte();
     }
 
     @net.thucydides.core.annotations.Step
-    public void validarPasaporteEliminado() throws InterruptedException {
-        page.validarPasaporteEliminado();
+    public void clickarEliminarPasaporte() throws InterruptedException {
+        page.clickarEliminarPasaporte();
     }
 }

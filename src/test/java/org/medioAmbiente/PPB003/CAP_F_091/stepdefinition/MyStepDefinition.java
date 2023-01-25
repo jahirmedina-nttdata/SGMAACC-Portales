@@ -1,7 +1,6 @@
 package org.medioAmbiente.PPB003.CAP_F_091.stepdefinition;
 
 import io.cucumber.java.es.Dado;
-import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_091.step.MyStep;
@@ -27,19 +26,9 @@ public class MyStepDefinition {
         myStep.autenticarUsuario();
     }
 
-    @Y("^PPB003-CAPF091 - Seleccionar idioma$")
-    public void Seleccionar_Idioma()throws InterruptedException {
-        myStep.seleccionarIdioma();
-    }
-
-    @Y("^PPB003-CAPF091 - Clickar ficha pasaporte$")
-    public void Clickar_Ficha_Pasaporte()throws InterruptedException {
-        myStep.clickarFichaPasaporte();
-    }
-
-    @Entonces("^PPB003-CAPF091 - Validar Traduccion$")
-    public void Validar_Traduccion()throws InterruptedException {
-        myStep.validarTraduccion();
+    @Y("^PPB003-CAPF091 - Clickar Tarjeta Pasaporte$")
+    public void Clickar_Tarjeta_Pasaporte()throws InterruptedException {
+        myStep.clikarTarjetaPasaporte();
     }
 
 }

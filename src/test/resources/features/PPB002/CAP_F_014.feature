@@ -1,18 +1,16 @@
 #language: es
 @PPB002-CAP_F_014
 
-Característica: PPB002-CAP_F_014 - Proximos Eventos
+Característica: PPB002-CAP_F_014 - Visualizacion Detalle tiempo
   Como un usuario comun
-  Quiero acceder al portal
-  Para visualizar eventos
+  Quiero seleccionar provincia
+  Para visualizar tiempo
 
   Escenario: Cargando el Portal de Referencia
-    Dado PPB002-CAPF014 - Cargando el Navegador
-    Cuando PPB002-CAPF014 - Se haya cargado la web
+    Dado PPB002-CAPF014 - Se haya cargado la web
     Y PPB002-CAPF014 - Aceptar las cookies
-    Y PPB002-CAPF014 - Ubicarse en la seccion Proximos Eventos
-    Y PPB002-CAPF014 - Clickar titulo
-    Y PPB002-CAPF014 - Clickar en el icono mas
+    Y PPB002-CAPF014 - Visualizar detalle de tiempo
+    Y PPB002-CAPF014 - Clickar enlace
 
 
 

@@ -22,9 +22,14 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF123 - Seleccionar menu PUBLICACIONES")
-    public void Seleccionar_Menu_PUBLICACIONES() throws InterruptedException {
-        myStep.seleccionarMenuPublicaciones();
+    @Y("^PPB003-CAPF123 - Seleccionar menu QUE PUEDES HACER")
+    public void Seleccionar_Menu_QUE_PUEDES_HACER() throws InterruptedException {
+        myStep.seleccionarMenu();
+    }
+
+    @Y("^PPB003-CAPF123 - Seleccionar submenu BUSCADOR DE ESPACIOS NATURALES$")
+    public void Seleccionar_Submenu_BUSCADOR_DE_ESPACIOS_NATURALES() throws InterruptedException {
+        myStep.seleccionarSubmenu();
     }
 
     @Y("^PPB003-CAPF123 - Escribe Sierra de Aracena en el cuadro de busqueda$")
@@ -44,9 +49,9 @@ public class MyStepDefinition {
     }
 
 
-    @Y("^PPB003-CAPF123 - Pulsar en enlace Formato PDF$")
-    public void Pulsar_En_Enlace_Formato_PDF() throws InterruptedException {
-        myStep.pulsarFormatoPDF();
+    @Y("^PPB003-CAPF123 - Pulsar el boton EXPORTAR RESULTADOS$")
+    public void Pulsar_El_Boton_EXPORTAR_RESULTADOS() throws InterruptedException {
+        myStep.pulsarExportarResultados();
     }
 
 }
