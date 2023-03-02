@@ -143,7 +143,7 @@ public class MyPage extends PageObject {
         }
     }
 
-    public void ejecutarcaso() throws InterruptedException {
+    public void navegarPaginadorCAPF067() throws InterruptedException {
         Limpiar.click();
         btnBuscar.click();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);

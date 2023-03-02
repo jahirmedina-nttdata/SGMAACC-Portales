@@ -12,7 +12,7 @@ Característica: PPB006-CAP_F_003 - Acceso al Portal de Referencia
     Y PPB006-CAPF003 - Visualizar cabecera CAPF103
     Y PPB006-CAPF003 - Visualizar menu CAPF114
     Y PPB006-CAPF003 - Visualizar migas CAPF113
-    Y PPB006-CAPF003 - Visualizar piepag CAPF115
+    Y PPB006-CAPF003 - Visualizar footer CAPF115
 
 
 

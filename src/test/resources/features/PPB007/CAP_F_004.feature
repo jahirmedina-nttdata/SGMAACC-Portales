@@ -8,6 +8,6 @@ Característica: PPB007-CAP_F_004 - Visualizacion Tramites mas solicitados
   Escenario: Cargando Portal de referencia
     Dado PPB007-CAPF004 - Accedo al Navegador
     Y PPB007-CAPF004 - Acepto Cookies
-    Y PPB007-CAPF004 - Visualizar CAPF038
-    Y PPB007-CAPF004 - Visualizar CAPF039
+    Y PPB007-CAPF004 - Visualizar CAPF038 Componentes Basicos
+    Y PPB007-CAPF004 - Visualizar CAPF039 Componentes Destacados
 

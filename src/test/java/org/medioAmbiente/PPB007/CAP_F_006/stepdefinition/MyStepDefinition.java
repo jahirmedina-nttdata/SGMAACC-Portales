@@ -21,13 +21,13 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB007-CAPF006 - Visualizar CAPF038$")
-    public void Visualizar_CAPF038() throws InterruptedException{
+    @Y("^PPB007-CAPF006 - Visualizar CAPF038 Componentes Basicos$")
+    public void Visualizar_CAPF038_Componentes_Basicos() throws InterruptedException{
         myStep.visualizarCAPF038();
     }
 
-    @Y("^PPB007-CAPF006 - Visualizar CAPF040$")
-    public void Visualizar_CAPF040() throws InterruptedException{
+    @Y("^PPB007-CAPF006 - Visualizar CAPF040 Componente Directo A$")
+    public void Visualizar_CAPF040_Componente_Directo_A() throws InterruptedException{
         myStep.visualizarCAPF040();
     }
 }

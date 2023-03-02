@@ -39,13 +39,13 @@ public class MyStepDefinition {
         myStep.clickarEnlace();
 
     }
-    @Y("^PPB004-CAPF004 - Visualizar CAP_F_005$")
-    public void Visualizar_CAP_F_005() throws InterruptedException, URISyntaxException {
+    @Y("^PPB004-CAPF004 - Visualizar Buscador Avanzado CAP_F_005$")
+    public void Visualizar_Buscador_Avanzado_CAP_F_005() throws InterruptedException, URISyntaxException {
         myStep.visualizarCAPF05();
     }
 
-    @Y("PPB004-CAPF004 - Visualizar CAP_F_067")
-    public void VisualizarCAP_F_067()throws InterruptedException {
+    @Y("PPB004-CAPF004 - Visualizar Paginador CAP_F_067")
+    public void Visualizar_Paginador_CAP_F_067()throws InterruptedException {
         myStep.visualizarCAPF067();
     }
 }

@@ -34,8 +34,8 @@ public class MyStepDefinition {
         myStep.visualizarCAPF105();
     }
 
-    @Y("^PPB006-CAPF006 - Visualizar componente CAPF106$")
-    public void Visualizar_Componente_CAPF106()throws InterruptedException {
+    @Y("^PPB006-CAPF006 - Visualizar componente basico CAPF106$")
+    public void Visualizar_Componente_Basico_CAPF106()throws InterruptedException {
         myStep.visualizarCAPF106();
     }
 }

@@ -18,7 +18,7 @@ Característica: PPB004-CAP_F_065 - Buscador Tramites
     Y PPB004-CAPF065 - Buscar por texto y plazo abierto
     Y PPB004-CAPF065 - Acceder al contenido
     Y PPB004-CAPF065 - Validar texto flotante
-    Y PPB004-CAPF065 - Realizar CAP_F_067
+    Y PPB004-CAPF065 - Navegar en paginador CAP_F_067
 
 
 

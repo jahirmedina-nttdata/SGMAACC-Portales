@@ -68,9 +68,9 @@ public class MyStepDefinition {
     }
 
 
-    @Y("^PPB004-CAPF065 - Realizar CAP_F_067$")
-    public void Realizar_CAP_F_67()throws InterruptedException {
-        myStep.ejecutarcaso();
+    @Y("^PPB004-CAPF065 - Navegar en paginador CAP_F_067$")
+    public void Navegar_En_Paginador_CAP_F_067()throws InterruptedException {
+        myStep.navegarPaginadorCAPF067();
     }
 }
 

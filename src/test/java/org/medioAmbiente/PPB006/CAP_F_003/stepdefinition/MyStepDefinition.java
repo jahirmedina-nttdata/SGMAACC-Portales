@@ -37,8 +37,8 @@ public class MyStepDefinition {
         myStep.visualizarCAPF113();
     }
 
-    @Y("^PPB006-CAPF003 - Visualizar piepag CAPF115$")
-    public void Visualizar_Piepag_CAPF115()throws InterruptedException {
+    @Y("^PPB006-CAPF003 - Visualizar footer CAPF115$")
+    public void Visualizar_Footer_CAPF115()throws InterruptedException {
         myStep.visualizarCAPF115();
     }
 

@@ -68,7 +68,7 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void ejecutarcaso() throws InterruptedException{
-        page.ejecutarcaso();
+    public void navegarPaginadorCAPF067() throws InterruptedException{
+        page.navegarPaginadorCAPF067();
     }
 }

@@ -9,10 +9,10 @@ Característica: PPB004-CAP_F_003 - Visualizacion de elementos home
   Escenario: Cargando Portal de referencia
     Dado PPB004-CAPF003 - Accedo al portal
     Cuando PPB004-CAPF003 - Acepto Cookies
-    Y PPB004-CAPF003 - Visualizar CAP_F_050
-    Y PPB004-CAPF003 - Visualizar CAP_F_051
-    Y PPB004-CAPF003 - Visualizar CAP_F_052
-    Y PPB004-CAPF003 - Visualizar CAP_F_053
+    Y PPB004-CAPF003 - Visualizar Cabecera CAP_F_050
+    Y PPB004-CAPF003 - Visualizar Menu CAP_F_051
+    Y PPB004-CAPF003 - Visualizar Camino de Migas CAP_F_052
+    Y PPB004-CAPF003 - Visualizar Pie de Pagina CAP_F_053
 
 
 

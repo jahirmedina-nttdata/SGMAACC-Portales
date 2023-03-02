@@ -12,8 +12,8 @@ Característica: PPB004-CAP_F_004 - Visualizacion Buscador General
     Y PPB004-CAPF004 - Mostrar buscador general
     Y PPB004-CAPF004 - Buscar por texto
     Y PPB004-CAPF004 - Clickar enlace
-    Y PPB004-CAPF004 - Visualizar CAP_F_005
-    Y PPB004-CAPF004 - Visualizar CAP_F_067
+    Y PPB004-CAPF004 - Visualizar Buscador Avanzado CAP_F_005
+    Y PPB004-CAPF004 - Visualizar Paginador CAP_F_067
 
 
 

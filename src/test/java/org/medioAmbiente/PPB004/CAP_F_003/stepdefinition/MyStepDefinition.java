@@ -25,23 +25,23 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB004-CAPF003 - Visualizar CAP_F_050$")
-    public void Visualizar_CAP_F_050() throws InterruptedException {
+    @Y("^PPB004-CAPF003 - Visualizar Cabecera CAP_F_050$")
+    public void Visualizar_Cabecera_CAP_F_050() throws InterruptedException {
         myStep.ejecutarF050();
     }
 
-    @Y("^PPB004-CAPF003 - Visualizar CAP_F_051$")
-    public void Visualizar_CAP_F_051() throws InterruptedException {
+    @Y("^PPB004-CAPF003 - Visualizar Menu CAP_F_051$")
+    public void Visualizar_Menu_CAP_F_051() throws InterruptedException {
         myStep.ejecutarF051();
     }
 
-    @Y("^PPB004-CAPF003 - Visualizar CAP_F_052$")
-    public void Visualizar_CAP_F_052() throws InterruptedException {
+    @Y("^PPB004-CAPF003 - Visualizar Camino de Migas CAP_F_052$")
+    public void Visualizar_Camino_De_Migas_CAP_F_052() throws InterruptedException {
         myStep.ejecutarF052();
     }
 
-    @Y("^PPB004-CAPF003 - Visualizar CAP_F_053$")
-    public void Visualizar_CAP_F_053() throws InterruptedException, URISyntaxException {
+    @Y("^PPB004-CAPF003 - Visualizar Pie de Pagina CAP_F_053$")
+    public void Visualizar_Pie_De_Pagina_CAP_F_053() throws InterruptedException, URISyntaxException {
         myStep.ejecutarF053();
     }
 }
