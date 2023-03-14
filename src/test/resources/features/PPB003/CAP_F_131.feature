@@ -1,15 +1,16 @@
 #language: es
 @PPB003-CAP_F_131
 
-Característica: PPB003-CAP_F_131 - Visualizar busqueda de Espacios Naturales y Equipamiento
+Característica: PPB003-CAP_F_131 - Navegar entre paginas de resultados
   Como un usuario comun
   Quiero acceder al portal web
-  Para buscar en espacios naturales
+  Para navegar entre paginas
 
-  Escenario: Cargando Portal Ventana Visitante
+  Escenario: Cargando Web Buscador de Espacios Naturales
     Dado PPB003-CAPF131 - Accedo al Navegador
     Cuando PPB003-CAPF131 - Acepto Cookies
-    Y PPB003-CAPF131 - Seleccionar tipo de espacio LUGAR DE IMPORTANCIA COMUNITARIA
-    Y PPB003-CAPF131 - Seleccionar nombre de espacio DUNAS DEL ODIEL
-    Y PPB003-CAPF131 - Clickar buscar
-    Entonces PPB003-CAPF131 - Validar resultado
+    Y PPB003-CAPF131 - Seleccionar el paginador 5
+    Y PPB003-CAPF131 - Clickar siguiente pagina
+    Y PPB003-CAPF131 - Clickar siguiente en la ultima pagina
+    Y PPB003-CAPF131 - Clickar anterior
+    Y PPB003-CAPF131 - Clickar anterior en la primera pagina

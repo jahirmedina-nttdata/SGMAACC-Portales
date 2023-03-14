@@ -9,9 +9,6 @@ public class MyStep extends ScenarioSteps {
 
     private MyPage myPage;
 
-    private String prntw;
-    private String popwnd;
-
     @net.thucydides.core.annotations.Step
     public void cargarPagina() throws InterruptedException {
         myPage.open();
@@ -26,22 +23,28 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarImportanciaComunitaria() throws InterruptedException {
-        myPage.seleccionarImportanciaComunitaria();
+    public void seleccionarPaginador5() throws InterruptedException {
+        myPage.seleccionarPaginador5();
+    }
+
+
+    @net.thucydides.core.annotations.Step
+    public void clickarSiguientePag() throws InterruptedException {
+        myPage.clickarSiguientePag();
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarDunasOdiel() throws InterruptedException {
-        myPage.seleccionarDunasOdiel();
+    public void clickarSiguienteUltimaPag() throws InterruptedException {
+        myPage.clickarSiguienteUltimaPag();
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarBuscar() throws InterruptedException {
-        myPage.clickarBuscar();
+    public void clickarAnterior() throws InterruptedException {
+        myPage.clickarAnterior();
     }
 
     @net.thucydides.core.annotations.Step
-    public void validarResultado() throws InterruptedException {
-        myPage.validarResultado();
+    public void clickarAnteriorPrimeraPag() throws InterruptedException {
+        myPage.clickarAnteriorPrimeraPag();
     }
 }

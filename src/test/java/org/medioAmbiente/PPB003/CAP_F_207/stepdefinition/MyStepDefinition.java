@@ -22,14 +22,14 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF207 - Seleccionar ficha ANDALUCIA TIERRA DE ACOGIDA DE QUEBRANTAHUESOS")
-    public void Seleccionar_Ficha_ANDALUCIA_TIERRA_DE_ACOGIDA_DE_QUEBRANTAHUESOS() throws InterruptedException {
-        myStep.seleccionarFicha();
+    @Y("^PPB003-CAPF207 - Clickar pestaña BUENAS PRÁCTICAS$")
+    public void Clickar_Pestaña_BUENAS_PRÁCTICAS() throws InterruptedException {
+        myStep.clickarBuenasPracticas();
     }
 
-    @Entonces("^PPB003-CAPF207 - Validar Noticia$")
-    public void Validar_Noticia() throws InterruptedException {
-        myStep.validarNoticia();
+    @Entonces("^PPB003-CAPF207 - Validar Tarjetas$")
+    public void Validar_Tarjetas() throws InterruptedException {
+        myStep.validarTarjetas();
     }
 
 }

@@ -96,7 +96,6 @@ public class MyPage extends PageObject {
     }
 
     public void visualizarCAPF049() throws InterruptedException {
-        getDriver().navigate().back();
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Menu)
                 .perform();

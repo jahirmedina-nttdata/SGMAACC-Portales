@@ -22,24 +22,31 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF149 - Seleccionar tipo de espacio LUGAR DE IMPORTANCIA COMUNITARIA")
-    public void Seleccionar_Tipo_De_Espacio_LUGAR_DE_IMPORTANCIA_COMUNITARIA() throws InterruptedException {
-        myStep.seleccionarTipoDeEspacio();
+    @Y("^PPB003-CAPF149 - Seleccionar menu PUBLICACIONES")
+    public void Seleccionar_Menu_PUBLICACIONES() throws InterruptedException {
+        myStep.seleccionarMenuPublicaciones();
     }
 
-    @Y("^PPB003-CAPF149 - Seleccionar nombre de espacio MARIASMAS DEL ODIEL$")
-    public void Seleccionar_Nombre_De_Espacio_MARIASMAS_DEL_ODIEL() throws InterruptedException {
-        myStep.seleccionarNombreDeEspacio();
+    @Y("^PPB003-CAPF149 - Escribe Sierra de Aracena en el cuadro de busqueda$")
+    public void Escribe_Sierra_De_Aracena_En_El_Cuadro_De_Busqueda() throws InterruptedException {
+        myStep.buscarPorTexto();
     }
 
-    @Y("^PPB003-CAPF149 - Clickar buscar$")
-    public void Clickar_Buscar() throws InterruptedException {
-        myStep.clickarBuscar();
+
+    @Y("^PPB003-CAPF149 - Pulsar el boton Buscar$")
+    public void Pulsar_El_Boton_Buscar() throws InterruptedException {
+        myStep.pulsarBuscar();
     }
 
-    @Entonces("^PPB003-CAPF149 - Validar resultado$")
-    public void Validar_Resultado() throws InterruptedException {
-        myStep.validarResutado();
+    @Entonces("^PPB003-CAPF149 - Validar busqueda$")
+    public void Validar_Busqueda() throws InterruptedException {
+        myStep.validarBusqueda();
+    }
+
+
+    @Y("^PPB003-CAPF149 - Pulsar en enlace Formato PDF$")
+    public void Pulsar_En_Enlace_Formato_PDF() throws InterruptedException {
+        myStep.pulsarFormatoPDF();
     }
 
 }

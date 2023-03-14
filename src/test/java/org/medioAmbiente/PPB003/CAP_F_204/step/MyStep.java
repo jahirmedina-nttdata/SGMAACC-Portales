@@ -9,6 +9,9 @@ public class MyStep extends ScenarioSteps {
 
     private MyPage myPage;
 
+    private String prntw;
+    private String popwnd;
+
     @net.thucydides.core.annotations.Step
     public void cargarPagina() throws InterruptedException {
         myPage.open();
@@ -19,21 +22,17 @@ public class MyStep extends ScenarioSteps {
     public void aceptarCookies() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor)getDriver();
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
-        j.executeScript("window.scrollBy(0, 50)");
+      //  j.executeScript("window.scrollBy(0, 700)");
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarTipoDeEspacio() throws InterruptedException {
-        myPage.seleccionarTipoDeEspacio();
+    public void clickarDatosDeInteres() throws InterruptedException {
+        myPage.clickarDatosDeInteres();
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarNombreDeEspacio() throws InterruptedException {
-        myPage.seleccionarNombreDeEspacio();
+    public void clickarReservaTuVisita() throws InterruptedException {
+        myPage.clickarReservaTuVisita();
     }
 
-    @net.thucydides.core.annotations.Step
-    public void clickarBuscar() throws InterruptedException {
-        myPage.clickarBuscar();
-    }
 }

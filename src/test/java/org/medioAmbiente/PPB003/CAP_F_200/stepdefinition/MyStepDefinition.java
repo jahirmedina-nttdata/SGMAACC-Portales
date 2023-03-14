@@ -21,14 +21,19 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF200 - Seleccionar equipamiento AREA RECREATIVA")
-    public void Seleccionar_Equipamiento_AREA_RECREATIVA() throws InterruptedException {
-        myStep.seleccionarAreaRecreativa();
+    @Y("^PPB003-CAPF200 - Escribir Andalucia en el cuadro de texto$")
+    public void Escribir_Andalucia_En_El_Cuadro_De_Texto() throws InterruptedException {
+        myStep.escribirTextoBusqueda();
     }
 
-    @Y("^PPB003-CAPF200 - Seleccionar provincia ALMERIA$")
-    public void Seleccionar_Provincia_ALMERIA() throws InterruptedException {
-        myStep.seleccionarAlmeria();
+    @Y("^PPB003-CAPF200 - Seleccionar tipo de equipamiento CENTRO DE VISITANTES$")
+    public void Seleccionar_Tipo_De_Equipamiento_CENTRO_DE_VISITANTES() throws InterruptedException {
+        myStep.seleccionarTipoEquipamiento();
+    }
+
+    @Y("^PPB003-CAPF200 - Seleccionar provincia CÁDIZ$")
+    public void Seleccionar_Provincia_CÁDIZ() throws InterruptedException {
+        myStep.seleccionarProvincia();
     }
 
     @Y("^PPB003-CAPF200 - Clickar buscar$")

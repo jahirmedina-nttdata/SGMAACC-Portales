@@ -21,19 +21,15 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF204 - Seleccionar tipo de espacio LUGAR DE IMPORTANCIA COMUNITARIA")
-    public void Seleccionar_Tipo_De_Espacio_LUGAR_DE_IMPORTANCIA_COMUNITARIA() throws InterruptedException {
-        myStep.seleccionarTipoDeEspacio();
+    @Y("^PPB003-CAPF204 - Clickar pestaña Datos de Interes$")
+    public void Clickar_Pestaña_Datos_De_Interes() throws InterruptedException {
+        myStep.clickarDatosDeInteres();
     }
 
-    @Y("^PPB003-CAPF204 - Seleccionar nombre de espacio ACEBUCHAL DE ALPIZAR$")
-    public void Seleccionar_Nombre_De_Espacio_ACEBUCHAL_DE_ALPIZAR() throws InterruptedException {
-        myStep.seleccionarNombreDeEspacio();
+    @Y("^PPB003-CAPF204 - Clickar en boton ENLACE A RESERVA TU VISITA$")
+    public void Clickar_En_Boton_ENLACE_A_RESERVA_TU_VISITA() throws InterruptedException {
+        myStep.clickarReservaTuVisita();
     }
 
-    @Y("^PPB003-CAPF204 - Clickar buscar$")
-    public void Clickar_Buscar() throws InterruptedException {
-        myStep.clickarBuscar();
-    }
 }
 

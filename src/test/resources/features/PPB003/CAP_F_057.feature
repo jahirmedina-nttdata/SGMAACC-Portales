@@ -1,10 +1,10 @@
 #language: es
 @PPB003-CAP_F_057
 
-Característica: PPB003-CAP_F_057 - Visualizacion de sugerencia del Mes, noticias y avisos
+Característica: PPB003-CAP_F_057 - Acceder a Redes Sociales
   Como un usuario
   Quiero acceder al portal
-  Para visualizar sugerencia
+  Para visualizar Redes Sociales
 
   Escenario: Cargando Portal Ventana visitante
     Dado PPB003-CAPF057 - Accedo al Navegador

@@ -1,10 +1,10 @@
 #language: es
 @PPB003-CAP_F_053
 
-Característica: PPB003-CAP_F_053 - Visualizacion de Banner
+Característica: PPB003-CAP_F_053 - Visualizacion de Enlace a la Agenda
   Como un usuario
   Quiero acceder al portal
-  Para navegar por banner
+  Para navegar en Agenda
 
   Escenario: Cargando Portal Ventana visitante
     Dado PPB003-CAPF053 - Accedo al Navegador

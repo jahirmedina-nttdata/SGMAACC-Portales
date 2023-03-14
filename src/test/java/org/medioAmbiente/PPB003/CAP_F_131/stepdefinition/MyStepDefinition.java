@@ -2,7 +2,6 @@ package org.medioAmbiente.PPB003.CAP_F_131.stepdefinition;
 
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
-import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_131.step.MyStep;
@@ -22,24 +21,29 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF131 - Seleccionar tipo de espacio LUGAR DE IMPORTANCIA COMUNITARIA")
-    public void Seleccionar_Tipo_De_Espacio_LUGAR_DE_IMPORTANCIA_COMUNITARIA() throws InterruptedException {
-        myStep.seleccionarImportanciaComunitaria();
+    @Y("^PPB003-CAPF131 - Seleccionar el paginador 5")
+    public void Seleccionar_El_Paginador_5() throws InterruptedException {
+        myStep.seleccionarPaginador5();
     }
 
-    @Y("^PPB003-CAPF131 - Seleccionar nombre de espacio DUNAS DEL ODIEL$")
-    public void Seleccionar_Nombre_De_Espacio_DUNAS_DEL_ODIEL() throws InterruptedException {
-        myStep.seleccionarDunasOdiel();
+    @Y("^PPB003-CAPF131 - Clickar siguiente pagina$")
+    public void Clickar_Siguiente_Pagina() throws InterruptedException {
+        myStep.clickarSiguientePag();
     }
 
-    @Y("^PPB003-CAPF131 - Clickar buscar$")
-    public void Clickar_Buscar() throws InterruptedException {
-        myStep.clickarBuscar();
+    @Y("^PPB003-CAPF131 - Clickar siguiente en la ultima pagina$")
+    public void Clickar_Siguiente_En_La_Ultima_Pagina() throws InterruptedException {
+        myStep.clickarSiguienteUltimaPag();
     }
 
-    @Entonces("^PPB003-CAPF131 - Validar resultado$")
-    public void Validar_Resultado() throws InterruptedException {
-        myStep.validarResultado();
+    @Y("^PPB003-CAPF131 - Clickar anterior$")
+    public void Clickar_Anterior() throws InterruptedException {
+        myStep.clickarAnterior();
+    }
+
+    @Y("^PPB003-CAPF131 - Clickar anterior en la primera pagina$")
+    public void Clickar_Anterior_En_La_Primera_Pagina() throws InterruptedException {
+        myStep.clickarAnteriorPrimeraPag();
     }
 
 }

@@ -26,37 +26,22 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarMenu() throws InterruptedException {
-        myPage.seleccionarMenu();
+    public void seleccionarImportanciaComunitaria() throws InterruptedException {
+        myPage.seleccionarImportanciaComunitaria();
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarSubmenu() throws InterruptedException {
-        myPage.seleccionarSubmenu();
+    public void seleccionarDunasOdiel() throws InterruptedException {
+        myPage.seleccionarDunasOdiel();
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarParqueNatural() throws InterruptedException {
-        myPage.seleccionarParqueNatural();
+    public void clickarBuscar() throws InterruptedException {
+        myPage.clickarBuscar();
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarSierradeAracenayPicosdeAroche() throws InterruptedException {
-        myPage.seleccionarSierradeAracenayPicosdeAroche();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void pulsarBuscar() throws InterruptedException {
-        myPage.pulsarBuscar();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void validarBusqueda() throws InterruptedException {
-        myPage.validarBusqueda();
-    }
-
-    @net.thucydides.core.annotations.Step
-    public void pulsarLimpiar() throws InterruptedException {
-        myPage.pulsarLimpiar();
+    public void validarResultado() throws InterruptedException {
+        myPage.validarResultado();
     }
 }

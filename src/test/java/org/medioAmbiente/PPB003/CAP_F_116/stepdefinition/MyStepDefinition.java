@@ -1,9 +1,13 @@
 package org.medioAmbiente.PPB003.CAP_F_116.stepdefinition;
 
+import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 import org.medioAmbiente.PPB003.CAP_F_116.step.MyStep;
+
+import java.sql.SQLException;
 
 public class MyStepDefinition {
 
@@ -15,25 +19,30 @@ public class MyStepDefinition {
         myStep.cargarPagina();
     }
 
-
-    @Y("^PPB003-CAPF116 - Aceptar Cookies$")
-    public void Aceptar_Cookies() throws InterruptedException{
+    @Cuando("^PPB003-CAPF116 - Acepto Cookies$")
+    public void Acepto_Cookies() throws InterruptedException {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB003-CAPF116 - Clickar paginador$")
-    public void Clickar_Paginador()throws InterruptedException {
-        myStep.clickarPaginador();
+    @Y("^PPB003-CAPF116 - Seleccionar Area Recreativa")
+    public void Seleccionar_Area_Recreativa() throws InterruptedException {
+        myStep.seleccionarAreaRecreativa();
     }
 
-    @Y("^PPB003-CAPF116 - Seleccionar publicacion$")
-    public void Seleccionar_Publicacion()throws InterruptedException {
-        myStep.seleccionarPublicacion();
+    @Y("^PPB003-CAPF116 - Seleccionar provincia Almeria$")
+    public void Seleccionar_Provincia_Almeria() throws InterruptedException {
+        myStep.seleccionarAlmeria();
     }
 
-    @Y("^PPB003-CAPF116 - Retroceder pagina$")
-    public void Retroceder_Pagina()throws InterruptedException {
-        myStep.retrocederPagina();
+    @Y("^PPB003-CAPF116 - Clickar buscar$")
+    public void Clickar_Buscar() throws InterruptedException {
+        myStep.clickarBuscar();
     }
+
+    @Entonces("^PPB003-CAPF116 - Validar resultado$")
+    public void Validar_Resultado() throws InterruptedException, SQLException {
+        myStep.validarResultado();
+    }
+
 }
 

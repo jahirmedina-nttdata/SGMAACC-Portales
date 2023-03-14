@@ -1,44 +1,57 @@
 package org.medioAmbiente.PPB003.CAP_F_204.page;
 
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/noticias?categoryVal=")
+import java.util.Iterator;
+import java.util.Set;
+
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/detalle-actividad/-/asset_publisher/QYwm8uHC3ojh/content/buceo/255035")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_agurN6e4v7Bv_category1-button\"]")
-    private WebElementFacade Tipo_Espacio;
+    @FindBy(xpath = "//a[contains(text(),'DATOS DE INTERÉS')]")
+    private WebElementFacade Pestaña_DatosInteres;
 
-    @FindBy(xpath = "//div[contains(text(),'LUGAR DE IMPORTANCIA COMUNITARIA')]")
-    private WebElementFacade Importancia_Comunitaria;
+    @FindBy(xpath = "//a[contains(text(),'Enlace a Reserva Tu Visita')]")
+    private WebElementFacade Reserva_Visita;
 
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_agurN6e4v7Bv_espaciosNaturales-button\"]")
-    private WebElementFacade Nombre_Espacio;
+    private String prntw;
+    private String popwnd;
 
-    @FindBy(xpath = "//div[contains(text(),'ACEBUCHAL DE ALPIZAR')]")
-    private WebElementFacade Acebuchal_Alpizar;
-
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_agurN6e4v7Bv_searchButton\"]")
-    private WebElementFacade btnBuscar;
-
-
-    public void seleccionarTipoDeEspacio() throws InterruptedException {
-        Tipo_Espacio.click();
-        Importancia_Comunitaria.click();
+    public void clickarDatosDeInteres() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Buceo')]")));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 400)");
+        Pestaña_DatosInteres.click();
     }
 
-    public void seleccionarNombreDeEspacio() throws InterruptedException {
-        Nombre_Espacio.click();
-        Acebuchal_Alpizar.click();
+    public void clickarReservaTuVisita() throws InterruptedException {
+        WebElement Element = getDriver().findElement(By.xpath("//a[contains(text(),'DATOS DE INTERÉS')]"));
+        JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("arguments[0].scrollIntoView();", Element);
+        Reserva_Visita.click();
+        Set<String> wnd = getDriver().getWindowHandles();
+        // window handles iteration
+        Iterator<String> i = wnd.iterator();
+        prntw = i.next();
+        popwnd = i.next();
+        // switching pop up window handle id
+        getDriver().switchTo().window(popwnd);
+        System.out.println("Nombre de Pestana "+ getDriver().getTitle());
+        // closes pop up window
+        getDriver().close();
+        // switching parent window handle id
+        getDriver().switchTo().window(prntw);
     }
-
-    public void clickarBuscar() throws InterruptedException {
-        btnBuscar.click();
-    }
-
 }

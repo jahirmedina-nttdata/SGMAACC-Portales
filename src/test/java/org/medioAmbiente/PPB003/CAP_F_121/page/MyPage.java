@@ -1,11 +1,11 @@
 package org.medioAmbiente.PPB003.CAP_F_121.page;
 
 
-import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -15,100 +15,56 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante")
+@DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/buscador-de-espacios-naturales-y-equipamientos?categoryVal=")
 
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"layout_56\"]")
-    private WebElementFacade Menu;
-
-    @FindBy(xpath = "//*[@id=\"layout_60\"]")
-    private WebElementFacade SubMenu;
-
-    @FindBy(xpath = "//span[@title=\"Seleccione un tipo de espacio\"]")
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_rbJEpPKqmqSg_category0-button\"]")
     private WebElementFacade SelectTipo_Espacio;
 
-    @FindBy(xpath = "//div[contains(text(),'PARQUE NATURAL')]")
-    private WebElementFacade Tipo_Espacio;
+    @FindBy(xpath = "//div[contains(text(),'LUGAR DE IMPORTANCIA COMUNITARIA')]")
+    private WebElementFacade Importancia_Comunitaria;
 
-    @FindBy(xpath = "//span[@title=\"Seleccione un nombre de espacio\"]")
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_rbJEpPKqmqSg_espaciosNaturales-button\"]")
     private WebElementFacade SelectNombre_Espacio;
 
-    @FindBy(xpath = "//div[contains(text(),'SIERRA DE ARACENA Y PICOS DE AROCHE')]")
-    private WebElementFacade Nombre_Espacio;
+    @FindBy(xpath = "//div[contains(text(),'DUNAS DEL ODIEL')]")
+    private WebElementFacade Dunas_Odiel;
 
-    @FindBy(xpath = "//button/span[contains(text(),'Buscar')]")
+    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_rbJEpPKqmqSg_searchButton\"]")
     private WebElementFacade btnBuscar;
 
-    @FindBy(xpath = "//button/span[contains(text(),'Limpiar')]")
-    private WebElementFacade btnLimpiar;
 
-    @FindBy(xpath = "//span[@class=\"evr-article-collage-map__title\"]")
-    private WebElementFacade Validar_Resultado;
-
-
-    public void seleccionarMenu() throws InterruptedException {
-        Actions actions = new Actions(getDriver());
-        actions.moveToElement(Menu)
-                .perform();
+    public void seleccionarImportanciaComunitaria() throws InterruptedException {
+        Actions action = new Actions(getDriver());
+        action.moveToElement(SelectTipo_Espacio).click().perform();
+        action.moveToElement(Importancia_Comunitaria).click().perform();
     }
 
-    public void seleccionarSubmenu() throws InterruptedException {
-        Actions actions = new Actions(getDriver());
-        actions.moveToElement(SubMenu)
-                .perform();
-        SubMenu.click();
-    }
-
-    public void seleccionarParqueNatural() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@title=\"Seleccione un tipo de espacio\"]")));
-        SelectTipo_Espacio.click();
-        Tipo_Espacio.click();
-    }
-
-    public void seleccionarSierradeAracenayPicosdeAroche() throws InterruptedException {
+    public void seleccionarDunasOdiel() throws InterruptedException {
         SelectNombre_Espacio.waitUntilClickable();
-        SelectNombre_Espacio.click();
-        Nombre_Espacio.click();
+        Actions action = new Actions(getDriver());
+        action.moveToElement(SelectNombre_Espacio).click().perform();
+        action.moveToElement(Dunas_Odiel).click().perform();
     }
 
-    public void pulsarBuscar() throws InterruptedException {
-        btnBuscar.click();
+    public void clickarBuscar() throws InterruptedException {
+        Actions action = new Actions(getDriver());
+        action.moveToElement(btnBuscar).click().perform();
+    }
+
+    public void validarResultado() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 1000)");
-    }
-
-    public void validarBusqueda() throws InterruptedException {
-        waitFor(1).second();
         List<WebElement> lista = getDriver().findElements(By.xpath("//div[@class=\"evr-map-result__paragraph\"]"));
         if (lista.size() != 0) {
             Assert.assertTrue(true);
         } else {
-            Assert.fail("No existe Lista");
+            Assert.fail("No existe Resultados");
         }
-
-        String validacion = Validar_Resultado.getText();
-        if(validacion.equals("SIERRA DE ARACENA Y PICOS DE AROCHE")) {
-            Assert.assertTrue(true);
-        }else{
-            Assert.fail("Informacion valida");
-        }
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, -400)");
-        waitFor(7).second();
-    }
-
-    public void pulsarLimpiar() throws InterruptedException {
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, -document.body.scrollHeight)");
-        waitFor(1).second();
-        btnLimpiar.click();
-        j.executeScript("window.scrollBy(0, 600)");
-        waitFor(3).second();
     }
 
 }

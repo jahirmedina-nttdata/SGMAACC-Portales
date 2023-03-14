@@ -23,13 +23,18 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarAreaRecreativa() throws InterruptedException {
-        myPage.seleccionarAreaRecreativa();
+    public void escribirTextoBusqueda() throws InterruptedException {
+        myPage.escribirTextoBusqueda();
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarAlmeria() throws InterruptedException {
-        myPage.seleccionarAlmeria();
+    public void seleccionarTipoEquipamiento() throws InterruptedException {
+        myPage.seleccionarTipoEquipamiento();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void seleccionarProvincia() throws InterruptedException {
+        myPage.seleccionarProvincia();
     }
 
     @net.thucydides.core.annotations.Step

@@ -1,13 +1,18 @@
 #language: es
 @PPB003-CAP_F_207
 
-Característica: PPB003-CAP_F_207 - Visualizar Ficha de una Noticia
+Característica: PPB003-CAP_F_207 - Visualizar pestaña BUENAS PRÁCTICAS
   Como un usuario comun
   Quiero acceder al portal web
-  Para visualizar ficha
+  Para visualizar pestaña BUENAS PRÁCTICAS
 
-  Escenario: Cargando Portal Noticias
+  Escenario: Cargando Portal Actividades
     Dado PPB003-CAPF207 - Accedo al Navegador
     Cuando PPB003-CAPF207 - Acepto Cookies
-    Y PPB003-CAPF207 - Seleccionar ficha ANDALUCIA TIERRA DE ACOGIDA DE QUEBRANTAHUESOS
-    Entonces PPB003-CAPF207 - Validar Noticia
+    Y PPB003-CAPF207 - Clickar pestaña BUENAS PRÁCTICAS
+    Entonces PPB003-CAPF207 - Validar Tarjetas
+
+
+
+
+

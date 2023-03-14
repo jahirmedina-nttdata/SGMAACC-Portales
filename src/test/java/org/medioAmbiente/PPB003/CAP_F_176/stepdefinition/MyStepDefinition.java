@@ -39,6 +39,7 @@ public class MyStepDefinition {
 
     @Entonces("^PPB003-CAPF176 - Validar resultado$")
     public void Validar_Resultado() throws InterruptedException {
+        myStep.validarResultado();
     }
 
 }
