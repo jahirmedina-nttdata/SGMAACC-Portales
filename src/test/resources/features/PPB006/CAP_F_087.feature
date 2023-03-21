@@ -9,7 +9,7 @@ Característica: PPB006-CAP_F_087 - Visualizacion Portal Inclusion del cambio
   Escenario: Cargando Portal Inclusion del cambio
     Dado PPB006-CAPF087 - Accedo al Navegador
     Y PPB006-CAPF087 - Acepto Cookies
-    Y PPB006-CAPF087 - Visualizar informacion CAP_F_109
+    Y PPB006-CAPF087 - Visualizar informacion CAP_F_106
 
 
 

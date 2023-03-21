@@ -9,7 +9,7 @@ Característica: PPB006-CAP_F_025 - Visualizacion Informacion Menu
   Escenario: Cargando Portal de referencia
     Dado PPB006-CAPF025 - Accedo al Navegador
     Y PPB006-CAPF025 - Acepto Cookies
-    Y PPB006-CAPF025 - Visualizar informacion CAP_F_109
+    Y PPB006-CAPF025 - Visualizar informacion CAP_F_106
 
 
 

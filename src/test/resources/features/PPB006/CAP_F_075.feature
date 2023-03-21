@@ -9,7 +9,7 @@ Característica: PPB006-CAP_F_075 - Visualizacion Portal Estrategia en Andalucia
   Escenario: Cargando Portal Estrategia en Andalucia
     Dado PPB006-CAPF075 - Accedo al Navegador
     Y PPB006-CAPF075 - Acepto Cookies
-    Y PPB006-CAPF075 - Visualizar informacion CAP_F_109
+    Y PPB006-CAPF075 - Visualizar informacion CAP_F_106
 
 
 

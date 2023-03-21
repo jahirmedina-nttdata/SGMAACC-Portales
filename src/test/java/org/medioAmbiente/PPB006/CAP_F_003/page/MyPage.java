@@ -112,7 +112,7 @@ public class MyPage extends PageObject {
         }
     }
 
-    public void visualizarCAPF114() throws InterruptedException {
+    public void visualizarCAPF113() throws InterruptedException {
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Menu)
                 .perform();
@@ -123,7 +123,7 @@ public class MyPage extends PageObject {
         SubMenu.click();
     }
 
-    public void visualizarCAPF113() throws InterruptedException{
+    public void visualizarCAPF112() throws InterruptedException{
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Miga_Padre)
                 .perform();
@@ -132,7 +132,7 @@ public class MyPage extends PageObject {
         Home.click();
     }
 
-    public void visualizarCAPF115() throws InterruptedException {
+    public void visualizarCAPF114() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         Portal_Ambiental.click();

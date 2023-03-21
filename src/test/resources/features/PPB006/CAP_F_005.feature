@@ -9,7 +9,7 @@ Característica: PPB006-CAP_F_005 - Acceso al Portal de Referencia
   Escenario: Cargando la Web de Referencia
     Dado PPB006-CAPF005 - Accedo al Navegador
     Y PPB006-CAPF005 - Aceptar Cookies
-    Y PPB006-CAPF005 - Visualizar menu CAPF114
+    Y PPB006-CAPF005 - Visualizar menu CAPF113
 
 
 

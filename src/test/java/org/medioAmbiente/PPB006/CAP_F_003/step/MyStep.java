@@ -27,16 +27,16 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void visualizarCAPF114() throws InterruptedException {
-        page.visualizarCAPF114();
-    }
-
-    @net.thucydides.core.annotations.Step
     public void visualizarCAPF113() throws InterruptedException {
         page.visualizarCAPF113();
     }
+
     @net.thucydides.core.annotations.Step
-    public void visualizarCAPF115() throws InterruptedException {
-        page.visualizarCAPF115();
+    public void visualizarCAPF112() throws InterruptedException {
+        page.visualizarCAPF112();
+    }
+    @net.thucydides.core.annotations.Step
+    public void visualizarCAPF114() throws InterruptedException {
+        page.visualizarCAPF114();
     }
 }

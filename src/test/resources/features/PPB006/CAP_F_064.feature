@@ -9,7 +9,7 @@ Característica: PPB006-CAP_F_064 - Visualizacion Portal Jornadas y difusion
   Escenario: Cargando Portal de referencia
     Dado PPB006-CAPF064 - Accedo al Navegador
     Y PPB006-CAPF064 - Acepto Cookies
-    Y PPB006-CAPF064 - Visualizar informacion CAP_F_109
+    Y PPB006-CAPF064 - Visualizar informacion CAP_F_106
 
 
 

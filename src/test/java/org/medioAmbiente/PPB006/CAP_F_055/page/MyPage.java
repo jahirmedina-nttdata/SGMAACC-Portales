@@ -10,7 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 
 
 public class MyPage extends PageObject {
-    public void visualizarCAPF109() throws InterruptedException{
+    public void visualizarCAPF106() throws InterruptedException{
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 200)");
     }

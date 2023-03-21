@@ -27,19 +27,19 @@ public class MyStepDefinition {
         myStep.visualizarCAPF103();
     }
 
-    @Y("^PPB006-CAPF003 - Visualizar menu CAPF114$")
-    public void Visualizar_Menu_CAPF114()throws InterruptedException {
-        myStep.visualizarCAPF114();
-    }
-
-    @Y("^PPB006-CAPF003 - Visualizar migas CAPF113$")
-    public void Visualizar_Migas_CAPF113()throws InterruptedException {
+    @Y("^PPB006-CAPF003 - Visualizar menu CAPF113$")
+    public void Visualizar_Menu_CAPF113()throws InterruptedException {
         myStep.visualizarCAPF113();
     }
 
-    @Y("^PPB006-CAPF003 - Visualizar footer CAPF115$")
-    public void Visualizar_Footer_CAPF115()throws InterruptedException {
-        myStep.visualizarCAPF115();
+    @Y("^PPB006-CAPF003 - Visualizar migas CAPF112$")
+    public void Visualizar_Migas_CAPF112()throws InterruptedException {
+        myStep.visualizarCAPF112();
+    }
+
+    @Y("^PPB006-CAPF003 - Visualizar footer CAPF114$")
+    public void Visualizar_Footer_CAPF114()throws InterruptedException {
+        myStep.visualizarCAPF114();
     }
 
 }

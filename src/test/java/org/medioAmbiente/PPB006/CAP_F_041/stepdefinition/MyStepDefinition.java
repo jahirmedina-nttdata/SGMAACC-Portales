@@ -22,9 +22,9 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB006-CAPF041 - Visualizar informacion CAP_F_109$")
-    public void Visualizar_Informacion_CAP_F_109()throws InterruptedException {
-        myStep.visualizarCAPF109();
+    @Y("^PPB006-CAPF041 - Visualizar informacion CAP_F_106$")
+    public void Visualizar_Informacion_CAP_F_106()throws InterruptedException {
+        myStep.visualizarCAPF106();
     }
 
 }

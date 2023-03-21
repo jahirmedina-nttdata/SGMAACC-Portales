@@ -9,7 +9,7 @@ Característica: PPB006-CAP_F_055 - Visualizacion Portal Proyecto y casos de est
   Escenario: Cargando Portal de referencia
     Dado PPB006-CAPF055 - Accedo al Navegador
     Y PPB006-CAPF055 - Acepto Cookies
-    Y PPB006-CAPF055 - Visualizar informacion CAP_F_109
+    Y PPB006-CAPF055 - Visualizar informacion CAP_F_106
 
 
 

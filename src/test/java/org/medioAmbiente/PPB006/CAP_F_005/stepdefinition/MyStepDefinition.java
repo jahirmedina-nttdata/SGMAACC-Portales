@@ -22,8 +22,8 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB006-CAPF005 - Visualizar menu CAPF114$")
-    public void Visualizar_Menu_CAPF114()throws InterruptedException {
+    @Y("^PPB006-CAPF005 - Visualizar menu CAPF113$")
+    public void Visualizar_Menu_CAPF113()throws InterruptedException {
         myStep.visualizarMenu();
     }
 

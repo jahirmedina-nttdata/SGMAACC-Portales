@@ -1,10 +1,10 @@
 #language: es
 @PPB006-CAP_F_104
 
-Característica: PPB006-CAP_F_104 - Visualizacion de Cabecera
+Característica: PPB006-CAP_F_104 - Buscador General
   Como un usuario comun
   Quiero acceder al portal
-  Para visualizar cabecera
+  Para visualizar buscador
 
   Escenario: Cargando la Web de Referencia
     Dado PPB006-CAPF104 - Accedo al Navegador

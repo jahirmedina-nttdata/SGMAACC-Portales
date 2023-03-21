@@ -36,9 +36,9 @@ public class MyPage extends PageObject {
         Apartado.click();
         Enlace.click();
         getDriver().navigate().back();
-        Apartado.click();
-        Imagen.click();
-        Close_Imagen.click();
-        Apartado.click();
+       // Apartado.click();
+       // Imagen.click();
+       // Close_Imagen.click();
+       // Apartado.click();
     }
 }
