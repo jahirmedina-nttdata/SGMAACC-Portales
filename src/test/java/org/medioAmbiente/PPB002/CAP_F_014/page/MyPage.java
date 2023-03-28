@@ -8,11 +8,17 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.html5.Location;
+import org.openqa.selenium.html5.LocationContext;
 import org.openqa.selenium.support.FindBy;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @DefaultUrl("/medioambiente/portal/el-tiempo")
 
@@ -23,6 +29,12 @@ public class MyPage extends PageObject {
     private WebElementFacade Enlace;
 
     public void cargarpagina() throws AWTException {
+        Map prefs =new HashMap<String,Object>();
+        prefs.put("profile.default_content_setting_values.geolocation",1);
+        ChromeOptions options= new ChromeOptions();
+        options.setExperimentalOption("prefs",prefs);
+        ChromeDriver driver= new ChromeDriver(options);
+        ((LocationContext)driver).setLocation(new Location(37.3828300,-5.9731700,0));
        open();
        waitFor(5).second();
         Robot robot = new  Robot();
@@ -52,7 +64,7 @@ public class MyPage extends PageObject {
         } else {
             Assert.fail("No existe Provincia y Municipio");
         }
-
+waitFor(20).second();
     }
 
     public void clickarEnlace()throws InterruptedException {
