@@ -29,7 +29,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"tab-2\"]/span")
     private WebElementFacade btnmasbuscado;
 
-    @FindBy(xpath = "//*[@id=\"card-cladt13-distributivaMasBuscado2\"]//p")
+    @FindBy(xpath = "//a[@title=\"Enlace - Servicios\"]/p")
     private WebElementFacade btnservicio;
 
 

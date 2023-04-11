@@ -6,6 +6,8 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 @DefaultUrl("/medioambiente/portal/web/cambio-climatico/iniciativas-y-proyectos-nacionales-e-internacionales")
@@ -32,13 +34,17 @@ public class MyPage extends PageObject {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 200)");
         Apartado2.click();
+        waitFor(1).second();
         Apartado2.click();
+        waitFor(1).second();
         Apartado.click();
         Enlace.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.titleContains("Climate-KIC"));
         getDriver().navigate().back();
-        Apartado.click();
-        Imagen.click();
-        Close_Imagen.click();
-        Apartado.click();
+       // Apartado.click();
+       // Imagen.click();
+      //  Close_Imagen.click();
+       // Apartado.click();
     }
 }

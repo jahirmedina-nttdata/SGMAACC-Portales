@@ -47,6 +47,11 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
+    public void visualizarSinFechaHasta() throws InterruptedException{
+        page.visualizarSinFechaHasta();
+    }
+
+    @net.thucydides.core.annotations.Step
     public void visualizarSinDireccion() throws InterruptedException{
         page.visualizarSinDireccion();
     }

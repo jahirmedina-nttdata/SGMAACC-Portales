@@ -48,9 +48,14 @@ public class MyStepDefinition {
         myStep.visualizarSinTexto();
     }
 
-    @Y("^PPB002-CAPF071 - Visualizar sin fecha desde-hasta$")
-    public void Visualizar_Sin_Fecha_DesdeHasta() throws InterruptedException {
+    @Y("^PPB002-CAPF071 - Visualizar sin fecha desde$")
+    public void Visualizar_Sin_Fecha_Desde() throws InterruptedException {
         myStep.visualizarSinFechaDesde();
+    }
+
+    @Y("^PPB002-CAPF071 - Visualizar sin fecha hasta$")
+    public void Visualizar_Sin_Fecha_Hasta() throws InterruptedException {
+        myStep.visualizarSinFechaHasta();
     }
 
     @Y("^PPB002-CAPF071 - Visualizar sin direccion$")

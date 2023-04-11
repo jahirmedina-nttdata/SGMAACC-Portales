@@ -13,6 +13,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 
 @DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
 
@@ -40,6 +42,8 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//li[@class=\"tab active evr-tabs__nav\"]/a")
     private WebElementFacade Validar_Idioma;
 
+    @FindBy(xpath = "//a[@data-title=\"Menú\"]")
+    private WebElementFacade Menu_Vertical;
 
     public void autenticarUsuario() throws InterruptedException {
         Usuario.sendKeys("cmaot_testing");
@@ -49,6 +53,13 @@ public class MyPage extends PageObject {
     }
 
     public void seleccionarIdioma() throws InterruptedException {
+        Menu_Vertical.click();
+        List<WebElement> lista = getDriver().findElements(org.openqa.selenium.By.xpath("//a[@class=\"control-menu-icon lfr-portal-tooltip product-menu-toggle sidenav-toggler active open\"]"));
+        if (lista.size() != 0) {
+            Menu_Vertical.click();
+        } else {
+            Assert.assertTrue(true);
+        }
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 200)");
         Actions action = new Actions(getDriver());

@@ -27,7 +27,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "(//div[@class=\"slick-list draggable\"])[3]")
     private WebElementFacade carrusel_move;
 
-    @FindBy(xpath = "//*[@id=\"card-cladt05-destacadosActualidad3\"]/div/a/h5")
+    @FindBy(xpath = "(//h5[contains(text(),\"Sierra Mágina, el parque natural de los castillos medievales\")])[2]")
     private WebElementFacade noticia;
 
     @FindBy(xpath = "//button[@class=\"evr-btn evr-btn__secondary\"][1]")
@@ -52,9 +52,10 @@ public class MyPage extends PageObject {
     }
 
     public void clickarNoticia()throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(getDriver(), 90);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"card-cladt05-destacadosActualidad3\"]/div/a/h5")));
+        WebDriverWait wait = new WebDriverWait(getDriver(), 120);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h5[contains(text(),\"Sierra Mágina, el parque natural de los castillos medievales\")])[2]")));
         noticia.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1)[6]")));
         String validacion = textnoticia.getText();
         if(validacion.contains("Sierra Mágina, el parque natural de los castillos medievales")) {
             Assert.assertTrue(true);

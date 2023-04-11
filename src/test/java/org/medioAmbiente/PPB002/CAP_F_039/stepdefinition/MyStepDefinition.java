@@ -27,9 +27,9 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
-    @Y("^PPB002-CAPF039 - Visualizar tarjetas$")
-    public void Visualizar_Tarjetas() throws InterruptedException{
-        myStep.visualizarTarjetas();
+    @Y("^PPB002-CAPF039 - Visualizar carrusel$")
+    public void Visualizar_Carrusel() throws InterruptedException{
+        myStep.visualizarCarrusel();
     }
 
     @Y("^PPB002-CAPF039 - Comprobar funcionamiento de flechas$")

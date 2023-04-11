@@ -34,11 +34,12 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//a[@title=\"Informe de Medio Ambiente en Andalucía 2020\"]")
     private WebElementFacade Informe_MA2020;
 
-    @FindBy(xpath = "(//div[@data-placement=\"bottom\"]/a/img)[1]")
+    @FindBy(xpath = "(//a[@class=\"evr-publicacion-detalle__tooltip-style\"])[1]")
+    private WebElementFacade Descargar;
+
+    @FindBy(xpath = "//a[@title=\"Descargar PDF\"]")
     private WebElementFacade Descargar_PDF;
 
-    @FindBy(xpath = "(//div/a[@href=\"/medioambiente/portal/documents/20151/35851693/iMA2020.pdf/48eb86ad-576e-36c0-c576-af2583974201?t=1643201915257\"]/img)[1]")
-    private WebElementFacade Descargar;
     public void posicionarServicios() throws InterruptedException {
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Servicios)
@@ -72,7 +73,7 @@ public class MyPage extends PageObject {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1)[6]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 600)");
+        j.executeScript("window.scrollBy(0, 700)");
         Informe_MA2020.click();
     }
 
@@ -80,11 +81,10 @@ public class MyPage extends PageObject {
         WebElement Element = getDriver().findElement(By.xpath("//*[contains(text(),'gustaría')]"));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("arguments[0].scrollIntoView();", Element);
-
+        Descargar.waitUntilClickable();
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Descargar_PDF)
                 .perform();
-
         Descargar.click();
         waitFor(10).second();
     }

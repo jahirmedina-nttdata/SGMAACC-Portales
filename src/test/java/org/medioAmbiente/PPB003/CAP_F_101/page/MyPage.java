@@ -4,12 +4,16 @@ package org.medioAmbiente.PPB003.CAP_F_101.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 
 @DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
@@ -35,6 +39,9 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "(//a[@title=\"Ir a Ventana del Visitante\"]/img)[1]")
     private WebElementFacade Ventana_Visitante;
 
+    @FindBy(xpath = "//a[@data-title=\"Menú\"]")
+    private WebElementFacade Menu_Vertical;
+
     public void autenticarUsuario() throws InterruptedException {
         Usuario.sendKeys("cmaot_testing");
         Password.sendKeys("Liferay*21" + "\n");
@@ -43,6 +50,13 @@ public class MyPage extends PageObject {
     }
 
     public void ejecutarCAPF099() throws InterruptedException {
+        Menu_Vertical.click();
+        List<WebElement> lista = getDriver().findElements(By.xpath("//a[@class=\"control-menu-icon lfr-portal-tooltip product-menu-toggle sidenav-toggler active open\"]"));
+        if (lista.size() != 0) {
+            Menu_Vertical.click();
+        } else {
+            Assert.assertTrue(true);
+        }
         Ventana_Visitante.click();
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Menu)

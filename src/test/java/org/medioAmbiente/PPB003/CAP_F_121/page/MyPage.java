@@ -44,9 +44,8 @@ public class MyPage extends PageObject {
 
     public void seleccionarDunasOdiel() throws InterruptedException {
         SelectNombre_Espacio.waitUntilClickable();
-        Actions action = new Actions(getDriver());
-        action.moveToElement(SelectNombre_Espacio).click().perform();
-        action.moveToElement(Dunas_Odiel).click().perform();
+        SelectNombre_Espacio.click();
+        Dunas_Odiel.click();
     }
 
     public void clickarBuscar() throws InterruptedException {

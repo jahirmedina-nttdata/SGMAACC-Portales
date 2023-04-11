@@ -24,7 +24,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"evr-formFilters\"]/div[2]/div[2]/label")
     private WebElementFacade Busqueda_Avanzada;
 
-    @FindBy(xpath = "//*[@id=\"52815710\"]")
+    @FindBy(xpath = "//a[@title=\"Actividades en el Parque Natural de Bahía de Cádiz\"]")
     private WebElementFacade Contenido;
 
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_k4AFpXuQNU0N_startDate\"]")
@@ -50,13 +50,13 @@ public class MyPage extends PageObject {
     }
 
     public void accederContenido() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        WebDriverWait wait = new WebDriverWait(getDriver(), 60);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Contenido.click();
     }
     public void buscarPorFecha() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[@title=\"Catálogo REDIAM\"])[2]")));
+        WebDriverWait wait = new WebDriverWait(getDriver(), 60);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),\"Actividades en el Parque Natural de Bahía de Cádiz\")])[2]")));
         getDriver().navigate().back();
         Buscador_Especifico.clear();
         Busqueda_Avanzada.click();
@@ -68,7 +68,7 @@ public class MyPage extends PageObject {
 
     public void buscarPorTema() throws InterruptedException {
         btnLimpiar.click();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        WebDriverWait wait = new WebDriverWait(getDriver(), 60);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         Lista_Tema.click();
         Tema.click();

@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_076 @skip @KO
+@PPB002-CAP_F_076 @Pending
 
 Característica: PPB002-CAP_F_076 - Visualizacion detalle Audio
   Como un usuario comun

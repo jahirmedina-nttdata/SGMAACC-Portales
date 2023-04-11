@@ -40,6 +40,7 @@ public class MyPage extends PageObject {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 200)");
         Contenido.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),\"Comunicación para la realización\")])[2]")));
     }
 
     public void retrocederPagina() throws InterruptedException {

@@ -65,17 +65,16 @@ public class MyPage extends PageObject {
     }
 
     public void descargarArchivo() throws InterruptedException {
-        Actions actions = new Actions(getDriver());
-        actions.moveToElement(Descarga_Principal).click().perform();
+        Descarga_Principal.click();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),\"Las personas interesadas en adherirse\")]")));
-        actions.moveToElement(Apartado_Secundario).click().perform();
+        Apartado_Secundario.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),\"Solicitud de inscripción\")]")));
-        actions.moveToElement(Apartado_Descarga).click().perform();
+        Apartado_Descarga.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id=\"collapseService5\"]//a[@title=\"Descargar XLSX\"]")));
-        actions.moveToElement(Archivo_Descarga).click().perform();
+        Archivo_Descarga.click();
         waitFor(1).second();
-        actions.moveToElement(Descarga_Principal).click().perform();
+        Descarga_Principal.click();
     }
 
     public void clickarEnlace() throws InterruptedException {

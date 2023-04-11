@@ -14,7 +14,8 @@ Característica: PPB002-CAP_F_071 - Visualizar Detalle de Evento
     Y PPB002-CAPF071 - Visualizar sin subtitulo
     Y PPB002-CAPF071 - Visualizar sin imagen
     Y PPB002-CAPF071 - Visualizar sin texto
-    Y PPB002-CAPF071 - Visualizar sin fecha desde-hasta
+    Y PPB002-CAPF071 - Visualizar sin fecha desde
+    Y PPB002-CAPF071 - Visualizar sin fecha hasta
     Y PPB002-CAPF071 - Visualizar sin direccion
     Y PPB002-CAPF071 - Visualizar sin provincia
     Y PPB002-CAPF071 - Visualizar sin programa

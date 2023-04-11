@@ -38,6 +38,8 @@ public class MyPage extends PageObject {
 
     public void deslizarComponente() throws InterruptedException {
         Flecha_Anterior.click();
+        waitFor(1).second();
+        Flecha_Anterior.click();
         Actions actions = new Actions(getDriver());
         actions.dragAndDropBy(Deslizar,-300,0)
                 .perform();
@@ -47,6 +49,8 @@ public class MyPage extends PageObject {
     }
 
     public void posicionarPunteroEnTarjeta() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 120);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title=\"SAID\"]")));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Posicionar_Puntero)
                 .perform();

@@ -24,7 +24,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//span[@class=\"d-month\"]")
     private WebElementFacade Select_Mes;
 
-    @FindBy(xpath = "//div[@data-month=\"2\"]")
+    @FindBy(xpath = "//div[@data-month=\"4\"]")
     private WebElementFacade Mes_Posterior;
 
     @FindBy(xpath = "//span[@class=\"d-year\"]")
@@ -33,7 +33,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//div[@data-year=\"1\"]")
     private WebElementFacade Año_Posterior;
 
-    @FindBy(xpath = "//label/text[contains(text(),'14')]")
+    @FindBy(xpath = "//label[@for=\"1-0-d-day-14\"]")
     private WebElementFacade Select_Dia;
 
 
@@ -43,7 +43,7 @@ public class MyPage extends PageObject {
         Actions action = new Actions(getDriver());
         action.moveToElement(Select_Mes).click().perform();
         action.moveToElement(Mes_Posterior).click().perform();
-        List<WebElement> lista = getDriver().findElements(By.xpath("//input[@data-date=\"2023-02-01T05:00:00.000Z\"]"));
+        List<WebElement> lista = getDriver().findElements(By.xpath("//span[contains(text(),\"Abril\")]"));
         if (lista.size() != 0) {
             Assert.assertTrue(true);
         } else {
@@ -55,17 +55,19 @@ public class MyPage extends PageObject {
         Actions action = new Actions(getDriver());
         action.moveToElement(Select_Año).click().perform();
         action.moveToElement(Año_Posterior).click().perform();
-        List<WebElement> lista = getDriver().findElements(By.xpath("//input[@data-date=\"2024-02-01T05:00:00.000Z\"]"));
+        List<WebElement> lista = getDriver().findElements(By.xpath("//span[contains(text(),\"2024\")]"));
         if (lista.size() != 0) {
             Assert.assertTrue(true);
         } else {
-            Assert.fail("No se visualiza los dias del mes");
+            Assert.fail("No se visualiza el año");
         }
     }
 
     public void clickarSobreDia() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 60);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[@for=\"1-0-d-day-14\"]")));
         Select_Dia.click();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 80);
+        wait.until(ExpectedConditions.titleContains("Buscador agenda por días"));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(text(),\"Buscador agenda por días\")]")));
     }
 }

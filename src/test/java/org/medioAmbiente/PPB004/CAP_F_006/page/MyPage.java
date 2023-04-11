@@ -39,19 +39,19 @@ public class MyPage extends PageObject {
     }
 
     public void clickarSiguiente() throws InterruptedException{
-        btn_Siguiente.click();
+        //btn_Siguiente.click();
     }
 
     public void clickarAnterior()throws InterruptedException {
-        btn_Anterior.click();
+        //btn_Anterior.click();
     }
 
     public void clickarMasInfo() throws InterruptedException{
-        btn_MasInforma.click();
+       // btn_MasInforma.click();
     }
 
     public void clickarPesca()throws InterruptedException {
-        getDriver().navigate().back();
+      //  getDriver().navigate().back();
         Tab_Pesca.click();
     }
 

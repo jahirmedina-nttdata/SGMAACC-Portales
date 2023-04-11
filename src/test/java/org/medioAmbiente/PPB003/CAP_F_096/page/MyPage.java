@@ -59,6 +59,13 @@ public class MyPage extends PageObject {
     }
 
     public void accederPublicaciones() throws InterruptedException {
+        Menu_Vertical.click();
+        List<WebElement> lista = getDriver().findElements(org.openqa.selenium.By.xpath("//a[@class=\"control-menu-icon lfr-portal-tooltip product-menu-toggle sidenav-toggler active open\"]"));
+        if (lista.size() != 0) {
+            Menu_Vertical.click();
+        } else {
+            Assert.assertTrue(true);
+        }
         Ventana_Visitante.click();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@id=\"layout_18\"])[1]")));
@@ -69,13 +76,6 @@ public class MyPage extends PageObject {
     public void configurarPaginador() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@data-title=\"Menú\"]")));
-        Menu_Vertical.click();
-        List<WebElement> lista = getDriver().findElements(By.xpath("//a[@class=\"control-menu-icon lfr-portal-tooltip product-menu-toggle sidenav-toggler active open\"]"));
-        if (lista.size() != 0) {
-            Menu_Vertical.click();
-        } else {
-            Assert.assertTrue(true);
-        }
         Actions actions = new Actions(getDriver());
         actions.moveToElement(SelectCategorias).perform();
         actions.moveToElement(Icono_puntos).click().perform();

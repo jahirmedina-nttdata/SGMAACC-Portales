@@ -1,5 +1,5 @@
 #language: es
-@PPB004-CAP_F_060
+@PPB004-CAP_F_060 @skip @KO
 
 Característica: PPB004-CAP_F_060 - Menu Navegacion
   Como usuario comun

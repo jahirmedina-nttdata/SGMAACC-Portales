@@ -71,7 +71,7 @@ public class MyPage extends PageObject {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
-        txtbusquedad.sendKeys("Parques y la red natura" + "\n");
+        txtbusquedad.sendKeys("Vídeo de la encuesta de satisfacción" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinText.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();

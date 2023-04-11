@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_170 @bloqued
+@PPB003-CAP_F_170
 
 Característica: PPB003-CAP_F_170 - Validar busqueda del Portal Agenda
   Como un usuario comun

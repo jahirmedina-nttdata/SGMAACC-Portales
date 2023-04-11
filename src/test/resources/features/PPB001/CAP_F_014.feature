@@ -1,5 +1,5 @@
 #language: es
-@PPB001-CAP_F_014 @bloqued
+@PPB001-CAP_F_014 @Pending
 
 Característica: PPB001-CAP_F_014 - Visualizar Buscador de galerías Audio, Imágenes y Video
   Como un usuario comun

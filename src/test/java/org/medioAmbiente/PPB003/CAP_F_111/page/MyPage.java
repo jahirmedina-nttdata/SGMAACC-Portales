@@ -66,6 +66,7 @@ public class MyPage extends PageObject {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@title=\"Seleccione un tipo de espacio\"]")));
         SelectTipo_Espacio.click();
         Tipo_Espacio.click();
+        waitFor(1).second();
     }
 
     public void seleccionarSierradeAracenayPicosdeAroche() throws InterruptedException {

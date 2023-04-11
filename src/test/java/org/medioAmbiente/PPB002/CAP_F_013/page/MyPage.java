@@ -18,12 +18,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "(//a[@title=\"Taller presencial gestión del litoral y educación ambiental en Andalucía. Málaga (Andalucía occidental)\"])[2]")
+    @FindBy(xpath = "//a[@title=\"Bosques maduros: definición, estructura e importancia (L4.27.21)\"]")
     private WebElementFacade Titulo_Imagen;
 
 
     public void ubicarteEnTambienTePuedeInteresar() throws InterruptedException{
-        WebElement Element = getDriver().findElement(By.xpath("//img[@alt=\"Taller presencial gestión del litoral y educación ambiental en Andalucía. Málaga (Andalucía occidental)\"]"));
+        WebElement Element = getDriver().findElement(By.xpath("//a[@title=\"VER TODOS LOS EVENTOS\"]"));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("arguments[0].scrollIntoView();", Element);
     }
@@ -32,7 +32,7 @@ public class MyPage extends PageObject {
         Actions action = new Actions(getDriver());
         action.moveToElement(Titulo_Imagen).click().perform();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Taller presencial gestión del litoral')])[2]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),'Bosques maduros')])[2]")));
     }
 
 }

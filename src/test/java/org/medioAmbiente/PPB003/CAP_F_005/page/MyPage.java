@@ -22,7 +22,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_rbJEpPKqmqSg_searchTextInput\"]")
     private WebElementFacade Cuadro_Busqueda;
 
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_rbJEpPKqmqSg_follow_reading_asset0\"]/article/div/div[1]/figure/img")
+    @FindBy(xpath = "//span[contains(text(),\"DOÑANA\")]")
     private WebElementFacade Ficha;
 
     @FindBy(xpath = "//p[@class=\"evr-carrusel-banner__txt\"]")
@@ -43,6 +43,8 @@ public class MyPage extends PageObject {
     }
 
     public void visualizarFicha()throws InterruptedException  {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@data-tab-name=\"DATOS DE INTERÉS\"]")));
         String validacion = Ficha_Doñana.getText();
         if(validacion.contains("Doñana")) {
             Assert.assertTrue(true);

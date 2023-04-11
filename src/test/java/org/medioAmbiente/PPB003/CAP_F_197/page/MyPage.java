@@ -16,8 +16,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_agurN6e4v7Bv_pagination\"]/li[4]/a")
-    private WebElementFacade Siguiente;
+    @FindBy(xpath = "(//input[@title=\"Buscar\"])[2]")
+    private WebElementFacade txtbusquedad;
 
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_agurN6e4v7Bv_asset0\"]/figure/img")
     private WebElementFacade Noticia_Andalucia;
@@ -26,13 +26,9 @@ public class MyPage extends PageObject {
     private WebElementFacade Validar_Noticia;
 
     public void seleccionarFicha() throws InterruptedException {
+        txtbusquedad.sendKeys("quebrantahuesos"+ "\n");
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"reflex-grid resultados\"]")));
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
-        Siguiente.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"reflex-grid resultados\"]")));
-        j.executeScript("window.scrollBy(0, -document.body.scrollHeight)");
         Noticia_Andalucia.click();
     }
 

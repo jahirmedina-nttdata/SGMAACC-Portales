@@ -46,5 +46,11 @@ public class MyPage extends PageObject {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@data-title=\"Menú\"]")));
         Menu_Vertical.click();
+        List<WebElement> lista = getDriver().findElements(org.openqa.selenium.By.xpath("//a[@class=\"control-menu-icon lfr-portal-tooltip product-menu-toggle sidenav-toggler active open\"]"));
+        if (lista.size() != 0) {
+            Menu_Vertical.click();
+        } else {
+            Assert.assertTrue(true);
+        }
     }
 }

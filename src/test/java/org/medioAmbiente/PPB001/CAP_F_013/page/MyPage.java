@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("/medioambiente/portal/web/guest/buscador-de-noticias")
+@DefaultUrl("/medioambiente/portal/actualidad/noticias-destacados/buscador")
 
 
 public class MyPage extends PageObject {
@@ -20,10 +20,6 @@ public class MyPage extends PageObject {
 
     @FindBy(xpath = "//input[@title=\"Buscar\"]")
     private WebElementFacade Buscador_Especifico;
-
-    @FindBy(xpath = "//*[@id=\"evr-formFilters\"]/div[2]/div[2]/label")
-    private WebElementFacade Busqueda_Avanzada;
-
 
     @FindBy(xpath = "//input[@placeholder=\"Desde\"]")
     private WebElementFacade Fecha_Incio;
@@ -39,6 +35,9 @@ public class MyPage extends PageObject {
 
     @FindBy(xpath = "//span[@title=\"category-temática--noticias\"]")
     private WebElementFacade Lista_Tematica;
+
+    @FindBy(xpath = "//label[contains(text(),\"Búsqueda avanzada\")]")
+    private WebElementFacade Busqueda_Avanzada;
 
     @FindBy(xpath = "//div[contains(text(),\"Agua\")]")
     private WebElementFacade Tematica;
@@ -80,12 +79,10 @@ public class MyPage extends PageObject {
 
     public void buscarPorFechaDesdeYHasta() throws InterruptedException {
         Actions action = new Actions(getDriver());
-        action.moveToElement(Busqueda_Avanzada).click().perform();
         action.moveToElement(btnLimpiar).click().perform();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
-        JavascriptExecutor j = (JavascriptExecutor) getDriver();
-        j.executeScript("window.scrollBy(0, 180)");
+        action.moveToElement(Busqueda_Avanzada).click().perform();
         Fecha_Incio.sendKeys("01/02/2022");
         Fecha_Fin.sendKeys("12/05/2022");
         action.moveToElement(btnBuscar).click().perform();

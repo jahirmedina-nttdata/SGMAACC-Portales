@@ -10,7 +10,7 @@ Característica: PPB002-CAP_F_039 - Tambien se puede interesar
     Dado PPB002-CAPF039 - Cargando el Navegador
     Cuando PPB002-CAPF039 - Se haya cargado la web
     Y PPB002-CAPF039 - Aceptar las cookies
-    Y PPB002-CAPF039 - Visualizar tarjetas
+    Y PPB002-CAPF039 - Visualizar carrusel
     Y PPB002-CAPF039 - Comprobar funcionamiento de flechas
     Y PPB002-CAPF039 - Clickar enlace
 

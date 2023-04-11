@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_185 @bloqued
+@PPB003-CAP_F_185
 
 Característica: PPB003-CAP_F_185 - Navegar entre paginas de resultados Avisos
   Como un usuario comun

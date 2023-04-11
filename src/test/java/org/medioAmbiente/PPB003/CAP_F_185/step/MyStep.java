@@ -21,4 +21,29 @@ public class MyStep extends ScenarioSteps {
         j.executeScript("document.querySelector(\"#accept-cookies\").click();");
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
     }
+
+    @net.thucydides.core.annotations.Step
+    public void seleccionarPaginador() throws InterruptedException {
+        myPage.seleccionarPaginador();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarSiguientePag() throws InterruptedException {
+        myPage.clickarSiguientePag();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarSiguienteUltimaPag() throws InterruptedException {
+        myPage.clickarSiguienteUltimaPag();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarAnteriorPag() throws InterruptedException {
+        myPage.clickarAnteriorPag();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarAnteriorPrimeraPag() throws InterruptedException {
+        myPage.clickarAnteriorPrimeraPag();
+    }
 }

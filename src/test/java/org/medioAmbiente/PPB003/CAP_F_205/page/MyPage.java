@@ -22,6 +22,9 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//span[contains(text(),'ALDEA DEL CEREZO - AZUEL')]")
     private WebElementFacade Ficha_Azuel;
 
+    @FindBy(xpath = "(//button[@id=\"btnCuadricula\"])[1]")
+    private WebElementFacade Mostrar;
+
     @FindBy(xpath = "//span[@class=\"evr-breadcrumbs__txt\"]")
     private WebElementFacade Validar_Ficha;
 
@@ -39,6 +42,8 @@ public class MyPage extends PageObject {
     public void clickarFicha() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 300)");
+        Mostrar.waitUntilClickable();
+        Mostrar.click();
         Ficha_Azuel.click();
     }
 

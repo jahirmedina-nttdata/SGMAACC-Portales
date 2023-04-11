@@ -27,9 +27,9 @@ public class MyStepDefinition {
         myStep.clickarLogoJunta();
     }
 
-    @Y("^PPB007-CAPF037 - Clickar en Portal de la Caza y Pesca$")
-    public void Clickar_En_Portal_De_La_Caza_Y_Pesca()throws InterruptedException {
-        myStep.clickarLogoPortalCazaPesca();
+    @Y("^PPB007-CAPF037 - Clickar en Canal de Administración Electrónica$")
+    public void Clickar_En_Canal_De_Administración_Electrónica()throws InterruptedException {
+        myStep.clickarLogoCAE();
     }
 
     @Y("^PPB007-CAPF037 - Validar texto flotante de Junta de Andalucia$")

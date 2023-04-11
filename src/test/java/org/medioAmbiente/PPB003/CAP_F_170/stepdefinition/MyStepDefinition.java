@@ -34,6 +34,7 @@ public class MyStepDefinition {
 
     @Entonces("^PPB003-CAPF170 - Validar ficha$")
     public void Validar_Ficha() throws InterruptedException {
+        myStep.validarFichas();
     }
 
 }

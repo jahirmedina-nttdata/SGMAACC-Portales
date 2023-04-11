@@ -20,7 +20,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_rbJEpPKqmqSg_searchTextInput\"]")
     private WebElementFacade Cuadro_Busqueda;
 
-    @FindBy(xpath = "//*[@id=\"_AssetSearchPlugin_INSTANCE_rbJEpPKqmqSg_follow_reading_asset1\"]//figure/img")
+    @FindBy(xpath = "//span[contains(text(),\"PARQUE NATURAL BAHÍA DE CÁDIZ\")]")
     private WebElementFacade Ficha_Equipamiento;
 
 
@@ -34,10 +34,13 @@ public class MyPage extends PageObject {
         WebElement Element = getDriver().findElement(By.xpath("//span[contains(text(),'Resultados')]"));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("arguments[0].scrollIntoView();", Element);
+        Ficha_Equipamiento.waitUntilClickable();
         Ficha_Equipamiento.click();
     }
 
     public void visualizarFicha()throws InterruptedException  {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),\"DATOS DE INTERÉS\")]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 700)");
         j.executeScript("window.scrollBy(0, 200)");

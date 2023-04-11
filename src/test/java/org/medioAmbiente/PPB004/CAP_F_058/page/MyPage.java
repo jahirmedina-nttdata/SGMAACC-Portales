@@ -19,13 +19,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//a[@title=\"SERVICIO DE ATENCIÓN CIUDADANA\"]/span[contains(text(),\"Periodos hábiles de caza\")]")
+    @FindBy(xpath = "(//a[@title=\"Periodos hábiles de caza\"])[1]")
     private WebElementFacade Titulo_Animacion;
 
-    @FindBy(xpath = "//a[@title=\"SERVICIO DE ATENCIÓN CIUDADANA\"]/span[contains(text(),\"Homologación de trofeos\")]")
+    @FindBy(xpath = "//a[@title=\"Homologación de trofeos\"]")
     private WebElementFacade Enlace;
 
-    @FindBy(xpath = "(//a[@title=\"SERVICIO DE ATENCIÓN CIUDADANA\"])[5]")
+    @FindBy(xpath = "//a[@title=\"Oferta pública de caza\"]")
     private WebElementFacade Texto_Flotante;
 
 
@@ -56,7 +56,7 @@ public class MyPage extends PageObject {
 
         String textflotante = Texto_Flotante.getAttribute("title");
 
-        if(textflotante.equals("SERVICIO DE ATENCIÓN CIUDADANA")) {
+        if(textflotante.contains("Oferta pública de caza")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide el Texto");

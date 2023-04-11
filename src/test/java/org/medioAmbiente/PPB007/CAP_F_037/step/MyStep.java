@@ -27,8 +27,8 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void clickarLogoPortalCazaPesca() throws InterruptedException {
-        page.clickarLogoPortalCazaPesca();
+    public void clickarLogoCAE() throws InterruptedException {
+        page.clickarLogoCAE();
     }
 
 

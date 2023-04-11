@@ -14,7 +14,7 @@ public class MyStepDefinition {
 
 
     @Dado("^PPB002-CAPF014 - Se haya cargado la web$")
-    public void Se_Haya_Cargado_LaWeb() throws AWTException {
+    public void Se_Haya_Cargado_LaWeb() throws AWTException{
         myStep.cargarPagina();
     }
 

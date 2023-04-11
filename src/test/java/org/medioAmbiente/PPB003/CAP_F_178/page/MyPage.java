@@ -39,7 +39,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//div[contains(text(),'ALMERÍA')]")
     private WebElementFacade Almeria;
 
-    @FindBy(xpath = "//strong[@class=\"evr-article-result__txt\"]")
+    @FindBy(xpath = "(//strong[@class=\"evr-article-result__txt\"])[2]")
     private WebElementFacade Validar_Ficha;
 
 
@@ -48,15 +48,16 @@ public class MyPage extends PageObject {
         Monumento_Natural.click();
     }
 
+    public void seleccionarNombreDeEspacio() throws InterruptedException {
+        Nombre_Espacio.click();
+        Encina_Peana.click();
+    }
+
     public void seleccionarProvincia() throws InterruptedException {
         Lista_Provincias.click();
         Almeria.click();
     }
 
-    public void seleccionarNombreDeEspacio() throws InterruptedException {
-        Nombre_Espacio.click();
-        Encina_Peana.click();
-    }
 
     public void clickarBuscar() throws InterruptedException {
         btnBuscar.click();

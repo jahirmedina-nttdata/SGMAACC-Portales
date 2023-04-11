@@ -1,9 +1,9 @@
 #language: es
 @PPB002-CAP_F_085
 
-Característica: PPB002-CAP_F_085 - Visualizar Detalle Video
+Característica: PPB002-CAP_F_085 - Visualizar Detalle Publicacion
   Como un usuario comun
-  Quiero seleccionar un video
+  Quiero seleccionar un publicacion
   Para visualizar el detalle
 
   Escenario: Cargando el Portal de Referencia
@@ -24,11 +24,11 @@ Característica: PPB002-CAP_F_085 - Visualizar Detalle Video
     Y PPB002-CAPF085 - Visualizar sin notas
     Y PPB002-CAPF085 - Visualizar sin archivos
     Y PPB002-CAPF085 - Visualizar sin derechos
-    Y PPB002-CAPF085 - Clickar descarga
     Y PPB002-CAPF085 - Clickar documento
     Y PPB002-CAPF085 - Clickar url
     Y PPB002-CAPF085 - Clickar interactivo
     Y PPB002-CAPF085 - Clickar enlace biblioteca
+    Y PPB002-CAPF085 - Clickar descarga
 
 
 

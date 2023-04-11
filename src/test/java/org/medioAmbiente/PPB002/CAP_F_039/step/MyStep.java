@@ -22,8 +22,8 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void visualizarTarjetas() throws InterruptedException {
-        page.visualizarTarjetas();
+    public void visualizarCarrusel() throws InterruptedException {
+        page.visualizarCarrusel();
     }
 
     @net.thucydides.core.annotations.Step

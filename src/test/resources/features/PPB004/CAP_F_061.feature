@@ -1,5 +1,5 @@
 #language: es
-@PPB004-CAP_F_061 @bloqued
+@PPB004-CAP_F_061
 
 Característica: PPB004-CAP_F_061 - Visualizacion Componente Destacamos
   Como usuario comun

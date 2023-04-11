@@ -23,27 +23,27 @@ public class MyStepDefinition {
 
     @Y("^PPB003-CAPF185 - Seleccionar el paginador$")
     public void Seleccionar_El_Paginador() throws InterruptedException {
-
+        myStep.seleccionarPaginador();
     }
 
     @Y("^PPB003-CAPF185 - Clickar siguiente pagina$")
     public void Clickar_Siguiente_Pagina() throws InterruptedException {
-
+        myStep.clickarSiguientePag();
     }
 
     @Y("^PPB003-CAPF185 - Clickar siguiente en la ultima pagina$")
     public void Clickar_Siguiente_En_La_Ultima_Pagina() throws InterruptedException {
-
+        myStep.clickarSiguienteUltimaPag();
     }
 
     @Y("^PPB003-CAPF185 - Clickar anterior$")
     public void Clickar_Anterior() throws InterruptedException {
-
+        myStep.clickarAnteriorPag();
     }
 
     @Y("^PPB003-CAPF185 - Clickar anterior en la primera pagina$")
     public void Clickar_Anterior_En_La_Primera_Pagina() throws InterruptedException {
-
+        myStep.clickarAnteriorPrimeraPag();
     }
 
 }

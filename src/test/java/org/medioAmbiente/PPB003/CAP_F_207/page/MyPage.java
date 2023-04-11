@@ -34,7 +34,7 @@ public class MyPage extends PageObject {
     public void validarTarjetas() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 300)");
-        List<WebElement> lista = getDriver().findElements(By.xpath("//article[@class=\"evr-article-result\"]"));
+        List<WebElement> lista = getDriver().findElements(By.xpath("//article[@class=\"evr-article-result evr-article-collage__act--practices\"]"));
         if (lista.size() != 0) {
             Assert.assertTrue(true);
         } else {

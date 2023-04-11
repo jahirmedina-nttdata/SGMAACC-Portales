@@ -44,10 +44,11 @@ public class MyPage extends PageObject {
 
 
     public void visualizarSinFecha() throws InterruptedException {
-
         txtbusquedad.sendKeys("Biosfera Sierra" + "\n");
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         sinfecha.click();
-
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("(//h1[contains(text(),'Reserva de la Biosfera Sierra de las Nieves')])[2]")));
     }
 
     public void visualizarSinSub() throws InterruptedException {

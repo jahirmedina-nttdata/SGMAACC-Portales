@@ -1,6 +1,7 @@
 package org.medioAmbiente.PPB004.CAP_F_066.page;
 
 
+import io.cucumber.java.hu.De;
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
@@ -55,9 +56,8 @@ public class MyPage extends PageObject {
     }
 
     public void descargarArchivo() throws InterruptedException {
-        Actions action = new Actions(getDriver());
-        action.moveToElement(Apartado_Descarga).click().perform();
-        action.moveToElement(Descarga).click().perform();
+        Apartado_Descarga.click();
+        Descarga.click();
         Set<String> wnd = getDriver().getWindowHandles();
         // window handles iteration
         Iterator<String> i = wnd.iterator();
@@ -71,7 +71,7 @@ public class MyPage extends PageObject {
         getDriver().close();
         // switching parent window handle id
         getDriver().switchTo().window(prntw);
-        action.moveToElement(Apartado_Descarga).click().perform();
+        Apartado_Descarga.click();
     }
 
     public void clickarEnlace() throws InterruptedException {

@@ -75,6 +75,7 @@ public class MyPage extends PageObject {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
+        Paginador.waitUntilClickable();
         Paginador.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Resultados')]")));
         j.executeScript("window.scrollBy(0, -document.body.scrollHeight)");

@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_166 @bloqued
+@PPB003-CAP_F_166 @Pending
 
 Característica: PPB003-CAP_F_166 - Validar Busqueda en Agenda
   Como un usuario comun

@@ -32,6 +32,11 @@ public class MyStepDefinition {
         myStep.seleccionarNombreDeEspacio();
     }
 
+    @Y("^PPB003-CAPF167 - Seleccionar provincia Almeria$")
+    public void Seleccionar_Provincia_Almeria() throws InterruptedException {
+        myStep.seleccionarProvincia();
+    }
+
     @Y("^PPB003-CAPF167 - Clickar buscar$")
     public void Clickar_Buscar() throws InterruptedException {
         myStep.clickarBuscar();
@@ -39,6 +44,7 @@ public class MyStepDefinition {
 
     @Entonces("^PPB003-CAPF167 - Validar resultado$")
     public void Validar_Resultado() throws InterruptedException {
+        myStep.validarResultado();
     }
 
 }

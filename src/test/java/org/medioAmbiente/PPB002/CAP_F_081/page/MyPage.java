@@ -33,7 +33,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//a[@title=\"Planificación Hidrológica 1998\"]")
     private WebElementFacade sinTexto;
 
-    @FindBy(xpath = "//a[@title=\"Jardines botánicos (2002)\"]")
+    @FindBy(xpath = "//a[@title=\"Life Flora Sierra Nevada\"]")
     private WebElementFacade sinRequisitos;
 
     @FindBy(xpath = "//a[@title=\"Área metropolitana de Sevilla. Análisis del medio físico\"]")
@@ -51,7 +51,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//a[@title=\"Geology of the arid zone of Almeria. 2003\"]")
     private WebElementFacade sinFechaPlazo;
 
-    @FindBy(xpath = "//a[@title=\"Plan Andaluz de Humedales  (2004)\"]")
+    @FindBy(xpath = "//a[@title=\"Programa de Conservación de la Focha moruna (2001-2012)\"]")
     private WebElementFacade sinPeriodo;
 
     @FindBy(xpath = "//a[@title=\"Aumenta la población de buitre negro en Andalucía\"]")
@@ -63,13 +63,13 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//a[@title=\"Menos ruido, más vida  (2004)\"]")
     private WebElementFacade sinModelo;
 
-    @FindBy(xpath = "//a[@title=\"Plan Director de Riberas de Andalucía\"]")
+    @FindBy(xpath = "//a[@title=\"Programa Andarríos\"]")
     private WebElementFacade sinSeguimiento;
 
     @FindBy(xpath = "//a[@title=\"La Sierra Subbética es reconocida por la UNESCO como Geoparque de España\"]")
     private WebElementFacade sinDocumentacion;
 
-    @FindBy(xpath = "(//a[@title=\"Plan Forestal Andaluz, 1989\"])[2]")
+    @FindBy(xpath = "//a[@title=\"Resolución del Parlamento de Andalucía de 14 y 15 de noviembre de 1989, por la que se aprueba el Plan Forestal Andaluz.\"]")
     private WebElementFacade sinEnlace;
 
     @FindBy(xpath = "//a[@title=\"Solicitud de estimación de la calidad del corcho\"]")
@@ -87,7 +87,7 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//a[@title=\"Un Mar de Bosques (1996)\"]")
     private WebElementFacade sinSeguiExpediente;
 
-    @FindBy(xpath = "//a[@title=\"Las sequías : análisis y tratamiento. 1995\"]")
+    @FindBy(xpath = "//a[@title=\"Técnicas de censo, muestreo y seguimiento de aves (L4.13.22)\"]")
     private WebElementFacade sinPago;
 
 
@@ -95,6 +95,8 @@ public class MyPage extends PageObject {
 
         txtbusquedad.sendKeys("Transporte comarcal" + "\n");
         sinfecha.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("(//h1[contains(text(),'El transporte comarcal como instrumento de ordenación territorial')])[2]")));
     }
 
     public void visualizarSinSub() throws InterruptedException {
@@ -116,6 +118,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Planificación Hidrológica 1998" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinTexto.waitUntilClickable();
         sinTexto.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -137,6 +140,7 @@ public class MyPage extends PageObject {
         btnLimpiar.click();
         txtbusquedad.sendKeys("Jardines botánicos (2002)" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinRequisitos.waitUntilClickable();
         sinRequisitos.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -149,6 +153,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Área metropolitana de Sevilla. Análisis del medio físico" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinAfectados.waitUntilClickable();
         sinAfectados.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -161,6 +166,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("El río Dílar y su entorno (1998)" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinOrganos.waitUntilClickable();
         sinOrganos.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -173,6 +179,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Datos Básicos Parque Nacional Doñana (Edición 1998)" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinLugar.waitUntilClickable();
         sinLugar.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -185,6 +192,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("La RENPA en Cifras (Edición 2002)" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinObservaciones.waitUntilClickable();
         sinObservaciones.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -197,6 +205,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Geology of the arid zone of Almeria. 2003" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinFechaPlazo.waitUntilClickable();
         sinFechaPlazo.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -209,6 +218,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Plan Andaluz de Humedales (2004)" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinPeriodo.waitUntilClickable();
         sinPeriodo.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -221,6 +231,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Aumenta la población de buitre negro en Andalucía" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinPlazoNoti.waitUntilClickable();
         sinPlazoNoti.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -233,6 +244,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Invertidos más de 12 millones en la gestión del litoral andaluz" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinSilencioAdmin.waitUntilClickable();
         sinSilencioAdmin.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -245,6 +257,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Menos ruido, más vida (2004)" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinModelo.waitUntilClickable();
         sinModelo.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -257,6 +270,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Plan Director de Riberas de Andalucía" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinSeguimiento.waitUntilClickable();
         sinSeguimiento.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -269,6 +283,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("La Sierra Subbética es reconocida por la UNESCO como Geoparque de España" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinDocumentacion.waitUntilClickable();
         sinDocumentacion.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -281,6 +296,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Plan Forestal Andaluz, 1989" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinEnlace.waitUntilClickable();
         sinEnlace.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -293,6 +309,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Solicitud de estimación de la calidad del corcho" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinEnlaceTrami.waitUntilClickable();
         sinEnlaceTrami.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -305,8 +322,10 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Flora amenazada y endémica de Sierra Nevada (2001)" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
-        sinPresTelematica.click();
+        sinPresTelematica.waitUntilClickable();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 150)");
+        sinPresTelematica.click();
         j.executeScript("window.scrollBy(0, 500)");
     }
 
@@ -317,8 +336,10 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Buenas prácticas del mes" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
-        sinJustTelematica.click();
+        sinJustTelematica.waitUntilClickable();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
+        j.executeScript("window.scrollBy(0, 250)");
+        sinJustTelematica.click();
         j.executeScript("window.scrollBy(0, 500)");
     }
 
@@ -329,6 +350,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Un vivero forestal en el aula (1995)" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinNotiTelematica.waitUntilClickable();
         sinNotiTelematica.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -341,6 +363,7 @@ public class MyPage extends PageObject {
         txtbusquedad.clear();
         txtbusquedad.sendKeys("Un Mar de Bosques (1996)" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinSeguiExpediente.waitUntilClickable();
         sinSeguiExpediente.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
@@ -351,8 +374,9 @@ public class MyPage extends PageObject {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
         txtbusquedad.clear();
-        txtbusquedad.sendKeys("análisis y tratamiento" + "\n");
+        txtbusquedad.sendKeys("Técnicas de censo" + "\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath("//p[contains(text(),'Mostrando')]")));
+        sinPago.waitUntilClickable();
         sinPago.click();
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");

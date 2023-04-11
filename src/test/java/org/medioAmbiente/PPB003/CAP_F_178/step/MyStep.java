@@ -28,13 +28,13 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarProvincia() throws InterruptedException {
-        myPage.seleccionarProvincia();
+    public void seleccionarNombreDeEspacio() throws InterruptedException {
+        myPage.seleccionarNombreDeEspacio();
     }
 
     @net.thucydides.core.annotations.Step
-    public void seleccionarNombreDeEspacio() throws InterruptedException {
-        myPage.seleccionarNombreDeEspacio();
+    public void seleccionarProvincia() throws InterruptedException {
+        myPage.seleccionarProvincia();
     }
 
     @net.thucydides.core.annotations.Step

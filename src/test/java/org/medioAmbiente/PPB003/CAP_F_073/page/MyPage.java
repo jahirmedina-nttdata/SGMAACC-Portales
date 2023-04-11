@@ -7,10 +7,13 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 
 @DefaultUrl("/medioambiente/portal/web/ventanadelvisitante/espacio-personal")
@@ -34,6 +37,9 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "(//h1[@class=\"evr-visitcollage__title\"]/a)[1]")
     private WebElementFacade Validar_Idioma;
 
+    @FindBy(xpath = "//a[@data-title=\"Menu\"]")
+    private WebElementFacade Menu_Vertical;
+
 
     public void accederUsuario() throws InterruptedException {
         Usuario.sendKeys("cmaot_testing");
@@ -53,6 +59,13 @@ public class MyPage extends PageObject {
     public void validarIdioma() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[@class=\"evr-visitcollage__title\"]/a)[1]")));
+        Menu_Vertical.click();
+        List<WebElement> lista = getDriver().findElements(org.openqa.selenium.By.xpath("//a[@class=\"control-menu-icon lfr-portal-tooltip product-menu-toggle sidenav-toggler active open\"]"));
+        if (lista.size() != 0) {
+            Menu_Vertical.click();
+        } else {
+            Assert.assertTrue(true);
+        }
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 200)");
         String validar = Validar_Idioma.getText();

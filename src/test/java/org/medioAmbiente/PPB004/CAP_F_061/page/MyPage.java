@@ -27,6 +27,14 @@ public class MyPage extends PageObject {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("arguments[0].scrollIntoView();", Element);
     }
+
+    public void clickarEnlace()throws InterruptedException  {
+        Enlace.click();
+        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),\"Cetrería en Andalucía\")])[2]")));
+        getDriver().navigate().back();
+    }
+
     public void validarTextFlotante() throws InterruptedException{
         WebElement Element = getDriver().findElement(By.xpath("//span[contains(text(),'Seguridad cinegética')]"));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
@@ -42,13 +50,6 @@ public class MyPage extends PageObject {
         }else{
             Assert.fail("No Coincide el Texto");
         }
-    }
-
-    public void clickarEnlace()throws InterruptedException  {
-        Enlace.click();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),\"Cetrería en Andalucía\")])[2]")));
-        getDriver().navigate().back();
     }
 
 

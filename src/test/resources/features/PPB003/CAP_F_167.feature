@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_167 @bloqued
+@PPB003-CAP_F_167 @Pending
 
 Característica: PPB003-CAP_F_167 - Validar Busqueda en Pagina Agenda
   Como un usuario comun
@@ -11,5 +11,6 @@ Característica: PPB003-CAP_F_167 - Validar Busqueda en Pagina Agenda
     Cuando PPB003-CAPF167 - Acepto Cookies
     Y PPB003-CAPF167 - Seleccionar tipo de espacio MONUMENTO NATURAL
     Y PPB003-CAPF167 - Seleccionar nombre de espacio ENCINA DE LA PEANA
+    Y PPB003-CAPF167 - Seleccionar provincia Almeria
     Y PPB003-CAPF167 - Clickar buscar
     Entonces PPB003-CAPF167 - Validar resultado

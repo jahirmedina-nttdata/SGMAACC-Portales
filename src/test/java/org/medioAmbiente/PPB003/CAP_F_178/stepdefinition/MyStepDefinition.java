@@ -27,15 +27,16 @@ public class MyStepDefinition {
         myStep.seleccionarTipoDeEspacio();
     }
 
+    @Y("^PPB003-CAPF178 - Seleccionar nombre de espacio ENCINA DE LA PEANA$")
+    public void Seleccionar_Nombre_De_Espacio_ENCINA_DE_LA_PEANA() throws InterruptedException {
+        myStep.seleccionarNombreDeEspacio();
+    }
+
     @Y("^PPB003-CAPF178 - Seleccionar provincia ALMERÍA$")
     public void Seleccionar_Provincia_ALMERÍA() throws InterruptedException {
         myStep.seleccionarProvincia();
     }
 
-    @Y("^PPB003-CAPF178 - Seleccionar nombre de espacio ENCINA DE LA PEANA$")
-    public void Seleccionar_Nombre_De_Espacio_ENCINA_DE_LA_PEANA() throws InterruptedException {
-        myStep.seleccionarNombreDeEspacio();
-    }
 
     @Y("^PPB003-CAPF178 - Clickar buscar$")
     public void Clickar_Buscar() throws InterruptedException {

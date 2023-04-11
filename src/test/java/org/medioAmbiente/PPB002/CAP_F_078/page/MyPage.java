@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("/medioambiente/portal/web/guest/actualidad/noticias-destacados ")
+@DefaultUrl("/medioambiente/portal/buscador-de-noticias?categoryVal=")
 
 
 public class MyPage extends PageObject {

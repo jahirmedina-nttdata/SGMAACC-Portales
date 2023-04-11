@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@DefaultUrl("/medioambiente/portal/acceso-rediam/catalogo")
+@DefaultUrl("/medioambiente/portal/acceso-rediam/ecobarometro-de-andalucia")
 
 
 public class MyPage extends PageObject {
@@ -23,11 +23,11 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//button[@aria-label=\"Previous\"]")
     private WebElementFacade Atras;
 
-    @FindBy(xpath = "//a[@title=\"Informe de Medio Ambiente en Andalucía (IMA), 2012\"]")
+    @FindBy(xpath = "//a[@title=\"Datos Básicos de Medio Ambiente en Andalucía\"]")
     private WebElementFacade Tarjeta;
 
 
-    public void visualizarTarjetas() throws InterruptedException {
+    public void visualizarCarrusel() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 950)");
 
@@ -37,26 +37,15 @@ public class MyPage extends PageObject {
         Actions action = new Actions(getDriver());
         action.moveToElement(Siguente).click().perform();
         waitFor(1).second();
-        action.moveToElement(Siguente).click().perform();
-        waitFor(1).second();
         action.moveToElement(Atras).click().perform();
         waitFor(1).second();
-        action.moveToElement(Siguente).click().perform();
-        waitFor(1).second();
-        action.moveToElement(Siguente).click().perform();
-        waitFor(1).second();
-        action.moveToElement(Siguente).click().perform();
-        waitFor(1).second();
-        action.moveToElement(Siguente).click().perform();
-        waitFor(1).second();
-        action.moveToElement(Siguente).click().perform();
     }
 
     public void clickarEnlace() throws InterruptedException {
         Actions action = new Actions(getDriver());
         action.moveToElement(Tarjeta).click().perform();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[@title=\"Catálogo REDIAM\"])[2]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),\"Datos Básicos de Medio Ambiente en Andalucía\")])[2]")));
     }
 
 
