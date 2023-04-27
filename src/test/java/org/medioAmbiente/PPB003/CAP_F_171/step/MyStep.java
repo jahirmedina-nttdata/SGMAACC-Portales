@@ -25,4 +25,24 @@ public class MyStep extends ScenarioSteps {
     public void seleccionarPaginador() throws InterruptedException {
         myPage.seleccionarPaginador();
     }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarSigPag() throws InterruptedException {
+        myPage.clickarSigPag();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarSigUltimaPag() throws InterruptedException {
+        myPage.clickarSigUltimaPag();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarAntPag() throws InterruptedException {
+        myPage.clickarAntPag();
+    }
+
+    @net.thucydides.core.annotations.Step
+    public void clickarAntPrimerPag() throws InterruptedException {
+        myPage.clickarAntPrimerPag();
+    }
 }

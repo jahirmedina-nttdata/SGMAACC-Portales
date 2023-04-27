@@ -19,7 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "(//a[@title=\"Seguimiento de aves acuáticas amenazadas en Andalucía. Reproducción. Informes restringidos\"])[3]")
+    @FindBy(xpath = "//a[@title=\"Restauración de riberas en ríos mediterráneos. Andalucía\"]")
     private WebElementFacade Texto_Flotante;
 
     @FindBy(xpath = "//div[@class=\"slick-list draggable\"]")
@@ -31,10 +31,10 @@ public class MyPage extends PageObject {
     @FindBy(xpath = "//button[@aria-label=\"Previous\"]")
     private WebElementFacade Flecha_Izquierda;
 
-    @FindBy(xpath = "//a[@title=\"Inventario de balsas de Andalucía\"]")
+    @FindBy(xpath = "//a[@title=\"Plan Director de Riberas de Andalucía 2003\"]")
     private WebElementFacade Enlace;
 
-    @FindBy(xpath = "(//span[@title=\"Catalogo REDIAM\"])[2]")
+    @FindBy(xpath = "(//span[@title=\"Catálogo REDIAM\"])[2]")
     private WebElementFacade validartext;
 
 
@@ -48,13 +48,13 @@ public class MyPage extends PageObject {
 
     public void posicionarPuntero()throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 90);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@title=\"Seguimiento de aves acuáticas amenazadas en Andalucía. Reproducción. Informes restringidos\"])[3]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title=\"Restauración de riberas en ríos mediterráneos. Andalucía\"]")));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(Texto_Flotante)
                 .perform();
         String textflotante = Texto_Flotante.getAttribute("title");
 
-        if(textflotante.contains("Seguimiento de aves acuáticas amenazadas en Andalucía. Reproducción. Informes restringidos")) {
+        if(textflotante.contains("Restauración de riberas en ríos mediterráneos. Andalucía")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide el Texto");
@@ -86,16 +86,16 @@ public class MyPage extends PageObject {
         waitFor(2).second();
         Flecha_Izquierda.click();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title=\"Inventario de balsas de Andalucía\"]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title=\"Plan Director de Riberas de Andalucía 2003\"]")));
         Enlace.click();
     }
 
     public void validarAccesoCorrecto()throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[@title=\"Catalogo REDIAM\"])[2]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[@title=\"Catálogo REDIAM\"])[2]")));
         String validar = validartext.getAttribute("title");
 
-        if(validar.contains("Catalogo REDIAM")) {
+        if(validar.contains("Catálogo REDIAM")) {
             Assert.assertTrue(true);
         }else{
             Assert.fail("No Coincide el Texto");

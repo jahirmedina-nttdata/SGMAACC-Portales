@@ -9,6 +9,7 @@ Característica: PPB003-CAP_F_062 - Visualizacion de Reservar visita
   Escenario: Cargando Portal Reservar visita
     Dado PPB003-CAPF062 - Accedo al Navegador
     Y PPB003-CAPF062 - Aceptar Cookies
+    Y PPB003-CAPF062 - Acceder a una Actividad
     Y PPB003-CAPF062 - Clickar reservar visita
 
 

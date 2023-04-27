@@ -24,9 +24,11 @@ public class MyPage extends PageObject {
     private WebElementFacade Reservar_Visita;
 
 
-    public void clickarReservar() throws InterruptedException {
+    public void accederActividad() throws InterruptedException {
         Actividad_Buceo.click();
-        waitFor(2).second();
+    }
+
+    public void clickarReservar() throws InterruptedException {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 850)");
         Reservar_Visita.click();
@@ -42,6 +44,5 @@ public class MyPage extends PageObject {
         getDriver().close();
         // switching parent window handle id
         getDriver().switchTo().window(prntw);
-
     }
 }

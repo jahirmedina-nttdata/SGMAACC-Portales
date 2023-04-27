@@ -1,13 +1,15 @@
-package org.medioAmbiente.PPB003.CAP_F_062.step;
+package org.medioAmbiente.PPB002.CAP_F_076.step;
 
 import net.thucydides.core.steps.ScenarioSteps;
-import org.medioAmbiente.PPB003.CAP_F_062.page.MyPage;
+import org.medioAmbiente.PPB002.CAP_F_076.page.MyPage;
 import org.openqa.selenium.JavascriptExecutor;
 
 
 public class MyStep extends ScenarioSteps {
 
     private MyPage page;
+    private String prntw;
+    private String popwnd;
 
     @net.thucydides.core.annotations.Step
     public void cargarPagina() throws InterruptedException {
@@ -22,12 +24,8 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
-    public void accederActividad() throws InterruptedException {
-        page.accederActividad();
+    public void visualizarSinFecha() throws InterruptedException {
+        page.visualizarSinFecha();
     }
 
-    @net.thucydides.core.annotations.Step
-    public void clickarReservar() throws InterruptedException {
-        page.clickarReservar();
-    }
 }

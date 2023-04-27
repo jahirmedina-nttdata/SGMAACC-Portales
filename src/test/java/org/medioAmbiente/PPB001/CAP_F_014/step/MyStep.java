@@ -27,6 +27,11 @@ public class MyStep extends ScenarioSteps {
     }
 
     @net.thucydides.core.annotations.Step
+    public void buscarAudioPorTexto() throws InterruptedException, URISyntaxException {
+        myPage.buscarAudioPorTexto();
+    }
+
+    @net.thucydides.core.annotations.Step
     public void buscarImagenPorTexto() throws InterruptedException, URISyntaxException {
         myPage.buscarImagenPorTexto();
     }

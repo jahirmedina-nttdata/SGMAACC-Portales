@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_013 @Pending
+@PPB003-CAP_F_013
 
 Característica: PPB003-CAP_F_013 - Visualizar Datos de Interes
   Como un usuario

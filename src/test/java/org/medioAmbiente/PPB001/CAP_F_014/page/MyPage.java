@@ -4,7 +4,10 @@ package org.medioAmbiente.PPB001.CAP_F_014.page;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -56,6 +59,11 @@ public class MyPage extends PageObject {
 
     @FindBy(xpath = "//div[contains(text(),'Agua')]")
     private WebElementFacade Tema_Video;
+
+    public void buscarAudioPorTexto() throws InterruptedException, URISyntaxException {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
+    }
 
     public void buscarImagenPorTexto() throws InterruptedException, URISyntaxException {
         getDriver().get(new URI(getDriver().getCurrentUrl()).resolve("/medioambiente/portal/buscador-imagenes").toString());

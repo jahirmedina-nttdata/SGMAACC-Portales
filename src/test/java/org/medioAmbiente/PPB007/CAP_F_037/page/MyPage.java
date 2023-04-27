@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MyPage extends PageObject {
 
-    @FindBy(xpath = "//*[@id=\"portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_PubL1et3R1zQ\"]//ul/a")
+    @FindBy(xpath = "(//a[@title=\"Consejería de Sostenibilidad, Medio Ambiente y Economía Azul\"])[1]")
     private WebElementFacade Logo_Junta;
 
     @FindBy(xpath = "//a[@title=\"Canal de Administración Electrónica\"]")

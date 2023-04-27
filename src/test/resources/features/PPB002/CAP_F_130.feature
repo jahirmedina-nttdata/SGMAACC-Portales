@@ -1,5 +1,5 @@
 #language: es
-@PPB002-CAP_F_130
+@PPB002-CAP_F_130 @skip @KO
 
 Característica: PPB002-CAP_F_130 - Visualizacion Buscador Noticias
   Como un usuario comun

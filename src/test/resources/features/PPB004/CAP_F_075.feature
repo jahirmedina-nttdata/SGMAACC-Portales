@@ -1,5 +1,5 @@
 #language: es
-@PPB004-CAP_F_075 @skip @KO
+@PPB004-CAP_F_075
 
 Característica: PPB004-CAP_F_075 - Visualizacion Buscador
   Como un usuario comun

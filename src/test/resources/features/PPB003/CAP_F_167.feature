@@ -1,5 +1,5 @@
 #language: es
-@PPB003-CAP_F_167 @Pending
+@PPB003-CAP_F_167
 
 Característica: PPB003-CAP_F_167 - Validar Busqueda en Pagina Agenda
   Como un usuario comun

@@ -21,6 +21,11 @@ public class MyStepDefinition {
         myStep.aceptarCookies();
     }
 
+    @Y("^PPB003-CAPF062 - Acceder a una Actividad$")
+    public void Acceder_A_Una_Actividad()throws InterruptedException {
+        myStep.accederActividad();
+    }
+
     @Y("^PPB003-CAPF062 - Clickar reservar visita$")
     public void Clickar_Reservar_Visita()throws InterruptedException {
         myStep.clickarReservar();

@@ -124,7 +124,7 @@ public class MyPage extends PageObject {
     public void clickarAtencionCiudadania()throws InterruptedException {
         Atencion_Ciudadania.click();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@title=\"Ir a Ventana del Visitante\"])[1]")));
+        wait.until(ExpectedConditions.titleContains("Servicio de Información"));
         getDriver().navigate().back();
     }
 

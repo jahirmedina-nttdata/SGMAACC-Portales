@@ -1,5 +1,5 @@
 #language: es
-@PPB007-CAP_F_048 @Pending
+@PPB007-CAP_F_048
 
 Característica: PPB007-CAP_F_048 - Visualizacion de contenido Pie de pagina
   Como usuario comun

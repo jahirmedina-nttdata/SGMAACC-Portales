@@ -25,8 +25,8 @@ public class MyStepDefinition {
     }
 
     @Y("^PPB001-CAPF014 - Buscar Audio por texto$")
-    public void Buscar_Audio_Por_Texto() throws InterruptedException {
-
+    public void Buscar_Audio_Por_Texto() throws InterruptedException, URISyntaxException {
+        myStep.buscarAudioPorTexto();
     }
     @Y("^PPB001-CAPF014 - Buscar Audio por tema$")
     public void Buscar_Audio_Por_Tema() throws InterruptedException {

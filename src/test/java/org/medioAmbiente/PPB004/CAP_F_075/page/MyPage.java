@@ -40,12 +40,13 @@ public class MyPage extends PageObject {
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 200)");
         Contenido.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),\"Comunicación para la realización\")])[2]")));
+        wait.until(ExpectedConditions.titleContains("Comunicación para la realización"));
     }
 
     public void retrocederPagina() throws InterruptedException {
-        getDriver().navigate().back();
         WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//h1[contains(text(),\"Comunicación para la realización\")])[2]")));
+        getDriver().navigate().back();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Mostrando')]")));
         JavascriptExecutor j = (JavascriptExecutor) getDriver();
         j.executeScript("window.scrollBy(0, 500)");
