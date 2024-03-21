@@ -1,7 +1,7 @@
 #language: es
 @PPB006-CAP_F_003
 
-Característica: PPB006-CAP_F_003 - Acceso al Portal de Referencia
+Característica: PPB006-CAP_F_003 - Visualizacion de elementos comunes
   Como un usuario comun
   Quiero navegar por internet
   Para acceder al Portal Web

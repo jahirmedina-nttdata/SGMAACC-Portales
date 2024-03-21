@@ -32,7 +32,7 @@ public class MyPage extends PageObject {
     private WebElementFacade Enlace;
 
     public void cargarpagina() throws AWTException{
-        open();
+      open();
        waitFor(5).second();
         Robot robot = new  Robot();
         try {

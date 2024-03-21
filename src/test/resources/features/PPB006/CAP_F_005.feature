@@ -1,7 +1,7 @@
 #language: es
 @PPB006-CAP_F_005
 
-Característica: PPB006-CAP_F_005 - Acceso al Portal de Referencia
+Característica: PPB006-CAP_F_005 - Menu navegacion
   Como un usuario comun
   Quiero navegar por internet
   Para acceder al Portal Web
